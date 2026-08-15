@@ -61,6 +61,8 @@ RE_CHOICE = re.compile(r"selection.*?: (.+?) with")
 RE_TIMING = re.compile(
     r"TurnTiming: elapsed=([\d.]+)s budget_per_world=(\d+)ms worlds=(\d+) waves=(\d+)"
 )
+RE_PLAYER = re.compile(r"^\|player\|(p[12])\|([^|]+)\|")
+RE_TERA = re.compile(r"^\|-terastallize\|(p[12])a")
 
 
 def find_game(arg=None):
@@ -88,8 +90,15 @@ def parse(game_dir):
     if not os.path.isfile(path):
         raise SystemExit("no battle.log.gz in %s" % game_dir)
     decisions, cur, turn = [], None, 0
+    players, tera_turns = {}, {}
     with gzip.open(path, "rt", errors="replace") as fh:
         for line in fh:
+            m = RE_PLAYER.match(line)
+            if m:
+                players.setdefault(m.group(1), m.group(2).strip())
+            m = RE_TERA.match(line)
+            if m:
+                tera_turns.setdefault(m.group(1), turn)
             m = RE_TURN.search(line)
             if m:
                 turn = int(m.group(1))
@@ -121,7 +130,7 @@ def parse(game_dir):
                     cur["waves"] = int(m.group(4))
                     decisions.append(cur)
                     cur = None
-    return decisions
+    return decisions, players, tera_turns
 
 
 def _arms(blob, pattern):
@@ -181,7 +190,7 @@ def main(argv):
     show_timing = "--timing" in argv
     args = [a for a in argv if not a.startswith("--")]
     game_dir = find_game(args[0] if args else None)
-    decisions = parse(game_dir)
+    decisions, players, tera_turns = parse(game_dir)
     if not decisions:
         raise SystemExit("no decisions parsed from %s (log level below INFO?)" % game_dir)
 
@@ -189,6 +198,11 @@ def main(argv):
     meta_path = os.path.join(game_dir, "meta.json")
     if os.path.isfile(meta_path):
         meta = json.load(open(meta_path))
+    account = meta.get("account", "")
+    opp_side = next(
+        (side for side, name in players.items() if name != account), "p1"
+    )
+    opp_tera_turn = tera_turns.get(opp_side)
     battle_id = (meta.get("battle_tag") or os.path.basename(game_dir)).split("-")
     frag = next((p for p in battle_id if p.isdigit() and len(p) > 6), "")
     acts = ledger_rows(frag) if frag else []
@@ -248,6 +262,18 @@ def main(argv):
                 if follow.startswith("switch "):
                     actual += " ⇒ " + follow.split(" ", 1)[1]
                 li += 1
+        # the ledger's observed action lacks the tera annotation; the
+        # protocol's |-terastallize| event carries it. Without this, turn 18
+        # of 2665372016 showed "thunderbolt" while the model's top-1 was
+        # thunderbolt-tera — a perfect call scored as a miss.
+        if (
+            opp_tera_turn is not None
+            and d["turn"] == opp_tera_turn
+            and actual not in ("—",)
+            and not actual.startswith("switch ")
+            and "-tera" not in actual
+        ):
+            actual = actual.replace(" ⇒", "-tera ⇒") if " ⇒" in actual else actual + "-tera"
         ours = pool(d["ws"], d["chance"])
         theirs = pool(d["ows"], d["chance"])
         names = [t[0] for t in theirs]
