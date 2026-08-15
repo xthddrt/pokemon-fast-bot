@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 573264,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth573264",
+  "seed": "sodium,a2f9229e0008bf50",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,a2efc1810008bf50",
+  "p2_ai_seed": "sodium,a2efd5920008bf50",
+  "p1_team_seed": "sodium,a2efe2a30008bf50",
+  "p2_team_seed": "sodium,a2eff3b40008bf50",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 45,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-03T21:31:45.583Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Arboliva",
+     "level": 91,
+     "gender": "F",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "hypervoice",
+      "substitute",
+      "protect",
+      "leechseed"
+     ],
+     "evs": {
+      "hp": 77,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 130,
+      "def": 216,
+      "spa": 279,
+      "spd": 250,
+      "spe": 123
+     }
+    },
+    {
+     "species": "Greedent",
+     "level": 86,
+     "gender": "F",
+     "ability": "Cheek Pouch",
+     "item": "Sitrus Berry",
+     "moves": [
+      "doubleedge",
+      "earthquake",
+      "swordsdance",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 347,
+      "atk": 213,
+      "def": 213,
+      "spa": 144,
+      "spd": 178,
+      "spe": 84
+     }
+    },
+    {
+     "species": "Wugtrio",
+     "level": 91,
+     "gender": "F",
+     "ability": "Gooey",
+     "item": "Choice Band",
+     "moves": [
+      "liquidation",
+      "aquajet",
+      "throatchop",
+      "stompingtantrum"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 212,
+      "atk": 234,
+      "def": 143,
+      "spa": 143,
+      "spd": 179,
+      "spe": 270
+     }
+    },
+    {
+     "species": "Dachsbun",
+     "level": 92,
+     "gender": "M",
+     "ability": "Well-Baked Body",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "playrough",
+      "bodypress",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 200,
+      "def": 264,
+      "spa": 144,
+      "spd": 200,
+      "spe": 227
+     }
+    },
+    {
+     "species": "Eiscue",
+     "level": 88,
+     "gender": "F",
+     "ability": "Ice Face",
+     "item": "Sitrus Berry",
+     "moves": [
+      "terablast",
+      "bellydrum",
+      "liquidation",
+      "icespinner"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 191,
+      "def": 244,
+      "spa": 165,
+      "spd": 209,
+      "spe": 138
+     }
+    },
+    {
+     "species": "Medicham",
+     "level": 86,
+     "gender": "F",
+     "ability": "Pure Power",
+     "item": "Choice Band",
+     "moves": [
+      "zenheadbutt",
+      "closecombat",
+      "trick",
+      "bulletpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 152,
+      "def": 178,
+      "spa": 152,
+      "spd": 178,
+      "spe": 187
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Toxtricity",
+     "level": 82,
+     "gender": "M",
+     "ability": "Punk Rock",
+     "item": "Throat Spray",
+     "moves": [
+      "boomburst",
+      "gunkshot",
+      "shiftgear",
+      "overdrive"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 208,
+      "def": 162,
+      "spa": 234,
+      "spd": 162,
+      "spe": 170
+     }
+    },
+    {
+     "species": "Weezing",
+     "level": 88,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Leftovers",
+     "moves": [
+      "fireblast",
+      "gunkshot",
+      "painsplit",
+      "willowisp"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 209,
+      "def": 261,
+      "spa": 200,
+      "spd": 173,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Swampert",
+     "level": 83,
+     "gender": "M",
+     "ability": "Damp",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "earthquake",
+      "yawn",
+      "icebeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 230,
+      "def": 197,
+      "spa": 189,
+      "spd": 197,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Baxcalibur",
+     "level": 75,
+     "gender": "F",
+     "ability": "Thermal Exchange",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "dragondance",
+      "earthquake",
+      "glaiverush",
+      "iciclecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 296,
+      "atk": 261,
+      "def": 182,
+      "spa": 156,
+      "spd": 173,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Sinistcha-Masterpiece",
+     "level": 83,
+     "gender": "N",
+     "ability": "Heatproof",
+     "item": "Leftovers",
+     "moves": [
+      "shadowball",
+      "calmmind",
+      "matchagotcha",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 104,
+      "def": 224,
+      "spa": 249,
+      "spd": 180,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Hypno",
+     "level": 95,
+     "gender": "F",
+     "ability": "Insomnia",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "encore",
+      "psychicnoise",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 193,
+      "def": 187,
+      "spa": 193,
+      "spd": 272,
+      "spe": 181
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Arboliva",
+    "details": "Arboliva, L91, F",
+    "condition": "288/288",
+    "active": true,
+    "stats": {
+     "atk": 130,
+     "def": 216,
+     "spa": 279,
+     "spd": 250,
+     "spe": 123
+    },
+    "moves": [
+     "hypervoice",
+     "substitute",
+     "protect",
+     "leechseed"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Greedent",
+    "details": "Greedent, L86, F",
+    "condition": "347/347",
+    "active": false,
+    "stats": {
+     "atk": 213,
+     "def": 213,
+     "spa": 144,
+     "spd": 178,
+     "spe": 84
+    },
+    "moves": [
+     "doubleedge",
+     "earthquake",
+     "swordsdance",
+     "knockoff"
+    ],
+    "baseAbility": "cheekpouch",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "cheekpouch",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Wugtrio",
+    "details": "Wugtrio, L91, F",
+    "condition": "212/212",
+    "active": false,
+    "stats": {
+     "atk": 234,
+     "def": 143,
+     "spa": 143,
+     "spd": 179,
+     "spe": 270
+    },
+    "moves": [
+     "liquidation",
+     "aquajet",
+     "throatchop",
+     "stompingtantrum"
+    ],
+    "baseAbility": "gooey",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "gooey",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dachsbun",
+    "details": "Dachsbun, L92, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 200,
+     "def": 264,
+     "spa": 144,
+     "spd": 200,
+     "spe": 227
+    },
+    "moves": [
+     "wish",
+     "playrough",
+     "bodypress",
+     "protect"
+    ],
+    "baseAbility": "wellbakedbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "wellbakedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Eiscue",
+    "details": "Eiscue, L88, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 191,
+     "def": 244,
+     "spa": 165,
+     "spd": 209,
+     "spe": 138
+    },
+    "moves": [
+     "terablast",
+     "bellydrum",
+     "liquidation",
+     "icespinner"
+    ],
+    "baseAbility": "iceface",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "iceface",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Medicham",
+    "details": "Medicham, L86, F",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 178,
+     "spa": 152,
+     "spd": 178,
+     "spe": 187
+    },
+    "moves": [
+     "zenheadbutt",
+     "closecombat",
+     "trick",
+     "bulletpunch"
+    ],
+    "baseAbility": "purepower",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "purepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Toxtricity",
+    "details": "Toxtricity, L82, M",
+    "condition": "257/257",
+    "active": true,
+    "stats": {
+     "atk": 208,
+     "def": 162,
+     "spa": 234,
+     "spd": 162,
+     "spe": 170
+    },
+    "moves": [
+     "boomburst",
+     "gunkshot",
+     "shiftgear",
+     "overdrive"
+    ],
+    "baseAbility": "punkrock",
+    "item": "throatspray",
+    "pokeball": "pokeball",
+    "ability": "punkrock",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Weezing",
+    "details": "Weezing, L88, M",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 209,
+     "def": 261,
+     "spa": 200,
+     "spd": 173,
+     "spe": 156
+    },
+    "moves": [
+     "fireblast",
+     "gunkshot",
+     "painsplit",
+     "willowisp"
+    ],
+    "baseAbility": "levitate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Swampert",
+    "details": "Swampert, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 197,
+     "spa": 189,
+     "spd": 197,
+     "spe": 147
+    },
+    "moves": [
+     "stealthrock",
+     "earthquake",
+     "yawn",
+     "icebeam"
+    ],
+    "baseAbility": "damp",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "damp",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Baxcalibur",
+    "details": "Baxcalibur, L75, F",
+    "condition": "296/296",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 182,
+     "spa": 156,
+     "spd": 173,
+     "spe": 174
+    },
+    "moves": [
+     "dragondance",
+     "earthquake",
+     "glaiverush",
+     "iciclecrash"
+    ],
+    "baseAbility": "thermalexchange",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "thermalexchange",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sinistcha",
+    "details": "Sinistcha-Masterpiece, L83",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 104,
+     "def": 224,
+     "spa": 249,
+     "spd": 180,
+     "spe": 164
+    },
+    "moves": [
+     "shadowball",
+     "calmmind",
+     "matchagotcha",
+     "strengthsap"
+    ],
+    "baseAbility": "heatproof",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "heatproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hypno",
+    "details": "Hypno, L95, F",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 193,
+     "def": 187,
+     "spa": 193,
+     "spd": 272,
+     "spe": 181
+    },
+    "moves": [
+     "knockoff",
+     "encore",
+     "psychicnoise",
+     "thunderwave"
+    ],
+    "baseAbility": "insomnia",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "insomnia",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1584639,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1584639",
+  "seed": "sodium,c309d61500182dff",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,c30074f800182dff",
+  "p2_ai_seed": "sodium,c300890900182dff",
+  "p1_team_seed": "sodium,c300961a00182dff",
+  "p2_team_seed": "sodium,c300a72b00182dff",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 32,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:20:35.639Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Eiscue",
+     "level": 88,
+     "gender": "M",
+     "ability": "Ice Face",
+     "item": "Sitrus Berry",
+     "moves": [
+      "liquidation",
+      "bellydrum",
+      "terablast",
+      "icespinner"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 191,
+      "def": 244,
+      "spa": 165,
+      "spd": 209,
+      "spe": 138
+     }
+    },
+    {
+     "species": "Amoonguss",
+     "level": 82,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Rocky Helmet",
+     "moves": [
+      "stompingtantrum",
+      "spore",
+      "sludgebomb",
+      "gigadrain"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 187,
+      "def": 162,
+      "spa": 187,
+      "spd": 178,
+      "spe": 96
+     }
+    },
+    {
+     "species": "Chesnaught",
+     "level": 84,
+     "gender": "F",
+     "ability": "Bulletproof",
+     "item": "Leftovers",
+     "moves": [
+      "irondefense",
+      "trailblaze",
+      "synthesis",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 285,
+      "atk": 228,
+      "def": 253,
+      "spa": 173,
+      "spd": 174,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Tauros",
+     "level": 82,
+     "gender": "M",
+     "ability": "Sheer Force",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "throatchop",
+      "earthquake",
+      "bodyslam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 211,
+      "def": 203,
+      "spa": 113,
+      "spd": 162,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Ting-Lu",
+     "level": 78,
+     "gender": "N",
+     "ability": "Vessel of Ruin",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "earthquake",
+      "throatchop",
+      "spikes"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 370,
+      "atk": 217,
+      "def": 240,
+      "spa": 131,
+      "spd": 170,
+      "spe": 115
+     }
+    },
+    {
+     "species": "Bruxish",
+     "level": 85,
+     "gender": "M",
+     "ability": "Strong Jaw",
+     "item": "Choice Scarf",
+     "moves": [
+      "icefang",
+      "psychicfangs",
+      "flipturn",
+      "wavecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 227,
+      "def": 168,
+      "spa": 168,
+      "spd": 168,
+      "spe": 205
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Mimikyu",
+     "level": 79,
+     "gender": "F",
+     "ability": "Disguise",
+     "item": "Life Orb",
+     "moves": [
+      "shadowclaw",
+      "swordsdance",
+      "playrough",
+      "shadowsneak"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 188,
+      "def": 172,
+      "spa": 125,
+      "spd": 211,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Cinderace",
+     "level": 77,
+     "gender": "M",
+     "ability": "Libero",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "uturn",
+      "courtchange",
+      "highjumpkick",
+      "pyroball"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 223,
+      "def": 160,
+      "spa": 145,
+      "spd": 160,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Ursaluna-Bloodmoon",
+     "level": 79,
+     "gender": "M",
+     "ability": "Mind's Eye",
+     "item": "Leftovers",
+     "moves": [
+      "vacuumwave",
+      "calmmind",
+      "moonlight",
+      "bloodmoon"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 308,
+      "atk": 115,
+      "def": 235,
+      "spa": 259,
+      "spd": 148,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Raichu-Alola",
+     "level": 87,
+     "gender": "F",
+     "ability": "Surge Surfer",
+     "item": "Life Orb",
+     "moves": [
+      "thunderbolt",
+      "psyshock",
+      "nastyplot",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 152,
+      "def": 137,
+      "spa": 215,
+      "spd": 198,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Flamigo",
+     "level": 82,
+     "gender": "M",
+     "ability": "Scrappy",
+     "item": "Choice Band",
+     "moves": [
+      "bravebird",
+      "throatchop",
+      "closecombat",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 236,
+      "def": 169,
+      "spa": 170,
+      "spd": 152,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Coalossal",
+     "level": 89,
+     "gender": "F",
+     "ability": "Flame Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "willowisp",
+      "overheat",
+      "stoneedge",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 341,
+      "atk": 193,
+      "def": 264,
+      "spa": 193,
+      "spd": 211,
+      "spe": 104
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Eiscue",
+    "details": "Eiscue, L88, M",
+    "condition": "274/274",
+    "active": true,
+    "stats": {
+     "atk": 191,
+     "def": 244,
+     "spa": 165,
+     "spd": 209,
+     "spe": 138
+    },
+    "moves": [
+     "liquidation",
+     "bellydrum",
+     "terablast",
+     "icespinner"
+    ],
+    "baseAbility": "iceface",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "iceface",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Amoonguss",
+    "details": "Amoonguss, L82, F",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 187,
+     "def": 162,
+     "spa": 187,
+     "spd": 178,
+     "spe": 96
+    },
+    "moves": [
+     "stompingtantrum",
+     "spore",
+     "sludgebomb",
+     "gigadrain"
+    ],
+    "baseAbility": "regenerator",
+    "item": "rockyhelmet",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Chesnaught",
+    "details": "Chesnaught, L84, F",
+    "condition": "285/285",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 253,
+     "spa": 173,
+     "spd": 174,
+     "spe": 156
+    },
+    "moves": [
+     "irondefense",
+     "trailblaze",
+     "synthesis",
+     "bodypress"
+    ],
+    "baseAbility": "bulletproof",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "bulletproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tauros",
+    "details": "Tauros, L82, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 203,
+     "spa": 113,
+     "spd": 162,
+     "spe": 228
+    },
+    "moves": [
+     "closecombat",
+     "throatchop",
+     "earthquake",
+     "bodyslam"
+    ],
+    "baseAbility": "sheerforce",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sheerforce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ting-Lu",
+    "details": "Ting-Lu, L78",
+    "condition": "370/370",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 240,
+     "spa": 131,
+     "spd": 170,
+     "spe": 115
+    },
+    "moves": [
+     "stealthrock",
+     "earthquake",
+     "throatchop",
+     "spikes"
+    ],
+    "baseAbility": "vesselofruin",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "vesselofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Bruxish",
+    "details": "Bruxish, L85, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 227,
+     "def": 168,
+     "spa": 168,
+     "spd": 168,
+     "spe": 205
+    },
+    "moves": [
+     "icefang",
+     "psychicfangs",
+     "flipturn",
+     "wavecrash"
+    ],
+    "baseAbility": "strongjaw",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "strongjaw",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Mimikyu",
+    "details": "Mimikyu, L79, F",
+    "condition": "216/216",
+    "active": true,
+    "stats": {
+     "atk": 188,
+     "def": 172,
+     "spa": 125,
+     "spd": 211,
+     "spe": 197
+    },
+    "moves": [
+     "shadowclaw",
+     "swordsdance",
+     "playrough",
+     "shadowsneak"
+    ],
+    "baseAbility": "disguise",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "disguise",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Cinderace",
+    "details": "Cinderace, L77, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 223,
+     "def": 160,
+     "spa": 145,
+     "spd": 160,
+     "spe": 228
+    },
+    "moves": [
+     "uturn",
+     "courtchange",
+     "highjumpkick",
+     "pyroball"
+    ],
+    "baseAbility": "libero",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "libero",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ursaluna",
+    "details": "Ursaluna-Bloodmoon, L79, M",
+    "condition": "308/308",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 235,
+     "spa": 259,
+     "spd": 148,
+     "spe": 128
+    },
+    "moves": [
+     "vacuumwave",
+     "calmmind",
+     "moonlight",
+     "bloodmoon"
+    ],
+    "baseAbility": "mindseye",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "mindseye",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Raichu",
+    "details": "Raichu-Alola, L87, F",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 137,
+     "spa": 215,
+     "spd": 198,
+     "spe": 241
+    },
+    "moves": [
+     "thunderbolt",
+     "psyshock",
+     "nastyplot",
+     "focusblast"
+    ],
+    "baseAbility": "surgesurfer",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "surgesurfer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Flamigo",
+    "details": "Flamigo, L82, M",
+    "condition": "269/269",
+    "active": false,
+    "stats": {
+     "atk": 236,
+     "def": 169,
+     "spa": 170,
+     "spd": 152,
+     "spe": 195
+    },
+    "moves": [
+     "bravebird",
+     "throatchop",
+     "closecombat",
+     "uturn"
+    ],
+    "baseAbility": "scrappy",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "scrappy",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Coalossal",
+    "details": "Coalossal, L89, F",
+    "condition": "341/341",
+    "active": false,
+    "stats": {
+     "atk": 193,
+     "def": 264,
+     "spa": 193,
+     "spd": 211,
+     "spe": 104
+    },
+    "moves": [
+     "willowisp",
+     "overheat",
+     "stoneedge",
+     "rapidspin"
+    ],
+    "baseAbility": "flamebody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flamebody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ }
+}

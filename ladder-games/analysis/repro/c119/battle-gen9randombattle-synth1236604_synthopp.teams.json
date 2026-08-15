@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1236604,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1236604",
+  "seed": "sodium,4d79756a0012de7c",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,4d70144d0012de7c",
+  "p2_ai_seed": "sodium,4d70285e0012de7c",
+  "p1_team_seed": "sodium,4d70356f0012de7c",
+  "p2_team_seed": "sodium,4d7046800012de7c",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 28,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T03:12:24.267Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Clodsire",
+     "level": 81,
+     "gender": "M",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "toxic",
+      "earthquake",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 343,
+      "atk": 168,
+      "def": 144,
+      "spa": 120,
+      "spd": 209,
+      "spe": 79
+     }
+    },
+    {
+     "species": "Chien-Pao",
+     "level": 72,
+     "gender": "N",
+     "ability": "Sword of Ruin",
+     "item": "Choice Band",
+     "moves": [
+      "throatchop",
+      "iciclecrash",
+      "sacredsword",
+      "iceshard"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 215,
+      "def": 157,
+      "spa": 172,
+      "spd": 136,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Krookodile",
+     "level": 79,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "earthquake",
+      "bulkup",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 280,
+      "atk": 230,
+      "def": 172,
+      "spa": 148,
+      "spd": 156,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Vileplume",
+     "level": 85,
+     "gender": "M",
+     "ability": "Effect Spore",
+     "item": "Leftovers",
+     "moves": [
+      "gigadrain",
+      "sludgebomb",
+      "leechseed",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 141,
+      "def": 193,
+      "spa": 236,
+      "spd": 202,
+      "spe": 134
+     }
+    },
+    {
+     "species": "Sudowoodo",
+     "level": 94,
+     "gender": "F",
+     "ability": "Rock Head",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "suckerpunch",
+      "woodhammer",
+      "headsmash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 241,
+      "def": 270,
+      "spa": 110,
+      "spd": 176,
+      "spe": 110
+     }
+    },
+    {
+     "species": "Mienshao",
+     "level": 83,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Assault Vest",
+     "moves": [
+      "closecombat",
+      "uturn",
+      "knockoff",
+      "fakeout"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 255,
+      "def": 147,
+      "spa": 205,
+      "spd": 147,
+      "spe": 222
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Polteageist",
+     "level": 78,
+     "gender": "N",
+     "ability": "Cursed Body",
+     "item": "White Herb",
+     "moves": [
+      "shellsmash",
+      "shadowball",
+      "storedpower",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 222,
+      "atk": 106,
+      "def": 146,
+      "spa": 254,
+      "spd": 223,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Trevenant",
+     "level": 89,
+     "gender": "M",
+     "ability": "Natural Cure",
+     "item": "Life Orb",
+     "moves": [
+      "willowisp",
+      "drainpunch",
+      "hornleech",
+      "poltergeist"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 296,
+      "atk": 247,
+      "def": 186,
+      "spa": 166,
+      "spd": 197,
+      "spe": 150
+     }
+    },
+    {
+     "species": "Registeel",
+     "level": 81,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Chesto Berry",
+     "moves": [
+      "ironhead",
+      "bodypress",
+      "irondefense",
+      "rest"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 168,
+      "def": 290,
+      "spa": 168,
+      "spd": 290,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Medicham",
+     "level": 86,
+     "gender": "F",
+     "ability": "Pure Power",
+     "item": "Choice Scarf",
+     "moves": [
+      "zenheadbutt",
+      "poisonjab",
+      "closecombat",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 152,
+      "def": 178,
+      "spa": 152,
+      "spd": 178,
+      "spe": 187
+     }
+    },
+    {
+     "species": "Urshifu-Rapid-Strike",
+     "level": 75,
+     "gender": "M",
+     "ability": "Unseen Fist",
+     "item": "Choice Band",
+     "moves": [
+      "surgingstrikes",
+      "closecombat",
+      "aquajet",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 239,
+      "def": 194,
+      "spa": 138,
+      "spd": 134,
+      "spe": 189
+     }
+    },
+    {
+     "species": "Probopass",
+     "level": 91,
+     "gender": "M",
+     "ability": "Magnet Pull",
+     "item": "Leftovers",
+     "moves": [
+      "irondefense",
+      "flashcannon",
+      "powergem",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 105,
+      "def": 316,
+      "spa": 188,
+      "spd": 325,
+      "spe": 125
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Clodsire",
+    "details": "Clodsire, L81, M",
+    "condition": "343/343",
+    "active": true,
+    "stats": {
+     "atk": 168,
+     "def": 144,
+     "spa": 120,
+     "spd": 209,
+     "spe": 79
+    },
+    "moves": [
+     "recover",
+     "toxic",
+     "earthquake",
+     "gunkshot"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Chien-Pao",
+    "details": "Chien-Pao, L72",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 215,
+     "def": 157,
+     "spa": 172,
+     "spd": 136,
+     "spe": 236
+    },
+    "moves": [
+     "throatchop",
+     "iciclecrash",
+     "sacredsword",
+     "iceshard"
+    ],
+    "baseAbility": "swordofruin",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "swordofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Krookodile",
+    "details": "Krookodile, L79, F",
+    "condition": "280/280",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 172,
+     "spa": 148,
+     "spd": 156,
+     "spe": 191
+    },
+    "moves": [
+     "knockoff",
+     "earthquake",
+     "bulkup",
+     "gunkshot"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Vileplume",
+    "details": "Vileplume, L85, M",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 141,
+     "def": 193,
+     "spa": 236,
+     "spd": 202,
+     "spe": 134
+    },
+    "moves": [
+     "gigadrain",
+     "sludgebomb",
+     "leechseed",
+     "strengthsap"
+    ],
+    "baseAbility": "effectspore",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "effectspore",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sudowoodo",
+    "details": "Sudowoodo, L94, F",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 241,
+     "def": 270,
+     "spa": 110,
+     "spd": 176,
+     "spe": 110
+    },
+    "moves": [
+     "stealthrock",
+     "suckerpunch",
+     "woodhammer",
+     "headsmash"
+    ],
+    "baseAbility": "rockhead",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "rockhead",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mienshao",
+    "details": "Mienshao, L83, F",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 255,
+     "def": 147,
+     "spa": 205,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "closecombat",
+     "uturn",
+     "knockoff",
+     "fakeout"
+    ],
+    "baseAbility": "regenerator",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Polteageist",
+    "details": "Polteageist, L78",
+    "condition": "222/222",
+    "active": true,
+    "stats": {
+     "atk": 106,
+     "def": 146,
+     "spa": 254,
+     "spd": 223,
+     "spe": 154
+    },
+    "moves": [
+     "shellsmash",
+     "shadowball",
+     "storedpower",
+     "strengthsap"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Trevenant",
+    "details": "Trevenant, L89, M",
+    "condition": "296/296",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 186,
+     "spa": 166,
+     "spd": 197,
+     "spe": 150
+    },
+    "moves": [
+     "willowisp",
+     "drainpunch",
+     "hornleech",
+     "poltergeist"
+    ],
+    "baseAbility": "naturalcure",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "naturalcure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Registeel",
+    "details": "Registeel, L81",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 168,
+     "def": 290,
+     "spa": 168,
+     "spd": 290,
+     "spe": 128
+    },
+    "moves": [
+     "ironhead",
+     "bodypress",
+     "irondefense",
+     "rest"
+    ],
+    "baseAbility": "clearbody",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Medicham",
+    "details": "Medicham, L86, F",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 178,
+     "spa": 152,
+     "spd": 178,
+     "spe": 187
+    },
+    "moves": [
+     "zenheadbutt",
+     "poisonjab",
+     "closecombat",
+     "trick"
+    ],
+    "baseAbility": "purepower",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "purepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Urshifu",
+    "details": "Urshifu-Rapid-Strike, L75, M",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 239,
+     "def": 194,
+     "spa": 138,
+     "spd": 134,
+     "spe": 189
+    },
+    "moves": [
+     "surgingstrikes",
+     "closecombat",
+     "aquajet",
+     "uturn"
+    ],
+    "baseAbility": "unseenfist",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "unseenfist",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Probopass",
+    "details": "Probopass, L91, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 105,
+     "def": 316,
+     "spa": 188,
+     "spd": 325,
+     "spe": 125
+    },
+    "moves": [
+     "irondefense",
+     "flashcannon",
+     "powergem",
+     "bodypress"
+    ],
+    "baseAbility": "magnetpull",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "magnetpull",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

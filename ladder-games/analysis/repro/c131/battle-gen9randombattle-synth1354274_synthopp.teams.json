@@ -1,0 +1,834 @@
+{
+ "meta": {
+  "game": 1354274,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1354274",
+  "seed": "sodium,5cb116600014aa22",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,5ca7b5430014aa22",
+  "p2_ai_seed": "sodium,5ca7c9540014aa22",
+  "p1_team_seed": "sodium,5ca7d6650014aa22",
+  "p2_team_seed": "sodium,5ca7e7760014aa22",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 35,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T04:50:35.955Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Oricorio-Pa'u",
+     "level": 87,
+     "gender": "F",
+     "ability": "Dancer",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "quiverdance",
+      "roost",
+      "hurricane",
+      "revelationdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 126,
+      "def": 172,
+      "spa": 220,
+      "spd": 172,
+      "spe": 212
+     }
+    },
+    {
+     "species": "Salazzle",
+     "level": 83,
+     "gender": "F",
+     "ability": "Corrosion",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "nastyplot",
+      "sludgewave",
+      "terablast",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 111,
+      "def": 147,
+      "spa": 232,
+      "spd": 147,
+      "spe": 242
+     }
+    },
+    {
+     "species": "Mamoswine",
+     "level": 81,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Choice Band",
+     "moves": [
+      "iciclecrash",
+      "knockoff",
+      "earthquake",
+      "iceshard"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 311,
+      "atk": 257,
+      "def": 176,
+      "spa": 160,
+      "spd": 144,
+      "spe": 176
+     }
+    },
+    {
+     "species": "Gengar",
+     "level": 81,
+     "gender": "M",
+     "ability": "Cursed Body",
+     "item": "Choice Specs",
+     "moves": [
+      "shadowball",
+      "sludgewave",
+      "focusblast",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 230,
+      "atk": 110,
+      "def": 144,
+      "spa": 257,
+      "spd": 168,
+      "spe": 225
+     }
+    },
+    {
+     "species": "Pawmot",
+     "level": 80,
+     "gender": "F",
+     "ability": "Volt Absorb",
+     "item": "Leppa Berry",
+     "moves": [
+      "closecombat",
+      "nuzzle",
+      "revivalblessing",
+      "doubleshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 230,
+      "def": 158,
+      "spa": 158,
+      "spd": 142,
+      "spe": 214
+     }
+    },
+    {
+     "species": "Ditto",
+     "level": 87,
+     "gender": "N",
+     "ability": "Imposter",
+     "item": "Choice Scarf",
+     "moves": [
+      "transform"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 133,
+      "def": 133,
+      "spa": 133,
+      "spd": 133,
+      "spe": 133
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Beartic",
+     "level": 91,
+     "gender": "F",
+     "ability": "Slush Rush",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "swordsdance",
+      "iciclecrash",
+      "snowscape",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 288,
+      "def": 197,
+      "spa": 179,
+      "spd": 197,
+      "spe": 143
+     }
+    },
+    {
+     "species": "Mabosstiff",
+     "level": 86,
+     "gender": "M",
+     "ability": "Stakeout",
+     "item": "Choice Band",
+     "moves": [
+      "wildcharge",
+      "playrough",
+      "psychicfangs",
+      "crunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 256,
+      "def": 204,
+      "spa": 152,
+      "spd": 170,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Groudon",
+     "level": 72,
+     "gender": "N",
+     "ability": "Drought",
+     "item": "Leftovers",
+     "moves": [
+      "heatcrash",
+      "swordsdance",
+      "thunderwave",
+      "precipiceblades"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 258,
+      "def": 244,
+      "spa": 186,
+      "spd": 172,
+      "spe": 172
+     }
+    },
+    {
+     "species": "Great Tusk",
+     "level": 77,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Booster Energy",
+     "moves": [
+      "earthquake",
+      "bulkup",
+      "stoneedge",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 304,
+      "atk": 246,
+      "def": 246,
+      "spa": 126,
+      "spd": 126,
+      "spe": 179
+     }
+    },
+    {
+     "species": "Raging Bolt",
+     "level": 78,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Leftovers",
+     "moves": [
+      "thunderbolt",
+      "calmmind",
+      "dracometeor",
+      "thunderclap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 118,
+      "def": 187,
+      "spa": 259,
+      "spd": 184,
+      "spe": 162
+     }
+    },
+    {
+     "species": "Azumarill",
+     "level": 82,
+     "gender": "M",
+     "ability": "Huge Power",
+     "item": "Choice Band",
+     "moves": [
+      "liquidation",
+      "icespinner",
+      "aquajet",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 298,
+      "atk": 129,
+      "def": 178,
+      "spa": 146,
+      "spd": 178,
+      "spe": 129
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Oricorio",
+    "details": "Oricorio-Pa'u, L87, F",
+    "condition": "272/272",
+    "active": true,
+    "stats": {
+     "atk": 126,
+     "def": 172,
+     "spa": 220,
+     "spd": 172,
+     "spe": 212
+    },
+    "moves": [
+     "quiverdance",
+     "roost",
+     "hurricane",
+     "revelationdance"
+    ],
+    "baseAbility": "dancer",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "dancer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Salazzle",
+    "details": "Salazzle, L83, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 111,
+     "def": 147,
+     "spa": 232,
+     "spd": 147,
+     "spe": 242
+    },
+    "moves": [
+     "nastyplot",
+     "sludgewave",
+     "terablast",
+     "fireblast"
+    ],
+    "baseAbility": "corrosion",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "corrosion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mamoswine",
+    "details": "Mamoswine, L81, M",
+    "condition": "311/311",
+    "active": false,
+    "stats": {
+     "atk": 257,
+     "def": 176,
+     "spa": 160,
+     "spd": 144,
+     "spe": 176
+    },
+    "moves": [
+     "iciclecrash",
+     "knockoff",
+     "earthquake",
+     "iceshard"
+    ],
+    "baseAbility": "thickfat",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gengar",
+    "details": "Gengar, L81, M",
+    "condition": "230/230",
+    "active": false,
+    "stats": {
+     "atk": 110,
+     "def": 144,
+     "spa": 257,
+     "spd": 168,
+     "spe": 225
+    },
+    "moves": [
+     "shadowball",
+     "sludgewave",
+     "focusblast",
+     "trick"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Pawmot",
+    "details": "Pawmot, L80, F",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 158,
+     "spa": 158,
+     "spd": 142,
+     "spe": 214
+    },
+    "moves": [
+     "closecombat",
+     "nuzzle",
+     "revivalblessing",
+     "doubleshock"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "leppaberry",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ditto",
+    "details": "Ditto, L87",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 133,
+     "def": 133,
+     "spa": 133,
+     "spd": 133,
+     "spe": 133
+    },
+    "moves": [
+     "transform"
+    ],
+    "baseAbility": "imposter",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "imposter",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Beartic",
+    "details": "Beartic, L91, F",
+    "condition": "321/321",
+    "active": true,
+    "stats": {
+     "atk": 288,
+     "def": 197,
+     "spa": 179,
+     "spd": 197,
+     "spe": 143
+    },
+    "moves": [
+     "swordsdance",
+     "iciclecrash",
+     "snowscape",
+     "earthquake"
+    ],
+    "baseAbility": "slushrush",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "slushrush",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mabosstiff",
+    "details": "Mabosstiff, L86, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 256,
+     "def": 204,
+     "spa": 152,
+     "spd": 170,
+     "spe": 195
+    },
+    "moves": [
+     "wildcharge",
+     "playrough",
+     "psychicfangs",
+     "crunch"
+    ],
+    "baseAbility": "stakeout",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "stakeout",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Groudon",
+    "details": "Groudon, L72",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 258,
+     "def": 244,
+     "spa": 186,
+     "spd": 172,
+     "spe": 172
+    },
+    "moves": [
+     "heatcrash",
+     "swordsdance",
+     "thunderwave",
+     "precipiceblades"
+    ],
+    "baseAbility": "drought",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "drought",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Great Tusk",
+    "details": "Great Tusk, L77",
+    "condition": "304/304",
+    "active": false,
+    "stats": {
+     "atk": 246,
+     "def": 246,
+     "spa": 126,
+     "spd": 126,
+     "spe": 179
+    },
+    "moves": [
+     "earthquake",
+     "bulkup",
+     "stoneedge",
+     "closecombat"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Raging Bolt",
+    "details": "Raging Bolt, L78",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 118,
+     "def": 187,
+     "spa": 259,
+     "spd": 184,
+     "spe": 162
+    },
+    "moves": [
+     "thunderbolt",
+     "calmmind",
+     "dracometeor",
+     "thunderclap"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Azumarill",
+    "details": "Azumarill, L82, M",
+    "condition": "298/298",
+    "active": false,
+    "stats": {
+     "atk": 129,
+     "def": 178,
+     "spa": 146,
+     "spd": 178,
+     "spe": 129
+    },
+    "moves": [
+     "liquidation",
+     "icespinner",
+     "aquajet",
+     "playrough"
+    ],
+    "baseAbility": "hugepower",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "hugepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

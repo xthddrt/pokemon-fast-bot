@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 753660,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth753660",
+  "seed": "sodium,7efbaaea000b7ffc",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,7ef249cd000b7ffc",
+  "p2_ai_seed": "sodium,7ef25dde000b7ffc",
+  "p1_team_seed": "sodium,7ef26aef000b7ffc",
+  "p2_team_seed": "sodium,7ef27c00000b7ffc",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 33,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:04:00.442Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Porygon2",
+     "level": 81,
+     "gender": "N",
+     "ability": "Download",
+     "item": "Eviolite",
+     "moves": [
+      "recover",
+      "discharge",
+      "icebeam",
+      "triattack"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 270,
+      "atk": 134,
+      "def": 192,
+      "spa": 217,
+      "spd": 201,
+      "spe": 144
+     }
+    },
+    {
+     "species": "Komala",
+     "level": 87,
+     "gender": "M",
+     "ability": "Comatose",
+     "item": "Assault Vest",
+     "moves": [
+      "bodyslam",
+      "uturn",
+      "knockoff",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 250,
+      "def": 163,
+      "spa": 180,
+      "spd": 215,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Leafeon",
+     "level": 88,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Leftovers",
+     "moves": [
+      "swordsdance",
+      "doubleedge",
+      "substitute",
+      "leafblade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 244,
+      "def": 279,
+      "spa": 156,
+      "spd": 165,
+      "spe": 217
+     }
+    },
+    {
+     "species": "Garganacl",
+     "level": 80,
+     "gender": "M",
+     "ability": "Purifying Salt",
+     "item": "Leftovers",
+     "moves": [
+      "saltcure",
+      "protect",
+      "earthquake",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 291,
+      "atk": 206,
+      "def": 254,
+      "spa": 118,
+      "spd": 190,
+      "spe": 102
+     }
+    },
+    {
+     "species": "Tauros-Paldea-Blaze",
+     "level": 81,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Choice Band",
+     "moves": [
+      "wildcharge",
+      "closecombat",
+      "stoneedge",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 225,
+      "def": 217,
+      "spa": 95,
+      "spd": 160,
+      "spe": 209
+     }
+    },
+    {
+     "species": "Quagsire",
+     "level": 84,
+     "gender": "F",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "toxic",
+      "icebeam",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 191,
+      "def": 191,
+      "spa": 157,
+      "spd": 157,
+      "spe": 107
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Wigglytuff",
+     "level": 96,
+     "gender": "F",
+     "ability": "Competitive",
+     "item": "Leftovers",
+     "moves": [
+      "thunderwave",
+      "knockoff",
+      "alluringvoice",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 424,
+      "atk": 189,
+      "def": 141,
+      "spa": 218,
+      "spd": 150,
+      "spe": 141
+     }
+    },
+    {
+     "species": "Dachsbun",
+     "level": 92,
+     "gender": "F",
+     "ability": "Well-Baked Body",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "playrough",
+      "wish",
+      "yawn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 200,
+      "def": 264,
+      "spa": 144,
+      "spd": 200,
+      "spe": 227
+     }
+    },
+    {
+     "species": "Ogerpon-Wellspring",
+     "level": 76,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Wellspring Mask",
+     "moves": [
+      "spikes",
+      "ivycudgel",
+      "woodhammer",
+      "synthesis"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 226,
+      "def": 172,
+      "spa": 135,
+      "spd": 190,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Hitmontop",
+     "level": 88,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Leftovers",
+     "moves": [
+      "closecombat",
+      "tripleaxel",
+      "rapidspin",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 217,
+      "def": 217,
+      "spa": 112,
+      "spd": 244,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Oranguru",
+     "level": 92,
+     "gender": "M",
+     "ability": "Inner Focus",
+     "item": "Life Orb",
+     "moves": [
+      "nastyplot",
+      "hypervoice",
+      "thunderbolt",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 115,
+      "def": 200,
+      "spa": 218,
+      "spd": 255,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Toedscruel",
+     "level": 87,
+     "gender": "M",
+     "ability": "Mycelium Might",
+     "item": "Leftovers",
+     "moves": [
+      "toxic",
+      "spore",
+      "gigadrain",
+      "earthpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 281,
+      "atk": 126,
+      "def": 163,
+      "spa": 189,
+      "spd": 259,
+      "spe": 224
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Porygon2",
+    "details": "Porygon2, L81",
+    "condition": "270/270",
+    "active": true,
+    "stats": {
+     "atk": 134,
+     "def": 192,
+     "spa": 217,
+     "spd": 201,
+     "spe": 144
+    },
+    "moves": [
+     "recover",
+     "discharge",
+     "icebeam",
+     "triattack"
+    ],
+    "baseAbility": "download",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "download",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Komala",
+    "details": "Komala, L87, M",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 250,
+     "def": 163,
+     "spa": 180,
+     "spd": 215,
+     "spe": 163
+    },
+    "moves": [
+     "bodyslam",
+     "uturn",
+     "knockoff",
+     "rapidspin"
+    ],
+    "baseAbility": "comatose",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "comatose",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Leafeon",
+    "details": "Leafeon, L88, F",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 244,
+     "def": 279,
+     "spa": 156,
+     "spd": 165,
+     "spe": 217
+    },
+    "moves": [
+     "swordsdance",
+     "doubleedge",
+     "substitute",
+     "leafblade"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Garganacl",
+    "details": "Garganacl, L80, M",
+    "condition": "291/291",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 254,
+     "spa": 118,
+     "spd": 190,
+     "spe": 102
+    },
+    "moves": [
+     "saltcure",
+     "protect",
+     "earthquake",
+     "recover"
+    ],
+    "baseAbility": "purifyingsalt",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "purifyingsalt",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tauros",
+    "details": "Tauros-Paldea-Blaze, L81, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 225,
+     "def": 217,
+     "spa": 95,
+     "spd": 160,
+     "spe": 209
+    },
+    "moves": [
+     "wildcharge",
+     "closecombat",
+     "stoneedge",
+     "flareblitz"
+    ],
+    "baseAbility": "intimidate",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Quagsire",
+    "details": "Quagsire, L84, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 191,
+     "def": 191,
+     "spa": 157,
+     "spd": 157,
+     "spe": 107
+    },
+    "moves": [
+     "recover",
+     "toxic",
+     "icebeam",
+     "earthquake"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Wigglytuff",
+    "details": "Wigglytuff, L96, F",
+    "condition": "424/424",
+    "active": true,
+    "stats": {
+     "atk": 189,
+     "def": 141,
+     "spa": 218,
+     "spd": 150,
+     "spe": 141
+    },
+    "moves": [
+     "thunderwave",
+     "knockoff",
+     "alluringvoice",
+     "fireblast"
+    ],
+    "baseAbility": "competitive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dachsbun",
+    "details": "Dachsbun, L92, F",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 200,
+     "def": 264,
+     "spa": 144,
+     "spd": 200,
+     "spe": 227
+    },
+    "moves": [
+     "protect",
+     "playrough",
+     "wish",
+     "yawn"
+    ],
+    "baseAbility": "wellbakedbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "wellbakedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ogerpon",
+    "details": "Ogerpon-Wellspring, L76, F",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 226,
+     "def": 172,
+     "spa": 135,
+     "spd": 190,
+     "spe": 211
+    },
+    "moves": [
+     "spikes",
+     "ivycudgel",
+     "woodhammer",
+     "synthesis"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "wellspringmask",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hitmontop",
+    "details": "Hitmontop, L88, M",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 217,
+     "spa": 112,
+     "spd": 244,
+     "spe": 173
+    },
+    "moves": [
+     "closecombat",
+     "tripleaxel",
+     "rapidspin",
+     "bulkup"
+    ],
+    "baseAbility": "technician",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Oranguru",
+    "details": "Oranguru, L92, M",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 200,
+     "spa": 218,
+     "spd": 255,
+     "spe": 163
+    },
+    "moves": [
+     "nastyplot",
+     "hypervoice",
+     "thunderbolt",
+     "psyshock"
+    ],
+    "baseAbility": "innerfocus",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "innerfocus",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Toedscruel",
+    "details": "Toedscruel, L87, M",
+    "condition": "281/281",
+    "active": false,
+    "stats": {
+     "atk": 126,
+     "def": 163,
+     "spa": 189,
+     "spd": 259,
+     "spe": 224
+    },
+    "moves": [
+     "toxic",
+     "spore",
+     "gigadrain",
+     "earthpower"
+    ],
+    "baseAbility": "myceliummight",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "myceliummight",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

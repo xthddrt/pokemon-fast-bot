@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 731752,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth731752",
+  "seed": "sodium,9b7edef6000b2a68",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,9b757dd9000b2a68",
+  "p2_ai_seed": "sodium,9b7591ea000b2a68",
+  "p1_team_seed": "sodium,9b759efb000b2a68",
+  "p2_team_seed": "sodium,9b75b00c000b2a68",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 31,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:04:01.148Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Galvantula",
+     "level": 82,
+     "gender": "M",
+     "ability": "Compound Eyes",
+     "item": "Focus Sash",
+     "moves": [
+      "bugbuzz",
+      "thunder",
+      "stickyweb",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 131,
+      "def": 146,
+      "spa": 206,
+      "spd": 146,
+      "spe": 224
+     }
+    },
+    {
+     "species": "Falinks",
+     "level": 84,
+     "gender": "N",
+     "ability": "Defiant",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "ironhead",
+      "noretreat",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 216,
+      "def": 216,
+      "spa": 166,
+      "spd": 149,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Umbreon",
+     "level": 84,
+     "gender": "F",
+     "ability": "Synchronize",
+     "item": "Leftovers",
+     "moves": [
+      "foulplay",
+      "wish",
+      "protect",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 114,
+      "def": 233,
+      "spa": 149,
+      "spd": 267,
+      "spe": 157
+     }
+    },
+    {
+     "species": "Vaporeon",
+     "level": 86,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "scald",
+      "wish",
+      "roar"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 364,
+      "atk": 116,
+      "def": 152,
+      "spa": 238,
+      "spd": 213,
+      "spe": 161
+     }
+    },
+    {
+     "species": "Enamorus",
+     "level": 79,
+     "gender": "F",
+     "ability": "Cute Charm",
+     "item": "Leftovers",
+     "moves": [
+      "moonblast",
+      "calmmind",
+      "substitute",
+      "earthpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 186,
+      "def": 156,
+      "spa": 259,
+      "spd": 172,
+      "spe": 213
+     }
+    },
+    {
+     "species": "Wo-Chien",
+     "level": 83,
+     "gender": "N",
+     "ability": "Tablets of Ruin",
+     "item": "Leftovers",
+     "moves": [
+      "gigadrain",
+      "stunspore",
+      "knockoff",
+      "ruination"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 189,
+      "def": 214,
+      "spa": 205,
+      "spd": 272,
+      "spe": 164
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Furret",
+     "level": 94,
+     "gender": "M",
+     "ability": "Frisk",
+     "item": "Life Orb",
+     "moves": [
+      "brickbreak",
+      "doubleedge",
+      "knockoff",
+      "tidyup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 196,
+      "def": 174,
+      "spa": 138,
+      "spd": 157,
+      "spe": 223
+     }
+    },
+    {
+     "species": "Cinderace",
+     "level": 77,
+     "gender": "M",
+     "ability": "Libero",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "highjumpkick",
+      "pyroball",
+      "courtchange",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 223,
+      "def": 160,
+      "spa": 145,
+      "spd": 160,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Meloetta",
+     "level": 82,
+     "gender": "N",
+     "ability": "Serene Grace",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "closecombat",
+      "relicsong",
+      "tripleaxel"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 298,
+      "atk": 173,
+      "def": 173,
+      "spa": 257,
+      "spd": 257,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Whiscash",
+     "level": 88,
+     "gender": "M",
+     "ability": "Oblivious",
+     "item": "Leftovers",
+     "moves": [
+      "hydropump",
+      "earthquake",
+      "spikes",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 337,
+      "atk": 188,
+      "def": 179,
+      "spa": 184,
+      "spd": 175,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Barraskewda",
+     "level": 81,
+     "gender": "M",
+     "ability": "Swift Swim",
+     "item": "Choice Band",
+     "moves": [
+      "throatchop",
+      "closecombat",
+      "flipturn",
+      "waterfall"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 246,
+      "def": 144,
+      "spa": 144,
+      "spd": 128,
+      "spe": 267
+     }
+    },
+    {
+     "species": "Salamence",
+     "level": 77,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "outrage",
+      "dragondance",
+      "earthquake",
+      "dualwingbeat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 273,
+      "atk": 252,
+      "def": 168,
+      "spa": 214,
+      "spd": 168,
+      "spe": 199
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Galvantula",
+    "details": "Galvantula, L82, M",
+    "condition": "249/249",
+    "active": true,
+    "stats": {
+     "atk": 131,
+     "def": 146,
+     "spa": 206,
+     "spd": 146,
+     "spe": 224
+    },
+    "moves": [
+     "bugbuzz",
+     "thunder",
+     "stickyweb",
+     "voltswitch"
+    ],
+    "baseAbility": "compoundeyes",
+    "item": "focussash",
+    "pokeball": "pokeball",
+    "ability": "compoundeyes",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Falinks",
+    "details": "Falinks, L84",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 216,
+     "spa": 166,
+     "spd": 149,
+     "spe": 174
+    },
+    "moves": [
+     "closecombat",
+     "ironhead",
+     "noretreat",
+     "knockoff"
+    ],
+    "baseAbility": "defiant",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Umbreon",
+    "details": "Umbreon, L84, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 233,
+     "spa": 149,
+     "spd": 267,
+     "spe": 157
+    },
+    "moves": [
+     "foulplay",
+     "wish",
+     "protect",
+     "toxic"
+    ],
+    "baseAbility": "synchronize",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "synchronize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Vaporeon",
+    "details": "Vaporeon, L86, F",
+    "condition": "364/364",
+    "active": false,
+    "stats": {
+     "atk": 116,
+     "def": 152,
+     "spa": 238,
+     "spd": 213,
+     "spe": 161
+    },
+    "moves": [
+     "protect",
+     "scald",
+     "wish",
+     "roar"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Enamorus",
+    "details": "Enamorus, L79, F",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 186,
+     "def": 156,
+     "spa": 259,
+     "spd": 172,
+     "spe": 213
+    },
+    "moves": [
+     "moonblast",
+     "calmmind",
+     "substitute",
+     "earthpower"
+    ],
+    "baseAbility": "cutecharm",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "cutecharm",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Wo-Chien",
+    "details": "Wo-Chien, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 189,
+     "def": 214,
+     "spa": 205,
+     "spd": 272,
+     "spe": 164
+    },
+    "moves": [
+     "gigadrain",
+     "stunspore",
+     "knockoff",
+     "ruination"
+    ],
+    "baseAbility": "tabletsofruin",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "tabletsofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Furret",
+    "details": "Furret, L94, M",
+    "condition": "312/312",
+    "active": true,
+    "stats": {
+     "atk": 196,
+     "def": 174,
+     "spa": 138,
+     "spd": 157,
+     "spe": 223
+    },
+    "moves": [
+     "brickbreak",
+     "doubleedge",
+     "knockoff",
+     "tidyup"
+    ],
+    "baseAbility": "frisk",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "frisk",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Cinderace",
+    "details": "Cinderace, L77, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 223,
+     "def": 160,
+     "spa": 145,
+     "spd": 160,
+     "spe": 228
+    },
+    "moves": [
+     "highjumpkick",
+     "pyroball",
+     "courtchange",
+     "gunkshot"
+    ],
+    "baseAbility": "libero",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "libero",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Meloetta",
+    "details": "Meloetta, L82",
+    "condition": "298/298",
+    "active": false,
+    "stats": {
+     "atk": 173,
+     "def": 173,
+     "spa": 257,
+     "spd": 257,
+     "spe": 195
+    },
+    "moves": [
+     "knockoff",
+     "closecombat",
+     "relicsong",
+     "tripleaxel"
+    ],
+    "baseAbility": "serenegrace",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "serenegrace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Whiscash",
+    "details": "Whiscash, L88, M",
+    "condition": "337/337",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 179,
+     "spa": 184,
+     "spd": 175,
+     "spe": 156
+    },
+    "moves": [
+     "hydropump",
+     "earthquake",
+     "spikes",
+     "stealthrock"
+    ],
+    "baseAbility": "oblivious",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "oblivious",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Barraskewda",
+    "details": "Barraskewda, L81, M",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 246,
+     "def": 144,
+     "spa": 144,
+     "spd": 128,
+     "spe": 267
+    },
+    "moves": [
+     "throatchop",
+     "closecombat",
+     "flipturn",
+     "waterfall"
+    ],
+    "baseAbility": "swiftswim",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "swiftswim",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Salamence",
+    "details": "Salamence, L77, M",
+    "condition": "273/273",
+    "active": false,
+    "stats": {
+     "atk": 252,
+     "def": 168,
+     "spa": 214,
+     "spd": 168,
+     "spe": 199
+    },
+    "moves": [
+     "outrage",
+     "dragondance",
+     "earthquake",
+     "dualwingbeat"
+    ],
+    "baseAbility": "intimidate",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1495189,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1495189",
+  "seed": "sodium,9f203a7b0016d095",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,9f16d95e0016d095",
+  "p2_ai_seed": "sodium,9f16ed6f0016d095",
+  "p1_team_seed": "sodium,9f16fa800016d095",
+  "p2_team_seed": "sodium,9f170b910016d095",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 24,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:11:38.869Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Gliscor",
+     "level": 76,
+     "gender": "M",
+     "ability": "Poison Heal",
+     "item": "Toxic Orb",
+     "moves": [
+      "earthquake",
+      "substitute",
+      "toxic",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 239,
+      "atk": 188,
+      "def": 234,
+      "spa": 112,
+      "spd": 158,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Rabsca",
+     "level": 91,
+     "gender": "F",
+     "ability": "Synchronize",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "recover",
+      "psychic",
+      "bugbuzz",
+      "revivalblessing"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 96,
+      "def": 207,
+      "spa": 261,
+      "spd": 234,
+      "spe": 134
+     }
+    },
+    {
+     "species": "Regieleki",
+     "level": 79,
+     "gender": "N",
+     "ability": "Transistor",
+     "item": "Magnet",
+     "moves": [
+      "rapidspin",
+      "voltswitch",
+      "thunderbolt",
+      "explosion"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 204,
+      "def": 125,
+      "spa": 204,
+      "spd": 125,
+      "spe": 362
+     }
+    },
+    {
+     "species": "Moltres",
+     "level": 81,
+     "gender": "N",
+     "ability": "Flame Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "uturn",
+      "bravebird",
+      "roost",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 209,
+      "def": 192,
+      "spa": 249,
+      "spd": 184,
+      "spe": 192
+     }
+    },
+    {
+     "species": "Delphox",
+     "level": 84,
+     "gender": "M",
+     "ability": "Blaze",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "nastyplot",
+      "grassknot",
+      "fireblast",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 120,
+      "def": 169,
+      "spa": 240,
+      "spd": 216,
+      "spe": 223
+     }
+    },
+    {
+     "species": "Azumarill",
+     "level": 82,
+     "gender": "F",
+     "ability": "Huge Power",
+     "item": "Choice Band",
+     "moves": [
+      "playrough",
+      "aquajet",
+      "knockoff",
+      "liquidation"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 298,
+      "atk": 129,
+      "def": 178,
+      "spa": 146,
+      "spd": 178,
+      "spe": 129
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Conkeldurr",
+     "level": 80,
+     "gender": "M",
+     "ability": "Guts",
+     "item": "Flame Orb",
+     "moves": [
+      "knockoff",
+      "machpunch",
+      "closecombat",
+      "facade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 299,
+      "atk": 270,
+      "def": 198,
+      "spa": 134,
+      "spd": 150,
+      "spe": 118
+     }
+    },
+    {
+     "species": "Porygon2",
+     "level": 81,
+     "gender": "N",
+     "ability": "Download",
+     "item": "Eviolite",
+     "moves": [
+      "recover",
+      "triattack",
+      "icebeam",
+      "discharge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 270,
+      "atk": 134,
+      "def": 192,
+      "spa": 217,
+      "spd": 201,
+      "spe": 144
+     }
+    },
+    {
+     "species": "Kommo-o",
+     "level": 77,
+     "gender": "F",
+     "ability": "Soundproof",
+     "item": "Loaded Dice",
+     "moves": [
+      "swordsdance",
+      "closecombat",
+      "scaleshot",
+      "ironhead"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 242,
+      "atk": 214,
+      "def": 237,
+      "spa": 199,
+      "spd": 206,
+      "spe": 175
+     }
+    },
+    {
+     "species": "Iron Jugulis",
+     "level": 77,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Power Herb",
+     "moves": [
+      "darkpulse",
+      "earthpower",
+      "hurricane",
+      "meteorbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 271,
+      "atk": 128,
+      "def": 177,
+      "spa": 232,
+      "spd": 168,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Talonflame",
+     "level": 83,
+     "gender": "F",
+     "ability": "Flame Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "overheat",
+      "roost",
+      "uturn",
+      "bravebird"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 182,
+      "def": 166,
+      "spa": 171,
+      "spd": 162,
+      "spe": 257
+     }
+    },
+    {
+     "species": "Lapras",
+     "level": 87,
+     "gender": "M",
+     "ability": "Water Absorb",
+     "item": "Choice Specs",
+     "moves": [
+      "icebeam",
+      "sparklingaria",
+      "hydropump",
+      "freezedry"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 367,
+      "atk": 152,
+      "def": 189,
+      "spa": 198,
+      "spd": 215,
+      "spe": 154
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Gliscor",
+    "details": "Gliscor, L76, M",
+    "condition": "239/239",
+    "active": true,
+    "stats": {
+     "atk": 188,
+     "def": 234,
+     "spa": 112,
+     "spd": 158,
+     "spe": 188
+    },
+    "moves": [
+     "earthquake",
+     "substitute",
+     "toxic",
+     "protect"
+    ],
+    "baseAbility": "poisonheal",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "poisonheal",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Rabsca",
+    "details": "Rabsca, L91, F",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 96,
+     "def": 207,
+     "spa": 261,
+     "spd": 234,
+     "spe": 134
+    },
+    "moves": [
+     "recover",
+     "psychic",
+     "bugbuzz",
+     "revivalblessing"
+    ],
+    "baseAbility": "synchronize",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "synchronize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Regieleki",
+    "details": "Regieleki, L79",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 204,
+     "def": 125,
+     "spa": 204,
+     "spd": 125,
+     "spe": 362
+    },
+    "moves": [
+     "rapidspin",
+     "voltswitch",
+     "thunderbolt",
+     "explosion"
+    ],
+    "baseAbility": "transistor",
+    "item": "magnet",
+    "pokeball": "pokeball",
+    "ability": "transistor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Moltres",
+    "details": "Moltres, L81",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 209,
+     "def": 192,
+     "spa": 249,
+     "spd": 184,
+     "spe": 192
+    },
+    "moves": [
+     "uturn",
+     "bravebird",
+     "roost",
+     "fireblast"
+    ],
+    "baseAbility": "flamebody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flamebody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Delphox",
+    "details": "Delphox, L84, M",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 120,
+     "def": 169,
+     "spa": 240,
+     "spd": 216,
+     "spe": 223
+    },
+    "moves": [
+     "nastyplot",
+     "grassknot",
+     "fireblast",
+     "psyshock"
+    ],
+    "baseAbility": "blaze",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "blaze",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Azumarill",
+    "details": "Azumarill, L82, F",
+    "condition": "298/298",
+    "active": false,
+    "stats": {
+     "atk": 129,
+     "def": 178,
+     "spa": 146,
+     "spd": 178,
+     "spe": 129
+    },
+    "moves": [
+     "playrough",
+     "aquajet",
+     "knockoff",
+     "liquidation"
+    ],
+    "baseAbility": "hugepower",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "hugepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Conkeldurr",
+    "details": "Conkeldurr, L80, M",
+    "condition": "299/299",
+    "active": true,
+    "stats": {
+     "atk": 270,
+     "def": 198,
+     "spa": 134,
+     "spd": 150,
+     "spe": 118
+    },
+    "moves": [
+     "knockoff",
+     "machpunch",
+     "closecombat",
+     "facade"
+    ],
+    "baseAbility": "guts",
+    "item": "flameorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Porygon2",
+    "details": "Porygon2, L81",
+    "condition": "270/270",
+    "active": false,
+    "stats": {
+     "atk": 134,
+     "def": 192,
+     "spa": 217,
+     "spd": 201,
+     "spe": 144
+    },
+    "moves": [
+     "recover",
+     "triattack",
+     "icebeam",
+     "discharge"
+    ],
+    "baseAbility": "download",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "download",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Kommo-o",
+    "details": "Kommo-o, L77, F",
+    "condition": "242/242",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 237,
+     "spa": 199,
+     "spd": 206,
+     "spe": 175
+    },
+    "moves": [
+     "swordsdance",
+     "closecombat",
+     "scaleshot",
+     "ironhead"
+    ],
+    "baseAbility": "soundproof",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "soundproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Jugulis",
+    "details": "Iron Jugulis, L77",
+    "condition": "271/271",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 177,
+     "spa": 232,
+     "spd": 168,
+     "spe": 211
+    },
+    "moves": [
+     "darkpulse",
+     "earthpower",
+     "hurricane",
+     "meteorbeam"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "powerherb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Talonflame",
+    "details": "Talonflame, L83, F",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 182,
+     "def": 166,
+     "spa": 171,
+     "spd": 162,
+     "spe": 257
+    },
+    "moves": [
+     "overheat",
+     "roost",
+     "uturn",
+     "bravebird"
+    ],
+    "baseAbility": "flamebody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flamebody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Lapras",
+    "details": "Lapras, L87, M",
+    "condition": "367/367",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 189,
+     "spa": 198,
+     "spd": 215,
+     "spe": 154
+    },
+    "moves": [
+     "icebeam",
+     "sparklingaria",
+     "hydropump",
+     "freezedry"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

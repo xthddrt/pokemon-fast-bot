@@ -1,0 +1,38 @@
+logs matched: 1
+Could not read user observed sets: /Users/sallyliu/pokemon-fast-bot/foul-play/data/pkmn_sets_cache/gen9randombattle_user.json
+battle-gen9randombattle-synth1027225_synthopp.log                      checked=48   skipped=0    findings=1 (hard 1, soft 0)
+
+==============================================================================
+GAMES 1 | turns checked 48 | skipped 0 | reconstruct-errors 0
+  finding turns re-evaluated over the certified HP band: 1
+  extra engine calls spent on band re-evaluation: 2
+
+MEMBERSHIP ASSERT (turns whose unnamable action was quantified):
+  membership turns 13 of 48 checked (27.08%) | engine calls spent 67
+    point          0  ( 0.00% of membership turns)  exact point assert (legal set has ONE member)
+    full           0  ( 0.00% of membership turns)  full discrimination (exactly 1 of N reproduces)
+    partial        0  ( 0.00% of membership turns)  partial (>1 but not all reproduce)
+    vacuous       13  (100.00% of membership turns)  VACUOUS -- every candidate reproduces; decides NOTHING
+    fail           0  ( 0.00% of membership turns)  NO candidate reproduces -> HARD finding
+      vacuous  fainted                                           5
+      vacuous  noaction_absent@split_2nd_half                    5
+      vacuous  cant_slp                                          3
+  ORDINARY (non-membership) checked turns with NO categorical event observed either -- same emptiness, counted both ways: 9
+  membership turns with NO categorical event observed at all (nothing could have failed): 12
+  HEADLINE: 48 of 48 resolution blocks asserted (100.00%); 13 (27.08% of checked) are VACUOUS membership checks -> NON-VACUOUS coverage 72.92%
+  LIKE-FOR-LIKE (empty-observation turns removed from BOTH sides): before 26/48 = 54.17%  ->  after 26/48 = 54.17%
+FINDINGS: 1 hard, 0 soft
+  [hard] battle-gen9randombattle-synth1027225_syn T36 status: observed brn on opp but no branch applies it
+
+==============================================================================
+EXACT-DAMAGE MEMBERSHIP (synthetic full-knowledge corpus)
+direct-damage events 35 | in-scope 12 | member 10 | lethal/capped-member 2 | diverged 0 | engine-no-damage 0
+  excluded (counted, not asserted):
+    combatant_not_turnstart                  10
+    confounded_status                        1
+    fraction_limited                         12
+
+  non-lethal in-scope: 10 | exact-member: 10 (100.00%)
+  observed-minus-nearest-roll histogram:
+     +0 HP:     10  ##########
+  lethal/capped in-scope: 2 | lower-bound satisfied: 2

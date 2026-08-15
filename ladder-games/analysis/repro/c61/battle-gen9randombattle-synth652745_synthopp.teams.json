@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 652745,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth652745",
+  "seed": "sodium,9897b10f0009f5c9",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,988e4ff20009f5c9",
+  "p2_ai_seed": "sodium,988e64030009f5c9",
+  "p1_team_seed": "sodium,988e71140009f5c9",
+  "p2_team_seed": "sodium,988e82250009f5c9",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 35,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T16:14:16.568Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Phione",
+     "level": 91,
+     "gender": "N",
+     "ability": "Hydration",
+     "item": "Leftovers",
+     "moves": [
+      "grassknot",
+      "scald",
+      "takeheart",
+      "icebeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 150,
+      "def": 197,
+      "spa": 197,
+      "spd": 197,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Muk",
+     "level": 86,
+     "gender": "M",
+     "ability": "Poison Touch",
+     "item": "Leftovers",
+     "moves": [
+      "gunkshot",
+      "toxicspikes",
+      "knockoff",
+      "haze"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 230,
+      "def": 178,
+      "spa": 161,
+      "spd": 221,
+      "spe": 135
+     }
+    },
+    {
+     "species": "Koraidon",
+     "level": 64,
+     "gender": "N",
+     "ability": "Orichalcum Pulse",
+     "item": "Choice Band",
+     "moves": [
+      "closecombat",
+      "uturn",
+      "outrage",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 211,
+      "def": 185,
+      "spa": 147,
+      "spd": 166,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Raging Bolt",
+     "level": 78,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Booster Energy",
+     "moves": [
+      "dragonpulse",
+      "calmmind",
+      "thunderclap",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 118,
+      "def": 187,
+      "spa": 259,
+      "spd": 184,
+      "spe": 162
+     }
+    },
+    {
+     "species": "Grimmsnarl",
+     "level": 83,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Light Clay",
+     "moves": [
+      "lightscreen",
+      "spiritbreak",
+      "reflect",
+      "partingshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 247,
+      "def": 156,
+      "spa": 205,
+      "spd": 172,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Iron Leaves",
+     "level": 80,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Choice Band",
+     "moves": [
+      "leafblade",
+      "megahorn",
+      "closecombat",
+      "psyblade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 254,
+      "def": 187,
+      "spa": 158,
+      "spd": 219,
+      "spe": 213
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Golduck",
+     "level": 90,
+     "gender": "F",
+     "ability": "Cloud Nine",
+     "item": "Leftovers",
+     "moves": [
+      "nastyplot",
+      "hydropump",
+      "icebeam",
+      "grassknot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 152,
+      "def": 192,
+      "spa": 222,
+      "spd": 195,
+      "spe": 204
+     }
+    },
+    {
+     "species": "Glimmora",
+     "level": 75,
+     "gender": "F",
+     "ability": "Toxic Debris",
+     "item": "Power Herb",
+     "moves": [
+      "energyball",
+      "sludgewave",
+      "earthpower",
+      "meteorbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 248,
+      "atk": 87,
+      "def": 179,
+      "spa": 239,
+      "spd": 165,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Komala",
+     "level": 87,
+     "gender": "M",
+     "ability": "Comatose",
+     "item": "Assault Vest",
+     "moves": [
+      "rapidspin",
+      "uturn",
+      "bodyslam",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 250,
+      "def": 163,
+      "spa": 180,
+      "spd": 215,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Skuntank",
+     "level": 84,
+     "gender": "M",
+     "ability": "Aftermath",
+     "item": "Assault Vest",
+     "moves": [
+      "suckerpunch",
+      "knockoff",
+      "gunkshot",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 310,
+      "atk": 204,
+      "def": 161,
+      "spa": 167,
+      "spd": 151,
+      "spe": 189
+     }
+    },
+    {
+     "species": "Flapple",
+     "level": 88,
+     "gender": "F",
+     "ability": "Hustle",
+     "item": "Choice Band",
+     "moves": [
+      "uturn",
+      "outrage",
+      "gravapple",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 244,
+      "def": 191,
+      "spa": 217,
+      "spd": 156,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Eelektross",
+     "level": 87,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Assault Vest",
+     "moves": [
+      "discharge",
+      "closecombat",
+      "uturn",
+      "gigadrain"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 250,
+      "def": 189,
+      "spa": 232,
+      "spd": 189,
+      "spe": 137
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Phione",
+    "details": "Phione, L91",
+    "condition": "293/293",
+    "active": true,
+    "stats": {
+     "atk": 150,
+     "def": 197,
+     "spa": 197,
+     "spd": 197,
+     "spe": 197
+    },
+    "moves": [
+     "grassknot",
+     "scald",
+     "takeheart",
+     "icebeam"
+    ],
+    "baseAbility": "hydration",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "hydration",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Muk",
+    "details": "Muk, L86, M",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 178,
+     "spa": 161,
+     "spd": 221,
+     "spe": 135
+    },
+    "moves": [
+     "gunkshot",
+     "toxicspikes",
+     "knockoff",
+     "haze"
+    ],
+    "baseAbility": "poisontouch",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "poisontouch",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Koraidon",
+    "details": "Koraidon, L64",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 185,
+     "spa": 147,
+     "spd": 166,
+     "spe": 211
+    },
+    "moves": [
+     "closecombat",
+     "uturn",
+     "outrage",
+     "flareblitz"
+    ],
+    "baseAbility": "orichalcumpulse",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "orichalcumpulse",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Raging Bolt",
+    "details": "Raging Bolt, L78",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 118,
+     "def": 187,
+     "spa": 259,
+     "spd": 184,
+     "spe": 162
+    },
+    "moves": [
+     "dragonpulse",
+     "calmmind",
+     "thunderclap",
+     "thunderbolt"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grimmsnarl",
+    "details": "Grimmsnarl, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 156,
+     "spa": 205,
+     "spd": 172,
+     "spe": 147
+    },
+    "moves": [
+     "lightscreen",
+     "spiritbreak",
+     "reflect",
+     "partingshot"
+    ],
+    "baseAbility": "prankster",
+    "item": "lightclay",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Iron Leaves",
+    "details": "Iron Leaves, L80",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 254,
+     "def": 187,
+     "spa": 158,
+     "spd": 219,
+     "spe": 213
+    },
+    "moves": [
+     "leafblade",
+     "megahorn",
+     "closecombat",
+     "psyblade"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Golduck",
+    "details": "Golduck, L90, F",
+    "condition": "290/290",
+    "active": true,
+    "stats": {
+     "atk": 152,
+     "def": 192,
+     "spa": 222,
+     "spd": 195,
+     "spe": 204
+    },
+    "moves": [
+     "nastyplot",
+     "hydropump",
+     "icebeam",
+     "grassknot"
+    ],
+    "baseAbility": "cloudnine",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "cloudnine",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Glimmora",
+    "details": "Glimmora, L75, F",
+    "condition": "248/248",
+    "active": false,
+    "stats": {
+     "atk": 87,
+     "def": 179,
+     "spa": 239,
+     "spd": 165,
+     "spe": 173
+    },
+    "moves": [
+     "energyball",
+     "sludgewave",
+     "earthpower",
+     "meteorbeam"
+    ],
+    "baseAbility": "toxicdebris",
+    "item": "powerherb",
+    "pokeball": "pokeball",
+    "ability": "toxicdebris",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Komala",
+    "details": "Komala, L87, M",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 250,
+     "def": 163,
+     "spa": 180,
+     "spd": 215,
+     "spe": 163
+    },
+    "moves": [
+     "rapidspin",
+     "uturn",
+     "bodyslam",
+     "knockoff"
+    ],
+    "baseAbility": "comatose",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "comatose",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Skuntank",
+    "details": "Skuntank, L84, M",
+    "condition": "310/310",
+    "active": false,
+    "stats": {
+     "atk": 204,
+     "def": 161,
+     "spa": 167,
+     "spd": 151,
+     "spe": 189
+    },
+    "moves": [
+     "suckerpunch",
+     "knockoff",
+     "gunkshot",
+     "fireblast"
+    ],
+    "baseAbility": "aftermath",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "aftermath",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Flapple",
+    "details": "Flapple, L88, F",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 244,
+     "def": 191,
+     "spa": 217,
+     "spd": 156,
+     "spe": 173
+    },
+    "moves": [
+     "uturn",
+     "outrage",
+     "gravapple",
+     "suckerpunch"
+    ],
+    "baseAbility": "hustle",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "hustle",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Eelektross",
+    "details": "Eelektross, L87, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 250,
+     "def": 189,
+     "spa": 232,
+     "spd": 189,
+     "spe": 137
+    },
+    "moves": [
+     "discharge",
+     "closecombat",
+     "uturn",
+     "gigadrain"
+    ],
+    "baseAbility": "levitate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

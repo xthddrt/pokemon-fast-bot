@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 961343,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth961343",
+  "seed": "sodium,a61d9955000eab3f",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,a6143838000eab3f",
+  "p2_ai_seed": "sodium,a6144c49000eab3f",
+  "p1_team_seed": "sodium,a614595a000eab3f",
+  "p2_team_seed": "sodium,a6146a6b000eab3f",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 54,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T22:18:33.036Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Zebstrika",
+     "level": 87,
+     "gender": "F",
+     "ability": "Sap Sipper",
+     "item": "Life Orb",
+     "moves": [
+      "highhorsepower",
+      "supercellslam",
+      "voltswitch",
+      "overheat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 224,
+      "def": 159,
+      "spa": 189,
+      "spd": 159,
+      "spe": 252
+     }
+    },
+    {
+     "species": "Rotom",
+     "level": 88,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Life Orb",
+     "moves": [
+      "nastyplot",
+      "willowisp",
+      "thunderbolt",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 93,
+      "def": 186,
+      "spa": 217,
+      "spd": 186,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Kleavor",
+     "level": 78,
+     "gender": "M",
+     "ability": "Sharpness",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "stoneaxe",
+      "uturn",
+      "xscissor",
+      "defog"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Bug",
+     "shiny": false,
+     "stats": {
+      "hp": 237,
+      "atk": 256,
+      "def": 193,
+      "spa": 115,
+      "spd": 154,
+      "spe": 178
+     }
+    },
+    {
+     "species": "Gurdurr",
+     "level": 85,
+     "gender": "F",
+     "ability": "Guts",
+     "item": "Eviolite",
+     "moves": [
+      "drainpunch",
+      "machpunch",
+      "knockoff",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 227,
+      "def": 193,
+      "spa": 117,
+      "spd": 134,
+      "spe": 117
+     }
+    },
+    {
+     "species": "Tauros-Paldea-Blaze",
+     "level": 81,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Choice Band",
+     "moves": [
+      "stoneedge",
+      "wildcharge",
+      "flareblitz",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 225,
+      "def": 217,
+      "spa": 95,
+      "spd": 160,
+      "spe": 209
+     }
+    },
+    {
+     "species": "Dusknoir",
+     "level": 89,
+     "gender": "M",
+     "ability": "Frisk",
+     "item": "Leftovers",
+     "moves": [
+      "poltergeist",
+      "focuspunch",
+      "painsplit",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 229,
+      "def": 291,
+      "spa": 166,
+      "spd": 291,
+      "spe": 131
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Stonjourner",
+     "level": 91,
+     "gender": "M",
+     "ability": "Power Spot",
+     "item": "Life Orb",
+     "moves": [
+      "stoneedge",
+      "stealthrock",
+      "heatcrash",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 330,
+      "atk": 279,
+      "def": 298,
+      "spa": 88,
+      "spd": 88,
+      "spe": 179
+     }
+    },
+    {
+     "species": "Volcanion",
+     "level": 79,
+     "gender": "N",
+     "ability": "Water Absorb",
+     "item": "Assault Vest",
+     "moves": [
+      "earthpower",
+      "steameruption",
+      "flamecharge",
+      "flamethrower"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 219,
+      "def": 235,
+      "spa": 251,
+      "spd": 188,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Misdreavus",
+     "level": 90,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Eviolite",
+     "moves": [
+      "willowisp",
+      "drainingkiss",
+      "calmmind",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 113,
+      "def": 159,
+      "spa": 204,
+      "spd": 204,
+      "spe": 204
+     }
+    },
+    {
+     "species": "Whiscash",
+     "level": 88,
+     "gender": "M",
+     "ability": "Oblivious",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "hydropump",
+      "icebeam",
+      "spikes"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 337,
+      "atk": 188,
+      "def": 179,
+      "spa": 184,
+      "spd": 175,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Gliscor",
+     "level": 76,
+     "gender": "M",
+     "ability": "Poison Heal",
+     "item": "Toxic Orb",
+     "moves": [
+      "substitute",
+      "toxic",
+      "earthquake",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 239,
+      "atk": 188,
+      "def": 234,
+      "spa": 112,
+      "spd": 158,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Venomoth",
+     "level": 84,
+     "gender": "F",
+     "ability": "Tinted Lens",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sleeppowder",
+      "quiverdance",
+      "sludgewave",
+      "bugbuzz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Bug",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 114,
+      "def": 149,
+      "spa": 199,
+      "spd": 174,
+      "spe": 199
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Zebstrika",
+    "details": "Zebstrika, L87, F",
+    "condition": "272/272",
+    "active": true,
+    "stats": {
+     "atk": 224,
+     "def": 159,
+     "spa": 189,
+     "spd": 159,
+     "spe": 252
+    },
+    "moves": [
+     "highhorsepower",
+     "supercellslam",
+     "voltswitch",
+     "overheat"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Rotom",
+    "details": "Rotom, L88",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 186,
+     "spa": 217,
+     "spd": 186,
+     "spe": 210
+    },
+    "moves": [
+     "nastyplot",
+     "willowisp",
+     "thunderbolt",
+     "shadowball"
+    ],
+    "baseAbility": "levitate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Kleavor",
+    "details": "Kleavor, L78, M",
+    "condition": "237/237",
+    "active": false,
+    "stats": {
+     "atk": 256,
+     "def": 193,
+     "spa": 115,
+     "spd": 154,
+     "spe": 178
+    },
+    "moves": [
+     "stoneaxe",
+     "uturn",
+     "xscissor",
+     "defog"
+    ],
+    "baseAbility": "sharpness",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "sharpness",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Bug",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gurdurr",
+    "details": "Gurdurr, L85, F",
+    "condition": "283/283",
+    "active": false,
+    "stats": {
+     "atk": 227,
+     "def": 193,
+     "spa": 117,
+     "spd": 134,
+     "spe": 117
+    },
+    "moves": [
+     "drainpunch",
+     "machpunch",
+     "knockoff",
+     "bulkup"
+    ],
+    "baseAbility": "guts",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tauros",
+    "details": "Tauros-Paldea-Blaze, L81, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 225,
+     "def": 217,
+     "spa": 95,
+     "spd": 160,
+     "spe": 209
+    },
+    "moves": [
+     "stoneedge",
+     "wildcharge",
+     "flareblitz",
+     "closecombat"
+    ],
+    "baseAbility": "intimidate",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dusknoir",
+    "details": "Dusknoir, L89, M",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 291,
+     "spa": 166,
+     "spd": 291,
+     "spe": 131
+    },
+    "moves": [
+     "poltergeist",
+     "focuspunch",
+     "painsplit",
+     "substitute"
+    ],
+    "baseAbility": "frisk",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "frisk",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Stonjourner",
+    "details": "Stonjourner, L91, M",
+    "condition": "330/330",
+    "active": true,
+    "stats": {
+     "atk": 279,
+     "def": 298,
+     "spa": 88,
+     "spd": 88,
+     "spe": 179
+    },
+    "moves": [
+     "stoneedge",
+     "stealthrock",
+     "heatcrash",
+     "earthquake"
+    ],
+    "baseAbility": "powerspot",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "powerspot",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Volcanion",
+    "details": "Volcanion, L79",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 219,
+     "def": 235,
+     "spa": 251,
+     "spd": 188,
+     "spe": 156
+    },
+    "moves": [
+     "earthpower",
+     "steameruption",
+     "flamecharge",
+     "flamethrower"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Misdreavus",
+    "details": "Misdreavus, L90, F",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 113,
+     "def": 159,
+     "spa": 204,
+     "spd": 204,
+     "spe": 204
+    },
+    "moves": [
+     "willowisp",
+     "drainingkiss",
+     "calmmind",
+     "shadowball"
+    ],
+    "baseAbility": "levitate",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Whiscash",
+    "details": "Whiscash, L88, M",
+    "condition": "337/337",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 179,
+     "spa": 184,
+     "spd": 175,
+     "spe": 156
+    },
+    "moves": [
+     "earthquake",
+     "hydropump",
+     "icebeam",
+     "spikes"
+    ],
+    "baseAbility": "oblivious",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "oblivious",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Gliscor",
+    "details": "Gliscor, L76, M",
+    "condition": "239/239",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 234,
+     "spa": 112,
+     "spd": 158,
+     "spe": 188
+    },
+    "moves": [
+     "substitute",
+     "toxic",
+     "earthquake",
+     "protect"
+    ],
+    "baseAbility": "poisonheal",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "poisonheal",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Venomoth",
+    "details": "Venomoth, L84, F",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 199,
+     "spd": 174,
+     "spe": 199
+    },
+    "moves": [
+     "sleeppowder",
+     "quiverdance",
+     "sludgewave",
+     "bugbuzz"
+    ],
+    "baseAbility": "tintedlens",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "tintedlens",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Bug",
+    "terastallized": ""
+   }
+  ]
+ }
+}

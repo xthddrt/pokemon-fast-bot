@@ -1,0 +1,834 @@
+{
+ "meta": {
+  "game": 765613,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth765613",
+  "seed": "sodium,db3611d3000baead",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,db2cb0b6000baead",
+  "p2_ai_seed": "sodium,db2cc4c7000baead",
+  "p1_team_seed": "sodium,db2cd1d8000baead",
+  "p2_team_seed": "sodium,db2ce2e9000baead",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 39,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:04:00.855Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Enamorus",
+     "level": 79,
+     "gender": "F",
+     "ability": "Cute Charm",
+     "item": "Leftovers",
+     "moves": [
+      "moonblast",
+      "earthpower",
+      "substitute",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 186,
+      "def": 156,
+      "spa": 259,
+      "spd": 172,
+      "spe": 213
+     }
+    },
+    {
+     "species": "Virizion",
+     "level": 82,
+     "gender": "N",
+     "ability": "Justified",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "leafblade",
+      "stoneedge",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 195,
+      "def": 165,
+      "spa": 195,
+      "spd": 259,
+      "spe": 224
+     }
+    },
+    {
+     "species": "Politoed",
+     "level": 88,
+     "gender": "F",
+     "ability": "Drizzle",
+     "item": "Chesto Berry",
+     "moves": [
+      "icebeam",
+      "rest",
+      "encore",
+      "surf"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 137,
+      "def": 182,
+      "spa": 209,
+      "spd": 226,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Registeel",
+     "level": 81,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Chesto Berry",
+     "moves": [
+      "irondefense",
+      "ironhead",
+      "bodypress",
+      "rest"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 168,
+      "def": 290,
+      "spa": 168,
+      "spd": 290,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Oricorio-Pom-Pom",
+     "level": 82,
+     "gender": "F",
+     "ability": "Dancer",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "quiverdance",
+      "roost",
+      "revelationdance",
+      "hurricane"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 119,
+      "def": 162,
+      "spa": 208,
+      "spd": 162,
+      "spe": 200
+     }
+    },
+    {
+     "species": "Sudowoodo",
+     "level": 94,
+     "gender": "M",
+     "ability": "Rock Head",
+     "item": "Leftovers",
+     "moves": [
+      "woodhammer",
+      "headsmash",
+      "stealthrock",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 241,
+      "def": 270,
+      "spa": 110,
+      "spd": 176,
+      "spe": 110
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Heatran",
+     "level": 79,
+     "gender": "F",
+     "ability": "Flash Fire",
+     "item": "Air Balloon",
+     "moves": [
+      "magmastorm",
+      "stealthrock",
+      "earthpower",
+      "heavyslam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 273,
+      "atk": 188,
+      "def": 213,
+      "spa": 251,
+      "spd": 213,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Noivern",
+     "level": 82,
+     "gender": "M",
+     "ability": "Infiltrator",
+     "item": "Choice Specs",
+     "moves": [
+      "uturn",
+      "hurricane",
+      "dracometeor",
+      "boomburst"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 162,
+      "def": 178,
+      "spa": 206,
+      "spd": 178,
+      "spe": 249
+     }
+    },
+    {
+     "species": "Oranguru",
+     "level": 92,
+     "gender": "M",
+     "ability": "Inner Focus",
+     "item": "Choice Specs",
+     "moves": [
+      "psyshock",
+      "hypervoice",
+      "trick",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 115,
+      "def": 200,
+      "spa": 218,
+      "spd": 255,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Ditto",
+     "level": 87,
+     "gender": "N",
+     "ability": "Imposter",
+     "item": "Choice Scarf",
+     "moves": [
+      "transform"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 133,
+      "def": 133,
+      "spa": 133,
+      "spd": 133,
+      "spe": 133
+     }
+    },
+    {
+     "species": "Tornadus-Therian",
+     "level": 79,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Choice Specs",
+     "moves": [
+      "bleakwindstorm",
+      "uturn",
+      "heatwave",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 204,
+      "def": 172,
+      "spa": 219,
+      "spd": 188,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Meowstic-F",
+     "level": 89,
+     "gender": "F",
+     "ability": "Competitive",
+     "item": "Life Orb",
+     "moves": [
+      "darkpulse",
+      "thunderbolt",
+      "nastyplot",
+      "psychic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 90,
+      "def": 186,
+      "spa": 199,
+      "spd": 195,
+      "spe": 236
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Enamorus",
+    "details": "Enamorus, L79, F",
+    "condition": "247/247",
+    "active": true,
+    "stats": {
+     "atk": 186,
+     "def": 156,
+     "spa": 259,
+     "spd": 172,
+     "spe": 213
+    },
+    "moves": [
+     "moonblast",
+     "earthpower",
+     "substitute",
+     "calmmind"
+    ],
+    "baseAbility": "cutecharm",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "cutecharm",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Virizion",
+    "details": "Virizion, L82",
+    "condition": "283/283",
+    "active": false,
+    "stats": {
+     "atk": 195,
+     "def": 165,
+     "spa": 195,
+     "spd": 259,
+     "spe": 224
+    },
+    "moves": [
+     "closecombat",
+     "leafblade",
+     "stoneedge",
+     "swordsdance"
+    ],
+    "baseAbility": "justified",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "justified",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Politoed",
+    "details": "Politoed, L88, F",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 137,
+     "def": 182,
+     "spa": 209,
+     "spd": 226,
+     "spe": 173
+    },
+    "moves": [
+     "icebeam",
+     "rest",
+     "encore",
+     "surf"
+    ],
+    "baseAbility": "drizzle",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "drizzle",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Registeel",
+    "details": "Registeel, L81",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 168,
+     "def": 290,
+     "spa": 168,
+     "spd": 290,
+     "spe": 128
+    },
+    "moves": [
+     "irondefense",
+     "ironhead",
+     "bodypress",
+     "rest"
+    ],
+    "baseAbility": "clearbody",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Oricorio",
+    "details": "Oricorio-Pom-Pom, L82, F",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 119,
+     "def": 162,
+     "spa": 208,
+     "spd": 162,
+     "spe": 200
+    },
+    "moves": [
+     "quiverdance",
+     "roost",
+     "revelationdance",
+     "hurricane"
+    ],
+    "baseAbility": "dancer",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "dancer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sudowoodo",
+    "details": "Sudowoodo, L94, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 241,
+     "def": 270,
+     "spa": 110,
+     "spd": 176,
+     "spe": 110
+    },
+    "moves": [
+     "woodhammer",
+     "headsmash",
+     "stealthrock",
+     "suckerpunch"
+    ],
+    "baseAbility": "rockhead",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "rockhead",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Heatran",
+    "details": "Heatran, L79, F",
+    "condition": "273/273",
+    "active": true,
+    "stats": {
+     "atk": 188,
+     "def": 213,
+     "spa": 251,
+     "spd": 213,
+     "spe": 167
+    },
+    "moves": [
+     "magmastorm",
+     "stealthrock",
+     "earthpower",
+     "heavyslam"
+    ],
+    "baseAbility": "flashfire",
+    "item": "airballoon",
+    "pokeball": "pokeball",
+    "ability": "flashfire",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Noivern",
+    "details": "Noivern, L82, M",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 162,
+     "def": 178,
+     "spa": 206,
+     "spd": 178,
+     "spe": 249
+    },
+    "moves": [
+     "uturn",
+     "hurricane",
+     "dracometeor",
+     "boomburst"
+    ],
+    "baseAbility": "infiltrator",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "infiltrator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Oranguru",
+    "details": "Oranguru, L92, M",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 200,
+     "spa": 218,
+     "spd": 255,
+     "spe": 163
+    },
+    "moves": [
+     "psyshock",
+     "hypervoice",
+     "trick",
+     "focusblast"
+    ],
+    "baseAbility": "innerfocus",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "innerfocus",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ditto",
+    "details": "Ditto, L87",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 133,
+     "def": 133,
+     "spa": 133,
+     "spd": 133,
+     "spe": 133
+    },
+    "moves": [
+     "transform"
+    ],
+    "baseAbility": "imposter",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "imposter",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tornadus",
+    "details": "Tornadus-Therian, L79, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 204,
+     "def": 172,
+     "spa": 219,
+     "spd": 188,
+     "spe": 237
+    },
+    "moves": [
+     "bleakwindstorm",
+     "uturn",
+     "heatwave",
+     "focusblast"
+    ],
+    "baseAbility": "regenerator",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Meowstic",
+    "details": "Meowstic-F, L89, F",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 90,
+     "def": 186,
+     "spa": 199,
+     "spd": 195,
+     "spe": 236
+    },
+    "moves": [
+     "darkpulse",
+     "thunderbolt",
+     "nastyplot",
+     "psychic"
+    ],
+    "baseAbility": "competitive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ }
+}

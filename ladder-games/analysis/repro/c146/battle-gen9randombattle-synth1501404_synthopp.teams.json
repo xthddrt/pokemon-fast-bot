@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1501404,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1501404",
+  "seed": "sodium,b3ec54ca0016e8dc",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,b3e2f3ad0016e8dc",
+  "p2_ai_seed": "sodium,b3e307be0016e8dc",
+  "p1_team_seed": "sodium,b3e314cf0016e8dc",
+  "p2_team_seed": "sodium,b3e325e00016e8dc",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 27,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:12:58.804Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Pikachu-Partner",
+     "level": 93,
+     "gender": "M",
+     "ability": "Lightning Rod",
+     "item": "Light Ball",
+     "moves": [
+      "voltswitch",
+      "surf",
+      "volttackle",
+      "fakeout"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 155,
+      "def": 127,
+      "spa": 146,
+      "spd": 146,
+      "spe": 220
+     }
+    },
+    {
+     "species": "Qwilfish-Hisui",
+     "level": 83,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Eviolite",
+     "moves": [
+      "spikes",
+      "toxicspikes",
+      "gunkshot",
+      "crunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 205,
+      "def": 189,
+      "spa": 139,
+      "spd": 139,
+      "spe": 189
+     }
+    },
+    {
+     "species": "Cacturne",
+     "level": 92,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Life Orb",
+     "moves": [
+      "suckerpunch",
+      "seedbomb",
+      "knockoff",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 264,
+      "def": 163,
+      "spa": 264,
+      "spd": 163,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Grumpig",
+     "level": 92,
+     "gender": "F",
+     "ability": "Thick Fat",
+     "item": "Choice Scarf",
+     "moves": [
+      "earthpower",
+      "psychic",
+      "trick",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 87,
+      "def": 172,
+      "spa": 218,
+      "spd": 255,
+      "spe": 200
+     }
+    },
+    {
+     "species": "Weezing-Galar",
+     "level": 86,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Leftovers",
+     "moves": [
+      "defog",
+      "willowisp",
+      "gunkshot",
+      "strangesteam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 252,
+      "atk": 204,
+      "def": 256,
+      "spa": 195,
+      "spd": 170,
+      "spe": 152
+     }
+    },
+    {
+     "species": "Dachsbun",
+     "level": 92,
+     "gender": "M",
+     "ability": "Well-Baked Body",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "protect",
+      "bodypress",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 200,
+      "def": 264,
+      "spa": 144,
+      "spd": 200,
+      "spe": 227
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Eternatus",
+     "level": 69,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Power Herb",
+     "moves": [
+      "sludgebomb",
+      "dynamaxcannon",
+      "fireblast",
+      "meteorbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 308,
+      "atk": 122,
+      "def": 171,
+      "spa": 240,
+      "spd": 171,
+      "spe": 220
+     }
+    },
+    {
+     "species": "Samurott-Hisui",
+     "level": 77,
+     "gender": "F",
+     "ability": "Sharpness",
+     "item": "Choice Band",
+     "moves": [
+      "ceaselessedge",
+      "suckerpunch",
+      "razorshell",
+      "flipturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 211,
+      "def": 168,
+      "spa": 199,
+      "spd": 145,
+      "spe": 175
+     }
+    },
+    {
+     "species": "Swampert",
+     "level": 83,
+     "gender": "M",
+     "ability": "Damp",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "yawn",
+      "earthquake",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 230,
+      "def": 197,
+      "spa": 189,
+      "spd": 197,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Flygon",
+     "level": 82,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Lum Berry",
+     "moves": [
+      "stoneedge",
+      "dragondance",
+      "earthquake",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 211,
+      "def": 178,
+      "spa": 178,
+      "spd": 178,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Regieleki",
+     "level": 79,
+     "gender": "N",
+     "ability": "Transistor",
+     "item": "Magnet",
+     "moves": [
+      "voltswitch",
+      "thunderbolt",
+      "terablast",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 204,
+      "def": 125,
+      "spa": 204,
+      "spd": 125,
+      "spe": 362
+     }
+    },
+    {
+     "species": "Polteageist",
+     "level": 78,
+     "gender": "N",
+     "ability": "Cursed Body",
+     "item": "White Herb",
+     "moves": [
+      "strengthsap",
+      "shadowball",
+      "storedpower",
+      "shellsmash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 222,
+      "atk": 106,
+      "def": 146,
+      "spa": 254,
+      "spd": 223,
+      "spe": 154
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Pikachu",
+    "details": "Pikachu-Partner, L93, M",
+    "condition": "216/216",
+    "active": true,
+    "stats": {
+     "atk": 155,
+     "def": 127,
+     "spa": 146,
+     "spd": 146,
+     "spe": 220
+    },
+    "moves": [
+     "voltswitch",
+     "surf",
+     "volttackle",
+     "fakeout"
+    ],
+    "baseAbility": "lightningrod",
+    "item": "lightball",
+    "pokeball": "pokeball",
+    "ability": "lightningrod",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Qwilfish",
+    "details": "Qwilfish-Hisui, L83, F",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 205,
+     "def": 189,
+     "spa": 139,
+     "spd": 139,
+     "spe": 189
+    },
+    "moves": [
+     "spikes",
+     "toxicspikes",
+     "gunkshot",
+     "crunch"
+    ],
+    "baseAbility": "intimidate",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cacturne",
+    "details": "Cacturne, L92, F",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 264,
+     "def": 163,
+     "spa": 264,
+     "spd": 163,
+     "spe": 154
+    },
+    "moves": [
+     "suckerpunch",
+     "seedbomb",
+     "knockoff",
+     "swordsdance"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grumpig",
+    "details": "Grumpig, L92, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 87,
+     "def": 172,
+     "spa": 218,
+     "spd": 255,
+     "spe": 200
+    },
+    "moves": [
+     "earthpower",
+     "psychic",
+     "trick",
+     "focusblast"
+    ],
+    "baseAbility": "thickfat",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Weezing",
+    "details": "Weezing-Galar, L86, F",
+    "condition": "252/252",
+    "active": false,
+    "stats": {
+     "atk": 204,
+     "def": 256,
+     "spa": 195,
+     "spd": 170,
+     "spe": 152
+    },
+    "moves": [
+     "defog",
+     "willowisp",
+     "gunkshot",
+     "strangesteam"
+    ],
+    "baseAbility": "levitate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dachsbun",
+    "details": "Dachsbun, L92, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 200,
+     "def": 264,
+     "spa": 144,
+     "spd": 200,
+     "spe": 227
+    },
+    "moves": [
+     "wish",
+     "protect",
+     "bodypress",
+     "playrough"
+    ],
+    "baseAbility": "wellbakedbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "wellbakedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Eternatus",
+    "details": "Eternatus, L69",
+    "condition": "308/308",
+    "active": true,
+    "stats": {
+     "atk": 122,
+     "def": 171,
+     "spa": 240,
+     "spd": 171,
+     "spe": 220
+    },
+    "moves": [
+     "sludgebomb",
+     "dynamaxcannon",
+     "fireblast",
+     "meteorbeam"
+    ],
+    "baseAbility": "pressure",
+    "item": "powerherb",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Samurott",
+    "details": "Samurott-Hisui, L77, F",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 168,
+     "spa": 199,
+     "spd": 145,
+     "spe": 175
+    },
+    "moves": [
+     "ceaselessedge",
+     "suckerpunch",
+     "razorshell",
+     "flipturn"
+    ],
+    "baseAbility": "sharpness",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "sharpness",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Swampert",
+    "details": "Swampert, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 197,
+     "spa": 189,
+     "spd": 197,
+     "spe": 147
+    },
+    "moves": [
+     "knockoff",
+     "yawn",
+     "earthquake",
+     "stealthrock"
+    ],
+    "baseAbility": "damp",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "damp",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Flygon",
+    "details": "Flygon, L82, M",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 178,
+     "spa": 178,
+     "spd": 178,
+     "spe": 211
+    },
+    "moves": [
+     "stoneedge",
+     "dragondance",
+     "earthquake",
+     "outrage"
+    ],
+    "baseAbility": "levitate",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Regieleki",
+    "details": "Regieleki, L79",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 204,
+     "def": 125,
+     "spa": 204,
+     "spd": 125,
+     "spe": 362
+    },
+    "moves": [
+     "voltswitch",
+     "thunderbolt",
+     "terablast",
+     "rapidspin"
+    ],
+    "baseAbility": "transistor",
+    "item": "magnet",
+    "pokeball": "pokeball",
+    "ability": "transistor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Polteageist",
+    "details": "Polteageist, L78",
+    "condition": "222/222",
+    "active": false,
+    "stats": {
+     "atk": 106,
+     "def": 146,
+     "spa": 254,
+     "spd": 223,
+     "spe": 154
+    },
+    "moves": [
+     "strengthsap",
+     "shadowball",
+     "storedpower",
+     "shellsmash"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   }
+  ]
+ }
+}

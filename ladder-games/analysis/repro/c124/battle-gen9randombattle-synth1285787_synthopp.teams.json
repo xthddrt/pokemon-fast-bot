@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1285787,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1285787",
+  "seed": "sodium,117bf2d100139e9b",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,117291b400139e9b",
+  "p2_ai_seed": "sodium,1172a5c500139e9b",
+  "p1_team_seed": "sodium,1172b2d600139e9b",
+  "p2_team_seed": "sodium,1172c3e700139e9b",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 56,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T03:15:27.784Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Beartic",
+     "level": 91,
+     "gender": "M",
+     "ability": "Slush Rush",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "earthquake",
+      "snowscape",
+      "iciclecrash",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 288,
+      "def": 197,
+      "spa": 179,
+      "spd": 197,
+      "spe": 143
+     }
+    },
+    {
+     "species": "Rhyperior",
+     "level": 82,
+     "gender": "F",
+     "ability": "Solid Rock",
+     "item": "Weakness Policy",
+     "moves": [
+      "stoneedge",
+      "rockpolish",
+      "earthquake",
+      "icepunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 277,
+      "def": 260,
+      "spa": 137,
+      "spd": 137,
+      "spe": 113
+     }
+    },
+    {
+     "species": "Frosmoth",
+     "level": 82,
+     "gender": "F",
+     "ability": "Ice Scales",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "quiverdance",
+      "gigadrain",
+      "icebeam",
+      "hurricane"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 111,
+      "def": 146,
+      "spa": 252,
+      "spd": 195,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Polteageist-Antique",
+     "level": 78,
+     "gender": "N",
+     "ability": "Cursed Body",
+     "item": "White Herb",
+     "moves": [
+      "strengthsap",
+      "shellsmash",
+      "storedpower",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 222,
+      "atk": 106,
+      "def": 146,
+      "spa": 254,
+      "spd": 223,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Tropius",
+     "level": 91,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "airslash",
+      "leechseed",
+      "protect",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 328,
+      "atk": 128,
+      "def": 203,
+      "spa": 183,
+      "spd": 210,
+      "spe": 145
+     }
+    },
+    {
+     "species": "Luxray",
+     "level": 88,
+     "gender": "F",
+     "ability": "Guts",
+     "item": "Flame Orb",
+     "moves": [
+      "trailblaze",
+      "supercellslam",
+      "throatchop",
+      "facade"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 261,
+      "def": 189,
+      "spa": 217,
+      "spd": 189,
+      "spe": 173
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Arceus-Grass",
+     "level": 73,
+     "gender": "N",
+     "ability": "Multitype",
+     "item": "Meadow Plate",
+     "moves": [
+      "calmmind",
+      "earthpower",
+      "icebeam",
+      "judgment"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 296,
+      "atk": 180,
+      "def": 218,
+      "spa": 218,
+      "spd": 218,
+      "spe": 218
+     }
+    },
+    {
+     "species": "Hariyama",
+     "level": 87,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Assault Vest",
+     "moves": [
+      "knockoff",
+      "heavyslam",
+      "bulletpunch",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 392,
+      "atk": 259,
+      "def": 154,
+      "spa": 119,
+      "spd": 154,
+      "spe": 137
+     }
+    },
+    {
+     "species": "Sandaconda",
+     "level": 84,
+     "gender": "F",
+     "ability": "Shed Skin",
+     "item": "Loaded Dice",
+     "moves": [
+      "earthquake",
+      "coil",
+      "scaleshot",
+      "rockblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 228,
+      "def": 258,
+      "spa": 157,
+      "spd": 166,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Palkia-Origin",
+     "level": 72,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Lustrous Globe",
+     "moves": [
+      "hydropump",
+      "fireblast",
+      "spacialrend",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 149,
+      "def": 186,
+      "spa": 258,
+      "spd": 215,
+      "spe": 215
+     }
+    },
+    {
+     "species": "Shiftry",
+     "level": 89,
+     "gender": "F",
+     "ability": "Wind Rider",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "knockoff",
+      "suckerpunch",
+      "leafblade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 305,
+      "atk": 229,
+      "def": 158,
+      "spa": 211,
+      "spd": 158,
+      "spe": 193
+     }
+    },
+    {
+     "species": "Scizor",
+     "level": 79,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Leftovers",
+     "moves": [
+      "bulletpunch",
+      "knockoff",
+      "uturn",
+      "defog"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 240,
+      "atk": 251,
+      "def": 204,
+      "spa": 132,
+      "spd": 172,
+      "spe": 148
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Beartic",
+    "details": "Beartic, L91, M",
+    "condition": "321/321",
+    "active": true,
+    "stats": {
+     "atk": 288,
+     "def": 197,
+     "spa": 179,
+     "spd": 197,
+     "spe": 143
+    },
+    "moves": [
+     "earthquake",
+     "snowscape",
+     "iciclecrash",
+     "swordsdance"
+    ],
+    "baseAbility": "slushrush",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "slushrush",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Rhyperior",
+    "details": "Rhyperior, L82, F",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 277,
+     "def": 260,
+     "spa": 137,
+     "spd": 137,
+     "spe": 113
+    },
+    "moves": [
+     "stoneedge",
+     "rockpolish",
+     "earthquake",
+     "icepunch"
+    ],
+    "baseAbility": "solidrock",
+    "item": "weaknesspolicy",
+    "pokeball": "pokeball",
+    "ability": "solidrock",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Frosmoth",
+    "details": "Frosmoth, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 111,
+     "def": 146,
+     "spa": 252,
+     "spd": 195,
+     "spe": 154
+    },
+    "moves": [
+     "quiverdance",
+     "gigadrain",
+     "icebeam",
+     "hurricane"
+    ],
+    "baseAbility": "icescales",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "icescales",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Polteageist",
+    "details": "Polteageist-Antique, L78",
+    "condition": "222/222",
+    "active": false,
+    "stats": {
+     "atk": 106,
+     "def": 146,
+     "spa": 254,
+     "spd": 223,
+     "spe": 154
+    },
+    "moves": [
+     "strengthsap",
+     "shellsmash",
+     "storedpower",
+     "shadowball"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tropius",
+    "details": "Tropius, L91, M",
+    "condition": "328/328",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 203,
+     "spa": 183,
+     "spd": 210,
+     "spe": 145
+    },
+    "moves": [
+     "airslash",
+     "leechseed",
+     "protect",
+     "substitute"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Luxray",
+    "details": "Luxray, L88, F",
+    "condition": "283/283",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 189,
+     "spa": 217,
+     "spd": 189,
+     "spe": 173
+    },
+    "moves": [
+     "trailblaze",
+     "supercellslam",
+     "throatchop",
+     "facade"
+    ],
+    "baseAbility": "guts",
+    "item": "flameorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Arceus",
+    "details": "Arceus-Grass, L73",
+    "condition": "296/296",
+    "active": true,
+    "stats": {
+     "atk": 180,
+     "def": 218,
+     "spa": 218,
+     "spd": 218,
+     "spe": 218
+    },
+    "moves": [
+     "calmmind",
+     "earthpower",
+     "icebeam",
+     "judgment"
+    ],
+    "baseAbility": "multitype",
+    "item": "meadowplate",
+    "pokeball": "pokeball",
+    "ability": "multitype",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hariyama",
+    "details": "Hariyama, L87, M",
+    "condition": "392/392",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 154,
+     "spa": 119,
+     "spd": 154,
+     "spe": 137
+    },
+    "moves": [
+     "knockoff",
+     "heavyslam",
+     "bulletpunch",
+     "closecombat"
+    ],
+    "baseAbility": "thickfat",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sandaconda",
+    "details": "Sandaconda, L84, F",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 258,
+     "spa": 157,
+     "spd": 166,
+     "spe": 167
+    },
+    "moves": [
+     "earthquake",
+     "coil",
+     "scaleshot",
+     "rockblast"
+    ],
+    "baseAbility": "shedskin",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "shedskin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Palkia",
+    "details": "Palkia-Origin, L72",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 149,
+     "def": 186,
+     "spa": 258,
+     "spd": 215,
+     "spe": 215
+    },
+    "moves": [
+     "hydropump",
+     "fireblast",
+     "spacialrend",
+     "thunderwave"
+    ],
+    "baseAbility": "pressure",
+    "item": "lustrousglobe",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Shiftry",
+    "details": "Shiftry, L89, F",
+    "condition": "305/305",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 158,
+     "spa": 211,
+     "spd": 158,
+     "spe": 193
+    },
+    "moves": [
+     "swordsdance",
+     "knockoff",
+     "suckerpunch",
+     "leafblade"
+    ],
+    "baseAbility": "windrider",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "windrider",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Scizor",
+    "details": "Scizor, L79, M",
+    "condition": "240/240",
+    "active": false,
+    "stats": {
+     "atk": 251,
+     "def": 204,
+     "spa": 132,
+     "spd": 172,
+     "spe": 148
+    },
+    "moves": [
+     "bulletpunch",
+     "knockoff",
+     "uturn",
+     "defog"
+    ],
+    "baseAbility": "technician",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   }
+  ]
+ }
+}

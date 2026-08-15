@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 591248,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth591248",
+  "seed": "sodium,5c2026de00090590",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,5c16c5c100090590",
+  "p2_ai_seed": "sodium,5c16d9d200090590",
+  "p1_team_seed": "sodium,5c16e6e300090590",
+  "p2_team_seed": "sodium,5c16f7f400090590",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 24,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 1,
+  "timed_out": false,
+  "generated_at": "2026-08-03T21:31:48.401Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Tornadus-Therian",
+     "level": 79,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Assault Vest",
+     "moves": [
+      "heatwave",
+      "uturn",
+      "bleakwindstorm",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 204,
+      "def": 172,
+      "spa": 219,
+      "spd": 188,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Quagsire",
+     "level": 84,
+     "gender": "M",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "spikes",
+      "toxic",
+      "recover",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 191,
+      "def": 191,
+      "spa": 157,
+      "spd": 157,
+      "spe": 107
+     }
+    },
+    {
+     "species": "Comfey",
+     "level": 85,
+     "gender": "F",
+     "ability": "Triage",
+     "item": "Leftovers",
+     "moves": [
+      "storedpower",
+      "gigadrain",
+      "drainingkiss",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 93,
+      "def": 202,
+      "spa": 188,
+      "spd": 236,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Fezandipiti",
+     "level": 82,
+     "gender": "M",
+     "ability": "Toxic Chain",
+     "item": "Leftovers",
+     "moves": [
+      "beatup",
+      "moonblast",
+      "roost",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 196,
+      "def": 182,
+      "spa": 162,
+      "spd": 252,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Porygon-Z",
+     "level": 83,
+     "gender": "N",
+     "ability": "Adaptability",
+     "item": "Life Orb",
+     "moves": [
+      "terablast",
+      "nastyplot",
+      "shadowball",
+      "agility"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 137,
+      "def": 164,
+      "spa": 272,
+      "spd": 172,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Lilligant",
+     "level": 86,
+     "gender": "F",
+     "ability": "Own Tempo",
+     "item": "Life Orb",
+     "moves": [
+      "quiverdance",
+      "sleeppowder",
+      "alluringvoice",
+      "petaldance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 108,
+      "def": 178,
+      "spa": 238,
+      "spd": 178,
+      "spe": 204
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Rotom",
+     "level": 88,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Life Orb",
+     "moves": [
+      "willowisp",
+      "voltswitch",
+      "shadowball",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 93,
+      "def": 186,
+      "spa": 217,
+      "spd": 186,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Seviper",
+     "level": 93,
+     "gender": "M",
+     "ability": "Infiltrator",
+     "item": "Life Orb",
+     "moves": [
+      "flamethrower",
+      "earthquake",
+      "knockoff",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 239,
+      "def": 164,
+      "spa": 239,
+      "spd": 164,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Swampert",
+     "level": 83,
+     "gender": "M",
+     "ability": "Torrent",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "earthquake",
+      "flipturn",
+      "yawn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 230,
+      "def": 197,
+      "spa": 189,
+      "spd": 197,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Exeggutor-Alola",
+     "level": 89,
+     "gender": "F",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "stunspore",
+      "dracometeor",
+      "woodhammer",
+      "flamethrower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": true,
+     "stats": {
+      "hp": 314,
+      "atk": 238,
+      "def": 202,
+      "spa": 273,
+      "spd": 184,
+      "spe": 131
+     }
+    },
+    {
+     "species": "Magnezone",
+     "level": 85,
+     "gender": "N",
+     "ability": "Magnet Pull",
+     "item": "Choice Scarf",
+     "moves": [
+      "flashcannon",
+      "thunderbolt",
+      "bodypress",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 124,
+      "def": 244,
+      "spa": 270,
+      "spd": 202,
+      "spe": 151
+     }
+    },
+    {
+     "species": "Tauros",
+     "level": 82,
+     "gender": "M",
+     "ability": "Sheer Force",
+     "item": "Life Orb",
+     "moves": [
+      "throatchop",
+      "bodyslam",
+      "closecombat",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 211,
+      "def": 203,
+      "spa": 113,
+      "spd": 162,
+      "spe": 228
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Tornadus",
+    "details": "Tornadus-Therian, L79, M",
+    "condition": "254/254",
+    "active": true,
+    "stats": {
+     "atk": 204,
+     "def": 172,
+     "spa": 219,
+     "spd": 188,
+     "spe": 237
+    },
+    "moves": [
+     "heatwave",
+     "uturn",
+     "bleakwindstorm",
+     "knockoff"
+    ],
+    "baseAbility": "regenerator",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Quagsire",
+    "details": "Quagsire, L84, M",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 191,
+     "def": 191,
+     "spa": 157,
+     "spd": 157,
+     "spe": 107
+    },
+    "moves": [
+     "spikes",
+     "toxic",
+     "recover",
+     "earthquake"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Comfey",
+    "details": "Comfey, L85, F",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 202,
+     "spa": 188,
+     "spd": 236,
+     "spe": 219
+    },
+    "moves": [
+     "storedpower",
+     "gigadrain",
+     "drainingkiss",
+     "calmmind"
+    ],
+    "baseAbility": "triage",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "triage",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Fezandipiti",
+    "details": "Fezandipiti, L82, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 196,
+     "def": 182,
+     "spa": 162,
+     "spd": 252,
+     "spe": 210
+    },
+    "moves": [
+     "beatup",
+     "moonblast",
+     "roost",
+     "gunkshot"
+    ],
+    "baseAbility": "toxicchain",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "toxicchain",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Porygon-Z",
+    "details": "Porygon-Z, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 137,
+     "def": 164,
+     "spa": 272,
+     "spd": 172,
+     "spe": 197
+    },
+    "moves": [
+     "terablast",
+     "nastyplot",
+     "shadowball",
+     "agility"
+    ],
+    "baseAbility": "adaptability",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lilligant",
+    "details": "Lilligant, L86, F",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 108,
+     "def": 178,
+     "spa": 238,
+     "spd": 178,
+     "spe": 204
+    },
+    "moves": [
+     "quiverdance",
+     "sleeppowder",
+     "alluringvoice",
+     "petaldance"
+    ],
+    "baseAbility": "owntempo",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "owntempo",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Rotom",
+    "details": "Rotom, L88",
+    "condition": "231/231",
+    "active": true,
+    "stats": {
+     "atk": 93,
+     "def": 186,
+     "spa": 217,
+     "spd": 186,
+     "spe": 210
+    },
+    "moves": [
+     "willowisp",
+     "voltswitch",
+     "shadowball",
+     "thunderbolt"
+    ],
+    "baseAbility": "levitate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Seviper",
+    "details": "Seviper, L93, M",
+    "condition": "287/287",
+    "active": false,
+    "stats": {
+     "atk": 239,
+     "def": 164,
+     "spa": 239,
+     "spd": 164,
+     "spe": 174
+    },
+    "moves": [
+     "flamethrower",
+     "earthquake",
+     "knockoff",
+     "gunkshot"
+    ],
+    "baseAbility": "infiltrator",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "infiltrator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Swampert",
+    "details": "Swampert, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 197,
+     "spa": 189,
+     "spd": 197,
+     "spe": 147
+    },
+    "moves": [
+     "stealthrock",
+     "earthquake",
+     "flipturn",
+     "yawn"
+    ],
+    "baseAbility": "torrent",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "torrent",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Exeggutor",
+    "details": "Exeggutor-Alola, L89, F, shiny",
+    "condition": "314/314",
+    "active": false,
+    "stats": {
+     "atk": 238,
+     "def": 202,
+     "spa": 273,
+     "spd": 184,
+     "spe": 131
+    },
+    "moves": [
+     "stunspore",
+     "dracometeor",
+     "woodhammer",
+     "flamethrower"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Magnezone",
+    "details": "Magnezone, L85",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 124,
+     "def": 244,
+     "spa": 270,
+     "spd": 202,
+     "spe": 151
+    },
+    "moves": [
+     "flashcannon",
+     "thunderbolt",
+     "bodypress",
+     "voltswitch"
+    ],
+    "baseAbility": "magnetpull",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "magnetpull",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tauros",
+    "details": "Tauros, L82, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 203,
+     "spa": 113,
+     "spd": 162,
+     "spe": 228
+    },
+    "moves": [
+     "throatchop",
+     "bodyslam",
+     "closecombat",
+     "earthquake"
+    ],
+    "baseAbility": "sheerforce",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sheerforce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   }
+  ]
+ }
+}

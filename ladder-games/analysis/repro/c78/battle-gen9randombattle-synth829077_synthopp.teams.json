@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 829077,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth829077",
+  "seed": "sodium,c3ede07b000ca695",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,c3e47f5e000ca695",
+  "p2_ai_seed": "sodium,c3e4936f000ca695",
+  "p1_team_seed": "sodium,c3e4a080000ca695",
+  "p2_team_seed": "sodium,c3e4b191000ca695",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 25,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:34.287Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Hawlucha",
+     "level": 80,
+     "gender": "F",
+     "ability": "Unburden",
+     "item": "White Herb",
+     "moves": [
+      "stoneedge",
+      "bravebird",
+      "closecombat",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 193,
+      "def": 166,
+      "spa": 165,
+      "spd": 147,
+      "spe": 235
+     }
+    },
+    {
+     "species": "Pikachu",
+     "level": 93,
+     "gender": "F",
+     "ability": "Lightning Rod",
+     "item": "Light Ball",
+     "moves": [
+      "knockoff",
+      "voltswitch",
+      "volttackle",
+      "surf"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 155,
+      "def": 127,
+      "spa": 146,
+      "spd": 146,
+      "spe": 220
+     }
+    },
+    {
+     "species": "Forretress",
+     "level": 84,
+     "gender": "M",
+     "ability": "Sturdy",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "voltswitch",
+      "rapidspin",
+      "ironhead"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 199,
+      "def": 283,
+      "spa": 149,
+      "spd": 149,
+      "spe": 115
+     }
+    },
+    {
+     "species": "Breloom",
+     "level": 83,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Life Orb",
+     "moves": [
+      "machpunch",
+      "spore",
+      "rocktomb",
+      "bulletseed"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 263,
+      "def": 180,
+      "spa": 147,
+      "spd": 147,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "F",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "trick",
+      "moonblast",
+      "psyshock",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Jolteon",
+     "level": 84,
+     "gender": "M",
+     "ability": "Volt Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "calmmind",
+      "substitute",
+      "thunderbolt",
+      "terablast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 114,
+      "def": 149,
+      "spa": 233,
+      "spd": 208,
+      "spe": 267
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Honchkrow",
+     "level": 86,
+     "gender": "F",
+     "ability": "Moxie",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "suckerpunch",
+      "bravebird",
+      "lashout",
+      "heatwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 264,
+      "def": 139,
+      "spa": 230,
+      "spd": 139,
+      "spe": 171
+     }
+    },
+    {
+     "species": "Houndoom",
+     "level": 87,
+     "gender": "F",
+     "ability": "Flash Fire",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "fireblast",
+      "darkpulse",
+      "suckerpunch",
+      "sludgebomb"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 206,
+      "def": 137,
+      "spa": 241,
+      "spd": 189,
+      "spe": 215
+     }
+    },
+    {
+     "species": "Fezandipiti",
+     "level": 82,
+     "gender": "M",
+     "ability": "Toxic Chain",
+     "item": "Leftovers",
+     "moves": [
+      "gunkshot",
+      "roost",
+      "beatup",
+      "moonblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 196,
+      "def": 182,
+      "spa": 162,
+      "spd": 252,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Zacian-Crowned",
+     "level": 64,
+     "gender": "N",
+     "ability": "Intrepid Sword",
+     "item": "Rusted Sword",
+     "moves": [
+      "swordsdance",
+      "playrough",
+      "behemothblade",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 230,
+      "def": 185,
+      "spa": 140,
+      "spd": 185,
+      "spe": 227
+     }
+    },
+    {
+     "species": "Dudunsparce-Three-Segment",
+     "level": 83,
+     "gender": "M",
+     "ability": "Rattled",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "boomburst",
+      "roost",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 343,
+      "atk": 214,
+      "def": 180,
+      "spa": 189,
+      "spd": 172,
+      "spe": 139
+     }
+    },
+    {
+     "species": "Conkeldurr",
+     "level": 80,
+     "gender": "F",
+     "ability": "Guts",
+     "item": "Flame Orb",
+     "moves": [
+      "machpunch",
+      "facade",
+      "closecombat",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 299,
+      "atk": 270,
+      "def": 198,
+      "spa": 134,
+      "spd": 150,
+      "spe": 118
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Hawlucha",
+    "details": "Hawlucha, L80, F",
+    "condition": "256/256",
+    "active": true,
+    "stats": {
+     "atk": 193,
+     "def": 166,
+     "spa": 165,
+     "spd": 147,
+     "spe": 235
+    },
+    "moves": [
+     "stoneedge",
+     "bravebird",
+     "closecombat",
+     "swordsdance"
+    ],
+    "baseAbility": "unburden",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "unburden",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Pikachu",
+    "details": "Pikachu, L93, F",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 155,
+     "def": 127,
+     "spa": 146,
+     "spd": 146,
+     "spe": 220
+    },
+    "moves": [
+     "knockoff",
+     "voltswitch",
+     "volttackle",
+     "surf"
+    ],
+    "baseAbility": "lightningrod",
+    "item": "lightball",
+    "pokeball": "pokeball",
+    "ability": "lightningrod",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Forretress",
+    "details": "Forretress, L84, M",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 199,
+     "def": 283,
+     "spa": 149,
+     "spd": 149,
+     "spe": 115
+    },
+    "moves": [
+     "stealthrock",
+     "voltswitch",
+     "rapidspin",
+     "ironhead"
+    ],
+    "baseAbility": "sturdy",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "sturdy",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Breloom",
+    "details": "Breloom, L83, M",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 263,
+     "def": 180,
+     "spa": 147,
+     "spd": 147,
+     "spe": 164
+    },
+    "moves": [
+     "machpunch",
+     "spore",
+     "rocktomb",
+     "bulletseed"
+    ],
+    "baseAbility": "technician",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gardevoir",
+    "details": "Gardevoir, L83, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "trick",
+     "moonblast",
+     "psyshock",
+     "focusblast"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Jolteon",
+    "details": "Jolteon, L84, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 233,
+     "spd": 208,
+     "spe": 267
+    },
+    "moves": [
+     "calmmind",
+     "substitute",
+     "thunderbolt",
+     "terablast"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Honchkrow",
+    "details": "Honchkrow, L86, F",
+    "condition": "312/312",
+    "active": true,
+    "stats": {
+     "atk": 264,
+     "def": 139,
+     "spa": 230,
+     "spd": 139,
+     "spe": 171
+    },
+    "moves": [
+     "suckerpunch",
+     "bravebird",
+     "lashout",
+     "heatwave"
+    ],
+    "baseAbility": "moxie",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "moxie",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Houndoom",
+    "details": "Houndoom, L87, F",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 137,
+     "spa": 241,
+     "spd": 189,
+     "spe": 215
+    },
+    "moves": [
+     "fireblast",
+     "darkpulse",
+     "suckerpunch",
+     "sludgebomb"
+    ],
+    "baseAbility": "flashfire",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flashfire",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Fezandipiti",
+    "details": "Fezandipiti, L82, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 196,
+     "def": 182,
+     "spa": 162,
+     "spd": 252,
+     "spe": 210
+    },
+    "moves": [
+     "gunkshot",
+     "roost",
+     "beatup",
+     "moonblast"
+    ],
+    "baseAbility": "toxicchain",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "toxicchain",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zacian",
+    "details": "Zacian-Crowned, L64",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 185,
+     "spa": 140,
+     "spd": 185,
+     "spe": 227
+    },
+    "moves": [
+     "swordsdance",
+     "playrough",
+     "behemothblade",
+     "closecombat"
+    ],
+    "baseAbility": "intrepidsword",
+    "item": "rustedsword",
+    "pokeball": "pokeball",
+    "ability": "intrepidsword",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dudunsparce",
+    "details": "Dudunsparce-Three-Segment, L83, M",
+    "condition": "343/343",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 180,
+     "spa": 189,
+     "spd": 172,
+     "spe": 139
+    },
+    "moves": [
+     "earthquake",
+     "boomburst",
+     "roost",
+     "toxic"
+    ],
+    "baseAbility": "rattled",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "rattled",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Conkeldurr",
+    "details": "Conkeldurr, L80, F",
+    "condition": "299/299",
+    "active": false,
+    "stats": {
+     "atk": 270,
+     "def": 198,
+     "spa": 134,
+     "spd": 150,
+     "spe": 118
+    },
+    "moves": [
+     "machpunch",
+     "facade",
+     "closecombat",
+     "knockoff"
+    ],
+    "baseAbility": "guts",
+    "item": "flameorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   }
+  ]
+ }
+}

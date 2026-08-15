@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 962100,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth962100",
+  "seed": "sodium,80288962000eae34",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,801f2845000eae34",
+  "p2_ai_seed": "sodium,801f3c56000eae34",
+  "p1_team_seed": "sodium,801f4967000eae34",
+  "p2_team_seed": "sodium,801f5a78000eae34",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 43,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T22:18:30.823Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Politoed",
+     "level": 88,
+     "gender": "M",
+     "ability": "Drizzle",
+     "item": "Leftovers",
+     "moves": [
+      "surf",
+      "icebeam",
+      "haze",
+      "hypnosis"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 137,
+      "def": 182,
+      "spa": 209,
+      "spd": 226,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Malamar",
+     "level": 82,
+     "gender": "M",
+     "ability": "Contrary",
+     "item": "Leftovers",
+     "moves": [
+      "rest",
+      "sleeptalk",
+      "knockoff",
+      "superpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 198,
+      "def": 191,
+      "spa": 159,
+      "spd": 170,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Avalugg",
+     "level": 88,
+     "gender": "F",
+     "ability": "Sturdy",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "rapidspin",
+      "avalanche",
+      "bodypress",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 310,
+      "atk": 256,
+      "def": 374,
+      "spa": 128,
+      "spd": 131,
+      "spe": 100
+     }
+    },
+    {
+     "species": "Jirachi",
+     "level": 80,
+     "gender": "N",
+     "ability": "Serene Grace",
+     "item": "Leftovers",
+     "moves": [
+      "ironhead",
+      "drainpunch",
+      "bodyslam",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 291,
+      "atk": 206,
+      "def": 206,
+      "spa": 206,
+      "spd": 206,
+      "spe": 206
+     }
+    },
+    {
+     "species": "Azumarill",
+     "level": 82,
+     "gender": "F",
+     "ability": "Huge Power",
+     "item": "Choice Band",
+     "moves": [
+      "knockoff",
+      "playrough",
+      "aquajet",
+      "liquidation"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 298,
+      "atk": 129,
+      "def": 178,
+      "spa": 146,
+      "spd": 178,
+      "spe": 129
+     }
+    },
+    {
+     "species": "Scrafty",
+     "level": 83,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "poisonjab",
+      "drainpunch",
+      "dragondance",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 197,
+      "def": 239,
+      "spa": 122,
+      "spd": 239,
+      "spe": 144
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Iron Bundle",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Choice Specs",
+     "moves": [
+      "freezedry",
+      "icebeam",
+      "hydropump",
+      "flipturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 215,
+      "atk": 170,
+      "def": 223,
+      "spa": 239,
+      "spd": 139,
+      "spe": 257
+     }
+    },
+    {
+     "species": "Ogerpon",
+     "level": 80,
+     "gender": "F",
+     "ability": "Defiant",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "spikes",
+      "knockoff",
+      "ivycudgel",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 259,
+      "atk": 238,
+      "def": 181,
+      "spa": 142,
+      "spd": 200,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Tauros-Paldea-Combat",
+     "level": 82,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Choice Band",
+     "moves": [
+      "ironhead",
+      "throatchop",
+      "closecombat",
+      "stoneedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 228,
+      "def": 219,
+      "spa": 96,
+      "spd": 162,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Koraidon",
+     "level": 64,
+     "gender": "N",
+     "ability": "Orichalcum Pulse",
+     "item": "Loaded Dice",
+     "moves": [
+      "scaleshot",
+      "flareblitz",
+      "collisioncourse",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 211,
+      "def": 185,
+      "spa": 147,
+      "spd": 166,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Zoroark",
+     "level": 83,
+     "gender": "M",
+     "ability": "Illusion",
+     "item": "Life Orb",
+     "moves": [
+      "encore",
+      "sludgebomb",
+      "nastyplot",
+      "darkpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 179,
+      "def": 147,
+      "spa": 247,
+      "spd": 147,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Mamoswine",
+     "level": 81,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Choice Band",
+     "moves": [
+      "iceshard",
+      "knockoff",
+      "earthquake",
+      "iciclecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 311,
+      "atk": 257,
+      "def": 176,
+      "spa": 160,
+      "spd": 144,
+      "spe": 176
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Politoed",
+    "details": "Politoed, L88, M",
+    "condition": "302/302",
+    "active": true,
+    "stats": {
+     "atk": 137,
+     "def": 182,
+     "spa": 209,
+     "spd": 226,
+     "spe": 173
+    },
+    "moves": [
+     "surf",
+     "icebeam",
+     "haze",
+     "hypnosis"
+    ],
+    "baseAbility": "drizzle",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "drizzle",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Malamar",
+    "details": "Malamar, L82, M",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 198,
+     "def": 191,
+     "spa": 159,
+     "spd": 170,
+     "spe": 167
+    },
+    "moves": [
+     "rest",
+     "sleeptalk",
+     "knockoff",
+     "superpower"
+    ],
+    "baseAbility": "contrary",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Avalugg",
+    "details": "Avalugg, L88, F",
+    "condition": "310/310",
+    "active": false,
+    "stats": {
+     "atk": 256,
+     "def": 374,
+     "spa": 128,
+     "spd": 131,
+     "spe": 100
+    },
+    "moves": [
+     "rapidspin",
+     "avalanche",
+     "bodypress",
+     "recover"
+    ],
+    "baseAbility": "sturdy",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "sturdy",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Jirachi",
+    "details": "Jirachi, L80",
+    "condition": "291/291",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 206,
+     "spa": 206,
+     "spd": 206,
+     "spe": 206
+    },
+    "moves": [
+     "ironhead",
+     "drainpunch",
+     "bodyslam",
+     "stealthrock"
+    ],
+    "baseAbility": "serenegrace",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "serenegrace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Azumarill",
+    "details": "Azumarill, L82, F",
+    "condition": "298/298",
+    "active": false,
+    "stats": {
+     "atk": 129,
+     "def": 178,
+     "spa": 146,
+     "spd": 178,
+     "spe": 129
+    },
+    "moves": [
+     "knockoff",
+     "playrough",
+     "aquajet",
+     "liquidation"
+    ],
+    "baseAbility": "hugepower",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "hugepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Scrafty",
+    "details": "Scrafty, L83, M",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 197,
+     "def": 239,
+     "spa": 122,
+     "spd": 239,
+     "spe": 144
+    },
+    "moves": [
+     "poisonjab",
+     "drainpunch",
+     "dragondance",
+     "knockoff"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Iron Bundle",
+    "details": "Iron Bundle, L78",
+    "condition": "215/215",
+    "active": true,
+    "stats": {
+     "atk": 170,
+     "def": 223,
+     "spa": 239,
+     "spd": 139,
+     "spe": 257
+    },
+    "moves": [
+     "freezedry",
+     "icebeam",
+     "hydropump",
+     "flipturn"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ogerpon",
+    "details": "Ogerpon, L80, F",
+    "condition": "259/259",
+    "active": false,
+    "stats": {
+     "atk": 238,
+     "def": 181,
+     "spa": 142,
+     "spd": 200,
+     "spe": 222
+    },
+    "moves": [
+     "spikes",
+     "knockoff",
+     "ivycudgel",
+     "uturn"
+    ],
+    "baseAbility": "defiant",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tauros",
+    "details": "Tauros-Paldea-Combat, L82, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 219,
+     "spa": 96,
+     "spd": 162,
+     "spe": 211
+    },
+    "moves": [
+     "ironhead",
+     "throatchop",
+     "closecombat",
+     "stoneedge"
+    ],
+    "baseAbility": "intimidate",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Koraidon",
+    "details": "Koraidon, L64",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 185,
+     "spa": 147,
+     "spd": 166,
+     "spe": 211
+    },
+    "moves": [
+     "scaleshot",
+     "flareblitz",
+     "collisioncourse",
+     "swordsdance"
+    ],
+    "baseAbility": "orichalcumpulse",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "orichalcumpulse",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zoroark",
+    "details": "Zoroark, L83, M",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 179,
+     "def": 147,
+     "spa": 247,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "encore",
+     "sludgebomb",
+     "nastyplot",
+     "darkpulse"
+    ],
+    "baseAbility": "illusion",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mamoswine",
+    "details": "Mamoswine, L81, M",
+    "condition": "311/311",
+    "active": false,
+    "stats": {
+     "atk": 257,
+     "def": 176,
+     "spa": 160,
+     "spd": 144,
+     "spe": 176
+    },
+    "moves": [
+     "iceshard",
+     "knockoff",
+     "earthquake",
+     "iciclecrash"
+    ],
+    "baseAbility": "thickfat",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ }
+}

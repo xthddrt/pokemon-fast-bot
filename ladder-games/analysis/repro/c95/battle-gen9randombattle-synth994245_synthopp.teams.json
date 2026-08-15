@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 994245,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth994245",
+  "seed": "sodium,3403d02b000f2bc5",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,33fa6f0e000f2bc5",
+  "p2_ai_seed": "sodium,33fa831f000f2bc5",
+  "p1_team_seed": "sodium,33fa9030000f2bc5",
+  "p2_team_seed": "sodium,33faa141000f2bc5",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 46,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T22:21:24.104Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Furret",
+     "level": 94,
+     "gender": "F",
+     "ability": "Frisk",
+     "item": "Life Orb",
+     "moves": [
+      "tidyup",
+      "brickbreak",
+      "doubleedge",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 196,
+      "def": 174,
+      "spa": 138,
+      "spd": 157,
+      "spe": 223
+     }
+    },
+    {
+     "species": "Dodrio",
+     "level": 85,
+     "gender": "M",
+     "ability": "Early Bird",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "knockoff",
+      "bravebird",
+      "swordsdance",
+      "drillrun"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 241,
+      "atk": 236,
+      "def": 168,
+      "spa": 151,
+      "spd": 151,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Espathra",
+     "level": 80,
+     "gender": "M",
+     "ability": "Speed Boost",
+     "item": "Leftovers",
+     "moves": [
+      "storedpower",
+      "calmmind",
+      "dazzlinggleam",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 101,
+      "def": 142,
+      "spa": 208,
+      "spd": 142,
+      "spe": 214
+     }
+    },
+    {
+     "species": "Skeledirge",
+     "level": 79,
+     "gender": "F",
+     "ability": "Unaware",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "slackoff",
+      "torchsong",
+      "willowisp",
+      "hex"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 294,
+      "atk": 123,
+      "def": 204,
+      "spa": 219,
+      "spd": 164,
+      "spe": 150
+     }
+    },
+    {
+     "species": "Probopass",
+     "level": 91,
+     "gender": "M",
+     "ability": "Magnet Pull",
+     "item": "Leftovers",
+     "moves": [
+      "bodypress",
+      "thunderwave",
+      "irondefense",
+      "flashcannon"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 105,
+      "def": 316,
+      "spa": 188,
+      "spd": 325,
+      "spe": 125
+     }
+    },
+    {
+     "species": "Meowstic",
+     "level": 89,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Light Clay",
+     "moves": [
+      "reflect",
+      "alluringvoice",
+      "lightscreen",
+      "psychicnoise"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 90,
+      "def": 186,
+      "spa": 199,
+      "spd": 195,
+      "spe": 236
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Grimmsnarl",
+     "level": 83,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Light Clay",
+     "moves": [
+      "lightscreen",
+      "spiritbreak",
+      "thunderwave",
+      "reflect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 247,
+      "def": 156,
+      "spa": 205,
+      "spd": 172,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Meowscarada",
+     "level": 78,
+     "gender": "F",
+     "ability": "Protean",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "toxicspikes",
+      "flowertrick",
+      "tripleaxel"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 217,
+      "def": 154,
+      "spa": 171,
+      "spd": 154,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Hitmontop",
+     "level": 88,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Leftovers",
+     "moves": [
+      "bulkup",
+      "tripleaxel",
+      "closecombat",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 217,
+      "def": 217,
+      "spa": 112,
+      "spd": 244,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Luxray",
+     "level": 88,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Assault Vest",
+     "moves": [
+      "voltswitch",
+      "wildcharge",
+      "throatchop",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 261,
+      "def": 189,
+      "spa": 217,
+      "spd": 189,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Ambipom",
+     "level": 84,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Silk Scarf",
+     "moves": [
+      "fakeout",
+      "doubleedge",
+      "uturn",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 216,
+      "def": 159,
+      "spa": 149,
+      "spd": 159,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Girafarig",
+     "level": 89,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Eviolite",
+     "moves": [
+      "psyshock",
+      "nastyplot",
+      "thunderbolt",
+      "hypervoice"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 147,
+      "def": 166,
+      "spa": 211,
+      "spd": 166,
+      "spe": 202
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Furret",
+    "details": "Furret, L94, F",
+    "condition": "312/312",
+    "active": true,
+    "stats": {
+     "atk": 196,
+     "def": 174,
+     "spa": 138,
+     "spd": 157,
+     "spe": 223
+    },
+    "moves": [
+     "tidyup",
+     "brickbreak",
+     "doubleedge",
+     "knockoff"
+    ],
+    "baseAbility": "frisk",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "frisk",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dodrio",
+    "details": "Dodrio, L85, M",
+    "condition": "241/241",
+    "active": false,
+    "stats": {
+     "atk": 236,
+     "def": 168,
+     "spa": 151,
+     "spd": 151,
+     "spe": 236
+    },
+    "moves": [
+     "knockoff",
+     "bravebird",
+     "swordsdance",
+     "drillrun"
+    ],
+    "baseAbility": "earlybird",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "earlybird",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Espathra",
+    "details": "Espathra, L80, M",
+    "condition": "283/283",
+    "active": false,
+    "stats": {
+     "atk": 101,
+     "def": 142,
+     "spa": 208,
+     "spd": 142,
+     "spe": 214
+    },
+    "moves": [
+     "storedpower",
+     "calmmind",
+     "dazzlinggleam",
+     "substitute"
+    ],
+    "baseAbility": "speedboost",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "speedboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Skeledirge",
+    "details": "Skeledirge, L79, F",
+    "condition": "294/294",
+    "active": false,
+    "stats": {
+     "atk": 123,
+     "def": 204,
+     "spa": 219,
+     "spd": 164,
+     "spe": 150
+    },
+    "moves": [
+     "slackoff",
+     "torchsong",
+     "willowisp",
+     "hex"
+    ],
+    "baseAbility": "unaware",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Probopass",
+    "details": "Probopass, L91, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 105,
+     "def": 316,
+     "spa": 188,
+     "spd": 325,
+     "spe": 125
+    },
+    "moves": [
+     "bodypress",
+     "thunderwave",
+     "irondefense",
+     "flashcannon"
+    ],
+    "baseAbility": "magnetpull",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "magnetpull",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Meowstic",
+    "details": "Meowstic, L89, M",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 90,
+     "def": 186,
+     "spa": 199,
+     "spd": 195,
+     "spe": 236
+    },
+    "moves": [
+     "reflect",
+     "alluringvoice",
+     "lightscreen",
+     "psychicnoise"
+    ],
+    "baseAbility": "prankster",
+    "item": "lightclay",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Grimmsnarl",
+    "details": "Grimmsnarl, L83, M",
+    "condition": "293/293",
+    "active": true,
+    "stats": {
+     "atk": 247,
+     "def": 156,
+     "spa": 205,
+     "spd": 172,
+     "spe": 147
+    },
+    "moves": [
+     "lightscreen",
+     "spiritbreak",
+     "thunderwave",
+     "reflect"
+    ],
+    "baseAbility": "prankster",
+    "item": "lightclay",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Meowscarada",
+    "details": "Meowscarada, L78, F",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 154,
+     "spa": 171,
+     "spd": 154,
+     "spe": 237
+    },
+    "moves": [
+     "knockoff",
+     "toxicspikes",
+     "flowertrick",
+     "tripleaxel"
+    ],
+    "baseAbility": "protean",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "protean",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hitmontop",
+    "details": "Hitmontop, L88, M",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 217,
+     "spa": 112,
+     "spd": 244,
+     "spe": 173
+    },
+    "moves": [
+     "bulkup",
+     "tripleaxel",
+     "closecombat",
+     "rapidspin"
+    ],
+    "baseAbility": "technician",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Luxray",
+    "details": "Luxray, L88, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 189,
+     "spa": 217,
+     "spd": 189,
+     "spe": 173
+    },
+    "moves": [
+     "voltswitch",
+     "wildcharge",
+     "throatchop",
+     "playrough"
+    ],
+    "baseAbility": "intimidate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ambipom",
+    "details": "Ambipom, L84, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 159,
+     "spa": 149,
+     "spd": 159,
+     "spe": 241
+    },
+    "moves": [
+     "fakeout",
+     "doubleedge",
+     "uturn",
+     "knockoff"
+    ],
+    "baseAbility": "technician",
+    "item": "silkscarf",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Girafarig",
+    "details": "Girafarig, L89, M",
+    "condition": "269/269",
+    "active": false,
+    "stats": {
+     "atk": 147,
+     "def": 166,
+     "spa": 211,
+     "spd": 166,
+     "spe": 202
+    },
+    "moves": [
+     "psyshock",
+     "nastyplot",
+     "thunderbolt",
+     "hypervoice"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   }
+  ]
+ }
+}

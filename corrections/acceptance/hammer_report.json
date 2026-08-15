@@ -1,0 +1,58 @@
+{
+ "ship_ready": true,
+ "steps": 400,
+ "steps_to_precheck_flip": 200,
+ "cap": 20000,
+ "entries": {
+  "2026-08-13_2664270550_yraf_L_d20": {
+   "ruled": "suckerpunch",
+   "value_from": 0.2964233220554888,
+   "value_to": 0.9828025177121162,
+   "values_final": {
+    "sludgebomb": 0.8504542383980419,
+    "sludgebomb-tera": 0.8659024835635774,
+    "suckerpunch": 0.9828025177121162,
+    "suckerpunch-tera": 0.9641088545322418,
+    "darkpulse": 0.8526288570777896,
+    "darkpulse-tera": 0.8692785947139215,
+    "fireblast": 0.8501209932179076,
+    "fireblast-tera": 0.8600951169596147,
+    "switch basculinbluestriped": 0.8040870941420231,
+    "switch gyarados": 0.875027644302383
+   }
+  }
+ },
+ "timings_s": {
+  "prepare": 0.57,
+  "per_round_mean": 1.08,
+  "precheck_mean": 0.018,
+  "flip_attempts": [
+   {
+    "steps": 200,
+    "export_s": 1.2641050815582275,
+    "flip_s": 33.46353769302368,
+    "results": {
+     "2026-08-13_2664270550_yraf_L_d20": {
+      "pass": false,
+      "choice": "sludgebomb-tera"
+     }
+    }
+   },
+   {
+    "steps": 400,
+    "export_s": 1.5098118782043457,
+    "flip_s": 31.366570234298706,
+    "results": {
+     "2026-08-13_2664270550_yraf_L_d20": {
+      "pass": true,
+      "choice": "suckerpunch"
+     }
+    }
+   }
+  ],
+  "total": 72.5
+ },
+ "candidate_pt": "acceptance/acceptance_v6nopol_h1.pt",
+ "candidate_bin": "acceptance/acceptance_v6nopol_h1.bin",
+ "device": "cpu"
+}

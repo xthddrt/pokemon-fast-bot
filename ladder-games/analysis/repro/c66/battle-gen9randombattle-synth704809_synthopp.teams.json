@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 704809,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth704809",
+  "seed": "sodium,eaeb096f000ac129",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,eae1a852000ac129",
+  "p2_ai_seed": "sodium,eae1bc63000ac129",
+  "p1_team_seed": "sodium,eae1c974000ac129",
+  "p2_team_seed": "sodium,eae1da85000ac129",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 28,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T16:14:21.384Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Koraidon",
+     "level": 64,
+     "gender": "N",
+     "ability": "Orichalcum Pulse",
+     "item": "Loaded Dice",
+     "moves": [
+      "collisioncourse",
+      "scaleshot",
+      "swordsdance",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 211,
+      "def": 185,
+      "spa": 147,
+      "spd": 166,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Galvantula",
+     "level": 82,
+     "gender": "M",
+     "ability": "Compound Eyes",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "energyball",
+      "bugbuzz",
+      "stickyweb",
+      "thunder"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 131,
+      "def": 146,
+      "spa": 206,
+      "spd": 146,
+      "spe": 224
+     }
+    },
+    {
+     "species": "Raging Bolt",
+     "level": 78,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Booster Energy",
+     "moves": [
+      "thunderbolt",
+      "thunderclap",
+      "dragonpulse",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 118,
+      "def": 187,
+      "spa": 259,
+      "spd": 184,
+      "spe": 162
+     }
+    },
+    {
+     "species": "Uxie",
+     "level": 83,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Leftovers",
+     "moves": [
+      "encore",
+      "stealthrock",
+      "thunderwave",
+      "psychicnoise"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 260,
+      "atk": 129,
+      "def": 263,
+      "spa": 172,
+      "spd": 263,
+      "spe": 205
+     }
+    },
+    {
+     "species": "Sawsbuck-Autumn",
+     "level": 88,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "highhorsepower",
+      "hornleech",
+      "doubleedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 226,
+      "def": 173,
+      "spa": 156,
+      "spd": 173,
+      "spe": 217
+     }
+    },
+    {
+     "species": "Zamazenta-Crowned",
+     "level": 68,
+     "gender": "N",
+     "ability": "Dauntless Shield",
+     "item": "Rusted Shield",
+     "moves": [
+      "stoneedge",
+      "bodypress",
+      "irondefense",
+      "heavyslam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 238,
+      "atk": 203,
+      "def": 230,
+      "spa": 149,
+      "spd": 230,
+      "spe": 214
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Flygon",
+     "level": 82,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Choice Band",
+     "moves": [
+      "earthquake",
+      "stoneedge",
+      "uturn",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 211,
+      "def": 178,
+      "spa": 178,
+      "spd": 178,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Milotic",
+     "level": 83,
+     "gender": "M",
+     "ability": "Competitive",
+     "item": "Leftovers",
+     "moves": [
+      "dragontail",
+      "recover",
+      "icebeam",
+      "scald"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 147,
+      "def": 179,
+      "spa": 214,
+      "spd": 255,
+      "spe": 182
+     }
+    },
+    {
+     "species": "Regigigas",
+     "level": 84,
+     "gender": "N",
+     "ability": "Slow Start",
+     "item": "Leftovers",
+     "moves": [
+      "bodyslam",
+      "knockoff",
+      "substitute",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 322,
+      "atk": 317,
+      "def": 233,
+      "spa": 183,
+      "spd": 233,
+      "spe": 216
+     }
+    },
+    {
+     "species": "Iron Leaves",
+     "level": 80,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "leafblade",
+      "psyblade",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 254,
+      "def": 187,
+      "spa": 158,
+      "spd": 219,
+      "spe": 213
+     }
+    },
+    {
+     "species": "Dachsbun",
+     "level": 92,
+     "gender": "M",
+     "ability": "Well-Baked Body",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "bodypress",
+      "playrough",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 200,
+      "def": 264,
+      "spa": 144,
+      "spd": 200,
+      "spe": 227
+     }
+    },
+    {
+     "species": "Sunflora",
+     "level": 100,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Life Orb",
+     "moves": [
+      "solarbeam",
+      "earthpower",
+      "sunnyday",
+      "weatherball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 155,
+      "def": 167,
+      "spa": 267,
+      "spd": 227,
+      "spe": 117
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Koraidon",
+    "details": "Koraidon, L64",
+    "condition": "235/235",
+    "active": true,
+    "stats": {
+     "atk": 211,
+     "def": 185,
+     "spa": 147,
+     "spd": 166,
+     "spe": 211
+    },
+    "moves": [
+     "collisioncourse",
+     "scaleshot",
+     "swordsdance",
+     "flareblitz"
+    ],
+    "baseAbility": "orichalcumpulse",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "orichalcumpulse",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Galvantula",
+    "details": "Galvantula, L82, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 131,
+     "def": 146,
+     "spa": 206,
+     "spd": 146,
+     "spe": 224
+    },
+    "moves": [
+     "energyball",
+     "bugbuzz",
+     "stickyweb",
+     "thunder"
+    ],
+    "baseAbility": "compoundeyes",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "compoundeyes",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Raging Bolt",
+    "details": "Raging Bolt, L78",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 118,
+     "def": 187,
+     "spa": 259,
+     "spd": 184,
+     "spe": 162
+    },
+    "moves": [
+     "thunderbolt",
+     "thunderclap",
+     "dragonpulse",
+     "calmmind"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Uxie",
+    "details": "Uxie, L83",
+    "condition": "260/260",
+    "active": false,
+    "stats": {
+     "atk": 129,
+     "def": 263,
+     "spa": 172,
+     "spd": 263,
+     "spe": 205
+    },
+    "moves": [
+     "encore",
+     "stealthrock",
+     "thunderwave",
+     "psychicnoise"
+    ],
+    "baseAbility": "levitate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sawsbuck",
+    "details": "Sawsbuck-Autumn, L88, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 226,
+     "def": 173,
+     "spa": 156,
+     "spd": 173,
+     "spe": 217
+    },
+    "moves": [
+     "swordsdance",
+     "highhorsepower",
+     "hornleech",
+     "doubleedge"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zamazenta",
+    "details": "Zamazenta-Crowned, L68",
+    "condition": "238/238",
+    "active": false,
+    "stats": {
+     "atk": 203,
+     "def": 230,
+     "spa": 149,
+     "spd": 230,
+     "spe": 214
+    },
+    "moves": [
+     "stoneedge",
+     "bodypress",
+     "irondefense",
+     "heavyslam"
+    ],
+    "baseAbility": "dauntlessshield",
+    "item": "rustedshield",
+    "pokeball": "pokeball",
+    "ability": "dauntlessshield",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Flygon",
+    "details": "Flygon, L82, M",
+    "condition": "265/265",
+    "active": true,
+    "stats": {
+     "atk": 211,
+     "def": 178,
+     "spa": 178,
+     "spd": 178,
+     "spe": 211
+    },
+    "moves": [
+     "earthquake",
+     "stoneedge",
+     "uturn",
+     "outrage"
+    ],
+    "baseAbility": "levitate",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Milotic",
+    "details": "Milotic, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 147,
+     "def": 179,
+     "spa": 214,
+     "spd": 255,
+     "spe": 182
+    },
+    "moves": [
+     "dragontail",
+     "recover",
+     "icebeam",
+     "scald"
+    ],
+    "baseAbility": "competitive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Regigigas",
+    "details": "Regigigas, L84",
+    "condition": "322/322",
+    "active": false,
+    "stats": {
+     "atk": 317,
+     "def": 233,
+     "spa": 183,
+     "spd": 233,
+     "spe": 216
+    },
+    "moves": [
+     "bodyslam",
+     "knockoff",
+     "substitute",
+     "protect"
+    ],
+    "baseAbility": "slowstart",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "slowstart",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Leaves",
+    "details": "Iron Leaves, L80",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 254,
+     "def": 187,
+     "spa": 158,
+     "spd": 219,
+     "spe": 213
+    },
+    "moves": [
+     "swordsdance",
+     "leafblade",
+     "psyblade",
+     "closecombat"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dachsbun",
+    "details": "Dachsbun, L92, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 200,
+     "def": 264,
+     "spa": 144,
+     "spd": 200,
+     "spe": 227
+    },
+    "moves": [
+     "wish",
+     "bodypress",
+     "playrough",
+     "protect"
+    ],
+    "baseAbility": "wellbakedbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "wellbakedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sunflora",
+    "details": "Sunflora, F",
+    "condition": "312/312",
+    "active": false,
+    "stats": {
+     "atk": 155,
+     "def": 167,
+     "spa": 267,
+     "spd": 227,
+     "spe": 117
+    },
+    "moves": [
+     "solarbeam",
+     "earthpower",
+     "sunnyday",
+     "weatherball"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   }
+  ]
+ }
+}

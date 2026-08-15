@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 789767,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth789767",
+  "seed": "sodium,d968cadd000c0d07",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,d95f69c0000c0d07",
+  "p2_ai_seed": "sodium,d95f7dd1000c0d07",
+  "p1_team_seed": "sodium,d95f8ae2000c0d07",
+  "p2_team_seed": "sodium,d95f9bf3000c0d07",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 26,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:04:13.527Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Komala",
+     "level": 87,
+     "gender": "F",
+     "ability": "Comatose",
+     "item": "Assault Vest",
+     "moves": [
+      "rapidspin",
+      "earthquake",
+      "bodyslam",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 250,
+      "def": 163,
+      "spa": 180,
+      "spd": 215,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Gengar",
+     "level": 81,
+     "gender": "M",
+     "ability": "Cursed Body",
+     "item": "Life Orb",
+     "moves": [
+      "shadowball",
+      "sludgewave",
+      "toxicspikes",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 230,
+      "atk": 110,
+      "def": 144,
+      "spa": 257,
+      "spd": 168,
+      "spe": 225
+     }
+    },
+    {
+     "species": "Vaporeon",
+     "level": 86,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "scald",
+      "wish",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 364,
+      "atk": 116,
+      "def": 152,
+      "spa": 238,
+      "spd": 213,
+      "spe": 161
+     }
+    },
+    {
+     "species": "Armarouge",
+     "level": 80,
+     "gender": "M",
+     "ability": "Weak Armor",
+     "item": "Power Herb",
+     "moves": [
+      "energyball",
+      "psyshock",
+      "armorcannon",
+      "meteorbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 267,
+      "atk": 101,
+      "def": 206,
+      "spa": 246,
+      "spd": 174,
+      "spe": 166
+     }
+    },
+    {
+     "species": "Plusle",
+     "level": 95,
+     "gender": "F",
+     "ability": "Lightning Rod",
+     "item": "Life Orb",
+     "moves": [
+      "alluringvoice",
+      "encore",
+      "nastyplot",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 100,
+      "def": 130,
+      "spa": 215,
+      "spd": 196,
+      "spe": 234
+     }
+    },
+    {
+     "species": "Grumpig",
+     "level": 92,
+     "gender": "F",
+     "ability": "Thick Fat",
+     "item": "Leftovers",
+     "moves": [
+      "nastyplot",
+      "earthpower",
+      "psychic",
+      "dazzlinggleam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 87,
+      "def": 172,
+      "spa": 218,
+      "spd": 255,
+      "spe": 200
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Registeel",
+     "level": 81,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Leftovers",
+     "moves": [
+      "bodypress",
+      "thunderwave",
+      "ironhead",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 168,
+      "def": 290,
+      "spa": 168,
+      "spd": 290,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Dragapult",
+     "level": 77,
+     "gender": "M",
+     "ability": "Cursed Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "uturn",
+      "hex",
+      "dragondarts",
+      "willowisp"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 229,
+      "def": 160,
+      "spa": 199,
+      "spd": 160,
+      "spe": 263
+     }
+    },
+    {
+     "species": "Eelektross",
+     "level": 87,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Assault Vest",
+     "moves": [
+      "discharge",
+      "flamethrower",
+      "uturn",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 250,
+      "def": 189,
+      "spa": 232,
+      "spd": 189,
+      "spe": 137
+     }
+    },
+    {
+     "species": "Kommo-o",
+     "level": 77,
+     "gender": "M",
+     "ability": "Soundproof",
+     "item": "Throat Spray",
+     "moves": [
+      "clangingscales",
+      "drainpunch",
+      "boomburst",
+      "clangoroussoul"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 242,
+      "atk": 214,
+      "def": 237,
+      "spa": 199,
+      "spd": 206,
+      "spe": 175
+     }
+    },
+    {
+     "species": "Toucannon",
+     "level": 88,
+     "gender": "M",
+     "ability": "Keen Eye",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "roost",
+      "uturn",
+      "boomburst",
+      "beakblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 261,
+      "def": 182,
+      "spa": 182,
+      "spd": 182,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Probopass",
+     "level": 91,
+     "gender": "M",
+     "ability": "Magnet Pull",
+     "item": "Chesto Berry",
+     "moves": [
+      "flashcannon",
+      "bodypress",
+      "irondefense",
+      "rest"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 105,
+      "def": 316,
+      "spa": 188,
+      "spd": 325,
+      "spe": 125
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Komala",
+    "details": "Komala, L87, F",
+    "condition": "255/255",
+    "active": true,
+    "stats": {
+     "atk": 250,
+     "def": 163,
+     "spa": 180,
+     "spd": 215,
+     "spe": 163
+    },
+    "moves": [
+     "rapidspin",
+     "earthquake",
+     "bodyslam",
+     "knockoff"
+    ],
+    "baseAbility": "comatose",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "comatose",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gengar",
+    "details": "Gengar, L81, M",
+    "condition": "230/230",
+    "active": false,
+    "stats": {
+     "atk": 110,
+     "def": 144,
+     "spa": 257,
+     "spd": 168,
+     "spe": 225
+    },
+    "moves": [
+     "shadowball",
+     "sludgewave",
+     "toxicspikes",
+     "focusblast"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Vaporeon",
+    "details": "Vaporeon, L86, F",
+    "condition": "364/364",
+    "active": false,
+    "stats": {
+     "atk": 116,
+     "def": 152,
+     "spa": 238,
+     "spd": 213,
+     "spe": 161
+    },
+    "moves": [
+     "protect",
+     "scald",
+     "wish",
+     "calmmind"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Armarouge",
+    "details": "Armarouge, L80, M",
+    "condition": "267/267",
+    "active": false,
+    "stats": {
+     "atk": 101,
+     "def": 206,
+     "spa": 246,
+     "spd": 174,
+     "spe": 166
+    },
+    "moves": [
+     "energyball",
+     "psyshock",
+     "armorcannon",
+     "meteorbeam"
+    ],
+    "baseAbility": "weakarmor",
+    "item": "powerherb",
+    "pokeball": "pokeball",
+    "ability": "weakarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Plusle",
+    "details": "Plusle, L95, F",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 100,
+     "def": 130,
+     "spa": 215,
+     "spd": 196,
+     "spe": 234
+    },
+    "moves": [
+     "alluringvoice",
+     "encore",
+     "nastyplot",
+     "thunderbolt"
+    ],
+    "baseAbility": "lightningrod",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "lightningrod",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grumpig",
+    "details": "Grumpig, L92, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 87,
+     "def": 172,
+     "spa": 218,
+     "spd": 255,
+     "spe": 200
+    },
+    "moves": [
+     "nastyplot",
+     "earthpower",
+     "psychic",
+     "dazzlinggleam"
+    ],
+    "baseAbility": "thickfat",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Registeel",
+    "details": "Registeel, L81",
+    "condition": "262/262",
+    "active": true,
+    "stats": {
+     "atk": 168,
+     "def": 290,
+     "spa": 168,
+     "spd": 290,
+     "spe": 128
+    },
+    "moves": [
+     "bodypress",
+     "thunderwave",
+     "ironhead",
+     "stealthrock"
+    ],
+    "baseAbility": "clearbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dragapult",
+    "details": "Dragapult, L77, M",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 160,
+     "spa": 199,
+     "spd": 160,
+     "spe": 263
+    },
+    "moves": [
+     "uturn",
+     "hex",
+     "dragondarts",
+     "willowisp"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Eelektross",
+    "details": "Eelektross, L87, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 250,
+     "def": 189,
+     "spa": 232,
+     "spd": 189,
+     "spe": 137
+    },
+    "moves": [
+     "discharge",
+     "flamethrower",
+     "uturn",
+     "knockoff"
+    ],
+    "baseAbility": "levitate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Kommo-o",
+    "details": "Kommo-o, L77, M",
+    "condition": "242/242",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 237,
+     "spa": 199,
+     "spd": 206,
+     "spe": 175
+    },
+    "moves": [
+     "clangingscales",
+     "drainpunch",
+     "boomburst",
+     "clangoroussoul"
+    ],
+    "baseAbility": "soundproof",
+    "item": "throatspray",
+    "pokeball": "pokeball",
+    "ability": "soundproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Toucannon",
+    "details": "Toucannon, L88, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 182,
+     "spa": 182,
+     "spd": 182,
+     "spe": 156
+    },
+    "moves": [
+     "roost",
+     "uturn",
+     "boomburst",
+     "beakblast"
+    ],
+    "baseAbility": "keeneye",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "keeneye",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Probopass",
+    "details": "Probopass, L91, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 105,
+     "def": 316,
+     "spa": 188,
+     "spd": 325,
+     "spe": 125
+    },
+    "moves": [
+     "flashcannon",
+     "bodypress",
+     "irondefense",
+     "rest"
+    ],
+    "baseAbility": "magnetpull",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "magnetpull",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

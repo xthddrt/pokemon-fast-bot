@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1445270,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1445270",
+  "seed": "sodium,fb9fc93400160d96",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,fb96681700160d96",
+  "p2_ai_seed": "sodium,fb967c2800160d96",
+  "p1_team_seed": "sodium,fb96893900160d96",
+  "p2_team_seed": "sodium,fb969a4a00160d96",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 33,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:07:19.390Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Dipplin",
+     "level": 88,
+     "gender": "M",
+     "ability": "Sticky Hold",
+     "item": "Eviolite",
+     "moves": [
+      "gigadrain",
+      "dragontail",
+      "recover",
+      "dragonpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 191,
+      "def": 244,
+      "spa": 217,
+      "spd": 191,
+      "spe": 121
+     }
+    },
+    {
+     "species": "Basculin",
+     "level": 86,
+     "gender": "F",
+     "ability": "Adaptability",
+     "item": "Choice Band",
+     "moves": [
+      "doubleedge",
+      "wavecrash",
+      "flipturn",
+      "aquajet"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 207,
+      "def": 161,
+      "spa": 187,
+      "spd": 144,
+      "spe": 218
+     }
+    },
+    {
+     "species": "Iron Thorns",
+     "level": 83,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Booster Energy",
+     "moves": [
+      "icepunch",
+      "dragondance",
+      "wildcharge",
+      "stoneedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 270,
+      "def": 230,
+      "spa": 164,
+      "spd": 187,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Regice",
+     "level": 88,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "thunderbolt",
+      "thunderwave",
+      "icebeam",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 93,
+      "def": 226,
+      "spa": 226,
+      "spd": 402,
+      "spe": 138
+     }
+    },
+    {
+     "species": "Girafarig",
+     "level": 89,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Eviolite",
+     "moves": [
+      "psyshock",
+      "thunderbolt",
+      "nastyplot",
+      "hypervoice"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 147,
+      "def": 166,
+      "spa": 211,
+      "spd": 166,
+      "spe": 202
+     }
+    },
+    {
+     "species": "Enamorus-Therian",
+     "level": 83,
+     "gender": "F",
+     "ability": "Overcoat",
+     "item": "Choice Specs",
+     "moves": [
+      "mysticalfire",
+      "psychic",
+      "earthpower",
+      "moonblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 259,
+      "atk": 195,
+      "def": 230,
+      "spa": 272,
+      "spd": 214,
+      "spe": 124
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Pikachu-Alola",
+     "level": 93,
+     "gender": "M",
+     "ability": "Lightning Rod",
+     "item": "Light Ball",
+     "moves": [
+      "playrough",
+      "volttackle",
+      "surf",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 155,
+      "def": 127,
+      "spa": 146,
+      "spd": 146,
+      "spe": 220
+     }
+    },
+    {
+     "species": "Palkia-Origin",
+     "level": 72,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Lustrous Globe",
+     "moves": [
+      "spacialrend",
+      "hydropump",
+      "thunderwave",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 149,
+      "def": 186,
+      "spa": 258,
+      "spd": 215,
+      "spe": 215
+     }
+    },
+    {
+     "species": "Swanna",
+     "level": 89,
+     "gender": "M",
+     "ability": "Hydration",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "defog",
+      "hydropump",
+      "bravebird",
+      "roost"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 206,
+      "def": 163,
+      "spa": 206,
+      "spd": 163,
+      "spe": 225
+     }
+    },
+    {
+     "species": "Passimian",
+     "level": 83,
+     "gender": "M",
+     "ability": "Defiant",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "drainpunch",
+      "bulkup",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 247,
+      "def": 197,
+      "spa": 114,
+      "spd": 147,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Scyther",
+     "level": 82,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "swordsdance",
+      "dualwingbeat",
+      "closecombat",
+      "bugbite"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 228,
+      "def": 178,
+      "spa": 137,
+      "spd": 178,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Pincurchin",
+     "level": 100,
+     "gender": "M",
+     "ability": "Electric Surge",
+     "item": "Leftovers",
+     "moves": [
+      "liquidation",
+      "zingzap",
+      "curse",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 259,
+      "def": 247,
+      "spa": 239,
+      "spd": 227,
+      "spe": 87
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Dipplin",
+    "details": "Dipplin, L88, M",
+    "condition": "284/284",
+    "active": true,
+    "stats": {
+     "atk": 191,
+     "def": 244,
+     "spa": 217,
+     "spd": 191,
+     "spe": 121
+    },
+    "moves": [
+     "gigadrain",
+     "dragontail",
+     "recover",
+     "dragonpulse"
+    ],
+    "baseAbility": "stickyhold",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "stickyhold",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Basculin",
+    "details": "Basculin, L86, F",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 207,
+     "def": 161,
+     "spa": 187,
+     "spd": 144,
+     "spe": 218
+    },
+    "moves": [
+     "doubleedge",
+     "wavecrash",
+     "flipturn",
+     "aquajet"
+    ],
+    "baseAbility": "adaptability",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Iron Thorns",
+    "details": "Iron Thorns, L83",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 270,
+     "def": 230,
+     "spa": 164,
+     "spd": 187,
+     "spe": 167
+    },
+    "moves": [
+     "icepunch",
+     "dragondance",
+     "wildcharge",
+     "stoneedge"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Regice",
+    "details": "Regice, L88",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 226,
+     "spa": 226,
+     "spd": 402,
+     "spe": 138
+    },
+    "moves": [
+     "thunderbolt",
+     "thunderwave",
+     "icebeam",
+     "bodypress"
+    ],
+    "baseAbility": "clearbody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Girafarig",
+    "details": "Girafarig, L89, M",
+    "condition": "269/269",
+    "active": false,
+    "stats": {
+     "atk": 147,
+     "def": 166,
+     "spa": 211,
+     "spd": 166,
+     "spe": 202
+    },
+    "moves": [
+     "psyshock",
+     "thunderbolt",
+     "nastyplot",
+     "hypervoice"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Enamorus",
+    "details": "Enamorus-Therian, L83, F",
+    "condition": "259/259",
+    "active": false,
+    "stats": {
+     "atk": 195,
+     "def": 230,
+     "spa": 272,
+     "spd": 214,
+     "spe": 124
+    },
+    "moves": [
+     "mysticalfire",
+     "psychic",
+     "earthpower",
+     "moonblast"
+    ],
+    "baseAbility": "overcoat",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "overcoat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Pikachu",
+    "details": "Pikachu-Alola, L93, M",
+    "condition": "216/216",
+    "active": true,
+    "stats": {
+     "atk": 155,
+     "def": 127,
+     "spa": 146,
+     "spd": 146,
+     "spe": 220
+    },
+    "moves": [
+     "playrough",
+     "volttackle",
+     "surf",
+     "voltswitch"
+    ],
+    "baseAbility": "lightningrod",
+    "item": "lightball",
+    "pokeball": "pokeball",
+    "ability": "lightningrod",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Palkia",
+    "details": "Palkia-Origin, L72",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 149,
+     "def": 186,
+     "spa": 258,
+     "spd": 215,
+     "spe": 215
+    },
+    "moves": [
+     "spacialrend",
+     "hydropump",
+     "thunderwave",
+     "fireblast"
+    ],
+    "baseAbility": "pressure",
+    "item": "lustrousglobe",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Swanna",
+    "details": "Swanna, L89, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 163,
+     "spa": 206,
+     "spd": 163,
+     "spe": 225
+    },
+    "moves": [
+     "defog",
+     "hydropump",
+     "bravebird",
+     "roost"
+    ],
+    "baseAbility": "hydration",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "hydration",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Passimian",
+    "details": "Passimian, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 197,
+     "spa": 114,
+     "spd": 147,
+     "spe": 180
+    },
+    "moves": [
+     "knockoff",
+     "drainpunch",
+     "bulkup",
+     "gunkshot"
+    ],
+    "baseAbility": "defiant",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Scyther",
+    "details": "Scyther, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 178,
+     "spa": 137,
+     "spd": 178,
+     "spe": 219
+    },
+    "moves": [
+     "swordsdance",
+     "dualwingbeat",
+     "closecombat",
+     "bugbite"
+    ],
+    "baseAbility": "technician",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Pincurchin",
+    "details": "Pincurchin, M",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 247,
+     "spa": 239,
+     "spd": 227,
+     "spe": 87
+    },
+    "moves": [
+     "liquidation",
+     "zingzap",
+     "curse",
+     "recover"
+    ],
+    "baseAbility": "electricsurge",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "electricsurge",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ }
+}

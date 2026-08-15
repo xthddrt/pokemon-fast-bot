@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1058206,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1058206",
+  "seed": "sodium,466eeefc0010259e",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,46658ddf0010259e",
+  "p2_ai_seed": "sodium,4665a1f00010259e",
+  "p1_team_seed": "sodium,4665af010010259e",
+  "p2_team_seed": "sodium,4665c0120010259e",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 52,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T23:01:45.102Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Zekrom",
+     "level": 71,
+     "gender": "N",
+     "ability": "Teravolt",
+     "item": "Leftovers",
+     "moves": [
+      "substitute",
+      "dragondance",
+      "boltstrike",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 259,
+      "atk": 254,
+      "def": 212,
+      "spa": 212,
+      "spd": 183,
+      "spe": 169
+     }
+    },
+    {
+     "species": "Dondozo",
+     "level": 78,
+     "gender": "M",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "rest",
+      "curse",
+      "sleeptalk",
+      "wavecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 362,
+      "atk": 201,
+      "def": 224,
+      "spa": 146,
+      "spd": 146,
+      "spe": 100
+     }
+    },
+    {
+     "species": "Exeggutor",
+     "level": 89,
+     "gender": "F",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "sleeppowder",
+      "leechseed",
+      "psychicnoise",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 77,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 174,
+      "def": 202,
+      "spa": 273,
+      "spd": 184,
+      "spe": 149
+     }
+    },
+    {
+     "species": "Zebstrika",
+     "level": 87,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Life Orb",
+     "moves": [
+      "highhorsepower",
+      "overheat",
+      "voltswitch",
+      "supercellslam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 224,
+      "def": 159,
+      "spa": 189,
+      "spd": 159,
+      "spe": 252
+     }
+    },
+    {
+     "species": "Milotic",
+     "level": 83,
+     "gender": "M",
+     "ability": "Competitive",
+     "item": "Leftovers",
+     "moves": [
+      "dragontail",
+      "recover",
+      "scald",
+      "icebeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 147,
+      "def": 179,
+      "spa": 214,
+      "spd": 255,
+      "spe": 182
+     }
+    },
+    {
+     "species": "Oricorio",
+     "level": 84,
+     "gender": "M",
+     "ability": "Dancer",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "roost",
+      "hurricane",
+      "revelationdance",
+      "quiverdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 122,
+      "def": 166,
+      "spa": 213,
+      "spd": 166,
+      "spe": 204
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Iron Crown",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Leftovers",
+     "moves": [
+      "focusblast",
+      "tachyoncutter",
+      "calmmind",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 117,
+      "def": 201,
+      "spa": 235,
+      "spd": 214,
+      "spe": 198
+     }
+    },
+    {
+     "species": "Krookodile",
+     "level": 79,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "earthquake",
+      "bulkup",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 280,
+      "atk": 230,
+      "def": 172,
+      "spa": 148,
+      "spd": 156,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Altaria",
+     "level": 89,
+     "gender": "M",
+     "ability": "Natural Cure",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "roost",
+      "earthquake",
+      "bravebird",
+      "dragondance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 175,
+      "def": 211,
+      "spa": 175,
+      "spd": 238,
+      "spe": 193
+     }
+    },
+    {
+     "species": "Corviknight",
+     "level": 80,
+     "gender": "M",
+     "ability": "Mirror Armor",
+     "item": "Leftovers",
+     "moves": [
+      "bravebird",
+      "roost",
+      "defog",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 185,
+      "def": 214,
+      "spa": 131,
+      "spd": 182,
+      "spe": 153
+     }
+    },
+    {
+     "species": "Magcargo",
+     "level": 95,
+     "gender": "M",
+     "ability": "Flame Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "stealthrock",
+      "powergem",
+      "recover",
+      "lavaplume"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 100,
+      "def": 282,
+      "spa": 225,
+      "spd": 206,
+      "spe": 111
+     }
+    },
+    {
+     "species": "Poliwrath",
+     "level": 88,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "icepunch",
+      "liquidation",
+      "drainpunch",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 217,
+      "def": 217,
+      "spa": 173,
+      "spd": 209,
+      "spe": 173
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Zekrom",
+    "details": "Zekrom, L71",
+    "condition": "259/259",
+    "active": true,
+    "stats": {
+     "atk": 254,
+     "def": 212,
+     "spa": 212,
+     "spd": 183,
+     "spe": 169
+    },
+    "moves": [
+     "substitute",
+     "dragondance",
+     "boltstrike",
+     "outrage"
+    ],
+    "baseAbility": "teravolt",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "teravolt",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dondozo",
+    "details": "Dondozo, L78, M",
+    "condition": "362/362",
+    "active": false,
+    "stats": {
+     "atk": 201,
+     "def": 224,
+     "spa": 146,
+     "spd": 146,
+     "spe": 100
+    },
+    "moves": [
+     "rest",
+     "curse",
+     "sleeptalk",
+     "wavecrash"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Exeggutor",
+    "details": "Exeggutor, L89, F",
+    "condition": "312/312",
+    "active": false,
+    "stats": {
+     "atk": 174,
+     "def": 202,
+     "spa": 273,
+     "spd": 184,
+     "spe": 149
+    },
+    "moves": [
+     "sleeppowder",
+     "leechseed",
+     "psychicnoise",
+     "substitute"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zebstrika",
+    "details": "Zebstrika, L87, M",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 224,
+     "def": 159,
+     "spa": 189,
+     "spd": 159,
+     "spe": 252
+    },
+    "moves": [
+     "highhorsepower",
+     "overheat",
+     "voltswitch",
+     "supercellslam"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Milotic",
+    "details": "Milotic, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 147,
+     "def": 179,
+     "spa": 214,
+     "spd": 255,
+     "spe": 182
+    },
+    "moves": [
+     "dragontail",
+     "recover",
+     "scald",
+     "icebeam"
+    ],
+    "baseAbility": "competitive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Oricorio",
+    "details": "Oricorio, L84, M",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 122,
+     "def": 166,
+     "spa": 213,
+     "spd": 166,
+     "spe": 204
+    },
+    "moves": [
+     "roost",
+     "hurricane",
+     "revelationdance",
+     "quiverdance"
+    ],
+    "baseAbility": "dancer",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "dancer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Iron Crown",
+    "details": "Iron Crown, L78",
+    "condition": "268/268",
+    "active": true,
+    "stats": {
+     "atk": 117,
+     "def": 201,
+     "spa": 235,
+     "spd": 214,
+     "spe": 198
+    },
+    "moves": [
+     "focusblast",
+     "tachyoncutter",
+     "calmmind",
+     "psyshock"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Krookodile",
+    "details": "Krookodile, L79, M",
+    "condition": "280/280",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 172,
+     "spa": 148,
+     "spd": 156,
+     "spe": 191
+    },
+    "moves": [
+     "knockoff",
+     "earthquake",
+     "bulkup",
+     "gunkshot"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Altaria",
+    "details": "Altaria, L89, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 175,
+     "def": 211,
+     "spa": 175,
+     "spd": 238,
+     "spe": 193
+    },
+    "moves": [
+     "roost",
+     "earthquake",
+     "bravebird",
+     "dragondance"
+    ],
+    "baseAbility": "naturalcure",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "naturalcure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Corviknight",
+    "details": "Corviknight, L80, M",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 185,
+     "def": 214,
+     "spa": 131,
+     "spd": 182,
+     "spe": 153
+    },
+    "moves": [
+     "bravebird",
+     "roost",
+     "defog",
+     "bodypress"
+    ],
+    "baseAbility": "mirrorarmor",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "mirrorarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Magcargo",
+    "details": "Magcargo, L95, M",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 100,
+     "def": 282,
+     "spa": 225,
+     "spd": 206,
+     "spe": 111
+    },
+    "moves": [
+     "stealthrock",
+     "powergem",
+     "recover",
+     "lavaplume"
+    ],
+    "baseAbility": "flamebody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flamebody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Poliwrath",
+    "details": "Poliwrath, L88, F",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 217,
+     "spa": 173,
+     "spd": 209,
+     "spe": 173
+    },
+    "moves": [
+     "icepunch",
+     "liquidation",
+     "drainpunch",
+     "bulkup"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1436400,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1436400",
+  "seed": "sodium,057c493e0015eaf0",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,0572e8210015eaf0",
+  "p2_ai_seed": "sodium,0572fc320015eaf0",
+  "p1_team_seed": "sodium,057309430015eaf0",
+  "p2_team_seed": "sodium,05731a540015eaf0",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 37,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:07:22.403Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Hatterene",
+     "level": 85,
+     "gender": "F",
+     "ability": "Magic Bounce",
+     "item": "Leftovers",
+     "moves": [
+      "psychic",
+      "calmmind",
+      "drainingkiss",
+      "mysticalfire"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 236,
+      "atk": 158,
+      "def": 210,
+      "spa": 280,
+      "spd": 224,
+      "spe": 98
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "F",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "trick",
+      "psychic",
+      "mysticalfire",
+      "moonblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Delibird",
+     "level": 100,
+     "gender": "M",
+     "ability": "Vital Spirit",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "spikes",
+      "bravebird",
+      "freezedry",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 252,
+      "atk": 167,
+      "def": 147,
+      "spa": 187,
+      "spd": 147,
+      "spe": 207
+     }
+    },
+    {
+     "species": "Registeel",
+     "level": 81,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Chesto Berry",
+     "moves": [
+      "irondefense",
+      "rest",
+      "ironhead",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 168,
+      "def": 290,
+      "spa": 168,
+      "spd": 290,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Venomoth",
+     "level": 84,
+     "gender": "F",
+     "ability": "Tinted Lens",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sludgewave",
+      "bugbuzz",
+      "quiverdance",
+      "sleeppowder"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 114,
+      "def": 149,
+      "spa": 199,
+      "spd": 174,
+      "spe": 199
+     }
+    },
+    {
+     "species": "Minun",
+     "level": 95,
+     "gender": "M",
+     "ability": "Volt Absorb",
+     "item": "Life Orb",
+     "moves": [
+      "nastyplot",
+      "thunderbolt",
+      "encore",
+      "grassknot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 81,
+      "def": 149,
+      "spa": 196,
+      "spd": 215,
+      "spe": 234
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Grimmsnarl",
+     "level": 83,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Light Clay",
+     "moves": [
+      "partingshot",
+      "reflect",
+      "spiritbreak",
+      "lightscreen"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 247,
+      "def": 156,
+      "spa": 205,
+      "spd": 172,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Victreebel",
+     "level": 90,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Life Orb",
+     "moves": [
+      "suckerpunch",
+      "swordsdance",
+      "poisonjab",
+      "powerwhip"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 240,
+      "def": 168,
+      "spa": 231,
+      "spd": 177,
+      "spe": 177
+     }
+    },
+    {
+     "species": "Flareon",
+     "level": 90,
+     "gender": "F",
+     "ability": "Guts",
+     "item": "Toxic Orb",
+     "moves": [
+      "facade",
+      "quickattack",
+      "trailblaze",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 285,
+      "def": 159,
+      "spa": 222,
+      "spd": 249,
+      "spe": 168
+     }
+    },
+    {
+     "species": "Wo-Chien",
+     "level": 83,
+     "gender": "N",
+     "ability": "Tablets of Ruin",
+     "item": "Leftovers",
+     "moves": [
+      "ruination",
+      "stunspore",
+      "gigadrain",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 189,
+      "def": 214,
+      "spa": 205,
+      "spd": 272,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Vivillon",
+     "level": 83,
+     "gender": "F",
+     "ability": "Compound Eyes",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sleeppowder",
+      "bugbuzz",
+      "quiverdance",
+      "hurricane"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 91,
+      "def": 131,
+      "spa": 197,
+      "spd": 131,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Drednaw",
+     "level": 81,
+     "gender": "F",
+     "ability": "Shell Armor",
+     "item": "White Herb",
+     "moves": [
+      "liquidation",
+      "shellsmash",
+      "stoneedge",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 233,
+      "def": 192,
+      "spa": 124,
+      "spd": 157,
+      "spe": 167
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Hatterene",
+    "details": "Hatterene, L85, F",
+    "condition": "236/236",
+    "active": true,
+    "stats": {
+     "atk": 158,
+     "def": 210,
+     "spa": 280,
+     "spd": 224,
+     "spe": 98
+    },
+    "moves": [
+     "psychic",
+     "calmmind",
+     "drainingkiss",
+     "mysticalfire"
+    ],
+    "baseAbility": "magicbounce",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "magicbounce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gardevoir",
+    "details": "Gardevoir, L83, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "trick",
+     "psychic",
+     "mysticalfire",
+     "moonblast"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Delibird",
+    "details": "Delibird, M",
+    "condition": "252/252",
+    "active": false,
+    "stats": {
+     "atk": 167,
+     "def": 147,
+     "spa": 187,
+     "spd": 147,
+     "spe": 207
+    },
+    "moves": [
+     "spikes",
+     "bravebird",
+     "freezedry",
+     "rapidspin"
+    ],
+    "baseAbility": "vitalspirit",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "vitalspirit",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Registeel",
+    "details": "Registeel, L81",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 168,
+     "def": 290,
+     "spa": 168,
+     "spd": 290,
+     "spe": 128
+    },
+    "moves": [
+     "irondefense",
+     "rest",
+     "ironhead",
+     "bodypress"
+    ],
+    "baseAbility": "clearbody",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Venomoth",
+    "details": "Venomoth, L84, F",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 199,
+     "spd": 174,
+     "spe": 199
+    },
+    "moves": [
+     "sludgewave",
+     "bugbuzz",
+     "quiverdance",
+     "sleeppowder"
+    ],
+    "baseAbility": "tintedlens",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "tintedlens",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Minun",
+    "details": "Minun, L95, M",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 81,
+     "def": 149,
+     "spa": 196,
+     "spd": 215,
+     "spe": 234
+    },
+    "moves": [
+     "nastyplot",
+     "thunderbolt",
+     "encore",
+     "grassknot"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Grimmsnarl",
+    "details": "Grimmsnarl, L83, M",
+    "condition": "293/293",
+    "active": true,
+    "stats": {
+     "atk": 247,
+     "def": 156,
+     "spa": 205,
+     "spd": 172,
+     "spe": 147
+    },
+    "moves": [
+     "partingshot",
+     "reflect",
+     "spiritbreak",
+     "lightscreen"
+    ],
+    "baseAbility": "prankster",
+    "item": "lightclay",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Victreebel",
+    "details": "Victreebel, L90, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 240,
+     "def": 168,
+     "spa": 231,
+     "spd": 177,
+     "spe": 177
+    },
+    "moves": [
+     "suckerpunch",
+     "swordsdance",
+     "poisonjab",
+     "powerwhip"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Flareon",
+    "details": "Flareon, L90, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 285,
+     "def": 159,
+     "spa": 222,
+     "spd": 249,
+     "spe": 168
+    },
+    "moves": [
+     "facade",
+     "quickattack",
+     "trailblaze",
+     "flareblitz"
+    ],
+    "baseAbility": "guts",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Wo-Chien",
+    "details": "Wo-Chien, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 189,
+     "def": 214,
+     "spa": 205,
+     "spd": 272,
+     "spe": 164
+    },
+    "moves": [
+     "ruination",
+     "stunspore",
+     "gigadrain",
+     "knockoff"
+    ],
+    "baseAbility": "tabletsofruin",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "tabletsofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Vivillon",
+    "details": "Vivillon, L83, F",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 91,
+     "def": 131,
+     "spa": 197,
+     "spd": 131,
+     "spe": 195
+    },
+    "moves": [
+     "sleeppowder",
+     "bugbuzz",
+     "quiverdance",
+     "hurricane"
+    ],
+    "baseAbility": "compoundeyes",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "compoundeyes",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Drednaw",
+    "details": "Drednaw, L81, F",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 233,
+     "def": 192,
+     "spa": 124,
+     "spd": 157,
+     "spe": 167
+    },
+    "moves": [
+     "liquidation",
+     "shellsmash",
+     "stoneedge",
+     "earthquake"
+    ],
+    "baseAbility": "shellarmor",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "shellarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

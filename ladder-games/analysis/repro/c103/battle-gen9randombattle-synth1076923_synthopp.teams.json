@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1076923,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1076923",
+  "seed": "sodium,046d79f100106ebb",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,046418d400106ebb",
+  "p2_ai_seed": "sodium,04642ce500106ebb",
+  "p1_team_seed": "sodium,046439f600106ebb",
+  "p2_team_seed": "sodium,04644b0700106ebb",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 33,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T23:02:39.596Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Sylveon",
+     "level": 85,
+     "gender": "M",
+     "ability": "Pixilate",
+     "item": "Leftovers",
+     "moves": [
+      "calmmind",
+      "hypervoice",
+      "protect",
+      "wish"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 300,
+      "atk": 115,
+      "def": 159,
+      "spa": 236,
+      "spd": 270,
+      "spe": 151
+     }
+    },
+    {
+     "species": "Grimmsnarl",
+     "level": 83,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "spiritbreak",
+      "taunt",
+      "suckerpunch",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 247,
+      "def": 156,
+      "spa": 205,
+      "spd": 172,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Dunsparce",
+     "level": 86,
+     "gender": "F",
+     "ability": "Serene Grace",
+     "item": "Eviolite",
+     "moves": [
+      "roost",
+      "bodyslam",
+      "earthquake",
+      "coil"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 170,
+      "def": 170,
+      "spa": 161,
+      "spd": 161,
+      "spe": 127
+     }
+    },
+    {
+     "species": "Ting-Lu",
+     "level": 78,
+     "gender": "N",
+     "ability": "Vessel of Ruin",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "payback",
+      "spikes",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 370,
+      "atk": 217,
+      "def": 240,
+      "spa": 131,
+      "spd": 170,
+      "spe": 115
+     }
+    },
+    {
+     "species": "Espeon",
+     "level": 84,
+     "gender": "F",
+     "ability": "Magic Bounce",
+     "item": "Choice Specs",
+     "moves": [
+      "psychic",
+      "trick",
+      "alluringvoice",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 114,
+      "def": 149,
+      "spa": 267,
+      "spd": 208,
+      "spe": 233
+     }
+    },
+    {
+     "species": "Raikou",
+     "level": 81,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "voltswitch",
+      "calmmind",
+      "thunderbolt",
+      "scald"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 142,
+      "def": 168,
+      "spa": 233,
+      "spd": 209,
+      "spe": 233
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Salazzle",
+     "level": 83,
+     "gender": "F",
+     "ability": "Corrosion",
+     "item": "Leftovers",
+     "moves": [
+      "toxic",
+      "protect",
+      "flamethrower",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 111,
+      "def": 147,
+      "spa": 232,
+      "spd": 147,
+      "spe": 242
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "F",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "moonblast",
+      "mysticalfire",
+      "psychic",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Hawlucha",
+     "level": 80,
+     "gender": "F",
+     "ability": "Unburden",
+     "item": "White Herb",
+     "moves": [
+      "stoneedge",
+      "acrobatics",
+      "swordsdance",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 193,
+      "def": 166,
+      "spa": 165,
+      "spd": 147,
+      "spe": 235
+     }
+    },
+    {
+     "species": "Raichu-Alola",
+     "level": 87,
+     "gender": "M",
+     "ability": "Surge Surfer",
+     "item": "Life Orb",
+     "moves": [
+      "thunderbolt",
+      "focusblast",
+      "nastyplot",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 152,
+      "def": 137,
+      "spa": 215,
+      "spd": 198,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Ariados",
+     "level": 95,
+     "gender": "F",
+     "ability": "Swarm",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "poisonjab",
+      "megahorn",
+      "stickyweb",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 225,
+      "def": 187,
+      "spa": 168,
+      "spd": 187,
+      "spe": 130
+     }
+    },
+    {
+     "species": "Volcarona",
+     "level": 77,
+     "gender": "F",
+     "ability": "Swarm",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "quiverdance",
+      "bugbuzz",
+      "fireblast",
+      "gigadrain"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 97,
+      "def": 145,
+      "spa": 252,
+      "spd": 206,
+      "spe": 199
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Sylveon",
+    "details": "Sylveon, L85, M",
+    "condition": "300/300",
+    "active": true,
+    "stats": {
+     "atk": 115,
+     "def": 159,
+     "spa": 236,
+     "spd": 270,
+     "spe": 151
+    },
+    "moves": [
+     "calmmind",
+     "hypervoice",
+     "protect",
+     "wish"
+    ],
+    "baseAbility": "pixilate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "pixilate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grimmsnarl",
+    "details": "Grimmsnarl, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 156,
+     "spa": 205,
+     "spd": 172,
+     "spe": 147
+    },
+    "moves": [
+     "spiritbreak",
+     "taunt",
+     "suckerpunch",
+     "thunderwave"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dunsparce",
+    "details": "Dunsparce, L86, F",
+    "condition": "312/312",
+    "active": false,
+    "stats": {
+     "atk": 170,
+     "def": 170,
+     "spa": 161,
+     "spd": 161,
+     "spe": 127
+    },
+    "moves": [
+     "roost",
+     "bodyslam",
+     "earthquake",
+     "coil"
+    ],
+    "baseAbility": "serenegrace",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "serenegrace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ting-Lu",
+    "details": "Ting-Lu, L78",
+    "condition": "370/370",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 240,
+     "spa": 131,
+     "spd": 170,
+     "spe": 115
+    },
+    "moves": [
+     "stealthrock",
+     "payback",
+     "spikes",
+     "earthquake"
+    ],
+    "baseAbility": "vesselofruin",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "vesselofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Espeon",
+    "details": "Espeon, L84, F",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 267,
+     "spd": 208,
+     "spe": 233
+    },
+    "moves": [
+     "psychic",
+     "trick",
+     "alluringvoice",
+     "shadowball"
+    ],
+    "baseAbility": "magicbounce",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "magicbounce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Raikou",
+    "details": "Raikou, L81",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 142,
+     "def": 168,
+     "spa": 233,
+     "spd": 209,
+     "spe": 233
+    },
+    "moves": [
+     "voltswitch",
+     "calmmind",
+     "thunderbolt",
+     "scald"
+    ],
+    "baseAbility": "pressure",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Salazzle",
+    "details": "Salazzle, L83, F",
+    "condition": "249/249",
+    "active": true,
+    "stats": {
+     "atk": 111,
+     "def": 147,
+     "spa": 232,
+     "spd": 147,
+     "spe": 242
+    },
+    "moves": [
+     "toxic",
+     "protect",
+     "flamethrower",
+     "substitute"
+    ],
+    "baseAbility": "corrosion",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "corrosion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Gardevoir",
+    "details": "Gardevoir, L83, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "moonblast",
+     "mysticalfire",
+     "psychic",
+     "trick"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hawlucha",
+    "details": "Hawlucha, L80, F",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 193,
+     "def": 166,
+     "spa": 165,
+     "spd": 147,
+     "spe": 235
+    },
+    "moves": [
+     "stoneedge",
+     "acrobatics",
+     "swordsdance",
+     "closecombat"
+    ],
+    "baseAbility": "unburden",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "unburden",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Raichu",
+    "details": "Raichu-Alola, L87, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 137,
+     "spa": 215,
+     "spd": 198,
+     "spe": 241
+    },
+    "moves": [
+     "thunderbolt",
+     "focusblast",
+     "nastyplot",
+     "psyshock"
+    ],
+    "baseAbility": "surgesurfer",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "surgesurfer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ariados",
+    "details": "Ariados, L95, F",
+    "condition": "287/287",
+    "active": false,
+    "stats": {
+     "atk": 225,
+     "def": 187,
+     "spa": 168,
+     "spd": 187,
+     "spe": 130
+    },
+    "moves": [
+     "poisonjab",
+     "megahorn",
+     "stickyweb",
+     "suckerpunch"
+    ],
+    "baseAbility": "swarm",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "swarm",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Volcarona",
+    "details": "Volcarona, L77, F",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 97,
+     "def": 145,
+     "spa": 252,
+     "spd": 206,
+     "spe": 199
+    },
+    "moves": [
+     "quiverdance",
+     "bugbuzz",
+     "fireblast",
+     "gigadrain"
+    ],
+    "baseAbility": "swarm",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "swarm",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

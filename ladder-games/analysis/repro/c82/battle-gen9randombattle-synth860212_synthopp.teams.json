@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 860212,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth860212",
+  "seed": "sodium,40eaeb62000d2034",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,40e18a45000d2034",
+  "p2_ai_seed": "sodium,40e19e56000d2034",
+  "p1_team_seed": "sodium,40e1ab67000d2034",
+  "p2_team_seed": "sodium,40e1bc78000d2034",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 55,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:40.708Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Corviknight",
+     "level": 80,
+     "gender": "M",
+     "ability": "Mirror Armor",
+     "item": "Rocky Helmet",
+     "moves": [
+      "roost",
+      "bravebird",
+      "defog",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 185,
+      "def": 214,
+      "spa": 131,
+      "spd": 182,
+      "spe": 153
+     }
+    },
+    {
+     "species": "Latias",
+     "level": 79,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Soul Dew",
+     "moves": [
+      "psyshock",
+      "dracometeor",
+      "calmmind",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 131,
+      "def": 188,
+      "spa": 219,
+      "spd": 251,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Noctowl",
+     "level": 95,
+     "gender": "M",
+     "ability": "Tinted Lens",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "hurricane",
+      "hypervoice",
+      "roost",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 344,
+      "atk": 100,
+      "def": 149,
+      "spa": 217,
+      "spd": 236,
+      "spe": 187
+     }
+    },
+    {
+     "species": "Zoroark-Hisui",
+     "level": 80,
+     "gender": "F",
+     "ability": "Illusion",
+     "item": "Choice Specs",
+     "moves": [
+      "hypervoice",
+      "bittermalice",
+      "focusblast",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 219,
+      "atk": 165,
+      "def": 142,
+      "spa": 246,
+      "spd": 142,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Azelf",
+     "level": 82,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Choice Specs",
+     "moves": [
+      "psyshock",
+      "dazzlinggleam",
+      "fireblast",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 252,
+      "def": 162,
+      "spa": 252,
+      "spd": 162,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Cinderace",
+     "level": 77,
+     "gender": "M",
+     "ability": "Libero",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "courtchange",
+      "willowisp",
+      "uturn",
+      "pyroball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 250,
+      "atk": 223,
+      "def": 160,
+      "spa": 145,
+      "spd": 160,
+      "spe": 228
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Iron Boulder",
+     "level": 77,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "zenheadbutt",
+      "swordsdance",
+      "mightycleave",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 229,
+      "def": 168,
+      "spa": 149,
+      "spd": 211,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Sandy Shocks",
+     "level": 80,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Leftovers",
+     "moves": [
+      "thunderwave",
+      "earthpower",
+      "spikes",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 267,
+      "atk": 134,
+      "def": 201,
+      "spa": 240,
+      "spd": 182,
+      "spe": 208
+     }
+    },
+    {
+     "species": "Sudowoodo",
+     "level": 94,
+     "gender": "M",
+     "ability": "Rock Head",
+     "item": "Choice Band",
+     "moves": [
+      "woodhammer",
+      "earthquake",
+      "headsmash",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 241,
+      "def": 270,
+      "spa": 110,
+      "spd": 176,
+      "spe": 110
+     }
+    },
+    {
+     "species": "Noctowl",
+     "level": 95,
+     "gender": "F",
+     "ability": "Tinted Lens",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "roost",
+      "calmmind",
+      "hypervoice",
+      "hurricane"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 344,
+      "atk": 100,
+      "def": 149,
+      "spa": 217,
+      "spd": 236,
+      "spe": 187
+     }
+    },
+    {
+     "species": "Umbreon",
+     "level": 84,
+     "gender": "F",
+     "ability": "Synchronize",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "foulplay",
+      "toxic",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 114,
+      "def": 233,
+      "spa": 149,
+      "spd": 267,
+      "spe": 157
+     }
+    },
+    {
+     "species": "Regigigas",
+     "level": 84,
+     "gender": "N",
+     "ability": "Slow Start",
+     "item": "Leftovers",
+     "moves": [
+      "bodyslam",
+      "knockoff",
+      "protect",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 322,
+      "atk": 317,
+      "def": 233,
+      "spa": 183,
+      "spd": 233,
+      "spe": 216
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Corviknight",
+    "details": "Corviknight, L80, M",
+    "condition": "288/288",
+    "active": true,
+    "stats": {
+     "atk": 185,
+     "def": 214,
+     "spa": 131,
+     "spd": 182,
+     "spe": 153
+    },
+    "moves": [
+     "roost",
+     "bravebird",
+     "defog",
+     "bodypress"
+    ],
+    "baseAbility": "mirrorarmor",
+    "item": "rockyhelmet",
+    "pokeball": "pokeball",
+    "ability": "mirrorarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Latias",
+    "details": "Latias, L79, F",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 131,
+     "def": 188,
+     "spa": 219,
+     "spd": 251,
+     "spe": 219
+    },
+    "moves": [
+     "psyshock",
+     "dracometeor",
+     "calmmind",
+     "recover"
+    ],
+    "baseAbility": "levitate",
+    "item": "souldew",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Noctowl",
+    "details": "Noctowl, L95, M",
+    "condition": "344/344",
+    "active": false,
+    "stats": {
+     "atk": 100,
+     "def": 149,
+     "spa": 217,
+     "spd": 236,
+     "spe": 187
+    },
+    "moves": [
+     "hurricane",
+     "hypervoice",
+     "roost",
+     "calmmind"
+    ],
+    "baseAbility": "tintedlens",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "tintedlens",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zoroark",
+    "details": "Zoroark-Hisui, L80, F",
+    "condition": "219/219",
+    "active": false,
+    "stats": {
+     "atk": 165,
+     "def": 142,
+     "spa": 246,
+     "spd": 142,
+     "spe": 222
+    },
+    "moves": [
+     "hypervoice",
+     "bittermalice",
+     "focusblast",
+     "trick"
+    ],
+    "baseAbility": "illusion",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Azelf",
+    "details": "Azelf, L82",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 252,
+     "def": 162,
+     "spa": 252,
+     "spd": 162,
+     "spe": 236
+    },
+    "moves": [
+     "psyshock",
+     "dazzlinggleam",
+     "fireblast",
+     "uturn"
+    ],
+    "baseAbility": "levitate",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cinderace",
+    "details": "Cinderace, L77, M",
+    "condition": "250/250",
+    "active": false,
+    "stats": {
+     "atk": 223,
+     "def": 160,
+     "spa": 145,
+     "spd": 160,
+     "spe": 228
+    },
+    "moves": [
+     "courtchange",
+     "willowisp",
+     "uturn",
+     "pyroball"
+    ],
+    "baseAbility": "libero",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "libero",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Iron Boulder",
+    "details": "Iron Boulder, L77",
+    "condition": "265/265",
+    "active": true,
+    "stats": {
+     "atk": 229,
+     "def": 168,
+     "spa": 149,
+     "spd": 211,
+     "spe": 236
+    },
+    "moves": [
+     "zenheadbutt",
+     "swordsdance",
+     "mightycleave",
+     "closecombat"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sandy Shocks",
+    "details": "Sandy Shocks, L80",
+    "condition": "267/267",
+    "active": false,
+    "stats": {
+     "atk": 134,
+     "def": 201,
+     "spa": 240,
+     "spd": 182,
+     "spe": 208
+    },
+    "moves": [
+     "thunderwave",
+     "earthpower",
+     "spikes",
+     "thunderbolt"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sudowoodo",
+    "details": "Sudowoodo, L94, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 241,
+     "def": 270,
+     "spa": 110,
+     "spd": 176,
+     "spe": 110
+    },
+    "moves": [
+     "woodhammer",
+     "earthquake",
+     "headsmash",
+     "suckerpunch"
+    ],
+    "baseAbility": "rockhead",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "rockhead",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Noctowl",
+    "details": "Noctowl, L95, F",
+    "condition": "344/344",
+    "active": false,
+    "stats": {
+     "atk": 100,
+     "def": 149,
+     "spa": 217,
+     "spd": 236,
+     "spe": 187
+    },
+    "moves": [
+     "roost",
+     "calmmind",
+     "hypervoice",
+     "hurricane"
+    ],
+    "baseAbility": "tintedlens",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "tintedlens",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Umbreon",
+    "details": "Umbreon, L84, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 233,
+     "spa": 149,
+     "spd": 267,
+     "spe": 157
+    },
+    "moves": [
+     "wish",
+     "foulplay",
+     "toxic",
+     "protect"
+    ],
+    "baseAbility": "synchronize",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "synchronize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Regigigas",
+    "details": "Regigigas, L84",
+    "condition": "322/322",
+    "active": false,
+    "stats": {
+     "atk": 317,
+     "def": 233,
+     "spa": 183,
+     "spd": 233,
+     "spe": 216
+    },
+    "moves": [
+     "bodyslam",
+     "knockoff",
+     "protect",
+     "substitute"
+    ],
+    "baseAbility": "slowstart",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "slowstart",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "_doc": "MCTS constants derived from THIS net by derive_constants.py. foul-play auto-applies the PE_* keys when --nn-weights points at the matching .bin. Explicit PE_TUNE_* in the environment overrides these.",
+ "derived_from": "acceptance_v6nopol_h1.pt",
+ "shard": "valuenet_v6nopol.constants.json",
+ "weights_sha256": "d8d67c0cb755338372ca92355d5e3384e36ececa2af59471c180a25829a78070",
+ "ckpt": {
+  "lambda": 1.0,
+  "epoch": 1,
+  "val": 0.5044796896683547,
+  "mon_hid": 128,
+  "trunk": 256,
+  "attn_d": 0,
+  "policy_weight": 0.0,
+  "bench_pool": "sum",
+  "trunk_blocks": 0,
+  "bench_sort": "1",
+  "pp_true_max": "1"
+ },
+ "games": 112,
+ "iters": 12000,
+ "lnN": 9.39,
+ "delta": 0.3491,
+ "sigma": 1.0234,
+ "k": 1.5,
+ "tau": 2.8642,
+ "r": 0.01568,
+ "PE_TUNE_SIGMOID_SCALE": 0.01971,
+ "PE_TUNE_UCB_EXPLORATION": 0.1286,
+ "PE_TUNE_OPPONENT_UCB_EXPLORATION": 0.1286,
+ "stale_fast_export": true,
+ "stale_constants_from": "valuenet_v6nopol.constants.json"
+}

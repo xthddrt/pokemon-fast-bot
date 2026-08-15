@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 873476,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth873476",
+  "seed": "sodium,db3dacb2000d5404",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,db344b95000d5404",
+  "p2_ai_seed": "sodium,db345fa6000d5404",
+  "p1_team_seed": "sodium,db346cb7000d5404",
+  "p2_team_seed": "sodium,db347dc8000d5404",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 29,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:47.875Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Hoopa-Unbound",
+     "level": 80,
+     "gender": "N",
+     "ability": "Magician",
+     "item": "Choice Band",
+     "moves": [
+      "trick",
+      "hyperspacefury",
+      "drainpunch",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 259,
+      "atk": 302,
+      "def": 142,
+      "spa": 318,
+      "spd": 254,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Tauros-Paldea-Blaze",
+     "level": 81,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Choice Band",
+     "moves": [
+      "wildcharge",
+      "flareblitz",
+      "closecombat",
+      "stoneedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 225,
+      "def": 217,
+      "spa": 95,
+      "spd": 160,
+      "spe": 209
+     }
+    },
+    {
+     "species": "Victreebel",
+     "level": 90,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Life Orb",
+     "moves": [
+      "sunnyday",
+      "weatherball",
+      "powerwhip",
+      "sludgewave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 240,
+      "def": 168,
+      "spa": 231,
+      "spd": 177,
+      "spe": 177
+     }
+    },
+    {
+     "species": "Golem-Alola",
+     "level": 93,
+     "gender": "M",
+     "ability": "Galvanize",
+     "item": "Life Orb",
+     "moves": [
+      "stoneedge",
+      "earthquake",
+      "rockpolish",
+      "doubleedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 300,
+      "atk": 276,
+      "def": 295,
+      "spa": 155,
+      "spd": 174,
+      "spe": 137
+     }
+    },
+    {
+     "species": "Dugtrio-Alola",
+     "level": 84,
+     "gender": "M",
+     "ability": "Tangling Hair",
+     "item": "Life Orb",
+     "moves": [
+      "ironhead",
+      "suckerpunch",
+      "earthquake",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 196,
+      "atk": 216,
+      "def": 149,
+      "spa": 132,
+      "spd": 166,
+      "spe": 233
+     }
+    },
+    {
+     "species": "Suicune",
+     "level": 82,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Leftovers",
+     "moves": [
+      "substitute",
+      "protect",
+      "scald",
+      "calmmind"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 298,
+      "atk": 128,
+      "def": 236,
+      "spa": 195,
+      "spd": 236,
+      "spe": 187
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Girafarig",
+     "level": 89,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Eviolite",
+     "moves": [
+      "hypervoice",
+      "nastyplot",
+      "psyshock",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 147,
+      "def": 166,
+      "spa": 211,
+      "spd": 166,
+      "spe": 202
+     }
+    },
+    {
+     "species": "Slowbro-Galar",
+     "level": 87,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Rocky Helmet",
+     "moves": [
+      "shellsidearm",
+      "slackoff",
+      "thunderwave",
+      "psychic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 307,
+      "atk": 224,
+      "def": 215,
+      "spa": 224,
+      "spd": 172,
+      "spe": 102
+     }
+    },
+    {
+     "species": "Tornadus-Therian",
+     "level": 79,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "grassknot",
+      "nastyplot",
+      "bleakwindstorm",
+      "heatwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 163,
+      "def": 172,
+      "spa": 219,
+      "spd": 188,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Greedent",
+     "level": 86,
+     "gender": "F",
+     "ability": "Cheek Pouch",
+     "item": "Sitrus Berry",
+     "moves": [
+      "earthquake",
+      "knockoff",
+      "bodyslam",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 347,
+      "atk": 213,
+      "def": 213,
+      "spa": 144,
+      "spd": 178,
+      "spe": 84
+     }
+    },
+    {
+     "species": "Dedenne",
+     "level": 88,
+     "gender": "M",
+     "ability": "Cheek Pouch",
+     "item": "Sitrus Berry",
+     "moves": [
+      "uturn",
+      "superfang",
+      "thunderbolt",
+      "dazzlinggleam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 152,
+      "def": 151,
+      "spa": 193,
+      "spd": 168,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Alcremie-Ruby-Swirl",
+     "level": 90,
+     "gender": "F",
+     "ability": "Aroma Veil",
+     "item": "Leftovers",
+     "moves": [
+      "calmmind",
+      "recover",
+      "terablast",
+      "alluringvoice"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 113,
+      "def": 186,
+      "spa": 249,
+      "spd": 269,
+      "spe": 167
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Hoopa",
+    "details": "Hoopa-Unbound, L80",
+    "condition": "259/259",
+    "active": true,
+    "stats": {
+     "atk": 302,
+     "def": 142,
+     "spa": 318,
+     "spd": 254,
+     "spe": 174
+    },
+    "moves": [
+     "trick",
+     "hyperspacefury",
+     "drainpunch",
+     "gunkshot"
+    ],
+    "baseAbility": "magician",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "magician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tauros",
+    "details": "Tauros-Paldea-Blaze, L81, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 225,
+     "def": 217,
+     "spa": 95,
+     "spd": 160,
+     "spe": 209
+    },
+    "moves": [
+     "wildcharge",
+     "flareblitz",
+     "closecombat",
+     "stoneedge"
+    ],
+    "baseAbility": "intimidate",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Victreebel",
+    "details": "Victreebel, L90, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 240,
+     "def": 168,
+     "spa": 231,
+     "spd": 177,
+     "spe": 177
+    },
+    "moves": [
+     "sunnyday",
+     "weatherball",
+     "powerwhip",
+     "sludgewave"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Golem",
+    "details": "Golem-Alola, L93, M",
+    "condition": "300/300",
+    "active": false,
+    "stats": {
+     "atk": 276,
+     "def": 295,
+     "spa": 155,
+     "spd": 174,
+     "spe": 137
+    },
+    "moves": [
+     "stoneedge",
+     "earthquake",
+     "rockpolish",
+     "doubleedge"
+    ],
+    "baseAbility": "galvanize",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "galvanize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dugtrio",
+    "details": "Dugtrio-Alola, L84, M",
+    "condition": "196/196",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 149,
+     "spa": 132,
+     "spd": 166,
+     "spe": 233
+    },
+    "moves": [
+     "ironhead",
+     "suckerpunch",
+     "earthquake",
+     "swordsdance"
+    ],
+    "baseAbility": "tanglinghair",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "tanglinghair",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Suicune",
+    "details": "Suicune, L82",
+    "condition": "298/298",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 236,
+     "spa": 195,
+     "spd": 236,
+     "spe": 187
+    },
+    "moves": [
+     "substitute",
+     "protect",
+     "scald",
+     "calmmind"
+    ],
+    "baseAbility": "pressure",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Girafarig",
+    "details": "Girafarig, L89, M",
+    "condition": "269/269",
+    "active": true,
+    "stats": {
+     "atk": 147,
+     "def": 166,
+     "spa": 211,
+     "spd": 166,
+     "spe": 202
+    },
+    "moves": [
+     "hypervoice",
+     "nastyplot",
+     "psyshock",
+     "thunderbolt"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Slowbro",
+    "details": "Slowbro-Galar, L87, M",
+    "condition": "307/307",
+    "active": false,
+    "stats": {
+     "atk": 224,
+     "def": 215,
+     "spa": 224,
+     "spd": 172,
+     "spe": 102
+    },
+    "moves": [
+     "shellsidearm",
+     "slackoff",
+     "thunderwave",
+     "psychic"
+    ],
+    "baseAbility": "regenerator",
+    "item": "rockyhelmet",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tornadus",
+    "details": "Tornadus-Therian, L79, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 172,
+     "spa": 219,
+     "spd": 188,
+     "spe": 237
+    },
+    "moves": [
+     "grassknot",
+     "nastyplot",
+     "bleakwindstorm",
+     "heatwave"
+    ],
+    "baseAbility": "regenerator",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Greedent",
+    "details": "Greedent, L86, F",
+    "condition": "347/347",
+    "active": false,
+    "stats": {
+     "atk": 213,
+     "def": 213,
+     "spa": 144,
+     "spd": 178,
+     "spe": 84
+    },
+    "moves": [
+     "earthquake",
+     "knockoff",
+     "bodyslam",
+     "swordsdance"
+    ],
+    "baseAbility": "cheekpouch",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "cheekpouch",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dedenne",
+    "details": "Dedenne, L88, M",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 151,
+     "spa": 193,
+     "spd": 168,
+     "spe": 228
+    },
+    "moves": [
+     "uturn",
+     "superfang",
+     "thunderbolt",
+     "dazzlinggleam"
+    ],
+    "baseAbility": "cheekpouch",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "cheekpouch",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Alcremie",
+    "details": "Alcremie-Ruby-Swirl, L90, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 113,
+     "def": 186,
+     "spa": 249,
+     "spd": 269,
+     "spe": 167
+    },
+    "moves": [
+     "calmmind",
+     "recover",
+     "terablast",
+     "alluringvoice"
+    ],
+    "baseAbility": "aromaveil",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "aromaveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ }
+}

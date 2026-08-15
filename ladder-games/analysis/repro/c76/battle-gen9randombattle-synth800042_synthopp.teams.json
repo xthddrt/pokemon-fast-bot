@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 800042,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth800042",
+  "seed": "sodium,26035728000c352a",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,25f9f60b000c352a",
+  "p2_ai_seed": "sodium,25fa0a1c000c352a",
+  "p1_team_seed": "sodium,25fa172d000c352a",
+  "p2_team_seed": "sodium,25fa283e000c352a",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 36,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:06:09.709Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Leavanny",
+     "level": 86,
+     "gender": "M",
+     "ability": "Chlorophyll",
+     "item": "Loaded Dice",
+     "moves": [
+      "tripleaxel",
+      "bulletseed",
+      "stickyweb",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 226,
+      "def": 187,
+      "spa": 170,
+      "spd": 187,
+      "spe": 207
+     }
+    },
+    {
+     "species": "Rabsca",
+     "level": 91,
+     "gender": "M",
+     "ability": "Synchronize",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "bugbuzz",
+      "trickroom",
+      "psychic",
+      "revivalblessing"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 0
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 0
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 96,
+      "def": 207,
+      "spa": 261,
+      "spd": 234,
+      "spe": 86
+     }
+    },
+    {
+     "species": "Hariyama",
+     "level": 87,
+     "gender": "F",
+     "ability": "Thick Fat",
+     "item": "Assault Vest",
+     "moves": [
+      "heavyslam",
+      "closecombat",
+      "headlongrush",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 392,
+      "atk": 259,
+      "def": 154,
+      "spa": 119,
+      "spd": 154,
+      "spe": 137
+     }
+    },
+    {
+     "species": "Floatzel",
+     "level": 86,
+     "gender": "M",
+     "ability": "Water Veil",
+     "item": "Choice Band",
+     "moves": [
+      "flipturn",
+      "wavecrash",
+      "crunch",
+      "icespinner"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 286,
+      "atk": 230,
+      "def": 144,
+      "spa": 195,
+      "spd": 135,
+      "spe": 247
+     }
+    },
+    {
+     "species": "Pawmot",
+     "level": 80,
+     "gender": "F",
+     "ability": "Volt Absorb",
+     "item": "Leppa Berry",
+     "moves": [
+      "revivalblessing",
+      "nuzzle",
+      "doubleshock",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 230,
+      "def": 158,
+      "spa": 158,
+      "spd": 142,
+      "spe": 214
+     }
+    },
+    {
+     "species": "Iron Boulder",
+     "level": 77,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Booster Energy",
+     "moves": [
+      "mightycleave",
+      "swordsdance",
+      "closecombat",
+      "zenheadbutt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 229,
+      "def": 168,
+      "spa": 149,
+      "spd": 211,
+      "spe": 236
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Ursaluna",
+     "level": 79,
+     "gender": "M",
+     "ability": "Guts",
+     "item": "Flame Orb",
+     "moves": [
+      "throatchop",
+      "facade",
+      "trailblaze",
+      "headlongrush"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 335,
+      "atk": 267,
+      "def": 211,
+      "spa": 117,
+      "spd": 172,
+      "spe": 125
+     }
+    },
+    {
+     "species": "Cyclizar",
+     "level": 84,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "dracometeor",
+      "rapidspin",
+      "knockoff",
+      "shedtail"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 208,
+      "def": 157,
+      "spa": 191,
+      "spd": 157,
+      "spe": 251
+     }
+    },
+    {
+     "species": "Urshifu",
+     "level": 74,
+     "gender": "M",
+     "ability": "Unseen Fist",
+     "item": "Choice Band",
+     "moves": [
+      "closecombat",
+      "wickedblow",
+      "uturn",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 270,
+      "atk": 235,
+      "def": 191,
+      "spa": 136,
+      "spd": 132,
+      "spe": 187
+     }
+    },
+    {
+     "species": "Milotic",
+     "level": 83,
+     "gender": "M",
+     "ability": "Competitive",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "icebeam",
+      "scald",
+      "haze"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 104,
+      "def": 179,
+      "spa": 214,
+      "spd": 255,
+      "spe": 182
+     }
+    },
+    {
+     "species": "Tinkaton",
+     "level": 82,
+     "gender": "F",
+     "ability": "Mold Breaker",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "playrough",
+      "encore",
+      "gigatonhammer"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 170,
+      "def": 173,
+      "spa": 162,
+      "spd": 219,
+      "spe": 201
+     }
+    },
+    {
+     "species": "Bellibolt",
+     "level": 84,
+     "gender": "F",
+     "ability": "Electromorphosis",
+     "item": "Leftovers",
+     "moves": [
+      "slackoff",
+      "muddywater",
+      "thunderbolt",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 320,
+      "atk": 112,
+      "def": 201,
+      "spa": 221,
+      "spd": 188,
+      "spe": 124
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Leavanny",
+    "details": "Leavanny, L86, M",
+    "condition": "269/269",
+    "active": true,
+    "stats": {
+     "atk": 226,
+     "def": 187,
+     "spa": 170,
+     "spd": 187,
+     "spe": 207
+    },
+    "moves": [
+     "tripleaxel",
+     "bulletseed",
+     "stickyweb",
+     "knockoff"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Rabsca",
+    "details": "Rabsca, L91, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 96,
+     "def": 207,
+     "spa": 261,
+     "spd": 234,
+     "spe": 86
+    },
+    "moves": [
+     "bugbuzz",
+     "trickroom",
+     "psychic",
+     "revivalblessing"
+    ],
+    "baseAbility": "synchronize",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "synchronize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Hariyama",
+    "details": "Hariyama, L87, F",
+    "condition": "392/392",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 154,
+     "spa": 119,
+     "spd": 154,
+     "spe": 137
+    },
+    "moves": [
+     "heavyslam",
+     "closecombat",
+     "headlongrush",
+     "knockoff"
+    ],
+    "baseAbility": "thickfat",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Floatzel",
+    "details": "Floatzel, L86, M",
+    "condition": "286/286",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 144,
+     "spa": 195,
+     "spd": 135,
+     "spe": 247
+    },
+    "moves": [
+     "flipturn",
+     "wavecrash",
+     "crunch",
+     "icespinner"
+    ],
+    "baseAbility": "waterveil",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "waterveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Pawmot",
+    "details": "Pawmot, L80, F",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 158,
+     "spa": 158,
+     "spd": 142,
+     "spe": 214
+    },
+    "moves": [
+     "revivalblessing",
+     "nuzzle",
+     "doubleshock",
+     "closecombat"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "leppaberry",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Iron Boulder",
+    "details": "Iron Boulder, L77",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 168,
+     "spa": 149,
+     "spd": 211,
+     "spe": 236
+    },
+    "moves": [
+     "mightycleave",
+     "swordsdance",
+     "closecombat",
+     "zenheadbutt"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Ursaluna",
+    "details": "Ursaluna, L79, M",
+    "condition": "335/335",
+    "active": true,
+    "stats": {
+     "atk": 267,
+     "def": 211,
+     "spa": 117,
+     "spd": 172,
+     "spe": 125
+    },
+    "moves": [
+     "throatchop",
+     "facade",
+     "trailblaze",
+     "headlongrush"
+    ],
+    "baseAbility": "guts",
+    "item": "flameorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Cyclizar",
+    "details": "Cyclizar, L84, M",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 157,
+     "spa": 191,
+     "spd": 157,
+     "spe": 251
+    },
+    "moves": [
+     "dracometeor",
+     "rapidspin",
+     "knockoff",
+     "shedtail"
+    ],
+    "baseAbility": "regenerator",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Urshifu",
+    "details": "Urshifu, L74, M",
+    "condition": "270/270",
+    "active": false,
+    "stats": {
+     "atk": 235,
+     "def": 191,
+     "spa": 136,
+     "spd": 132,
+     "spe": 187
+    },
+    "moves": [
+     "closecombat",
+     "wickedblow",
+     "uturn",
+     "suckerpunch"
+    ],
+    "baseAbility": "unseenfist",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "unseenfist",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Milotic",
+    "details": "Milotic, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 104,
+     "def": 179,
+     "spa": 214,
+     "spd": 255,
+     "spe": 182
+    },
+    "moves": [
+     "recover",
+     "icebeam",
+     "scald",
+     "haze"
+    ],
+    "baseAbility": "competitive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tinkaton",
+    "details": "Tinkaton, L82, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 170,
+     "def": 173,
+     "spa": 162,
+     "spd": 219,
+     "spe": 201
+    },
+    "moves": [
+     "knockoff",
+     "playrough",
+     "encore",
+     "gigatonhammer"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Bellibolt",
+    "details": "Bellibolt, L84, F",
+    "condition": "320/320",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 201,
+     "spa": 221,
+     "spd": 188,
+     "spe": 124
+    },
+    "moves": [
+     "slackoff",
+     "muddywater",
+     "thunderbolt",
+     "toxic"
+    ],
+    "baseAbility": "electromorphosis",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "electromorphosis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1412380,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1412380",
+  "seed": "sodium,d853470a00158d1c",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,d849e5ed00158d1c",
+  "p2_ai_seed": "sodium,d849f9fe00158d1c",
+  "p1_team_seed": "sodium,d84a070f00158d1c",
+  "p2_team_seed": "sodium,d84a182000158d1c",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 69,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:07:17.937Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Sableye",
+     "level": 88,
+     "gender": "F",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "recover",
+      "willowisp",
+      "encore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 182,
+      "def": 182,
+      "spa": 165,
+      "spd": 165,
+      "spe": 138
+     }
+    },
+    {
+     "species": "Dusknoir",
+     "level": 89,
+     "gender": "M",
+     "ability": "Frisk",
+     "item": "Leftovers",
+     "moves": [
+      "substitute",
+      "poltergeist",
+      "focuspunch",
+      "painsplit"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 229,
+      "def": 291,
+      "spa": 166,
+      "spd": 291,
+      "spe": 131
+     }
+    },
+    {
+     "species": "Araquanid",
+     "level": 82,
+     "gender": "M",
+     "ability": "Water Bubble",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "liquidation",
+      "leechlife",
+      "hydropump",
+      "stickyweb"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 162,
+      "def": 198,
+      "spa": 129,
+      "spd": 264,
+      "spe": 116
+     }
+    },
+    {
+     "species": "Electrode-Hisui",
+     "level": 87,
+     "gender": "N",
+     "ability": "Soundproof",
+     "item": "Leftovers",
+     "moves": [
+      "gigadrain",
+      "substitute",
+      "thunderbolt",
+      "leechseed"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 92,
+      "def": 172,
+      "spa": 189,
+      "spd": 189,
+      "spe": 311
+     }
+    },
+    {
+     "species": "Tropius",
+     "level": 91,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "protect",
+      "leechseed",
+      "substitute",
+      "airslash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 328,
+      "atk": 128,
+      "def": 203,
+      "spa": 183,
+      "spd": 210,
+      "spe": 145
+     }
+    },
+    {
+     "species": "Klefki",
+     "level": 84,
+     "gender": "F",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "playrough",
+      "spikes",
+      "magnetrise",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 233,
+      "atk": 183,
+      "def": 201,
+      "spa": 183,
+      "spd": 194,
+      "spe": 174
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Jumpluff",
+     "level": 87,
+     "gender": "F",
+     "ability": "Infiltrator",
+     "item": "",
+     "moves": [
+      "substitute",
+      "strengthsap",
+      "acrobatics",
+      "leechseed"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 271,
+      "atk": 145,
+      "def": 172,
+      "spa": 145,
+      "spd": 215,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Falinks",
+     "level": 84,
+     "gender": "N",
+     "ability": "Defiant",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "noretreat",
+      "ironhead",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 216,
+      "def": 216,
+      "spa": 166,
+      "spd": 149,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Pecharunt",
+     "level": 77,
+     "gender": "N",
+     "ability": "Poison Puppeteer",
+     "item": "Rocky Helmet",
+     "moves": [
+      "partingshot",
+      "malignantchain",
+      "recover",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 140,
+      "def": 291,
+      "spa": 180,
+      "spd": 180,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "M",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "trick",
+      "moonblast",
+      "focusblast",
+      "psychic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Espeon",
+     "level": 84,
+     "gender": "M",
+     "ability": "Magic Bounce",
+     "item": "Choice Specs",
+     "moves": [
+      "alluringvoice",
+      "psyshock",
+      "shadowball",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 114,
+      "def": 149,
+      "spa": 267,
+      "spd": 208,
+      "spe": 233
+     }
+    },
+    {
+     "species": "Revavroom",
+     "level": 79,
+     "gender": "M",
+     "ability": "Filter",
+     "item": "Life Orb",
+     "moves": [
+      "ironhead",
+      "gunkshot",
+      "shiftgear",
+      "highhorsepower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 234,
+      "def": 188,
+      "spa": 131,
+      "spd": 151,
+      "spe": 188
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Sableye",
+    "details": "Sableye, L88, F",
+    "condition": "231/231",
+    "active": true,
+    "stats": {
+     "atk": 182,
+     "def": 182,
+     "spa": 165,
+     "spd": 165,
+     "spe": 138
+    },
+    "moves": [
+     "knockoff",
+     "recover",
+     "willowisp",
+     "encore"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dusknoir",
+    "details": "Dusknoir, L89, M",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 291,
+     "spa": 166,
+     "spd": 291,
+     "spe": 131
+    },
+    "moves": [
+     "substitute",
+     "poltergeist",
+     "focuspunch",
+     "painsplit"
+    ],
+    "baseAbility": "frisk",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "frisk",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Araquanid",
+    "details": "Araquanid, L82, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 162,
+     "def": 198,
+     "spa": 129,
+     "spd": 264,
+     "spe": 116
+    },
+    "moves": [
+     "liquidation",
+     "leechlife",
+     "hydropump",
+     "stickyweb"
+    ],
+    "baseAbility": "waterbubble",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "waterbubble",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Electrode",
+    "details": "Electrode-Hisui, L87",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 92,
+     "def": 172,
+     "spa": 189,
+     "spd": 189,
+     "spe": 311
+    },
+    "moves": [
+     "gigadrain",
+     "substitute",
+     "thunderbolt",
+     "leechseed"
+    ],
+    "baseAbility": "soundproof",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "soundproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tropius",
+    "details": "Tropius, L91, M",
+    "condition": "328/328",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 203,
+     "spa": 183,
+     "spd": 210,
+     "spe": 145
+    },
+    "moves": [
+     "protect",
+     "leechseed",
+     "substitute",
+     "airslash"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Klefki",
+    "details": "Klefki, L84, F",
+    "condition": "233/233",
+    "active": false,
+    "stats": {
+     "atk": 183,
+     "def": 201,
+     "spa": 183,
+     "spd": 194,
+     "spe": 174
+    },
+    "moves": [
+     "playrough",
+     "spikes",
+     "magnetrise",
+     "thunderwave"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Jumpluff",
+    "details": "Jumpluff, L87, F",
+    "condition": "271/271",
+    "active": true,
+    "stats": {
+     "atk": 145,
+     "def": 172,
+     "spa": 145,
+     "spd": 215,
+     "spe": 241
+    },
+    "moves": [
+     "substitute",
+     "strengthsap",
+     "acrobatics",
+     "leechseed"
+    ],
+    "baseAbility": "infiltrator",
+    "item": "",
+    "pokeball": "pokeball",
+    "ability": "infiltrator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Falinks",
+    "details": "Falinks, L84",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 216,
+     "spa": 166,
+     "spd": 149,
+     "spe": 174
+    },
+    "moves": [
+     "closecombat",
+     "noretreat",
+     "ironhead",
+     "knockoff"
+    ],
+    "baseAbility": "defiant",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Pecharunt",
+    "details": "Pecharunt, L77",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 140,
+     "def": 291,
+     "spa": 180,
+     "spd": 180,
+     "spe": 180
+    },
+    "moves": [
+     "partingshot",
+     "malignantchain",
+     "recover",
+     "shadowball"
+    ],
+    "baseAbility": "poisonpuppeteer",
+    "item": "rockyhelmet",
+    "pokeball": "pokeball",
+    "ability": "poisonpuppeteer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Gardevoir",
+    "details": "Gardevoir, L83, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "trick",
+     "moonblast",
+     "focusblast",
+     "psychic"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Espeon",
+    "details": "Espeon, L84, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 267,
+     "spd": 208,
+     "spe": 233
+    },
+    "moves": [
+     "alluringvoice",
+     "psyshock",
+     "shadowball",
+     "trick"
+    ],
+    "baseAbility": "magicbounce",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "magicbounce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Revavroom",
+    "details": "Revavroom, L79, M",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 234,
+     "def": 188,
+     "spa": 131,
+     "spd": 151,
+     "spe": 188
+    },
+    "moves": [
+     "ironhead",
+     "gunkshot",
+     "shiftgear",
+     "highhorsepower"
+    ],
+    "baseAbility": "filter",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "filter",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ }
+}

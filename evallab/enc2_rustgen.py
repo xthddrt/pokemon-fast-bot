@@ -1,0 +1,413 @@
+"""Generate the Rust encoder's constant tables from the PYTHON encoder.
+
+Every table the Rust port needs is emitted from `enc2.Tables(vocab)`,
+`dmgtab` and `enc2.DEFAULT_LAYOUT` -- the same objects the Python encoder
+uses -- indexed by the POKE-ENGINE enum discriminant, so Rust does one array
+index where Python does a vocab lookup plus a gather.
+
+  python enc2_rustgen.py [--out poke-engine/src/genx/enc2_tables.rs]
+
+Why generate rather than hand-write: table parity is then true BY
+CONSTRUCTION, and the only thing the parity gate has to prove is the
+arithmetic.  A hand-transcribed move table would make every parity failure
+ambiguous between "wrong table" and "wrong maths".
+
+The enum variant ORDER is read out of the poke-engine source
+(`define_enum_with_from_str!` blocks), so the generated arrays are indexed by
+`Choices as usize` / `Abilities as usize` / `Items as usize` directly.
+"""
+import os
+import re
+import sys
+
+LAB = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, LAB)
+ROOT = os.path.dirname(LAB)
+
+import numpy as np  # noqa: E402
+import labenv  # noqa: E402,F401
+import lossless_encoder as LE  # noqa: E402
+import dmgtab as DT  # noqa: E402
+import enc2  # noqa: E402
+
+PE = os.path.join(ROOT, "poke-engine")
+
+
+# --------------------------------------------------------------------------
+# 1. enum variant lists, read from the poke-engine source
+# --------------------------------------------------------------------------
+def enum_variants(path, name):
+    """`define_enum_with_from_str! { ... NAME { A, B, C }, ... }` -> [A, B, C]."""
+    src = open(os.path.join(PE, path)).read()
+    m = re.search(r"define_enum_with_from_str!\s*\{(?:[^{}]*?)\b%s\s*\{" % name, src)
+    if m is None:
+        raise SystemExit("enum %s not found in %s" % (name, path))
+    i = src.index("{", m.end() - 1)
+    depth, j = 0, i
+    while True:
+        if src[j] == "{":
+            depth += 1
+        elif src[j] == "}":
+            depth -= 1
+            if depth == 0:
+                break
+        j += 1
+    body = src[i + 1:j]
+    body = re.sub(r"//[^\n]*", "", body)
+    body = re.sub(r"#\[[^\]]*\]", "", body)
+    out = [t.strip() for t in body.split(",")]
+    return [t for t in out if t and re.fullmatch(r"[A-Za-z0-9_]+", t)]
+
+
+def check_order(got, want, tag):
+    if list(got) != list(want):
+        raise SystemExit("ORDER MISMATCH %s:\n  rust=%s\n  py  =%s"
+                         % (tag, list(got)[:8], list(want)[:8]))
+
+
+# --------------------------------------------------------------------------
+# 2. formatting helpers
+# --------------------------------------------------------------------------
+def f32(x):
+    x = float(np.float32(x))
+    if x != x:
+        return "f32::NAN"
+    s = repr(x)
+    return s if ("." in s or "e" in s or "E" in s) else s + ".0"
+
+
+def f64(x):
+    x = float(x)
+    s = repr(x)
+    return s if ("." in s or "e" in s or "E" in s) else s + ".0"
+
+
+def arr(vals, fmt, per=16):
+    out, line = [], "    "
+    for v in vals:
+        t = fmt(v) + ", "
+        if len(line) + len(t) > 96:
+            out.append(line.rstrip())
+            line = "    "
+        line += t
+    if line.strip():
+        out.append(line.rstrip())
+    return "\n".join(out)
+
+
+def main():
+    out_path = os.path.join(PE, "src/genx/enc2_tables.rs")
+    if "--out" in sys.argv:
+        out_path = sys.argv[sys.argv.index("--out") + 1]
+
+    vocab = LE.LosslessVocab()
+    T = enc2.Tables(vocab)
+    L = enc2.DEFAULT_LAYOUT
+    mt = DT.moves()
+
+    choices = enum_variants("src/choices.rs", "Choices")
+    abilities = enum_variants("src/genx/abilities.rs", "Abilities")
+    items = enum_variants("src/genx/items.rs", "Items")
+    vols = enum_variants("src/genx/state.rs", "PokemonVolatileStatus")
+    types = enum_variants("src/state.rs", "PokemonType")
+    status = enum_variants("src/state.rs", "PokemonStatus")
+    weather = enum_variants("src/genx/state.rs", "Weather")
+    terrain = enum_variants("src/genx/state.rs", "Terrain")
+
+    # the closed enums MUST already agree, column for column, or the whole
+    # port is built on a different alphabet than the encoder it must match
+    check_order(types, LE.TYPE_ORDER, "PokemonType")
+    check_order(status, LE.STATUS_ORDER, "PokemonStatus")
+    check_order(weather, LE.WEATHER_ORDER, "Weather")
+    check_order(terrain, LE.TERRAIN_ORDER, "Terrain")
+    check_order(vols, LE.VOLATILE_ORDER, "PokemonVolatileStatus")
+
+    vd_m, vd_a, vd_i = vocab.d["move"], vocab.d["ability"], vocab.d["item"]
+    mvid = np.array([vd_m.get(c, 0) for c in choices], np.int64)
+    abid = np.array([vd_a.get(a, 0) for a in abilities], np.int64)
+    itid = np.array([vd_i.get(i, 0) for i in items], np.int64)
+
+    # channel / physical, exactly as `enc2._channel_of` computes them
+    chan = enc2._channel_of(T, mvid)
+    phys = enc2.CHAN_PHYSICAL[np.clip(chan, 0, enc2.N_CHAN - 1)]
+
+    W = []
+    p = W.append
+    p("// GENERATED by evallab/enc2_rustgen.py -- DO NOT EDIT BY HAND.")
+    p("// Tables emitted from the PYTHON encoder (enc2.Tables / dmgtab), indexed by")
+    p("// the poke-engine enum discriminant, so table parity is true by construction.")
+    p("#![allow(clippy::all)]")
+    p("")
+    p("pub const N_CHOICES: usize = %d;" % len(choices))
+    p("pub const N_ABILITIES: usize = %d;" % len(abilities))
+    p("pub const N_ITEMS: usize = %d;" % len(items))
+    p("pub const N_TYPES: usize = %d;" % DT.N_TYPES)
+    p("pub const TYPELESS: i8 = %d;" % DT.TYPELESS)
+    p("pub const N_VOLATILES: usize = %d;" % LE.N_VOLATILES)
+    p("pub const MIN_ROLL: f64 = %s;" % f64(DT.MIN_ROLL))
+    p("")
+    # ---- layout ---------------------------------------------------------
+    p("// ---- layout (enc2.DEFAULT_LAYOUT) ----------------------------------")
+    for k, v in (("NM", L.NM), ("NS", L.NS), ("NR", L.NR), ("NCM", L.NCM),
+                 ("NCS", L.NCS), ("NG", L.NG), ("N_FEATS", L.N),
+                 ("N_IDS", L.N_IDS), ("O_MON", L.O_MON), ("O_SIDE", L.O_SIDE),
+                 ("O_REL", L.O_REL), ("O_CFM", L.O_CFM), ("O_CFS", L.O_CFS),
+                 ("O_GLOB", L.O_GLOB)):
+        p("pub const %s: usize = %d;" % (k, v))
+    p("pub const N_VOL_COLS: usize = %d;" % len(enc2.VOL_COLS))
+    p("pub const N_DUR_COLS: usize = %d;" % len(enc2.DUR_COLS))
+    p("pub const N_CAPS: usize = %d;" % len(enc2.CAP_NAMES))
+    p("pub const N_WEATHER_COLS: usize = %d;" % len(enc2.WEATHER_COLS))
+    p("pub const N_TERRAIN: usize = %d;" % len(LE.TERRAIN_ORDER))
+    # per-mon column offsets
+    for k in ("hp_frac", "maxhp", "attack", "status_none", "sleep_rest_turns",
+              "times_attacked", "terastallized", "alive", "pp_frac0",
+              "disabled0", "seen_species"):
+        p("pub const M_%s: usize = %d;" % (k.upper(), L.M[k]))
+    p("pub const M_CAP0: usize = %d;" % L.I_CAP)
+    # per-side column offsets
+    for k in ("stealth_rock", "boost_atk", "toxic_counter",
+              "substitute_hp_frac", "wish_turns", "wish_amount",
+              "future_sight_turns", "future_sight_source", "lock_choice",
+              "lock_encore", "lock_disable", "lock_multiturn",
+              "just_switched_in", "force_switch", "force_trapped",
+              "last_move_failed", "tera_available", "n_fainted_revivable",
+              "best_revival_target_score", "times_revived"):
+        p("pub const S_%s: usize = %d;" % (k.upper(), L.SS[k]))
+    p("pub const S_VOL0: usize = %d;" % L.SS["vol_" + enc2.VOL_COLS[0].lower()])
+    p("pub const S_DUR0: usize = %d;" % L.SS["dur_" + enc2.DUR_COLS[0]])
+    for k in ("setup_present", "setup_boost_atk", "s1_ohko_count"):
+        p("pub const CM_%s: usize = %d;" % (k.upper(), L.CM[k]))
+    for k in ("best_sweep_1", "free_turn", "answers_to_best_threat",
+              "tera_best_value", "tera_enabled_sweep"):
+        p("pub const CS_%s: usize = %d;" % (k.upper(), L.CS[k]))
+    for k in ("weather_none", "weather_turns", "terrain_none", "terrain_turns",
+              "trick_room", "trick_room_turns"):
+        p("pub const G_%s: usize = %d;" % (k.upper(), L.G[k]))
+    p("")
+    # ---- scalar divisors ------------------------------------------------
+    p("// ---- normalisation divisors (lossless_encoder) ---------------------")
+    for k in ("D_HP", "D_STAT", "D_SLEEP", "D_TIMES_ATTACKED", "D_BOOST",
+              "D_SIDECOND", "D_DURATION", "D_WEATHER_TURNS", "D_TR_TURNS"):
+        p("pub const %s: f32 = %s;" % (k, f32(getattr(LE, k))))
+    p("pub const D_STAT_EFF: f32 = %s;" % f32(enc2.D_STAT_EFF))
+    # SI_DIV is a float64 array in numpy -> the divide happens in f64
+    p("pub const D_WISH_TURNS: f64 = %s;" % f64(LE.D_WISH_TURNS))
+    p("pub const D_WISH_AMOUNT: f64 = %s;" % f64(LE.D_WISH_AMOUNT))
+    p("pub const D_FS_TURNS: f64 = %s;" % f64(LE.D_FS_TURNS))
+    p("pub const D_TIMES_REVIVED: f64 = %s;" % f64(LE.D_TIMES_REVIVED))
+    p("")
+    # ---- side-condition column plumbing ---------------------------------
+    p("// ---- §2 hazard/screen columns: (source sc index, dest col, divisor) -")
+    p("pub static SC_SRC: [usize; %d] = [%s];"
+      % (len(L.SC_SRC), ", ".join(str(int(x)) for x in L.SC_SRC)))
+    p("pub static SC_DST: [usize; %d] = [%s];"
+      % (len(L.SC_DST), ", ".join(str(int(x)) for x in L.SC_DST)))
+    p("pub static SC_DIV: [f32; %d] = [%s];"
+      % (len(L.SC_DIV), ", ".join(f32(x) for x in L.SC_DIV)))
+    p("pub static SCT_SRC: [usize; %d] = [%s];"
+      % (len(L.SCT_SRC), ", ".join(str(int(x)) for x in L.SCT_SRC)))
+    p("pub static SCT_DST: [usize; %d] = [%s];"
+      % (len(L.SCT_DST), ", ".join(str(int(x)) for x in L.SCT_DST)))
+    p("pub const SC_TOXIC_COUNT: usize = %d;" % enc2.SC["toxic_count"])
+    p("pub const SC_TAILWIND: usize = %d;" % enc2.SC["tailwind"])
+    p("pub const SC_REFLECT: usize = %d;" % enc2.SC["reflect"])
+    p("pub const SC_LIGHT_SCREEN: usize = %d;" % enc2.SC["light_screen"])
+    p("pub const SC_AURORA_VEIL: usize = %d;" % enc2.SC["aurora_veil"])
+    p("")
+    # ---- volatile / duration column pick-lists --------------------------
+    p("// ---- §2 volatile columns = rbpool.reachable_list(), as enum ids ----")
+    p("pub static VOL_IX: [usize; %d] = [%s];"
+      % (len(enc2.VOL_IX), ", ".join(str(int(x)) for x in enc2.VOL_IX)))
+    p("pub static DUR_IX: [usize; %d] = [%s];"
+      % (len(enc2.DUR_IX), ", ".join(str(int(x)) for x in enc2.DUR_IX)))
+    for k in ("SLOWSTART", "UNBURDEN", "PROTOSYNTHESISSPE", "QUARKDRIVESPE",
+              "ENCORE", "LOCKEDMOVE", "SOLARBEAM", "METEORBEAM"):
+        p("pub const VIX_%s: usize = %d;" % (k, LE.VOLATILE_IX[k]))
+    p("")
+    # ---- weather plumbing ----------------------------------------------
+    p("pub static WEATHER_VAR_MAP: [usize; %d] = [%s];"
+      % (len(enc2.WEATHER_VAR_MAP),
+         ", ".join(str(int(x)) for x in enc2.WEATHER_VAR_MAP)))
+    p("pub static WEATHER_MAP: [usize; %d] = [%s];"
+      % (len(enc2.WEATHER_MAP), ", ".join(str(int(x)) for x in enc2.WEATHER_MAP)))
+    p("pub static CHAN_PHYSICAL: [bool; 5] = [%s];"
+      % ", ".join("true" if x else "false" for x in enc2.CHAN_PHYSICAL))
+    p("pub static NUM_STAT: [usize; 4] = [%s];"
+      % ", ".join(str(int(x)) for x in enc2._NUM_STAT))
+    p("pub const TIX_ELECTRICTERRAIN: usize = %d;" % LE.TERRAIN_IX["ELECTRICTERRAIN"])
+    for k in ("NORMAL", "FIRE", "WATER", "ROCK", "ICE", "GROUND", "FLYING",
+              "STELLAR"):
+        p("pub const TY_%s: i8 = %d;" % (k, DT.TIX[k]))
+    p("")
+    # ---- boost multipliers + type chart ---------------------------------
+    p("pub static BOOST_MULT: [f32; 13] = [%s];"
+      % ", ".join(f32(x) for x in DT.BOOST_MULT_TABLE))
+    p("pub static CHART_P: [[f32; %d]; %d] = [" % (DT.N_TYPES + 1, DT.N_TYPES + 1))
+    for row in DT.CHART_P:
+        p("    [%s]," % ", ".join(f32(x) for x in row))
+    p("];")
+    p("")
+
+    # ---- moves ----------------------------------------------------------
+    p("#[derive(Clone, Copy)]")
+    p("pub struct MoveRow {")
+    for nm, ty in (("vocab", "i32"), ("bp", "f32"), ("mtype", "i8"),
+                   ("cat", "i8"), ("prio", "f32"), ("flags", "i32"),
+                   ("secondary", "i8"), ("hits", "f32"), ("hits_dice", "f32"),
+                   ("bp_kind", "i8"), ("unmodelled", "i8"),
+                   ("off_is_def", "i8"), ("def_is_phys", "i8"),
+                   ("off_is_target", "i8"), ("pp", "f32"),
+                   ("boosts", "[f32; 5]"), ("damaging", "bool"),
+                   ("real", "bool"), ("setup_rank", "f64"), ("cap", "u16"),
+                   ("is_status", "bool"), ("is_heal", "bool"),
+                   ("chan", "i8"), ("phys", "bool")):
+        p("    pub %s: %s," % (nm, ty))
+    p("}")
+    p("pub static MOVE_TAB: [MoveRow; N_CHOICES] = [")
+    for k, name in enumerate(choices):
+        v = int(mvid[k])
+        cap = 0
+        for c in range(len(enc2.CAP_NAMES)):
+            if T.mv_cap[v, c] > 0:
+                cap |= 1 << c
+        p("    MoveRow { vocab: %d, bp: %s, mtype: %d, cat: %d, prio: %s, flags: %d, "
+          "secondary: %d, hits: %s, hits_dice: %s, bp_kind: %d, unmodelled: %d, "
+          "off_is_def: %d, def_is_phys: %d, off_is_target: %d, pp: %s, "
+          "boosts: [%s], damaging: %s, real: %s, setup_rank: %s, cap: %d, "
+          "is_status: %s, is_heal: %s, chan: %d, phys: %s },  // %s"
+          % (v, f32(T.mv_bp[v]), int(T.mv_type[v]), int(T.mv_cat[v]),
+             f32(T.mv_prio[v]), int(T.mv_flags[v]), int(T.mv_secondary[v]),
+             f32(T.mv_hits[v]), f32(T.mv_hits_dice[v]), int(T.mv_bp_kind[v]),
+             int(T.mv_unmodelled[v]), int(T.mv_off_is_def[v]),
+             int(T.mv_def_is_phys[v]), int(T.mv_off_is_target[v]),
+             f32(T.mv_pp[v]),
+             ", ".join(f32(x) for x in T.mv_boosts[v, :5]),
+             "true" if T.mv_damaging[v] else "false",
+             "true" if T.mv_local[v] != 0 else "false",
+             f64(T.mv_setup_rank[v]), cap,
+             "true" if T.mv_is_status[v] else "false",
+             "true" if T.mv_is_heal[v] else "false",
+             int(chan[k]), "true" if phys[k] else "false", name))
+    p("];")
+    p("")
+
+    # ---- abilities ------------------------------------------------------
+    ab = T.ab
+    p("#[derive(Clone, Copy)]")
+    p("pub struct AbilRow {")
+    for nm, ty in (("vocab", "i32"), ("atk_mult", "f32"), ("spa_mult", "f32"),
+                   ("def_mult", "f32"), ("spd_mult", "f32"),
+                   ("adaptability", "bool"), ("technician", "bool"),
+                   ("sheerforce", "bool"), ("tintedlens", "bool"),
+                   ("guts", "bool"), ("multiscale", "bool"),
+                   ("moldbreaker", "bool"), ("infiltrator", "bool"),
+                   ("se_boost", "f32"), ("se_resist", "f32"), ("ate", "i8"),
+                   ("tb_type", "i8"), ("tb_mult", "f32"),
+                   ("fb_bit", "i32"), ("fb_mult", "f32"),
+                   ("tm_type", "i8"), ("tm_mult", "f32"),
+                   ("tm_type2", "i8"), ("tm_mult2", "f32"), ("cap", "u16"),
+                   ("prankster", "bool"), ("galewings", "bool"),
+                   ("triage", "bool"), ("quickfeet", "bool"),
+                   ("weather_speed", "u8"), ("surgesurfer", "bool"),
+                   ("supreme", "bool")):
+        p("    pub %s: %s," % (nm, ty))
+    p("}")
+    p("pub static ABIL_TAB: [AbilRow; N_ABILITIES] = [")
+    for k, name in enumerate(abilities):
+        v = int(abid[k])
+        cap = 0
+        for c in range(len(enc2.CAP_NAMES)):
+            if T.ab_cap[v, c] > 0:
+                cap |= 1 << c
+        ws = 0
+        for w in range(len(LE.WEATHER_ORDER)):
+            if T.ab_weather_speed[v, w]:
+                ws |= 1 << w
+        p("    AbilRow { vocab: %d, atk_mult: %s, spa_mult: %s, def_mult: %s, "
+          "spd_mult: %s, adaptability: %s, technician: %s, sheerforce: %s, "
+          "tintedlens: %s, guts: %s, multiscale: %s, moldbreaker: %s, "
+          "infiltrator: %s, se_boost: %s, se_resist: %s, ate: %d, tb_type: %d, "
+          "tb_mult: %s, fb_bit: %d, fb_mult: %s, tm_type: %d, tm_mult: %s, "
+          "tm_type2: %d, tm_mult2: %s, cap: %d, prankster: %s, galewings: %s, "
+          "triage: %s, quickfeet: %s, weather_speed: %d, surgesurfer: %s, "
+          "supreme: %s },  // %s"
+          % (v, f32(ab["ab_atk_mult"][v]), f32(ab["ab_spa_mult"][v]),
+             f32(ab["ab_def_mult"][v]), f32(ab["ab_spd_mult"][v]),
+             "true" if ab["ab_adaptability"][v] else "false",
+             "true" if ab["ab_technician"][v] else "false",
+             "true" if ab["ab_sheerforce"][v] else "false",
+             "true" if ab["ab_tintedlens"][v] else "false",
+             "true" if ab["ab_guts"][v] else "false",
+             "true" if ab["ab_multiscale"][v] else "false",
+             "true" if ab["ab_moldbreaker"][v] else "false",
+             "true" if ab["ab_infiltrator"][v] else "false",
+             f32(ab["ab_se_boost"][v]), f32(ab["ab_se_resist"][v]),
+             int(ab["ab_ate"][v]), int(ab["ab_type_boost_type"][v]),
+             f32(ab["ab_type_boost_mult"][v]), int(ab["ab_flag_boost_bit"][v]),
+             f32(ab["ab_flag_boost_mult"][v]), int(ab["ab_typemod_type"][v]),
+             f32(ab["ab_typemod_mult"][v]), int(ab["ab_typemod_type2"][v]),
+             f32(ab["ab_typemod_mult2"][v]), cap,
+             "true" if T.ab_prankster[v] else "false",
+             "true" if T.ab_galewings[v] else "false",
+             "true" if T.ab_triage[v] else "false",
+             "true" if T.ab_quickfeet[v] else "false", ws,
+             "true" if T.ab_surgesurfer[v] else "false",
+             "true" if T.ab_supreme[v] else "false", name))
+    p("];")
+    p("")
+
+    # ---- items ----------------------------------------------------------
+    it = T.it
+    p("#[derive(Clone, Copy)]")
+    p("pub struct ItemRow {")
+    for nm, ty in (("vocab", "i32"), ("atk_mult", "f32"), ("spa_mult", "f32"),
+                   ("def_mult", "f32"), ("spd_mult", "f32"),
+                   ("all_mult", "f32"), ("se_mult", "f32"),
+                   ("airballoon", "bool"), ("loaded_dice", "bool"),
+                   ("has_item", "bool"), ("type_boost", "i8"),
+                   ("scarf", "bool"), ("choice", "bool")):
+        p("    pub %s: %s," % (nm, ty))
+    p("}")
+    p("pub static ITEM_TAB: [ItemRow; N_ITEMS] = [")
+    for k, name in enumerate(items):
+        v = int(itid[k])
+        p("    ItemRow { vocab: %d, atk_mult: %s, spa_mult: %s, def_mult: %s, "
+          "spd_mult: %s, all_mult: %s, se_mult: %s, airballoon: %s, "
+          "loaded_dice: %s, has_item: %s, type_boost: %d, scarf: %s, "
+          "choice: %s },  // %s"
+          % (v, f32(it["it_atk_mult"][v]), f32(it["it_spa_mult"][v]),
+             f32(it["it_def_mult"][v]), f32(it["it_spd_mult"][v]),
+             f32(it["it_all_mult"][v]), f32(it["it_se_mult"][v]),
+             "true" if it["it_airballoon"][v] else "false",
+             "true" if it["it_loaded_dice"][v] else "false",
+             "true" if it["has_item"][v] else "false",
+             int(it["it_type_boost"][v]),
+             "true" if T.it_scarf[v] else "false",
+             "true" if T.it_choice[v] else "false", name))
+    p("];")
+    p("")
+    # ---- type vocab ids (for the embedding-id block) --------------------
+    p("// type / tera embedding ids are the TYPE INDEX itself (LE.TYPE_IX)")
+    p("pub const CHARGE_SOLARBEAM: usize = %d;" % mt.ix["SOLARBEAM"])
+    p("pub const CHARGE_METEORBEAM: usize = %d;" % mt.ix["METEORBEAM"])
+    p("pub static MOVE_LOCAL: [u16; N_CHOICES] = [")
+    p(arr([int(T.mv_local[int(mvid[k])]) for k in range(len(choices))], str))
+    p("];")
+
+    with open(out_path, "w") as fh:
+        fh.write("\n".join(W) + "\n")
+    print("wrote %s (%d lines)" % (out_path, len(W)))
+
+    # column names, for the parity harness
+    names_path = os.path.join(LAB, "data/enc2/rust_columns.txt")
+    os.makedirs(os.path.dirname(names_path), exist_ok=True)
+    with open(names_path, "w") as fh:
+        fh.write("\n".join(L.names) + "\n")
+    print("wrote %s (%d columns)" % (names_path, len(L.names)))
+    print("choices=%d abilities=%d items=%d  layout N=%d ids=%d"
+          % (len(choices), len(abilities), len(items), L.N, L.N_IDS))
+
+
+if __name__ == "__main__":
+    main()

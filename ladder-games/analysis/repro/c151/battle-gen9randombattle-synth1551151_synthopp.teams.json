@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1551151,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1551151",
+  "seed": "sodium,0a26fdc50017ab2f",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,0a1d9ca80017ab2f",
+  "p2_ai_seed": "sodium,0a1db0b90017ab2f",
+  "p1_team_seed": "sodium,0a1dbdca0017ab2f",
+  "p2_team_seed": "sodium,0a1dcedb0017ab2f",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 55,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:16:55.110Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Bisharp",
+     "level": 79,
+     "gender": "F",
+     "ability": "Defiant",
+     "item": "Eviolite",
+     "moves": [
+      "suckerpunch",
+      "throatchop",
+      "ironhead",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 232,
+      "atk": 243,
+      "def": 204,
+      "spa": 140,
+      "spd": 156,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Vivillon-Continental",
+     "level": 83,
+     "gender": "F",
+     "ability": "Compound Eyes",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sleeppowder",
+      "terablast",
+      "hurricane",
+      "quiverdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 91,
+      "def": 131,
+      "spa": 197,
+      "spd": 131,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "M",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "mysticalfire",
+      "psyshock",
+      "moonblast",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Calyrex-Ice",
+     "level": 72,
+     "gender": "N",
+     "ability": "As One (Glastrier)",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "trickroom",
+      "highhorsepower",
+      "closecombat",
+      "glaciallance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 0
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 0
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 280,
+      "def": 258,
+      "spa": 164,
+      "spd": 229,
+      "spe": 77
+     }
+    },
+    {
+     "species": "Comfey",
+     "level": 85,
+     "gender": "M",
+     "ability": "Triage",
+     "item": "Leftovers",
+     "moves": [
+      "gigadrain",
+      "calmmind",
+      "drainingkiss",
+      "storedpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 93,
+      "def": 202,
+      "spa": 188,
+      "spd": 236,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Blissey",
+     "level": 85,
+     "gender": "F",
+     "ability": "Natural Cure",
+     "item": "Leftovers",
+     "moves": [
+      "thunderwave",
+      "seismictoss",
+      "softboiled",
+      "healbell"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 572,
+      "atk": 22,
+      "def": 66,
+      "spa": 176,
+      "spd": 278,
+      "spe": 142
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Lunala",
+     "level": 70,
+     "gender": "N",
+     "ability": "Shadow Shield",
+     "item": "Leftovers",
+     "moves": [
+      "moonlight",
+      "psyshock",
+      "calmmind",
+      "moongeistbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 308,
+      "atk": 163,
+      "def": 166,
+      "spa": 233,
+      "spd": 191,
+      "spe": 177
+     }
+    },
+    {
+     "species": "Floatzel",
+     "level": 86,
+     "gender": "F",
+     "ability": "Water Veil",
+     "item": "Choice Band",
+     "moves": [
+      "icespinner",
+      "wavecrash",
+      "crunch",
+      "flipturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 286,
+      "atk": 230,
+      "def": 144,
+      "spa": 195,
+      "spd": 135,
+      "spe": 247
+     }
+    },
+    {
+     "species": "Dragalge",
+     "level": 88,
+     "gender": "M",
+     "ability": "Adaptability",
+     "item": "Assault Vest",
+     "moves": [
+      "sludgewave",
+      "focusblast",
+      "dragontail",
+      "dracometeor"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 182,
+      "def": 209,
+      "spa": 221,
+      "spd": 267,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Banette",
+     "level": 93,
+     "gender": "M",
+     "ability": "Cursed Body",
+     "item": "Life Orb",
+     "moves": [
+      "poltergeist",
+      "shadowsneak",
+      "gunkshot",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 270,
+      "atk": 267,
+      "def": 174,
+      "spa": 207,
+      "spd": 170,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Oricorio-Pom-Pom",
+     "level": 82,
+     "gender": "F",
+     "ability": "Dancer",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "hurricane",
+      "roost",
+      "quiverdance",
+      "revelationdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 119,
+      "def": 162,
+      "spa": 208,
+      "spd": 162,
+      "spe": 200
+     }
+    },
+    {
+     "species": "Bombirdier",
+     "level": 85,
+     "gender": "F",
+     "ability": "Big Pecks",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "bravebird",
+      "knockoff",
+      "uturn",
+      "roost"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 224,
+      "def": 193,
+      "spa": 151,
+      "spd": 193,
+      "spe": 188
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Bisharp",
+    "details": "Bisharp, L79, F",
+    "condition": "232/232",
+    "active": true,
+    "stats": {
+     "atk": 243,
+     "def": 204,
+     "spa": 140,
+     "spd": 156,
+     "spe": 156
+    },
+    "moves": [
+     "suckerpunch",
+     "throatchop",
+     "ironhead",
+     "stealthrock"
+    ],
+    "baseAbility": "defiant",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Vivillon",
+    "details": "Vivillon-Continental, L83, F",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 91,
+     "def": 131,
+     "spa": 197,
+     "spd": 131,
+     "spe": 195
+    },
+    "moves": [
+     "sleeppowder",
+     "terablast",
+     "hurricane",
+     "quiverdance"
+    ],
+    "baseAbility": "compoundeyes",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "compoundeyes",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gardevoir",
+    "details": "Gardevoir, L83, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "mysticalfire",
+     "psyshock",
+     "moonblast",
+     "trick"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Calyrex",
+    "details": "Calyrex-Ice, L72",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 280,
+     "def": 258,
+     "spa": 164,
+     "spd": 229,
+     "spe": 77
+    },
+    "moves": [
+     "trickroom",
+     "highhorsepower",
+     "closecombat",
+     "glaciallance"
+    ],
+    "baseAbility": "asoneglastrier",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "asoneglastrier",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Comfey",
+    "details": "Comfey, L85, M",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 202,
+     "spa": 188,
+     "spd": 236,
+     "spe": 219
+    },
+    "moves": [
+     "gigadrain",
+     "calmmind",
+     "drainingkiss",
+     "storedpower"
+    ],
+    "baseAbility": "triage",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "triage",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Blissey",
+    "details": "Blissey, L85, F",
+    "condition": "572/572",
+    "active": false,
+    "stats": {
+     "atk": 22,
+     "def": 66,
+     "spa": 176,
+     "spd": 278,
+     "spe": 142
+    },
+    "moves": [
+     "thunderwave",
+     "seismictoss",
+     "softboiled",
+     "healbell"
+    ],
+    "baseAbility": "naturalcure",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "naturalcure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Lunala",
+    "details": "Lunala, L70",
+    "condition": "308/308",
+    "active": true,
+    "stats": {
+     "atk": 163,
+     "def": 166,
+     "spa": 233,
+     "spd": 191,
+     "spe": 177
+    },
+    "moves": [
+     "moonlight",
+     "psyshock",
+     "calmmind",
+     "moongeistbeam"
+    ],
+    "baseAbility": "shadowshield",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "shadowshield",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Floatzel",
+    "details": "Floatzel, L86, F",
+    "condition": "286/286",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 144,
+     "spa": 195,
+     "spd": 135,
+     "spe": 247
+    },
+    "moves": [
+     "icespinner",
+     "wavecrash",
+     "crunch",
+     "flipturn"
+    ],
+    "baseAbility": "waterveil",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "waterveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dragalge",
+    "details": "Dragalge, L88, M",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 182,
+     "def": 209,
+     "spa": 221,
+     "spd": 267,
+     "spe": 128
+    },
+    "moves": [
+     "sludgewave",
+     "focusblast",
+     "dragontail",
+     "dracometeor"
+    ],
+    "baseAbility": "adaptability",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Banette",
+    "details": "Banette, L93, M",
+    "condition": "270/270",
+    "active": false,
+    "stats": {
+     "atk": 267,
+     "def": 174,
+     "spa": 207,
+     "spd": 170,
+     "spe": 174
+    },
+    "moves": [
+     "poltergeist",
+     "shadowsneak",
+     "gunkshot",
+     "thunderwave"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Oricorio",
+    "details": "Oricorio-Pom-Pom, L82, F",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 119,
+     "def": 162,
+     "spa": 208,
+     "spd": 162,
+     "spe": 200
+    },
+    "moves": [
+     "hurricane",
+     "roost",
+     "quiverdance",
+     "revelationdance"
+    ],
+    "baseAbility": "dancer",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "dancer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Bombirdier",
+    "details": "Bombirdier, L85, F",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 224,
+     "def": 193,
+     "spa": 151,
+     "spd": 193,
+     "spe": 188
+    },
+    "moves": [
+     "bravebird",
+     "knockoff",
+     "uturn",
+     "roost"
+    ],
+    "baseAbility": "bigpecks",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "bigpecks",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ }
+}

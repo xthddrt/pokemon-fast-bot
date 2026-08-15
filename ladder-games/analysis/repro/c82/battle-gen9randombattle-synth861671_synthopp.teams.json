@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 861671,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth861671",
+  "seed": "sodium,f715a4bd000d25e7",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,f70c43a0000d25e7",
+  "p2_ai_seed": "sodium,f70c57b1000d25e7",
+  "p1_team_seed": "sodium,f70c64c2000d25e7",
+  "p2_team_seed": "sodium,f70c75d3000d25e7",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 34,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:44.423Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Flareon",
+     "level": 90,
+     "gender": "M",
+     "ability": "Guts",
+     "item": "Toxic Orb",
+     "moves": [
+      "willowisp",
+      "flareblitz",
+      "facade",
+      "trailblaze"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 285,
+      "def": 159,
+      "spa": 222,
+      "spd": 249,
+      "spe": 168
+     }
+    },
+    {
+     "species": "Kingdra",
+     "level": 84,
+     "gender": "M",
+     "ability": "Sniper",
+     "item": "Lum Berry",
+     "moves": [
+      "wavecrash",
+      "outrage",
+      "dragondance",
+      "waterfall"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 208,
+      "def": 208,
+      "spa": 208,
+      "spd": 208,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Raging Bolt",
+     "level": 78,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Booster Energy",
+     "moves": [
+      "thunderbolt",
+      "calmmind",
+      "thunderclap",
+      "dragonpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 118,
+      "def": 187,
+      "spa": 259,
+      "spd": 184,
+      "spe": 162
+     }
+    },
+    {
+     "species": "Mudsdale",
+     "level": 83,
+     "gender": "M",
+     "ability": "Stamina",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "roar",
+      "heavyslam",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 255,
+      "def": 214,
+      "spa": 139,
+      "spd": 189,
+      "spe": 106
+     }
+    },
+    {
+     "species": "Abomasnow",
+     "level": 84,
+     "gender": "F",
+     "ability": "Snow Warning",
+     "item": "Light Clay",
+     "moves": [
+      "iceshard",
+      "blizzard",
+      "earthquake",
+      "auroraveil"
+     ],
+     "evs": {
+      "hp": 77,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 203,
+      "def": 174,
+      "spa": 203,
+      "spd": 191,
+      "spe": 149
+     }
+    },
+    {
+     "species": "Arboliva",
+     "level": 91,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "leechseed",
+      "substitute",
+      "hypervoice",
+      "protect"
+     ],
+     "evs": {
+      "hp": 77,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 130,
+      "def": 216,
+      "spa": 279,
+      "spd": 250,
+      "spe": 123
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Girafarig",
+     "level": 89,
+     "gender": "F",
+     "ability": "Sap Sipper",
+     "item": "Eviolite",
+     "moves": [
+      "thunderbolt",
+      "psyshock",
+      "hypervoice",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 147,
+      "def": 166,
+      "spa": 211,
+      "spd": 166,
+      "spe": 202
+     }
+    },
+    {
+     "species": "Zoroark",
+     "level": 83,
+     "gender": "F",
+     "ability": "Illusion",
+     "item": "Choice Specs",
+     "moves": [
+      "sludgebomb",
+      "flamethrower",
+      "focusblast",
+      "darkpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 179,
+      "def": 147,
+      "spa": 247,
+      "spd": 147,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Illumise",
+     "level": 91,
+     "gender": "F",
+     "ability": "Prankster",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "encore",
+      "thunderwave",
+      "roost",
+      "bugbuzz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 90,
+      "def": 188,
+      "spa": 185,
+      "spd": 207,
+      "spe": 207
+     }
+    },
+    {
+     "species": "Mismagius",
+     "level": 86,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Life Orb",
+     "moves": [
+      "nastyplot",
+      "mysticalfire",
+      "dazzlinggleam",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 108,
+      "def": 152,
+      "spa": 230,
+      "spd": 230,
+      "spe": 230
+     }
+    },
+    {
+     "species": "Vaporeon",
+     "level": 86,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "scald",
+      "wish",
+      "icebeam",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 364,
+      "atk": 116,
+      "def": 152,
+      "spa": 238,
+      "spd": 213,
+      "spe": 161
+     }
+    },
+    {
+     "species": "Exeggutor-Alola",
+     "level": 89,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "dracometeor",
+      "flamethrower",
+      "woodhammer",
+      "dragontail"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 314,
+      "atk": 238,
+      "def": 202,
+      "spa": 273,
+      "spd": 184,
+      "spe": 131
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Flareon",
+    "details": "Flareon, L90, M",
+    "condition": "263/263",
+    "active": true,
+    "stats": {
+     "atk": 285,
+     "def": 159,
+     "spa": 222,
+     "spd": 249,
+     "spe": 168
+    },
+    "moves": [
+     "willowisp",
+     "flareblitz",
+     "facade",
+     "trailblaze"
+    ],
+    "baseAbility": "guts",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Kingdra",
+    "details": "Kingdra, L84, M",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 208,
+     "spa": 208,
+     "spd": 208,
+     "spe": 191
+    },
+    "moves": [
+     "wavecrash",
+     "outrage",
+     "dragondance",
+     "waterfall"
+    ],
+    "baseAbility": "sniper",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "sniper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Raging Bolt",
+    "details": "Raging Bolt, L78",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 118,
+     "def": 187,
+     "spa": 259,
+     "spd": 184,
+     "spe": 162
+    },
+    "moves": [
+     "thunderbolt",
+     "calmmind",
+     "thunderclap",
+     "dragonpulse"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "boosterenergy",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mudsdale",
+    "details": "Mudsdale, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 255,
+     "def": 214,
+     "spa": 139,
+     "spd": 189,
+     "spe": 106
+    },
+    "moves": [
+     "earthquake",
+     "roar",
+     "heavyslam",
+     "stealthrock"
+    ],
+    "baseAbility": "stamina",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "stamina",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Abomasnow",
+    "details": "Abomasnow, L84, F",
+    "condition": "287/287",
+    "active": false,
+    "stats": {
+     "atk": 203,
+     "def": 174,
+     "spa": 203,
+     "spd": 191,
+     "spe": 149
+    },
+    "moves": [
+     "iceshard",
+     "blizzard",
+     "earthquake",
+     "auroraveil"
+    ],
+    "baseAbility": "snowwarning",
+    "item": "lightclay",
+    "pokeball": "pokeball",
+    "ability": "snowwarning",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Arboliva",
+    "details": "Arboliva, L91, M",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 130,
+     "def": 216,
+     "spa": 279,
+     "spd": 250,
+     "spe": 123
+    },
+    "moves": [
+     "leechseed",
+     "substitute",
+     "hypervoice",
+     "protect"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Girafarig",
+    "details": "Girafarig, L89, F",
+    "condition": "269/269",
+    "active": true,
+    "stats": {
+     "atk": 147,
+     "def": 166,
+     "spa": 211,
+     "spd": 166,
+     "spe": 202
+    },
+    "moves": [
+     "thunderbolt",
+     "psyshock",
+     "hypervoice",
+     "nastyplot"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zoroark",
+    "details": "Zoroark, L83, F",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 179,
+     "def": 147,
+     "spa": 247,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "sludgebomb",
+     "flamethrower",
+     "focusblast",
+     "darkpulse"
+    ],
+    "baseAbility": "illusion",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Illumise",
+    "details": "Illumise, L91, F",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 90,
+     "def": 188,
+     "spa": 185,
+     "spd": 207,
+     "spe": 207
+    },
+    "moves": [
+     "encore",
+     "thunderwave",
+     "roost",
+     "bugbuzz"
+    ],
+    "baseAbility": "prankster",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mismagius",
+    "details": "Mismagius, L86, M",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 108,
+     "def": 152,
+     "spa": 230,
+     "spd": 230,
+     "spe": 230
+    },
+    "moves": [
+     "nastyplot",
+     "mysticalfire",
+     "dazzlinggleam",
+     "shadowball"
+    ],
+    "baseAbility": "levitate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Vaporeon",
+    "details": "Vaporeon, L86, F",
+    "condition": "364/364",
+    "active": false,
+    "stats": {
+     "atk": 116,
+     "def": 152,
+     "spa": 238,
+     "spd": 213,
+     "spe": 161
+    },
+    "moves": [
+     "scald",
+     "wish",
+     "icebeam",
+     "protect"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Exeggutor",
+    "details": "Exeggutor-Alola, L89, M",
+    "condition": "314/314",
+    "active": false,
+    "stats": {
+     "atk": 238,
+     "def": 202,
+     "spa": 273,
+     "spd": 184,
+     "spe": 131
+    },
+    "moves": [
+     "dracometeor",
+     "flamethrower",
+     "woodhammer",
+     "dragontail"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1168830,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1168830",
+  "seed": "sodium,aac6561c0011d5be",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,aabcf4ff0011d5be",
+  "p2_ai_seed": "sodium,aabd09100011d5be",
+  "p1_team_seed": "sodium,aabd16210011d5be",
+  "p2_team_seed": "sodium,aabd27320011d5be",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 24,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T00:19:31.396Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Plusle",
+     "level": 95,
+     "gender": "F",
+     "ability": "Lightning Rod",
+     "item": "Life Orb",
+     "moves": [
+      "encore",
+      "thunderbolt",
+      "grassknot",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 100,
+      "def": 130,
+      "spa": 215,
+      "spd": 196,
+      "spe": 234
+     }
+    },
+    {
+     "species": "Palafin",
+     "level": 77,
+     "gender": "F",
+     "ability": "Zero to Hero",
+     "item": "Leftovers",
+     "moves": [
+      "icepunch",
+      "bulkup",
+      "jetpunch",
+      "drainpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 281,
+      "atk": 152,
+      "def": 155,
+      "spa": 126,
+      "spd": 140,
+      "spe": 199
+     }
+    },
+    {
+     "species": "Gumshoos",
+     "level": 95,
+     "gender": "M",
+     "ability": "Adaptability",
+     "item": "Choice Band",
+     "moves": [
+      "knockoff",
+      "uturn",
+      "earthquake",
+      "doubleedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 263,
+      "def": 168,
+      "spa": 158,
+      "spd": 168,
+      "spe": 139
+     }
+    },
+    {
+     "species": "Rillaboom",
+     "level": 79,
+     "gender": "F",
+     "ability": "Grassy Surge",
+     "item": "Choice Band",
+     "moves": [
+      "grassyglide",
+      "woodhammer",
+      "knockoff",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 243,
+      "def": 188,
+      "spa": 140,
+      "spd": 156,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Regirock",
+     "level": 83,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Chesto Berry",
+     "moves": [
+      "rest",
+      "stoneedge",
+      "irondefense",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 214,
+      "def": 380,
+      "spa": 131,
+      "spd": 214,
+      "spe": 131
+     }
+    },
+    {
+     "species": "Mewtwo",
+     "level": 72,
+     "gender": "N",
+     "ability": "Unnerve",
+     "item": "Life Orb",
+     "moves": [
+      "darkpulse",
+      "aurasphere",
+      "nastyplot",
+      "psystrike"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 163,
+      "def": 172,
+      "spa": 264,
+      "spd": 172,
+      "spe": 229
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Lugia",
+     "level": 73,
+     "gender": "N",
+     "ability": "Multiscale",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "earthpower",
+      "recover",
+      "calmmind",
+      "aeroblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 136,
+      "def": 232,
+      "spa": 174,
+      "spd": 267,
+      "spe": 203
+     }
+    },
+    {
+     "species": "Mewtwo",
+     "level": 72,
+     "gender": "N",
+     "ability": "Unnerve",
+     "item": "Life Orb",
+     "moves": [
+      "darkpulse",
+      "aurasphere",
+      "psystrike",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 163,
+      "def": 172,
+      "spa": 264,
+      "spd": 172,
+      "spe": 229
+     }
+    },
+    {
+     "species": "Falinks",
+     "level": 84,
+     "gender": "N",
+     "ability": "Defiant",
+     "item": "Life Orb",
+     "moves": [
+      "ironhead",
+      "closecombat",
+      "knockoff",
+      "noretreat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 216,
+      "def": 216,
+      "spa": 166,
+      "spd": 149,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Frosmoth",
+     "level": 82,
+     "gender": "F",
+     "ability": "Ice Scales",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "terablast",
+      "quiverdance",
+      "icebeam",
+      "bugbuzz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 111,
+      "def": 146,
+      "spa": 252,
+      "spd": 195,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Porygon-Z",
+     "level": 83,
+     "gender": "N",
+     "ability": "Adaptability",
+     "item": "Choice Scarf",
+     "moves": [
+      "icebeam",
+      "thunderbolt",
+      "triattack",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 137,
+      "def": 164,
+      "spa": 272,
+      "spd": 172,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Blaziken",
+     "level": 76,
+     "gender": "M",
+     "ability": "Speed Boost",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "closecombat",
+      "flareblitz",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 226,
+      "def": 150,
+      "spa": 211,
+      "spd": 150,
+      "spe": 166
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Plusle",
+    "details": "Plusle, L95, F",
+    "condition": "268/268",
+    "active": true,
+    "stats": {
+     "atk": 100,
+     "def": 130,
+     "spa": 215,
+     "spd": 196,
+     "spe": 234
+    },
+    "moves": [
+     "encore",
+     "thunderbolt",
+     "grassknot",
+     "nastyplot"
+    ],
+    "baseAbility": "lightningrod",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "lightningrod",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Palafin",
+    "details": "Palafin, L77, F",
+    "condition": "281/281",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 155,
+     "spa": 126,
+     "spd": 140,
+     "spe": 199
+    },
+    "moves": [
+     "icepunch",
+     "bulkup",
+     "jetpunch",
+     "drainpunch"
+    ],
+    "baseAbility": "zerotohero",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "zerotohero",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gumshoos",
+    "details": "Gumshoos, L95, M",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 263,
+     "def": 168,
+     "spa": 158,
+     "spd": 168,
+     "spe": 139
+    },
+    "moves": [
+     "knockoff",
+     "uturn",
+     "earthquake",
+     "doubleedge"
+    ],
+    "baseAbility": "adaptability",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Rillaboom",
+    "details": "Rillaboom, L79, F",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 243,
+     "def": 188,
+     "spa": 140,
+     "spd": 156,
+     "spe": 180
+    },
+    "moves": [
+     "grassyglide",
+     "woodhammer",
+     "knockoff",
+     "uturn"
+    ],
+    "baseAbility": "grassysurge",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "grassysurge",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Regirock",
+    "details": "Regirock, L83",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 380,
+     "spa": 131,
+     "spd": 214,
+     "spe": 131
+    },
+    "moves": [
+     "rest",
+     "stoneedge",
+     "irondefense",
+     "bodypress"
+    ],
+    "baseAbility": "clearbody",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mewtwo",
+    "details": "Mewtwo, L72",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 172,
+     "spa": 264,
+     "spd": 172,
+     "spe": 229
+    },
+    "moves": [
+     "darkpulse",
+     "aurasphere",
+     "nastyplot",
+     "psystrike"
+    ],
+    "baseAbility": "unnerve",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "unnerve",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Lugia",
+    "details": "Lugia, L73",
+    "condition": "275/275",
+    "active": true,
+    "stats": {
+     "atk": 136,
+     "def": 232,
+     "spa": 174,
+     "spd": 267,
+     "spe": 203
+    },
+    "moves": [
+     "earthpower",
+     "recover",
+     "calmmind",
+     "aeroblast"
+    ],
+    "baseAbility": "multiscale",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "multiscale",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mewtwo",
+    "details": "Mewtwo, L72",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 172,
+     "spa": 264,
+     "spd": 172,
+     "spe": 229
+    },
+    "moves": [
+     "darkpulse",
+     "aurasphere",
+     "psystrike",
+     "nastyplot"
+    ],
+    "baseAbility": "unnerve",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "unnerve",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Falinks",
+    "details": "Falinks, L84",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 216,
+     "spa": 166,
+     "spd": 149,
+     "spe": 174
+    },
+    "moves": [
+     "ironhead",
+     "closecombat",
+     "knockoff",
+     "noretreat"
+    ],
+    "baseAbility": "defiant",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Frosmoth",
+    "details": "Frosmoth, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 111,
+     "def": 146,
+     "spa": 252,
+     "spd": 195,
+     "spe": 154
+    },
+    "moves": [
+     "terablast",
+     "quiverdance",
+     "icebeam",
+     "bugbuzz"
+    ],
+    "baseAbility": "icescales",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "icescales",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Porygon-Z",
+    "details": "Porygon-Z, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 137,
+     "def": 164,
+     "spa": 272,
+     "spd": 172,
+     "spe": 197
+    },
+    "moves": [
+     "icebeam",
+     "thunderbolt",
+     "triattack",
+     "shadowball"
+    ],
+    "baseAbility": "adaptability",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Blaziken",
+    "details": "Blaziken, L76, M",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 226,
+     "def": 150,
+     "spa": 211,
+     "spd": 150,
+     "spe": 166
+    },
+    "moves": [
+     "knockoff",
+     "closecombat",
+     "flareblitz",
+     "swordsdance"
+    ],
+    "baseAbility": "speedboost",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "speedboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

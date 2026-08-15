@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 836020,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth836020",
+  "seed": "sodium,c67c20e2000cc1b4",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,c672bfc5000cc1b4",
+  "p2_ai_seed": "sodium,c672d3d6000cc1b4",
+  "p1_team_seed": "sodium,c672e0e7000cc1b4",
+  "p2_team_seed": "sodium,c672f1f8000cc1b4",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 30,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:33.689Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Minun",
+     "level": 95,
+     "gender": "M",
+     "ability": "Volt Absorb",
+     "item": "Life Orb",
+     "moves": [
+      "grassknot",
+      "alluringvoice",
+      "nastyplot",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 81,
+      "def": 149,
+      "spa": 196,
+      "spd": 215,
+      "spe": 234
+     }
+    },
+    {
+     "species": "Cryogonal",
+     "level": 89,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "recover",
+      "freezedry",
+      "rapidspin",
+      "flashcannon"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 140,
+      "def": 140,
+      "spa": 220,
+      "spd": 291,
+      "spe": 238
+     }
+    },
+    {
+     "species": "Greninja",
+     "level": 80,
+     "gender": "M",
+     "ability": "Protean",
+     "item": "Life Orb",
+     "moves": [
+      "hydropump",
+      "uturn",
+      "gunkshot",
+      "darkpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 198,
+      "def": 153,
+      "spa": 211,
+      "spd": 160,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Hypno",
+     "level": 95,
+     "gender": "F",
+     "ability": "Insomnia",
+     "item": "Leftovers",
+     "moves": [
+      "toxic",
+      "protect",
+      "psychicnoise",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 143,
+      "def": 187,
+      "spa": 193,
+      "spd": 272,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Cetitan",
+     "level": 82,
+     "gender": "F",
+     "ability": "Thick Fat",
+     "item": "Sitrus Berry",
+     "moves": [
+      "earthquake",
+      "iceshard",
+      "icespinner",
+      "bellydrum"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 412,
+      "atk": 232,
+      "def": 154,
+      "spa": 121,
+      "spd": 137,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Leafeon",
+     "level": 88,
+     "gender": "M",
+     "ability": "Chlorophyll",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "swordsdance",
+      "doubleedge",
+      "leafblade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 244,
+      "def": 279,
+      "spa": 156,
+      "spd": 165,
+      "spe": 217
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Arceus",
+     "level": 68,
+     "gender": "N",
+     "ability": "Multitype",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "extremespeed",
+      "recover",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 276,
+      "atk": 203,
+      "def": 203,
+      "spa": 203,
+      "spd": 203,
+      "spe": 203
+     }
+    },
+    {
+     "species": "Dialga-Origin",
+     "level": 73,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Adamant Crystal",
+     "moves": [
+      "thunderwave",
+      "heavyslam",
+      "fireblast",
+      "dracometeor"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 188,
+      "def": 218,
+      "spa": 261,
+      "spd": 218,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Rillaboom",
+     "level": 79,
+     "gender": "M",
+     "ability": "Grassy Surge",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "woodhammer",
+      "highhorsepower",
+      "grassyglide"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 243,
+      "def": 188,
+      "spa": 140,
+      "spd": 156,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Zoroark-Hisui",
+     "level": 80,
+     "gender": "M",
+     "ability": "Illusion",
+     "item": "Life Orb",
+     "moves": [
+      "poltergeist",
+      "willowisp",
+      "hypervoice",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 219,
+      "atk": 206,
+      "def": 142,
+      "spa": 246,
+      "spd": 142,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Calyrex-Shadow",
+     "level": 64,
+     "gender": "N",
+     "ability": "As One (Spectrier)",
+     "item": "Life Orb",
+     "moves": [
+      "psyshock",
+      "nastyplot",
+      "astralbarrage",
+      "pollenpuff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 113,
+      "def": 140,
+      "spa": 249,
+      "spd": 166,
+      "spe": 230
+     }
+    },
+    {
+     "species": "Haxorus",
+     "level": 77,
+     "gender": "F",
+     "ability": "Mold Breaker",
+     "item": "Loaded Dice",
+     "moves": [
+      "earthquake",
+      "swordsdance",
+      "scaleshot",
+      "ironhead"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 271,
+      "def": 183,
+      "spa": 137,
+      "spd": 152,
+      "spe": 194
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Minun",
+    "details": "Minun, L95, M",
+    "condition": "268/268",
+    "active": true,
+    "stats": {
+     "atk": 81,
+     "def": 149,
+     "spa": 196,
+     "spd": 215,
+     "spe": 234
+    },
+    "moves": [
+     "grassknot",
+     "alluringvoice",
+     "nastyplot",
+     "thunderbolt"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cryogonal",
+    "details": "Cryogonal, L89",
+    "condition": "287/287",
+    "active": false,
+    "stats": {
+     "atk": 140,
+     "def": 140,
+     "spa": 220,
+     "spd": 291,
+     "spe": 238
+    },
+    "moves": [
+     "recover",
+     "freezedry",
+     "rapidspin",
+     "flashcannon"
+    ],
+    "baseAbility": "levitate",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Greninja",
+    "details": "Greninja, L80, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 198,
+     "def": 153,
+     "spa": 211,
+     "spd": 160,
+     "spe": 241
+    },
+    "moves": [
+     "hydropump",
+     "uturn",
+     "gunkshot",
+     "darkpulse"
+    ],
+    "baseAbility": "protean",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "protean",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Hypno",
+    "details": "Hypno, L95, F",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 143,
+     "def": 187,
+     "spa": 193,
+     "spd": 272,
+     "spe": 181
+    },
+    "moves": [
+     "toxic",
+     "protect",
+     "psychicnoise",
+     "focusblast"
+    ],
+    "baseAbility": "insomnia",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "insomnia",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cetitan",
+    "details": "Cetitan, L82, F",
+    "condition": "412/412",
+    "active": false,
+    "stats": {
+     "atk": 232,
+     "def": 154,
+     "spa": 121,
+     "spd": 137,
+     "spe": 167
+    },
+    "moves": [
+     "earthquake",
+     "iceshard",
+     "icespinner",
+     "bellydrum"
+    ],
+    "baseAbility": "thickfat",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Leafeon",
+    "details": "Leafeon, L88, M",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 244,
+     "def": 279,
+     "spa": 156,
+     "spd": 165,
+     "spe": 217
+    },
+    "moves": [
+     "knockoff",
+     "swordsdance",
+     "doubleedge",
+     "leafblade"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Arceus",
+    "details": "Arceus, L68",
+    "condition": "276/276",
+    "active": true,
+    "stats": {
+     "atk": 203,
+     "def": 203,
+     "spa": 203,
+     "spd": 203,
+     "spe": 203
+    },
+    "moves": [
+     "swordsdance",
+     "extremespeed",
+     "recover",
+     "earthquake"
+    ],
+    "baseAbility": "multitype",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "multitype",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dialga",
+    "details": "Dialga-Origin, L73",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 218,
+     "spa": 261,
+     "spd": 218,
+     "spe": 174
+    },
+    "moves": [
+     "thunderwave",
+     "heavyslam",
+     "fireblast",
+     "dracometeor"
+    ],
+    "baseAbility": "pressure",
+    "item": "adamantcrystal",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Rillaboom",
+    "details": "Rillaboom, L79, M",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 243,
+     "def": 188,
+     "spa": 140,
+     "spd": 156,
+     "spe": 180
+    },
+    "moves": [
+     "swordsdance",
+     "woodhammer",
+     "highhorsepower",
+     "grassyglide"
+    ],
+    "baseAbility": "grassysurge",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "grassysurge",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zoroark",
+    "details": "Zoroark-Hisui, L80, M",
+    "condition": "219/219",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 142,
+     "spa": 246,
+     "spd": 142,
+     "spe": 222
+    },
+    "moves": [
+     "poltergeist",
+     "willowisp",
+     "hypervoice",
+     "focusblast"
+    ],
+    "baseAbility": "illusion",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Calyrex",
+    "details": "Calyrex-Shadow, L64",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 113,
+     "def": 140,
+     "spa": 249,
+     "spd": 166,
+     "spe": 230
+    },
+    "moves": [
+     "psyshock",
+     "nastyplot",
+     "astralbarrage",
+     "pollenpuff"
+    ],
+    "baseAbility": "asonespectrier",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "asonespectrier",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Haxorus",
+    "details": "Haxorus, L77, F",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 271,
+     "def": 183,
+     "spa": 137,
+     "spd": 152,
+     "spe": 194
+    },
+    "moves": [
+     "earthquake",
+     "swordsdance",
+     "scaleshot",
+     "ironhead"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

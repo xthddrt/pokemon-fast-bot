@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1163620,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1163620",
+  "seed": "sodium,b5c317120011c164",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,b5b9b5f50011c164",
+  "p2_ai_seed": "sodium,b5b9ca060011c164",
+  "p1_team_seed": "sodium,b5b9d7170011c164",
+  "p2_team_seed": "sodium,b5b9e8280011c164",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 52,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T00:19:31.040Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Palossand",
+     "level": 89,
+     "gender": "M",
+     "ability": "Water Compaction",
+     "item": "Leftovers",
+     "moves": [
+      "earthpower",
+      "shoreup",
+      "shadowball",
+      "sludgebomb"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 296,
+      "atk": 138,
+      "def": 247,
+      "spa": 229,
+      "spd": 184,
+      "spe": 113
+     }
+    },
+    {
+     "species": "Wo-Chien",
+     "level": 83,
+     "gender": "N",
+     "ability": "Tablets of Ruin",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "leechseed",
+      "ruination",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 189,
+      "def": 214,
+      "spa": 205,
+      "spd": 272,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Inteleon",
+     "level": 81,
+     "gender": "F",
+     "ability": "Torrent",
+     "item": "Choice Specs",
+     "moves": [
+      "uturn",
+      "icebeam",
+      "scald",
+      "hydropump"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 184,
+      "def": 152,
+      "spa": 249,
+      "spd": 152,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Zamazenta",
+     "level": 71,
+     "gender": "N",
+     "ability": "Dauntless Shield",
+     "item": "Leftovers",
+     "moves": [
+      "irondefense",
+      "crunch",
+      "ironhead",
+      "bodypress"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 248,
+      "atk": 212,
+      "def": 205,
+      "spa": 155,
+      "spd": 205,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Comfey",
+     "level": 85,
+     "gender": "F",
+     "ability": "Triage",
+     "item": "Leftovers",
+     "moves": [
+      "encore",
+      "drainingkiss",
+      "calmmind",
+      "terablast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 93,
+      "def": 202,
+      "spa": 188,
+      "spd": 236,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Chien-Pao",
+     "level": 72,
+     "gender": "N",
+     "ability": "Sword of Ruin",
+     "item": "Choice Band",
+     "moves": [
+      "crunch",
+      "sacredsword",
+      "iciclecrash",
+      "iceshard"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 215,
+      "def": 157,
+      "spa": 172,
+      "spd": 136,
+      "spe": 236
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Tropius",
+     "level": 91,
+     "gender": "F",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "airslash",
+      "substitute",
+      "leechseed",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 328,
+      "atk": 128,
+      "def": 203,
+      "spa": 183,
+      "spd": 210,
+      "spe": 145
+     }
+    },
+    {
+     "species": "Gouging Fire",
+     "level": 74,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "earthquake",
+      "heatcrash",
+      "dragondance",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 213,
+      "def": 222,
+      "spa": 139,
+      "spd": 181,
+      "spe": 178
+     }
+    },
+    {
+     "species": "Farigiraf",
+     "level": 90,
+     "gender": "F",
+     "ability": "Sap Sipper",
+     "item": "Leftovers",
+     "moves": [
+      "psychicnoise",
+      "wish",
+      "bodyslam",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 362,
+      "atk": 213,
+      "def": 177,
+      "spa": 249,
+      "spd": 177,
+      "spe": 159
+     }
+    },
+    {
+     "species": "Latios",
+     "level": 78,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Soul Dew",
+     "moves": [
+      "calmmind",
+      "psyshock",
+      "dracometeor",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 253,
+      "atk": 145,
+      "def": 170,
+      "spa": 248,
+      "spd": 217,
+      "spe": 217
+     }
+    },
+    {
+     "species": "Jolteon",
+     "level": 84,
+     "gender": "M",
+     "ability": "Volt Absorb",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "thunderbolt",
+      "alluringvoice",
+      "calmmind",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 114,
+      "def": 149,
+      "spa": 233,
+      "spd": 208,
+      "spe": 267
+     }
+    },
+    {
+     "species": "Scyther",
+     "level": 82,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "swordsdance",
+      "bugbite",
+      "dualwingbeat",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 228,
+      "def": 178,
+      "spa": 137,
+      "spd": 178,
+      "spe": 219
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Palossand",
+    "details": "Palossand, L89, M",
+    "condition": "296/296",
+    "active": true,
+    "stats": {
+     "atk": 138,
+     "def": 247,
+     "spa": 229,
+     "spd": 184,
+     "spe": 113
+    },
+    "moves": [
+     "earthpower",
+     "shoreup",
+     "shadowball",
+     "sludgebomb"
+    ],
+    "baseAbility": "watercompaction",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "watercompaction",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Wo-Chien",
+    "details": "Wo-Chien, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 189,
+     "def": 214,
+     "spa": 205,
+     "spd": 272,
+     "spe": 164
+    },
+    "moves": [
+     "protect",
+     "leechseed",
+     "ruination",
+     "knockoff"
+    ],
+    "baseAbility": "tabletsofruin",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "tabletsofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Inteleon",
+    "details": "Inteleon, L81, F",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 184,
+     "def": 152,
+     "spa": 249,
+     "spd": 152,
+     "spe": 241
+    },
+    "moves": [
+     "uturn",
+     "icebeam",
+     "scald",
+     "hydropump"
+    ],
+    "baseAbility": "torrent",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "torrent",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zamazenta",
+    "details": "Zamazenta, L71",
+    "condition": "248/248",
+    "active": false,
+    "stats": {
+     "atk": 212,
+     "def": 205,
+     "spa": 155,
+     "spd": 205,
+     "spe": 237
+    },
+    "moves": [
+     "irondefense",
+     "crunch",
+     "ironhead",
+     "bodypress"
+    ],
+    "baseAbility": "dauntlessshield",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "dauntlessshield",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Comfey",
+    "details": "Comfey, L85, F",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 202,
+     "spa": 188,
+     "spd": 236,
+     "spe": 219
+    },
+    "moves": [
+     "encore",
+     "drainingkiss",
+     "calmmind",
+     "terablast"
+    ],
+    "baseAbility": "triage",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "triage",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Chien-Pao",
+    "details": "Chien-Pao, L72",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 215,
+     "def": 157,
+     "spa": 172,
+     "spd": 136,
+     "spe": 236
+    },
+    "moves": [
+     "crunch",
+     "sacredsword",
+     "iciclecrash",
+     "iceshard"
+    ],
+    "baseAbility": "swordofruin",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "swordofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Tropius",
+    "details": "Tropius, L91, F",
+    "condition": "328/328",
+    "active": true,
+    "stats": {
+     "atk": 128,
+     "def": 203,
+     "spa": 183,
+     "spd": 210,
+     "spe": 145
+    },
+    "moves": [
+     "airslash",
+     "substitute",
+     "leechseed",
+     "protect"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Gouging Fire",
+    "details": "Gouging Fire, L74",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 213,
+     "def": 222,
+     "spa": 139,
+     "spd": 181,
+     "spe": 178
+    },
+    "moves": [
+     "earthquake",
+     "heatcrash",
+     "dragondance",
+     "outrage"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Farigiraf",
+    "details": "Farigiraf, L90, F",
+    "condition": "362/362",
+    "active": false,
+    "stats": {
+     "atk": 213,
+     "def": 177,
+     "spa": 249,
+     "spd": 177,
+     "spe": 159
+    },
+    "moves": [
+     "psychicnoise",
+     "wish",
+     "bodyslam",
+     "protect"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Latios",
+    "details": "Latios, L78, M",
+    "condition": "253/253",
+    "active": false,
+    "stats": {
+     "atk": 145,
+     "def": 170,
+     "spa": 248,
+     "spd": 217,
+     "spe": 217
+    },
+    "moves": [
+     "calmmind",
+     "psyshock",
+     "dracometeor",
+     "recover"
+    ],
+    "baseAbility": "levitate",
+    "item": "souldew",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Jolteon",
+    "details": "Jolteon, L84, M",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 233,
+     "spd": 208,
+     "spe": 267
+    },
+    "moves": [
+     "thunderbolt",
+     "alluringvoice",
+     "calmmind",
+     "voltswitch"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Scyther",
+    "details": "Scyther, L82, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 178,
+     "spa": 137,
+     "spd": 178,
+     "spe": 219
+    },
+    "moves": [
+     "swordsdance",
+     "bugbite",
+     "dualwingbeat",
+     "closecombat"
+    ],
+    "baseAbility": "technician",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

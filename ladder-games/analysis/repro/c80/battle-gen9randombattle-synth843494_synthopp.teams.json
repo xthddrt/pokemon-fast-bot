@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 843494,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth843494",
+  "seed": "sodium,f61bdc04000cdee6",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,f6127ae7000cdee6",
+  "p2_ai_seed": "sodium,f6128ef8000cdee6",
+  "p1_team_seed": "sodium,f6129c09000cdee6",
+  "p2_team_seed": "sodium,f612ad1a000cdee6",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 36,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:05:40.786Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Sceptile",
+     "level": 87,
+     "gender": "M",
+     "ability": "Overgrow",
+     "item": "Life Orb",
+     "moves": [
+      "rockslide",
+      "swordsdance",
+      "earthquake",
+      "leafblade"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 264,
+      "atk": 198,
+      "def": 163,
+      "spa": 232,
+      "spd": 198,
+      "spe": 259
+     }
+    },
+    {
+     "species": "Dondozo",
+     "level": 78,
+     "gender": "M",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "curse",
+      "sleeptalk",
+      "wavecrash",
+      "rest"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 362,
+      "atk": 201,
+      "def": 224,
+      "spa": 146,
+      "spd": 146,
+      "spe": 100
+     }
+    },
+    {
+     "species": "Lucario",
+     "level": 84,
+     "gender": "F",
+     "ability": "Inner Focus",
+     "item": "Life Orb",
+     "moves": [
+      "aurasphere",
+      "nastyplot",
+      "flashcannon",
+      "vacuumwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 189,
+      "def": 166,
+      "spa": 241,
+      "spd": 166,
+      "spe": 199
+     }
+    },
+    {
+     "species": "Squawkabilly",
+     "level": 85,
+     "gender": "M",
+     "ability": "Guts",
+     "item": "Flame Orb",
+     "moves": [
+      "quickattack",
+      "facade",
+      "bravebird",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 212,
+      "def": 135,
+      "spa": 125,
+      "spd": 135,
+      "spe": 205
+     }
+    },
+    {
+     "species": "Scovillain",
+     "level": 91,
+     "gender": "M",
+     "ability": "Chlorophyll",
+     "item": "Choice Scarf",
+     "moves": [
+      "leafstorm",
+      "energyball",
+      "flamethrower",
+      "overheat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 201,
+      "def": 170,
+      "spa": 248,
+      "spd": 170,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Ursaring",
+     "level": 84,
+     "gender": "F",
+     "ability": "Guts",
+     "item": "Eviolite",
+     "moves": [
+      "earthquake",
+      "bodyslam",
+      "rest",
+      "sleeptalk"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 267,
+      "def": 174,
+      "spa": 174,
+      "spd": 174,
+      "spe": 141
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Gyarados",
+     "level": 79,
+     "gender": "F",
+     "ability": "Moxie",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "waterfall",
+      "dragondance",
+      "temperflare",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 280,
+      "atk": 243,
+      "def": 170,
+      "spa": 140,
+      "spd": 204,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Vivillon-Garden",
+     "level": 83,
+     "gender": "M",
+     "ability": "Compound Eyes",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "hurricane",
+      "sleeppowder",
+      "quiverdance",
+      "terablast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 268,
+      "atk": 91,
+      "def": 131,
+      "spa": 197,
+      "spd": 131,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Tentacruel",
+     "level": 84,
+     "gender": "F",
+     "ability": "Liquid Ooze",
+     "item": "Leftovers",
+     "moves": [
+      "rapidspin",
+      "sludgebomb",
+      "haze",
+      "surf"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 166,
+      "def": 157,
+      "spa": 183,
+      "spd": 250,
+      "spe": 216
+     }
+    },
+    {
+     "species": "Magearna-Original",
+     "level": 77,
+     "gender": "N",
+     "ability": "Soul-Heart",
+     "item": "Leftovers",
+     "moves": [
+      "spikes",
+      "fleurcannon",
+      "aurasphere",
+      "flashcannon"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 250,
+      "atk": 151,
+      "def": 222,
+      "spa": 245,
+      "spd": 222,
+      "spe": 145
+     }
+    },
+    {
+     "species": "Tinkaton",
+     "level": 82,
+     "gender": "F",
+     "ability": "Mold Breaker",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "playrough",
+      "encore",
+      "gigatonhammer"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 170,
+      "def": 173,
+      "spa": 162,
+      "spd": 219,
+      "spe": 201
+     }
+    },
+    {
+     "species": "Hoopa-Unbound",
+     "level": 80,
+     "gender": "N",
+     "ability": "Magician",
+     "item": "Choice Band",
+     "moves": [
+      "zenheadbutt",
+      "gunkshot",
+      "trick",
+      "hyperspacefury"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 259,
+      "atk": 302,
+      "def": 142,
+      "spa": 318,
+      "spd": 254,
+      "spe": 174
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Sceptile",
+    "details": "Sceptile, L87, M",
+    "condition": "264/264",
+    "active": true,
+    "stats": {
+     "atk": 198,
+     "def": 163,
+     "spa": 232,
+     "spd": 198,
+     "spe": 259
+    },
+    "moves": [
+     "rockslide",
+     "swordsdance",
+     "earthquake",
+     "leafblade"
+    ],
+    "baseAbility": "overgrow",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "overgrow",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dondozo",
+    "details": "Dondozo, L78, M",
+    "condition": "362/362",
+    "active": false,
+    "stats": {
+     "atk": 201,
+     "def": 224,
+     "spa": 146,
+     "spd": 146,
+     "spe": 100
+    },
+    "moves": [
+     "curse",
+     "sleeptalk",
+     "wavecrash",
+     "rest"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lucario",
+    "details": "Lucario, L84, F",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 189,
+     "def": 166,
+     "spa": 241,
+     "spd": 166,
+     "spe": 199
+    },
+    "moves": [
+     "aurasphere",
+     "nastyplot",
+     "flashcannon",
+     "vacuumwave"
+    ],
+    "baseAbility": "innerfocus",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "innerfocus",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Squawkabilly",
+    "details": "Squawkabilly, L85, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 212,
+     "def": 135,
+     "spa": 125,
+     "spd": 135,
+     "spe": 205
+    },
+    "moves": [
+     "quickattack",
+     "facade",
+     "bravebird",
+     "uturn"
+    ],
+    "baseAbility": "guts",
+    "item": "flameorb",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Scovillain",
+    "details": "Scovillain, L91, M",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 201,
+     "def": 170,
+     "spa": 248,
+     "spd": 170,
+     "spe": 188
+    },
+    "moves": [
+     "leafstorm",
+     "energyball",
+     "flamethrower",
+     "overheat"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ursaring",
+    "details": "Ursaring, L84, F",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 267,
+     "def": 174,
+     "spa": 174,
+     "spd": 174,
+     "spe": 141
+    },
+    "moves": [
+     "earthquake",
+     "bodyslam",
+     "rest",
+     "sleeptalk"
+    ],
+    "baseAbility": "guts",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "guts",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Gyarados",
+    "details": "Gyarados, L79, F",
+    "condition": "280/280",
+    "active": true,
+    "stats": {
+     "atk": 243,
+     "def": 170,
+     "spa": 140,
+     "spd": 204,
+     "spe": 174
+    },
+    "moves": [
+     "waterfall",
+     "dragondance",
+     "temperflare",
+     "earthquake"
+    ],
+    "baseAbility": "moxie",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "moxie",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Vivillon",
+    "details": "Vivillon-Garden, L83, M",
+    "condition": "268/268",
+    "active": false,
+    "stats": {
+     "atk": 91,
+     "def": 131,
+     "spa": 197,
+     "spd": 131,
+     "spe": 195
+    },
+    "moves": [
+     "hurricane",
+     "sleeppowder",
+     "quiverdance",
+     "terablast"
+    ],
+    "baseAbility": "compoundeyes",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "compoundeyes",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tentacruel",
+    "details": "Tentacruel, L84, F",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 166,
+     "def": 157,
+     "spa": 183,
+     "spd": 250,
+     "spe": 216
+    },
+    "moves": [
+     "rapidspin",
+     "sludgebomb",
+     "haze",
+     "surf"
+    ],
+    "baseAbility": "liquidooze",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "liquidooze",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Magearna",
+    "details": "Magearna-Original, L77",
+    "condition": "250/250",
+    "active": false,
+    "stats": {
+     "atk": 151,
+     "def": 222,
+     "spa": 245,
+     "spd": 222,
+     "spe": 145
+    },
+    "moves": [
+     "spikes",
+     "fleurcannon",
+     "aurasphere",
+     "flashcannon"
+    ],
+    "baseAbility": "soulheart",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "soulheart",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tinkaton",
+    "details": "Tinkaton, L82, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 170,
+     "def": 173,
+     "spa": 162,
+     "spd": 219,
+     "spe": 201
+    },
+    "moves": [
+     "knockoff",
+     "playrough",
+     "encore",
+     "gigatonhammer"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hoopa",
+    "details": "Hoopa-Unbound, L80",
+    "condition": "259/259",
+    "active": false,
+    "stats": {
+     "atk": 302,
+     "def": 142,
+     "spa": 318,
+     "spd": 254,
+     "spe": 174
+    },
+    "moves": [
+     "zenheadbutt",
+     "gunkshot",
+     "trick",
+     "hyperspacefury"
+    ],
+    "baseAbility": "magician",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "magician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ }
+}

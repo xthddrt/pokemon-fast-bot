@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 897713,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth897713",
+  "seed": "sodium,256cdcb7000db2b1",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,25637b9a000db2b1",
+  "p2_ai_seed": "sodium,25638fab000db2b1",
+  "p1_team_seed": "sodium,25639cbc000db2b1",
+  "p2_team_seed": "sodium,2563adcd000db2b1",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 61,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:08:43.632Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Ariados",
+     "level": 95,
+     "gender": "M",
+     "ability": "Insomnia",
+     "item": "Focus Sash",
+     "moves": [
+      "megahorn",
+      "toxicspikes",
+      "stickyweb",
+      "poisonjab"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 225,
+      "def": 187,
+      "spa": 168,
+      "spd": 187,
+      "spe": 130
+     }
+    },
+    {
+     "species": "Flygon",
+     "level": 82,
+     "gender": "M",
+     "ability": "Levitate",
+     "item": "Lum Berry",
+     "moves": [
+      "dragondance",
+      "stoneedge",
+      "outrage",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 211,
+      "def": 178,
+      "spa": 178,
+      "spd": 178,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Toxapex",
+     "level": 82,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Leftovers",
+     "moves": [
+      "liquidation",
+      "recover",
+      "haze",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 150,
+      "def": 296,
+      "spa": 134,
+      "spd": 280,
+      "spe": 105
+     }
+    },
+    {
+     "species": "Enamorus",
+     "level": 79,
+     "gender": "F",
+     "ability": "Contrary",
+     "item": "Leftovers",
+     "moves": [
+      "substitute",
+      "taunt",
+      "playrough",
+      "superpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 227,
+      "def": 156,
+      "spa": 259,
+      "spd": 172,
+      "spe": 213
+     }
+    },
+    {
+     "species": "Jolteon",
+     "level": 84,
+     "gender": "F",
+     "ability": "Volt Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "substitute",
+      "calmmind",
+      "terablast",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 114,
+      "def": 149,
+      "spa": 233,
+      "spd": 208,
+      "spe": 267
+     }
+    },
+    {
+     "species": "Sinistcha",
+     "level": 83,
+     "gender": "N",
+     "ability": "Heatproof",
+     "item": "Leftovers",
+     "moves": [
+      "shadowball",
+      "calmmind",
+      "matchagotcha",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 104,
+      "def": 224,
+      "spa": 249,
+      "spd": 180,
+      "spe": 164
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Latias",
+     "level": 79,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Soul Dew",
+     "moves": [
+      "calmmind",
+      "dracometeor",
+      "psyshock",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 131,
+      "def": 188,
+      "spa": 219,
+      "spd": 251,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Dragonite",
+     "level": 74,
+     "gender": "F",
+     "ability": "Multiscale",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "roost",
+      "outrage",
+      "earthquake",
+      "dragondance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 241,
+      "def": 184,
+      "spa": 191,
+      "spd": 191,
+      "spe": 161
+     }
+    },
+    {
+     "species": "Cryogonal",
+     "level": 89,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "rapidspin",
+      "terablast",
+      "icebeam",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 287,
+      "atk": 140,
+      "def": 140,
+      "spa": 220,
+      "spd": 291,
+      "spe": 238
+     }
+    },
+    {
+     "species": "Fezandipiti",
+     "level": 82,
+     "gender": "M",
+     "ability": "Toxic Chain",
+     "item": "Leftovers",
+     "moves": [
+      "moonblast",
+      "gunkshot",
+      "beatup",
+      "roost"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 196,
+      "def": 182,
+      "spa": 162,
+      "spd": 252,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Vaporeon",
+     "level": 86,
+     "gender": "M",
+     "ability": "Water Absorb",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "calmmind",
+      "scald",
+      "wish"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 364,
+      "atk": 116,
+      "def": 152,
+      "spa": 238,
+      "spd": 213,
+      "spe": 161
+     }
+    },
+    {
+     "species": "Zacian-Crowned",
+     "level": 64,
+     "gender": "N",
+     "ability": "Intrepid Sword",
+     "item": "Rusted Sword",
+     "moves": [
+      "closecombat",
+      "swordsdance",
+      "behemothblade",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 230,
+      "def": 185,
+      "spa": 140,
+      "spd": 185,
+      "spe": 227
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Ariados",
+    "details": "Ariados, L95, M",
+    "condition": "287/287",
+    "active": true,
+    "stats": {
+     "atk": 225,
+     "def": 187,
+     "spa": 168,
+     "spd": 187,
+     "spe": 130
+    },
+    "moves": [
+     "megahorn",
+     "toxicspikes",
+     "stickyweb",
+     "poisonjab"
+    ],
+    "baseAbility": "insomnia",
+    "item": "focussash",
+    "pokeball": "pokeball",
+    "ability": "insomnia",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Flygon",
+    "details": "Flygon, L82, M",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 178,
+     "spa": 178,
+     "spd": 178,
+     "spe": 211
+    },
+    "moves": [
+     "dragondance",
+     "stoneedge",
+     "outrage",
+     "earthquake"
+    ],
+    "baseAbility": "levitate",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Toxapex",
+    "details": "Toxapex, L82, M",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 150,
+     "def": 296,
+     "spa": 134,
+     "spd": 280,
+     "spe": 105
+    },
+    "moves": [
+     "liquidation",
+     "recover",
+     "haze",
+     "toxic"
+    ],
+    "baseAbility": "regenerator",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Enamorus",
+    "details": "Enamorus, L79, F",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 227,
+     "def": 156,
+     "spa": 259,
+     "spd": 172,
+     "spe": 213
+    },
+    "moves": [
+     "substitute",
+     "taunt",
+     "playrough",
+     "superpower"
+    ],
+    "baseAbility": "contrary",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Jolteon",
+    "details": "Jolteon, L84, F",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 149,
+     "spa": 233,
+     "spd": 208,
+     "spe": 267
+    },
+    "moves": [
+     "substitute",
+     "calmmind",
+     "terablast",
+     "thunderbolt"
+    ],
+    "baseAbility": "voltabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "voltabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sinistcha",
+    "details": "Sinistcha, L83",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 104,
+     "def": 224,
+     "spa": 249,
+     "spd": 180,
+     "spe": 164
+    },
+    "moves": [
+     "shadowball",
+     "calmmind",
+     "matchagotcha",
+     "strengthsap"
+    ],
+    "baseAbility": "heatproof",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "heatproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Latias",
+    "details": "Latias, L79, F",
+    "condition": "256/256",
+    "active": true,
+    "stats": {
+     "atk": 131,
+     "def": 188,
+     "spa": 219,
+     "spd": 251,
+     "spe": 219
+    },
+    "moves": [
+     "calmmind",
+     "dracometeor",
+     "psyshock",
+     "recover"
+    ],
+    "baseAbility": "levitate",
+    "item": "souldew",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dragonite",
+    "details": "Dragonite, L74, F",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 241,
+     "def": 184,
+     "spa": 191,
+     "spd": 191,
+     "spe": 161
+    },
+    "moves": [
+     "roost",
+     "outrage",
+     "earthquake",
+     "dragondance"
+    ],
+    "baseAbility": "multiscale",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "multiscale",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Cryogonal",
+    "details": "Cryogonal, L89",
+    "condition": "287/287",
+    "active": false,
+    "stats": {
+     "atk": 140,
+     "def": 140,
+     "spa": 220,
+     "spd": 291,
+     "spe": 238
+    },
+    "moves": [
+     "rapidspin",
+     "terablast",
+     "icebeam",
+     "recover"
+    ],
+    "baseAbility": "levitate",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Fezandipiti",
+    "details": "Fezandipiti, L82, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 196,
+     "def": 182,
+     "spa": 162,
+     "spd": 252,
+     "spe": 210
+    },
+    "moves": [
+     "moonblast",
+     "gunkshot",
+     "beatup",
+     "roost"
+    ],
+    "baseAbility": "toxicchain",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "toxicchain",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Vaporeon",
+    "details": "Vaporeon, L86, M",
+    "condition": "364/364",
+    "active": false,
+    "stats": {
+     "atk": 116,
+     "def": 152,
+     "spa": 238,
+     "spd": 213,
+     "spe": 161
+    },
+    "moves": [
+     "protect",
+     "calmmind",
+     "scald",
+     "wish"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zacian",
+    "details": "Zacian-Crowned, L64",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 185,
+     "spa": 140,
+     "spd": 185,
+     "spe": 227
+    },
+    "moves": [
+     "closecombat",
+     "swordsdance",
+     "behemothblade",
+     "playrough"
+    ],
+    "baseAbility": "intrepidsword",
+    "item": "rustedsword",
+    "pokeball": "pokeball",
+    "ability": "intrepidsword",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

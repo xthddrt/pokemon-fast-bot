@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1555658,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1555658",
+  "seed": "sodium,84d2f9c80017bcca",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,84c998ab0017bcca",
+  "p2_ai_seed": "sodium,84c9acbc0017bcca",
+  "p1_team_seed": "sodium,84c9b9cd0017bcca",
+  "p2_team_seed": "sodium,84c9cade0017bcca",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 36,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T13:16:48.572Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Lapras",
+     "level": 87,
+     "gender": "F",
+     "ability": "Water Absorb",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sparklingaria",
+      "sleeptalk",
+      "rest",
+      "freezedry"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 368,
+      "atk": 152,
+      "def": 189,
+      "spa": 198,
+      "spd": 215,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Tinkaton",
+     "level": 82,
+     "gender": "F",
+     "ability": "Mold Breaker",
+     "item": "Leftovers",
+     "moves": [
+      "thunderwave",
+      "playrough",
+      "gigatonhammer",
+      "stealthrock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 170,
+      "def": 173,
+      "spa": 162,
+      "spd": 219,
+      "spe": 201
+     }
+    },
+    {
+     "species": "Mimikyu",
+     "level": 79,
+     "gender": "F",
+     "ability": "Disguise",
+     "item": "Life Orb",
+     "moves": [
+      "playrough",
+      "swordsdance",
+      "shadowsneak",
+      "shadowclaw"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 188,
+      "def": 172,
+      "spa": 125,
+      "spd": 211,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Emboar",
+     "level": 84,
+     "gender": "F",
+     "ability": "Reckless",
+     "item": "Choice Band",
+     "moves": [
+      "headsmash",
+      "closecombat",
+      "wildcharge",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 322,
+      "atk": 255,
+      "def": 157,
+      "spa": 216,
+      "spd": 157,
+      "spe": 157
+     }
+    },
+    {
+     "species": "Lokix",
+     "level": 82,
+     "gender": "M",
+     "ability": "Tinted Lens",
+     "item": "Silver Powder",
+     "moves": [
+      "firstimpression",
+      "knockoff",
+      "uturn",
+      "suckerpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Bug",
+     "shiny": false,
+     "stats": {
+      "hp": 251,
+      "atk": 214,
+      "def": 175,
+      "spa": 132,
+      "spd": 137,
+      "spe": 198
+     }
+    },
+    {
+     "species": "Hitmontop",
+     "level": 88,
+     "gender": "M",
+     "ability": "Technician",
+     "item": "Leftovers",
+     "moves": [
+      "rapidspin",
+      "tripleaxel",
+      "closecombat",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 217,
+      "def": 217,
+      "spa": 112,
+      "spd": 244,
+      "spe": 173
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Koraidon",
+     "level": 64,
+     "gender": "N",
+     "ability": "Orichalcum Pulse",
+     "item": "Loaded Dice",
+     "moves": [
+      "scaleshot",
+      "collisioncourse",
+      "flareblitz",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 211,
+      "def": 185,
+      "spa": 147,
+      "spd": 166,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Gumshoos",
+     "level": 95,
+     "gender": "F",
+     "ability": "Adaptability",
+     "item": "Choice Band",
+     "moves": [
+      "doubleedge",
+      "earthquake",
+      "uturn",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 263,
+      "def": 168,
+      "spa": 158,
+      "spd": 168,
+      "spe": 139
+     }
+    },
+    {
+     "species": "Mienshao",
+     "level": 83,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Assault Vest",
+     "moves": [
+      "fakeout",
+      "closecombat",
+      "knockoff",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 255,
+      "def": 147,
+      "spa": 205,
+      "spd": 147,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Oranguru",
+     "level": 92,
+     "gender": "F",
+     "ability": "Inner Focus",
+     "item": "Choice Specs",
+     "moves": [
+      "focusblast",
+      "hypervoice",
+      "psyshock",
+      "trick"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 115,
+      "def": 200,
+      "spa": 218,
+      "spd": 255,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Eiscue",
+     "level": 88,
+     "gender": "F",
+     "ability": "Ice Face",
+     "item": "Sitrus Berry",
+     "moves": [
+      "icespinner",
+      "bellydrum",
+      "terablast",
+      "liquidation"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 191,
+      "def": 244,
+      "spa": 165,
+      "spd": 209,
+      "spe": 138
+     }
+    },
+    {
+     "species": "Chimecho",
+     "level": 93,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "storedpower",
+      "dazzlinggleam",
+      "cosmicpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 98,
+      "def": 202,
+      "spa": 230,
+      "spd": 220,
+      "spe": 174
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Lapras",
+    "details": "Lapras, L87, F",
+    "condition": "368/368",
+    "active": true,
+    "stats": {
+     "atk": 152,
+     "def": 189,
+     "spa": 198,
+     "spd": 215,
+     "spe": 154
+    },
+    "moves": [
+     "sparklingaria",
+     "sleeptalk",
+     "rest",
+     "freezedry"
+    ],
+    "baseAbility": "waterabsorb",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "waterabsorb",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tinkaton",
+    "details": "Tinkaton, L82, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 170,
+     "def": 173,
+     "spa": 162,
+     "spd": 219,
+     "spe": 201
+    },
+    "moves": [
+     "thunderwave",
+     "playrough",
+     "gigatonhammer",
+     "stealthrock"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mimikyu",
+    "details": "Mimikyu, L79, F",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 172,
+     "spa": 125,
+     "spd": 211,
+     "spe": 197
+    },
+    "moves": [
+     "playrough",
+     "swordsdance",
+     "shadowsneak",
+     "shadowclaw"
+    ],
+    "baseAbility": "disguise",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "disguise",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Emboar",
+    "details": "Emboar, L84, F",
+    "condition": "322/322",
+    "active": false,
+    "stats": {
+     "atk": 255,
+     "def": 157,
+     "spa": 216,
+     "spd": 157,
+     "spe": 157
+    },
+    "moves": [
+     "headsmash",
+     "closecombat",
+     "wildcharge",
+     "flareblitz"
+    ],
+    "baseAbility": "reckless",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "reckless",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lokix",
+    "details": "Lokix, L82, M",
+    "condition": "251/251",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 175,
+     "spa": 132,
+     "spd": 137,
+     "spe": 198
+    },
+    "moves": [
+     "firstimpression",
+     "knockoff",
+     "uturn",
+     "suckerpunch"
+    ],
+    "baseAbility": "tintedlens",
+    "item": "silverpowder",
+    "pokeball": "pokeball",
+    "ability": "tintedlens",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Bug",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Hitmontop",
+    "details": "Hitmontop, L88, M",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 217,
+     "spa": 112,
+     "spd": 244,
+     "spe": 173
+    },
+    "moves": [
+     "rapidspin",
+     "tripleaxel",
+     "closecombat",
+     "bulkup"
+    ],
+    "baseAbility": "technician",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Koraidon",
+    "details": "Koraidon, L64",
+    "condition": "235/235",
+    "active": true,
+    "stats": {
+     "atk": 211,
+     "def": 185,
+     "spa": 147,
+     "spd": 166,
+     "spe": 211
+    },
+    "moves": [
+     "scaleshot",
+     "collisioncourse",
+     "flareblitz",
+     "swordsdance"
+    ],
+    "baseAbility": "orichalcumpulse",
+    "item": "loadeddice",
+    "pokeball": "pokeball",
+    "ability": "orichalcumpulse",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Gumshoos",
+    "details": "Gumshoos, L95, F",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 263,
+     "def": 168,
+     "spa": 158,
+     "spd": 168,
+     "spe": 139
+    },
+    "moves": [
+     "doubleedge",
+     "earthquake",
+     "uturn",
+     "knockoff"
+    ],
+    "baseAbility": "adaptability",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mienshao",
+    "details": "Mienshao, L83, F",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 255,
+     "def": 147,
+     "spa": 205,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "fakeout",
+     "closecombat",
+     "knockoff",
+     "uturn"
+    ],
+    "baseAbility": "regenerator",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Oranguru",
+    "details": "Oranguru, L92, F",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 200,
+     "spa": 218,
+     "spd": 255,
+     "spe": 163
+    },
+    "moves": [
+     "focusblast",
+     "hypervoice",
+     "psyshock",
+     "trick"
+    ],
+    "baseAbility": "innerfocus",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "innerfocus",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Eiscue",
+    "details": "Eiscue, L88, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 191,
+     "def": 244,
+     "spa": 165,
+     "spd": 209,
+     "spe": 138
+    },
+    "moves": [
+     "icespinner",
+     "bellydrum",
+     "terablast",
+     "liquidation"
+    ],
+    "baseAbility": "iceface",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "iceface",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Chimecho",
+    "details": "Chimecho, L93, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 98,
+     "def": 202,
+     "spa": 230,
+     "spd": 220,
+     "spe": 174
+    },
+    "moves": [
+     "recover",
+     "storedpower",
+     "dazzlinggleam",
+     "cosmicpower"
+    ],
+    "baseAbility": "levitate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

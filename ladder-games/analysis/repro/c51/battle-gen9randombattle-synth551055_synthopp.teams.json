@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 551055,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth551055",
+  "seed": "sodium,b84238250008688f",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,b838d7080008688f",
+  "p2_ai_seed": "sodium,b838eb190008688f",
+  "p1_team_seed": "sodium,b838f82a0008688f",
+  "p2_team_seed": "sodium,b839093b0008688f",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 51,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-03T21:31:42.526Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Zoroark-Hisui",
+     "level": 80,
+     "gender": "F",
+     "ability": "Illusion",
+     "item": "Life Orb",
+     "moves": [
+      "focusblast",
+      "willowisp",
+      "poltergeist",
+      "hypervoice"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 219,
+      "atk": 206,
+      "def": 142,
+      "spa": 246,
+      "spd": 142,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Haxorus",
+     "level": 77,
+     "gender": "F",
+     "ability": "Mold Breaker",
+     "item": "Lum Berry",
+     "moves": [
+      "dragondance",
+      "ironhead",
+      "earthquake",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 271,
+      "def": 183,
+      "spa": 137,
+      "spd": 152,
+      "spe": 194
+     }
+    },
+    {
+     "species": "Sinistcha-Masterpiece",
+     "level": 83,
+     "gender": "N",
+     "ability": "Heatproof",
+     "item": "Leftovers",
+     "moves": [
+      "shadowball",
+      "calmmind",
+      "strengthsap",
+      "matchagotcha"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 104,
+      "def": 224,
+      "spa": 249,
+      "spd": 180,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Feraligatr",
+     "level": 79,
+     "gender": "M",
+     "ability": "Sheer Force",
+     "item": "Life Orb",
+     "moves": [
+      "liquidation",
+      "icepunch",
+      "dragondance",
+      "crunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 264,
+      "atk": 211,
+      "def": 204,
+      "spa": 170,
+      "spd": 177,
+      "spe": 169
+     }
+    },
+    {
+     "species": "Probopass",
+     "level": 91,
+     "gender": "F",
+     "ability": "Magnet Pull",
+     "item": "Chesto Berry",
+     "moves": [
+      "bodypress",
+      "flashcannon",
+      "rest",
+      "irondefense"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 105,
+      "def": 316,
+      "spa": 188,
+      "spd": 325,
+      "spe": 125
+     }
+    },
+    {
+     "species": "Scrafty",
+     "level": 83,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "dragondance",
+      "poisonjab",
+      "drainpunch",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 197,
+      "def": 239,
+      "spa": 122,
+      "spd": 239,
+      "spe": 144
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Passimian",
+     "level": 83,
+     "gender": "F",
+     "ability": "Defiant",
+     "item": "Leftovers",
+     "moves": [
+      "gunkshot",
+      "drainpunch",
+      "knockoff",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 247,
+      "def": 197,
+      "spa": 114,
+      "spd": 147,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Iron Valiant",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "encore",
+      "knockoff",
+      "moonblast",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 248,
+      "def": 185,
+      "spa": 232,
+      "spd": 139,
+      "spe": 226
+     }
+    },
+    {
+     "species": "Toucannon",
+     "level": 88,
+     "gender": "M",
+     "ability": "Keen Eye",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "uturn",
+      "beakblast",
+      "roost",
+      "boomburst"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 261,
+      "def": 182,
+      "spa": 182,
+      "spd": 182,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Ribombee",
+     "level": 83,
+     "gender": "M",
+     "ability": "Shield Dust",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "moonblast",
+      "quiverdance",
+      "terablast",
+      "bugbuzz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 96,
+      "def": 147,
+      "spa": 205,
+      "spd": 164,
+      "spe": 254
+     }
+    },
+    {
+     "species": "Tauros",
+     "level": 82,
+     "gender": "M",
+     "ability": "Sheer Force",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "bodyslam",
+      "zenheadbutt",
+      "throatchop"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 211,
+      "def": 203,
+      "spa": 113,
+      "spd": 162,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Umbreon",
+     "level": 84,
+     "gender": "M",
+     "ability": "Synchronize",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "foulplay",
+      "wish",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 114,
+      "def": 233,
+      "spa": 149,
+      "spd": 267,
+      "spe": 157
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Zoroark",
+    "details": "Zoroark-Hisui, L80, F",
+    "condition": "219/219",
+    "active": true,
+    "stats": {
+     "atk": 206,
+     "def": 142,
+     "spa": 246,
+     "spd": 142,
+     "spe": 222
+    },
+    "moves": [
+     "focusblast",
+     "willowisp",
+     "poltergeist",
+     "hypervoice"
+    ],
+    "baseAbility": "illusion",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Haxorus",
+    "details": "Haxorus, L77, F",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 271,
+     "def": 183,
+     "spa": 137,
+     "spd": 152,
+     "spe": 194
+    },
+    "moves": [
+     "dragondance",
+     "ironhead",
+     "earthquake",
+     "outrage"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sinistcha",
+    "details": "Sinistcha-Masterpiece, L83",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 104,
+     "def": 224,
+     "spa": 249,
+     "spd": 180,
+     "spe": 164
+    },
+    "moves": [
+     "shadowball",
+     "calmmind",
+     "strengthsap",
+     "matchagotcha"
+    ],
+    "baseAbility": "heatproof",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "heatproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Feraligatr",
+    "details": "Feraligatr, L79, M",
+    "condition": "264/264",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 204,
+     "spa": 170,
+     "spd": 177,
+     "spe": 169
+    },
+    "moves": [
+     "liquidation",
+     "icepunch",
+     "dragondance",
+     "crunch"
+    ],
+    "baseAbility": "sheerforce",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sheerforce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Probopass",
+    "details": "Probopass, L91, F",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 105,
+     "def": 316,
+     "spa": 188,
+     "spd": 325,
+     "spe": 125
+    },
+    "moves": [
+     "bodypress",
+     "flashcannon",
+     "rest",
+     "irondefense"
+    ],
+    "baseAbility": "magnetpull",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "magnetpull",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Scrafty",
+    "details": "Scrafty, L83, M",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 197,
+     "def": 239,
+     "spa": 122,
+     "spd": 239,
+     "spe": 144
+    },
+    "moves": [
+     "dragondance",
+     "poisonjab",
+     "drainpunch",
+     "knockoff"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Passimian",
+    "details": "Passimian, L83, F",
+    "condition": "302/302",
+    "active": true,
+    "stats": {
+     "atk": 247,
+     "def": 197,
+     "spa": 114,
+     "spd": 147,
+     "spe": 180
+    },
+    "moves": [
+     "gunkshot",
+     "drainpunch",
+     "knockoff",
+     "bulkup"
+    ],
+    "baseAbility": "defiant",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Valiant",
+    "details": "Iron Valiant, L78",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 248,
+     "def": 185,
+     "spa": 232,
+     "spd": 139,
+     "spe": 226
+    },
+    "moves": [
+     "encore",
+     "knockoff",
+     "moonblast",
+     "closecombat"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Toucannon",
+    "details": "Toucannon, L88, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 182,
+     "spa": 182,
+     "spd": 182,
+     "spe": 156
+    },
+    "moves": [
+     "uturn",
+     "beakblast",
+     "roost",
+     "boomburst"
+    ],
+    "baseAbility": "keeneye",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "keeneye",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Ribombee",
+    "details": "Ribombee, L83, M",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 96,
+     "def": 147,
+     "spa": 205,
+     "spd": 164,
+     "spe": 254
+    },
+    "moves": [
+     "moonblast",
+     "quiverdance",
+     "terablast",
+     "bugbuzz"
+    ],
+    "baseAbility": "shielddust",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "shielddust",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tauros",
+    "details": "Tauros, L82, M",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 203,
+     "spa": 113,
+     "spd": 162,
+     "spe": 228
+    },
+    "moves": [
+     "closecombat",
+     "bodyslam",
+     "zenheadbutt",
+     "throatchop"
+    ],
+    "baseAbility": "sheerforce",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sheerforce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Umbreon",
+    "details": "Umbreon, L84, M",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 114,
+     "def": 233,
+     "spa": 149,
+     "spd": 267,
+     "spe": 157
+    },
+    "moves": [
+     "protect",
+     "foulplay",
+     "wish",
+     "toxic"
+    ],
+    "baseAbility": "synchronize",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "synchronize",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ }
+}

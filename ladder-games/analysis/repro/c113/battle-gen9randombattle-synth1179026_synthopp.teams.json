@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1179026,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1179026",
+  "seed": "sodium,244252500011fd92",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,2438f1330011fd92",
+  "p2_ai_seed": "sodium,243905440011fd92",
+  "p1_team_seed": "sodium,243912550011fd92",
+  "p2_team_seed": "sodium,243923660011fd92",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 20,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T00:19:33.238Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Rotom",
+     "level": 88,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Life Orb",
+     "moves": [
+      "shadowball",
+      "thunderbolt",
+      "voltswitch",
+      "willowisp"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 93,
+      "def": 186,
+      "spa": 217,
+      "spd": 186,
+      "spe": 210
+     }
+    },
+    {
+     "species": "Spiritomb",
+     "level": 89,
+     "gender": "M",
+     "ability": "Infiltrator",
+     "item": "Leftovers",
+     "moves": [
+      "painsplit",
+      "poltergeist",
+      "willowisp",
+      "foulplay"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 215,
+      "def": 243,
+      "spa": 215,
+      "spd": 243,
+      "spe": 113
+     }
+    },
+    {
+     "species": "Iron Bundle",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "hydropump",
+      "freezedry",
+      "encore",
+      "flipturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ice",
+     "shiny": false,
+     "stats": {
+      "hp": 215,
+      "atk": 170,
+      "def": 223,
+      "spa": 239,
+      "spd": 139,
+      "spe": 257
+     }
+    },
+    {
+     "species": "Cyclizar",
+     "level": 84,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "knockoff",
+      "dracometeor",
+      "shedtail",
+      "rapidspin"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 255,
+      "atk": 208,
+      "def": 157,
+      "spa": 191,
+      "spd": 157,
+      "spe": 251
+     }
+    },
+    {
+     "species": "Slither Wing",
+     "level": 81,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "morningsun",
+      "willowisp",
+      "uturn",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 270,
+      "atk": 265,
+      "def": 175,
+      "spa": 184,
+      "spd": 217,
+      "spe": 178
+     }
+    },
+    {
+     "species": "Magmortar",
+     "level": 88,
+     "gender": "F",
+     "ability": "Flame Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "focusblast",
+      "scorchingsands",
+      "fireblast",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 217,
+      "def": 168,
+      "spa": 270,
+      "spd": 217,
+      "spe": 196
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Scovillain",
+     "level": 91,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "stompingtantrum",
+      "sunnyday",
+      "energyball",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 248,
+      "def": 170,
+      "spa": 248,
+      "spd": 170,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Pincurchin",
+     "level": 100,
+     "gender": "M",
+     "ability": "Electric Surge",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "liquidation",
+      "curse",
+      "zingzap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 258,
+      "atk": 259,
+      "def": 247,
+      "spa": 239,
+      "spd": 227,
+      "spe": 87
+     }
+    },
+    {
+     "species": "Hypno",
+     "level": 95,
+     "gender": "M",
+     "ability": "Insomnia",
+     "item": "Leftovers",
+     "moves": [
+      "knockoff",
+      "toxic",
+      "encore",
+      "psychicnoise"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 193,
+      "def": 187,
+      "spa": 193,
+      "spd": 272,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Iron Boulder",
+     "level": 77,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "swordsdance",
+      "mightycleave",
+      "zenheadbutt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 265,
+      "atk": 229,
+      "def": 168,
+      "spa": 149,
+      "spd": 211,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Swampert",
+     "level": 83,
+     "gender": "F",
+     "ability": "Damp",
+     "item": "Leftovers",
+     "moves": [
+      "stealthrock",
+      "earthquake",
+      "knockoff",
+      "yawn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 230,
+      "def": 197,
+      "spa": 189,
+      "spd": 197,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Scyther",
+     "level": 82,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "uturn",
+      "closecombat",
+      "dualwingbeat",
+      "defog"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 228,
+      "def": 178,
+      "spa": 137,
+      "spd": 178,
+      "spe": 219
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Rotom",
+    "details": "Rotom, L88",
+    "condition": "231/231",
+    "active": true,
+    "stats": {
+     "atk": 93,
+     "def": 186,
+     "spa": 217,
+     "spd": 186,
+     "spe": 210
+    },
+    "moves": [
+     "shadowball",
+     "thunderbolt",
+     "voltswitch",
+     "willowisp"
+    ],
+    "baseAbility": "levitate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Spiritomb",
+    "details": "Spiritomb, L89, M",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 215,
+     "def": 243,
+     "spa": 215,
+     "spd": 243,
+     "spe": 113
+    },
+    "moves": [
+     "painsplit",
+     "poltergeist",
+     "willowisp",
+     "foulplay"
+    ],
+    "baseAbility": "infiltrator",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "infiltrator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Iron Bundle",
+    "details": "Iron Bundle, L78",
+    "condition": "215/215",
+    "active": false,
+    "stats": {
+     "atk": 170,
+     "def": 223,
+     "spa": 239,
+     "spd": 139,
+     "spe": 257
+    },
+    "moves": [
+     "hydropump",
+     "freezedry",
+     "encore",
+     "flipturn"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ice",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cyclizar",
+    "details": "Cyclizar, L84, F",
+    "condition": "255/255",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 157,
+     "spa": 191,
+     "spd": 157,
+     "spe": 251
+    },
+    "moves": [
+     "knockoff",
+     "dracometeor",
+     "shedtail",
+     "rapidspin"
+    ],
+    "baseAbility": "regenerator",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Slither Wing",
+    "details": "Slither Wing, L81",
+    "condition": "270/270",
+    "active": false,
+    "stats": {
+     "atk": 265,
+     "def": 175,
+     "spa": 184,
+     "spd": 217,
+     "spe": 178
+    },
+    "moves": [
+     "morningsun",
+     "willowisp",
+     "uturn",
+     "closecombat"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Magmortar",
+    "details": "Magmortar, L88, F",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 217,
+     "def": 168,
+     "spa": 270,
+     "spd": 217,
+     "spe": 196
+    },
+    "moves": [
+     "focusblast",
+     "scorchingsands",
+     "fireblast",
+     "knockoff"
+    ],
+    "baseAbility": "flamebody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "flamebody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Scovillain",
+    "details": "Scovillain, L91, F",
+    "condition": "266/266",
+    "active": true,
+    "stats": {
+     "atk": 248,
+     "def": 170,
+     "spa": 248,
+     "spd": 170,
+     "spe": 188
+    },
+    "moves": [
+     "stompingtantrum",
+     "sunnyday",
+     "energyball",
+     "fireblast"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Pincurchin",
+    "details": "Pincurchin, M",
+    "condition": "258/258",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 247,
+     "spa": 239,
+     "spd": 227,
+     "spe": 87
+    },
+    "moves": [
+     "recover",
+     "liquidation",
+     "curse",
+     "zingzap"
+    ],
+    "baseAbility": "electricsurge",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "electricsurge",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hypno",
+    "details": "Hypno, L95, M",
+    "condition": "315/315",
+    "active": false,
+    "stats": {
+     "atk": 193,
+     "def": 187,
+     "spa": 193,
+     "spd": 272,
+     "spe": 181
+    },
+    "moves": [
+     "knockoff",
+     "toxic",
+     "encore",
+     "psychicnoise"
+    ],
+    "baseAbility": "insomnia",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "insomnia",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Boulder",
+    "details": "Iron Boulder, L77",
+    "condition": "265/265",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 168,
+     "spa": 149,
+     "spd": 211,
+     "spe": 236
+    },
+    "moves": [
+     "closecombat",
+     "swordsdance",
+     "mightycleave",
+     "zenheadbutt"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Swampert",
+    "details": "Swampert, L83, F",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 197,
+     "spa": 189,
+     "spd": 197,
+     "spe": 147
+    },
+    "moves": [
+     "stealthrock",
+     "earthquake",
+     "knockoff",
+     "yawn"
+    ],
+    "baseAbility": "damp",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "damp",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Scyther",
+    "details": "Scyther, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 178,
+     "spa": 137,
+     "spd": 178,
+     "spe": 219
+    },
+    "moves": [
+     "uturn",
+     "closecombat",
+     "dualwingbeat",
+     "defog"
+    ],
+    "baseAbility": "technician",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

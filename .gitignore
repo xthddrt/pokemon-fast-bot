@@ -1,0 +1,48 @@
+# --- nested git repos (cloned separately; see README.md) ---
+foul-play/
+poke-engine/
+pokemon-showdown/
+pokemon-showdown-latest/
+pe-wt-mhdeath/
+
+# --- secrets ---
+.env
+
+# --- data / results / bulk artifacts (S3 or regenerable; deliberately unsaved) ---
+evallab/data/
+ladder-games/games/
+ladder-games/index.jsonl
+ladder-games/ELO_LOG.jsonl
+ladder-games/ELO_STATE.json
+ladder-games/LOSSES.md
+ladder-scrape/
+synthetic-corpus/
+valuenet/m4_*/
+valuenet/pilot_data/
+valuenet/tune/
+valuenet/nets_v8n/
+valuenet/*.pt
+truestate/*.pt
+truestate/rl/canary_games/
+opponent_ledger.jsonl
+SET_CENSUS.csv.gz
+SPECIES_CENSUS.csv
+fundamental_values.csv
+fundamental_6v6_values.csv
+spsa_*.json*
+spsa_run.log
+*.log
+
+# --- caches ---
+__pycache__/
+*.pyc
+.DS_Store
+
+# --- progress docs (process docs live in the pipeline dirs; these are history) ---
+/*.md
+!/README.md
+
+# their own GitHub repos (xthddrt/valuenet, xthddrt/truestate)
+valuenet/
+truestate/
+.venv-train/

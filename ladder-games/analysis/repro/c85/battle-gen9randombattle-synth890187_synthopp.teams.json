@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 890187,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth890187",
+  "seed": "sodium,d2886801000d954b",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,d27f06e4000d954b",
+  "p2_ai_seed": "sodium,d27f1af5000d954b",
+  "p1_team_seed": "sodium,d27f2806000d954b",
+  "p2_team_seed": "sodium,d27f3917000d954b",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 34,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T21:08:47.201Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Hypno",
+     "level": 95,
+     "gender": "M",
+     "ability": "Insomnia",
+     "item": "Leftovers",
+     "moves": [
+      "toxic",
+      "psychicnoise",
+      "knockoff",
+      "encore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 315,
+      "atk": 193,
+      "def": 187,
+      "spa": 193,
+      "spd": 272,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Annihilape",
+     "level": 76,
+     "gender": "F",
+     "ability": "Defiant",
+     "item": "Leftovers",
+     "moves": [
+      "bulkup",
+      "drainpunch",
+      "taunt",
+      "ragefist"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 292,
+      "atk": 219,
+      "def": 166,
+      "spa": 120,
+      "spd": 181,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Registeel",
+     "level": 81,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Chesto Berry",
+     "moves": [
+      "bodypress",
+      "ironhead",
+      "rest",
+      "irondefense"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 168,
+      "def": 290,
+      "spa": 168,
+      "spd": 290,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Zarude-Dada",
+     "level": 77,
+     "gender": "N",
+     "ability": "Leaf Guard",
+     "item": "Choice Scarf",
+     "moves": [
+      "powerwhip",
+      "closecombat",
+      "uturn",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 229,
+      "def": 206,
+      "spa": 152,
+      "spd": 191,
+      "spe": 206
+     }
+    },
+    {
+     "species": "Lunala",
+     "level": 70,
+     "gender": "N",
+     "ability": "Shadow Shield",
+     "item": "Leftovers",
+     "moves": [
+      "psyshock",
+      "calmmind",
+      "moongeistbeam",
+      "moonlight"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 308,
+      "atk": 163,
+      "def": 166,
+      "spa": 233,
+      "spd": 191,
+      "spe": 177
+     }
+    },
+    {
+     "species": "Regice",
+     "level": 88,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "icebeam",
+      "rest",
+      "sleeptalk",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 93,
+      "def": 226,
+      "spa": 226,
+      "spd": 402,
+      "spe": 138
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Gogoat",
+     "level": 88,
+     "gender": "F",
+     "ability": "Sap Sipper",
+     "item": "Leftovers",
+     "moves": [
+      "milkdrink",
+      "rockslide",
+      "hornleech",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 360,
+      "atk": 226,
+      "def": 159,
+      "spa": 221,
+      "spd": 193,
+      "spe": 170
+     }
+    },
+    {
+     "species": "Zoroark-Hisui",
+     "level": 80,
+     "gender": "F",
+     "ability": "Illusion",
+     "item": "Choice Specs",
+     "moves": [
+      "bittermalice",
+      "hypervoice",
+      "trick",
+      "focusblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 219,
+      "atk": 165,
+      "def": 142,
+      "spa": 246,
+      "spd": 142,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Pecharunt",
+     "level": 77,
+     "gender": "N",
+     "ability": "Poison Puppeteer",
+     "item": "Leftovers",
+     "moves": [
+      "malignantchain",
+      "recover",
+      "nastyplot",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 140,
+      "def": 291,
+      "spa": 180,
+      "spd": 180,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Hatterene",
+     "level": 85,
+     "gender": "F",
+     "ability": "Magic Bounce",
+     "item": "Leftovers",
+     "moves": [
+      "psychic",
+      "calmmind",
+      "drainingkiss",
+      "mysticalfire"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 236,
+      "atk": 158,
+      "def": 210,
+      "spa": 280,
+      "spd": 224,
+      "spe": 98
+     }
+    },
+    {
+     "species": "Tauros-Paldea-Aqua",
+     "level": 81,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Life Orb",
+     "moves": [
+      "closecombat",
+      "aquajet",
+      "bulkup",
+      "liquidation"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 225,
+      "def": 217,
+      "spa": 95,
+      "spd": 160,
+      "spe": 209
+     }
+    },
+    {
+     "species": "Passimian",
+     "level": 83,
+     "gender": "M",
+     "ability": "Defiant",
+     "item": "Choice Band",
+     "moves": [
+      "rockslide",
+      "knockoff",
+      "closecombat",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 247,
+      "def": 197,
+      "spa": 114,
+      "spd": 147,
+      "spe": 180
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Hypno",
+    "details": "Hypno, L95, M",
+    "condition": "315/315",
+    "active": true,
+    "stats": {
+     "atk": 193,
+     "def": 187,
+     "spa": 193,
+     "spd": 272,
+     "spe": 181
+    },
+    "moves": [
+     "toxic",
+     "psychicnoise",
+     "knockoff",
+     "encore"
+    ],
+    "baseAbility": "insomnia",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "insomnia",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Annihilape",
+    "details": "Annihilape, L76, F",
+    "condition": "292/292",
+    "active": false,
+    "stats": {
+     "atk": 219,
+     "def": 166,
+     "spa": 120,
+     "spd": 181,
+     "spe": 181
+    },
+    "moves": [
+     "bulkup",
+     "drainpunch",
+     "taunt",
+     "ragefist"
+    ],
+    "baseAbility": "defiant",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Registeel",
+    "details": "Registeel, L81",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 168,
+     "def": 290,
+     "spa": 168,
+     "spd": 290,
+     "spe": 128
+    },
+    "moves": [
+     "bodypress",
+     "ironhead",
+     "rest",
+     "irondefense"
+    ],
+    "baseAbility": "clearbody",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zarude",
+    "details": "Zarude-Dada, L77",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 206,
+     "spa": 152,
+     "spd": 191,
+     "spe": 206
+    },
+    "moves": [
+     "powerwhip",
+     "closecombat",
+     "uturn",
+     "knockoff"
+    ],
+    "baseAbility": "leafguard",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "leafguard",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lunala",
+    "details": "Lunala, L70",
+    "condition": "308/308",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 166,
+     "spa": 233,
+     "spd": 191,
+     "spe": 177
+    },
+    "moves": [
+     "psyshock",
+     "calmmind",
+     "moongeistbeam",
+     "moonlight"
+    ],
+    "baseAbility": "shadowshield",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "shadowshield",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Regice",
+    "details": "Regice, L88",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 226,
+     "spa": 226,
+     "spd": 402,
+     "spe": 138
+    },
+    "moves": [
+     "icebeam",
+     "rest",
+     "sleeptalk",
+     "thunderbolt"
+    ],
+    "baseAbility": "clearbody",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Gogoat",
+    "details": "Gogoat, L88, F",
+    "condition": "360/360",
+    "active": true,
+    "stats": {
+     "atk": 226,
+     "def": 159,
+     "spa": 221,
+     "spd": 193,
+     "spe": 170
+    },
+    "moves": [
+     "milkdrink",
+     "rockslide",
+     "hornleech",
+     "bulkup"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zoroark",
+    "details": "Zoroark-Hisui, L80, F",
+    "condition": "219/219",
+    "active": false,
+    "stats": {
+     "atk": 165,
+     "def": 142,
+     "spa": 246,
+     "spd": 142,
+     "spe": 222
+    },
+    "moves": [
+     "bittermalice",
+     "hypervoice",
+     "trick",
+     "focusblast"
+    ],
+    "baseAbility": "illusion",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Pecharunt",
+    "details": "Pecharunt, L77",
+    "condition": "262/262",
+    "active": false,
+    "stats": {
+     "atk": 140,
+     "def": 291,
+     "spa": 180,
+     "spd": 180,
+     "spe": 180
+    },
+    "moves": [
+     "malignantchain",
+     "recover",
+     "nastyplot",
+     "shadowball"
+    ],
+    "baseAbility": "poisonpuppeteer",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "poisonpuppeteer",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Hatterene",
+    "details": "Hatterene, L85, F",
+    "condition": "236/236",
+    "active": false,
+    "stats": {
+     "atk": 158,
+     "def": 210,
+     "spa": 280,
+     "spd": 224,
+     "spe": 98
+    },
+    "moves": [
+     "psychic",
+     "calmmind",
+     "drainingkiss",
+     "mysticalfire"
+    ],
+    "baseAbility": "magicbounce",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "magicbounce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tauros",
+    "details": "Tauros-Paldea-Aqua, L81, M",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 225,
+     "def": 217,
+     "spa": 95,
+     "spd": 160,
+     "spe": 209
+    },
+    "moves": [
+     "closecombat",
+     "aquajet",
+     "bulkup",
+     "liquidation"
+    ],
+    "baseAbility": "intimidate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Passimian",
+    "details": "Passimian, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 197,
+     "spa": 114,
+     "spd": 147,
+     "spe": 180
+    },
+    "moves": [
+     "rockslide",
+     "knockoff",
+     "closecombat",
+     "uturn"
+    ],
+    "baseAbility": "defiant",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1061370,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1061370",
+  "seed": "sodium,bc135978001031fa",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,bc09f85b001031fa",
+  "p2_ai_seed": "sodium,bc0a0c6c001031fa",
+  "p1_team_seed": "sodium,bc0a197d001031fa",
+  "p2_team_seed": "sodium,bc0a2a8e001031fa",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 36,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T23:02:10.109Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Mienshao",
+     "level": 83,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Assault Vest",
+     "moves": [
+      "fakeout",
+      "uturn",
+      "knockoff",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 255,
+      "def": 147,
+      "spa": 205,
+      "spd": 147,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Tropius",
+     "level": 91,
+     "gender": "F",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "leechseed",
+      "substitute",
+      "airslash",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 328,
+      "atk": 128,
+      "def": 203,
+      "spa": 183,
+      "spd": 210,
+      "spe": 145
+     }
+    },
+    {
+     "species": "Cloyster",
+     "level": 80,
+     "gender": "M",
+     "ability": "Skill Link",
+     "item": "White Herb",
+     "moves": [
+      "shellsmash",
+      "rockblast",
+      "drillrun",
+      "iciclespear"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 211,
+      "atk": 198,
+      "def": 334,
+      "spa": 182,
+      "spd": 118,
+      "spe": 158
+     }
+    },
+    {
+     "species": "Toxapex",
+     "level": 82,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Rocky Helmet",
+     "moves": [
+      "haze",
+      "liquidation",
+      "toxic",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 150,
+      "def": 296,
+      "spa": 134,
+      "spd": 280,
+      "spe": 105
+     }
+    },
+    {
+     "species": "Weavile",
+     "level": 79,
+     "gender": "F",
+     "ability": "Pickpocket",
+     "item": "Choice Band",
+     "moves": [
+      "knockoff",
+      "tripleaxel",
+      "iceshard",
+      "lowkick"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 239,
+      "atk": 235,
+      "def": 148,
+      "spa": 117,
+      "spd": 180,
+      "spe": 243
+     }
+    },
+    {
+     "species": "Zebstrika",
+     "level": 87,
+     "gender": "M",
+     "ability": "Sap Sipper",
+     "item": "Life Orb",
+     "moves": [
+      "highhorsepower",
+      "supercellslam",
+      "overheat",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 224,
+      "def": 159,
+      "spa": 189,
+      "spd": 159,
+      "spe": 252
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Gliscor",
+     "level": 76,
+     "gender": "F",
+     "ability": "Poison Heal",
+     "item": "Toxic Orb",
+     "moves": [
+      "toxic",
+      "earthquake",
+      "substitute",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 239,
+      "atk": 188,
+      "def": 234,
+      "spa": 112,
+      "spd": 158,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Brute Bonnet",
+     "level": 80,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Leftovers",
+     "moves": [
+      "crunch",
+      "suckerpunch",
+      "seedbomb",
+      "spore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 309,
+      "atk": 249,
+      "def": 205,
+      "spa": 173,
+      "spd": 205,
+      "spe": 134
+     }
+    },
+    {
+     "species": "Enamorus",
+     "level": 79,
+     "gender": "F",
+     "ability": "Contrary",
+     "item": "Leftovers",
+     "moves": [
+      "superpower",
+      "playrough",
+      "taunt",
+      "substitute"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 227,
+      "def": 156,
+      "spa": 259,
+      "spd": 172,
+      "spe": 213
+     }
+    },
+    {
+     "species": "Garganacl",
+     "level": 80,
+     "gender": "F",
+     "ability": "Purifying Salt",
+     "item": "Leftovers",
+     "moves": [
+      "bodypress",
+      "recover",
+      "protect",
+      "saltcure"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 291,
+      "atk": 206,
+      "def": 254,
+      "spa": 118,
+      "spd": 190,
+      "spe": 102
+     }
+    },
+    {
+     "species": "Kingdra",
+     "level": 84,
+     "gender": "M",
+     "ability": "Sniper",
+     "item": "Lum Berry",
+     "moves": [
+      "waterfall",
+      "wavecrash",
+      "dragondance",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 208,
+      "def": 208,
+      "spa": 208,
+      "spd": 208,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Sudowoodo",
+     "level": 94,
+     "gender": "F",
+     "ability": "Rock Head",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "headsmash",
+      "stealthrock",
+      "woodhammer"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 241,
+      "def": 270,
+      "spa": 110,
+      "spd": 176,
+      "spe": 110
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Mienshao",
+    "details": "Mienshao, L83, M",
+    "condition": "244/244",
+    "active": true,
+    "stats": {
+     "atk": 255,
+     "def": 147,
+     "spa": 205,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "fakeout",
+     "uturn",
+     "knockoff",
+     "closecombat"
+    ],
+    "baseAbility": "regenerator",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tropius",
+    "details": "Tropius, L91, F",
+    "condition": "328/328",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 203,
+     "spa": 183,
+     "spd": 210,
+     "spe": 145
+    },
+    "moves": [
+     "leechseed",
+     "substitute",
+     "airslash",
+     "protect"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cloyster",
+    "details": "Cloyster, L80, M",
+    "condition": "211/211",
+    "active": false,
+    "stats": {
+     "atk": 198,
+     "def": 334,
+     "spa": 182,
+     "spd": 118,
+     "spe": 158
+    },
+    "moves": [
+     "shellsmash",
+     "rockblast",
+     "drillrun",
+     "iciclespear"
+    ],
+    "baseAbility": "skilllink",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "skilllink",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Toxapex",
+    "details": "Toxapex, L82, F",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 150,
+     "def": 296,
+     "spa": 134,
+     "spd": 280,
+     "spe": 105
+    },
+    "moves": [
+     "haze",
+     "liquidation",
+     "toxic",
+     "recover"
+    ],
+    "baseAbility": "regenerator",
+    "item": "rockyhelmet",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Weavile",
+    "details": "Weavile, L79, F",
+    "condition": "239/239",
+    "active": false,
+    "stats": {
+     "atk": 235,
+     "def": 148,
+     "spa": 117,
+     "spd": 180,
+     "spe": 243
+    },
+    "moves": [
+     "knockoff",
+     "tripleaxel",
+     "iceshard",
+     "lowkick"
+    ],
+    "baseAbility": "pickpocket",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "pickpocket",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Zebstrika",
+    "details": "Zebstrika, L87, M",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 224,
+     "def": 159,
+     "spa": 189,
+     "spd": 159,
+     "spe": 252
+    },
+    "moves": [
+     "highhorsepower",
+     "supercellslam",
+     "overheat",
+     "voltswitch"
+    ],
+    "baseAbility": "sapsipper",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sapsipper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Gliscor",
+    "details": "Gliscor, L76, F",
+    "condition": "239/239",
+    "active": true,
+    "stats": {
+     "atk": 188,
+     "def": 234,
+     "spa": 112,
+     "spd": 158,
+     "spe": 188
+    },
+    "moves": [
+     "toxic",
+     "earthquake",
+     "substitute",
+     "protect"
+    ],
+    "baseAbility": "poisonheal",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "poisonheal",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Brute Bonnet",
+    "details": "Brute Bonnet, L80",
+    "condition": "309/309",
+    "active": false,
+    "stats": {
+     "atk": 249,
+     "def": 205,
+     "spa": 173,
+     "spd": 205,
+     "spe": 134
+    },
+    "moves": [
+     "crunch",
+     "suckerpunch",
+     "seedbomb",
+     "spore"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Enamorus",
+    "details": "Enamorus, L79, F",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 227,
+     "def": 156,
+     "spa": 259,
+     "spd": 172,
+     "spe": 213
+    },
+    "moves": [
+     "superpower",
+     "playrough",
+     "taunt",
+     "substitute"
+    ],
+    "baseAbility": "contrary",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Garganacl",
+    "details": "Garganacl, L80, F",
+    "condition": "291/291",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 254,
+     "spa": 118,
+     "spd": 190,
+     "spe": 102
+    },
+    "moves": [
+     "bodypress",
+     "recover",
+     "protect",
+     "saltcure"
+    ],
+    "baseAbility": "purifyingsalt",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "purifyingsalt",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Kingdra",
+    "details": "Kingdra, L84, M",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 208,
+     "spa": 208,
+     "spd": 208,
+     "spe": 191
+    },
+    "moves": [
+     "waterfall",
+     "wavecrash",
+     "dragondance",
+     "outrage"
+    ],
+    "baseAbility": "sniper",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "sniper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sudowoodo",
+    "details": "Sudowoodo, L94, F",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 241,
+     "def": 270,
+     "spa": 110,
+     "spd": 176,
+     "spe": 110
+    },
+    "moves": [
+     "earthquake",
+     "headsmash",
+     "stealthrock",
+     "woodhammer"
+    ],
+    "baseAbility": "rockhead",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "rockhead",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   }
+  ]
+ }
+}

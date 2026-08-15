@@ -1,0 +1,834 @@
+{
+ "meta": {
+  "game": 709679,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth709679",
+  "seed": "sodium,be409ec5000ad42f",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,be373da8000ad42f",
+  "p2_ai_seed": "sodium,be3751b9000ad42f",
+  "p1_team_seed": "sodium,be375eca000ad42f",
+  "p2_team_seed": "sodium,be376fdb000ad42f",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 24,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T16:14:26.569Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Hitmonlee",
+     "level": 85,
+     "gender": "M",
+     "ability": "Reckless",
+     "item": "Choice Band",
+     "moves": [
+      "knockoff",
+      "stoneedge",
+      "poisonjab",
+      "highjumpkick"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 223,
+      "atk": 253,
+      "def": 139,
+      "spa": 108,
+      "spd": 236,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Frosmoth",
+     "level": 82,
+     "gender": "F",
+     "ability": "Ice Scales",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "gigadrain",
+      "hurricane",
+      "quiverdance",
+      "icebeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 111,
+      "def": 146,
+      "spa": 252,
+      "spd": 195,
+      "spe": 154
+     }
+    },
+    {
+     "species": "Ditto",
+     "level": 87,
+     "gender": "N",
+     "ability": "Imposter",
+     "item": "Choice Scarf",
+     "moves": [
+      "transform"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 133,
+      "def": 133,
+      "spa": 133,
+      "spd": 133,
+      "spe": 133
+     }
+    },
+    {
+     "species": "Slowbro-Galar",
+     "level": 87,
+     "gender": "F",
+     "ability": "Regenerator",
+     "item": "Life Orb",
+     "moves": [
+      "shellsidearm",
+      "fireblast",
+      "trickroom",
+      "psychic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 0
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 0
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 307,
+      "atk": 224,
+      "def": 215,
+      "spa": 224,
+      "spd": 172,
+      "spe": 57
+     }
+    },
+    {
+     "species": "Luvdisc",
+     "level": 100,
+     "gender": "M",
+     "ability": "Swift Swim",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "flipturn",
+      "surf",
+      "substitute",
+      "endeavor"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 117,
+      "def": 167,
+      "spa": 137,
+      "spd": 187,
+      "spe": 251
+     }
+    },
+    {
+     "species": "Mewtwo",
+     "level": 72,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Life Orb",
+     "moves": [
+      "darkpulse",
+      "nastyplot",
+      "fireblast",
+      "psystrike"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 272,
+      "atk": 163,
+      "def": 172,
+      "spa": 264,
+      "spd": 172,
+      "spe": 229
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Bronzong",
+     "level": 88,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Leftovers",
+     "moves": [
+      "psychic",
+      "hypnosis",
+      "earthquake",
+      "ironhead"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 207,
+      "def": 254,
+      "spa": 189,
+      "spd": 254,
+      "spe": 108
+     }
+    },
+    {
+     "species": "Reshiram",
+     "level": 76,
+     "gender": "N",
+     "ability": "Turboblaze",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "outrage",
+      "flareblitz",
+      "stoneedge",
+      "dragondance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 226,
+      "def": 196,
+      "spa": 272,
+      "spd": 226,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Glastrier",
+     "level": 86,
+     "gender": "N",
+     "ability": "Chilling Neigh",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "iciclecrash",
+      "swordsdance",
+      "closecombat",
+      "heavyslam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 312,
+      "atk": 299,
+      "def": 273,
+      "spa": 161,
+      "spd": 238,
+      "spe": 101
+     }
+    },
+    {
+     "species": "Basculin-Blue-Striped",
+     "level": 86,
+     "gender": "F",
+     "ability": "Adaptability",
+     "item": "Choice Band",
+     "moves": [
+      "doubleedge",
+      "flipturn",
+      "aquajet",
+      "wavecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 207,
+      "def": 161,
+      "spa": 187,
+      "spd": 144,
+      "spe": 218
+     }
+    },
+    {
+     "species": "Dondozo",
+     "level": 78,
+     "gender": "F",
+     "ability": "Unaware",
+     "item": "Leftovers",
+     "moves": [
+      "wavecrash",
+      "sleeptalk",
+      "curse",
+      "rest"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 362,
+      "atk": 201,
+      "def": 224,
+      "spa": 146,
+      "spd": 146,
+      "spe": 100
+     }
+    },
+    {
+     "species": "Iron Leaves",
+     "level": 80,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "leafblade",
+      "closecombat",
+      "psyblade",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 254,
+      "def": 187,
+      "spa": 158,
+      "spd": 219,
+      "spe": 213
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Hitmonlee",
+    "details": "Hitmonlee, L85, M",
+    "condition": "223/223",
+    "active": true,
+    "stats": {
+     "atk": 253,
+     "def": 139,
+     "spa": 108,
+     "spd": 236,
+     "spe": 197
+    },
+    "moves": [
+     "knockoff",
+     "stoneedge",
+     "poisonjab",
+     "highjumpkick"
+    ],
+    "baseAbility": "reckless",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "reckless",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Frosmoth",
+    "details": "Frosmoth, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 111,
+     "def": 146,
+     "spa": 252,
+     "spd": 195,
+     "spe": 154
+    },
+    "moves": [
+     "gigadrain",
+     "hurricane",
+     "quiverdance",
+     "icebeam"
+    ],
+    "baseAbility": "icescales",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "icescales",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ditto",
+    "details": "Ditto, L87",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 133,
+     "def": 133,
+     "spa": 133,
+     "spd": 133,
+     "spe": 133
+    },
+    "moves": [
+     "transform"
+    ],
+    "baseAbility": "imposter",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "imposter",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Slowbro",
+    "details": "Slowbro-Galar, L87, F",
+    "condition": "307/307",
+    "active": false,
+    "stats": {
+     "atk": 224,
+     "def": 215,
+     "spa": 224,
+     "spd": 172,
+     "spe": 57
+    },
+    "moves": [
+     "shellsidearm",
+     "fireblast",
+     "trickroom",
+     "psychic"
+    ],
+    "baseAbility": "regenerator",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Luvdisc",
+    "details": "Luvdisc, M",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 117,
+     "def": 167,
+     "spa": 137,
+     "spd": 187,
+     "spe": 251
+    },
+    "moves": [
+     "flipturn",
+     "surf",
+     "substitute",
+     "endeavor"
+    ],
+    "baseAbility": "swiftswim",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "swiftswim",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mewtwo",
+    "details": "Mewtwo, L72",
+    "condition": "272/272",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 172,
+     "spa": 264,
+     "spd": 172,
+     "spe": 229
+    },
+    "moves": [
+     "darkpulse",
+     "nastyplot",
+     "fireblast",
+     "psystrike"
+    ],
+    "baseAbility": "pressure",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Bronzong",
+    "details": "Bronzong, L88",
+    "condition": "261/261",
+    "active": true,
+    "stats": {
+     "atk": 207,
+     "def": 254,
+     "spa": 189,
+     "spd": 254,
+     "spe": 108
+    },
+    "moves": [
+     "psychic",
+     "hypnosis",
+     "earthquake",
+     "ironhead"
+    ],
+    "baseAbility": "levitate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Reshiram",
+    "details": "Reshiram, L76",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 226,
+     "def": 196,
+     "spa": 272,
+     "spd": 226,
+     "spe": 181
+    },
+    "moves": [
+     "outrage",
+     "flareblitz",
+     "stoneedge",
+     "dragondance"
+    ],
+    "baseAbility": "turboblaze",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "turboblaze",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Glastrier",
+    "details": "Glastrier, L86",
+    "condition": "312/312",
+    "active": false,
+    "stats": {
+     "atk": 299,
+     "def": 273,
+     "spa": 161,
+     "spd": 238,
+     "spe": 101
+    },
+    "moves": [
+     "iciclecrash",
+     "swordsdance",
+     "closecombat",
+     "heavyslam"
+    ],
+    "baseAbility": "chillingneigh",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "chillingneigh",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Basculin",
+    "details": "Basculin-Blue-Striped, L86, F",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 207,
+     "def": 161,
+     "spa": 187,
+     "spd": 144,
+     "spe": 218
+    },
+    "moves": [
+     "doubleedge",
+     "flipturn",
+     "aquajet",
+     "wavecrash"
+    ],
+    "baseAbility": "adaptability",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dondozo",
+    "details": "Dondozo, L78, F",
+    "condition": "362/362",
+    "active": false,
+    "stats": {
+     "atk": 201,
+     "def": 224,
+     "spa": 146,
+     "spd": 146,
+     "spe": 100
+    },
+    "moves": [
+     "wavecrash",
+     "sleeptalk",
+     "curse",
+     "rest"
+    ],
+    "baseAbility": "unaware",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "unaware",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Leaves",
+    "details": "Iron Leaves, L80",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 254,
+     "def": 187,
+     "spa": 158,
+     "spd": 219,
+     "spe": 213
+    },
+    "moves": [
+     "leafblade",
+     "closecombat",
+     "psyblade",
+     "swordsdance"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

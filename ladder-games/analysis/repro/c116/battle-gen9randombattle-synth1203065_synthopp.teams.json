@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1203065,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1203065",
+  "seed": "sodium,0f895d3f00125b79",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,0f7ffc2200125b79",
+  "p2_ai_seed": "sodium,0f80103300125b79",
+  "p1_team_seed": "sodium,0f801d4400125b79",
+  "p2_team_seed": "sodium,0f802e5500125b79",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 52,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-10T00:22:26.823Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Malamar",
+     "level": 82,
+     "gender": "F",
+     "ability": "Contrary",
+     "item": "Chesto Berry",
+     "moves": [
+      "psychocut",
+      "rest",
+      "superpower",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 198,
+      "def": 191,
+      "spa": 159,
+      "spd": 170,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Falinks",
+     "level": 84,
+     "gender": "N",
+     "ability": "Defiant",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "ironhead",
+      "closecombat",
+      "noretreat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 246,
+      "atk": 216,
+      "def": 216,
+      "spa": 166,
+      "spd": 149,
+      "spe": 174
+     }
+    },
+    {
+     "species": "Cloyster",
+     "level": 80,
+     "gender": "M",
+     "ability": "Skill Link",
+     "item": "White Herb",
+     "moves": [
+      "iciclespear",
+      "shellsmash",
+      "hydropump",
+      "rockblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 211,
+      "atk": 198,
+      "def": 334,
+      "spa": 182,
+      "spd": 118,
+      "spe": 158
+     }
+    },
+    {
+     "species": "Lurantis",
+     "level": 87,
+     "gender": "F",
+     "ability": "Contrary",
+     "item": "Assault Vest",
+     "moves": [
+      "leechlife",
+      "superpower",
+      "leafstorm",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 264,
+      "atk": 232,
+      "def": 206,
+      "spa": 189,
+      "spd": 206,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Haxorus",
+     "level": 77,
+     "gender": "M",
+     "ability": "Mold Breaker",
+     "item": "Lum Berry",
+     "moves": [
+      "earthquake",
+      "dragondance",
+      "outrage",
+      "ironhead"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 271,
+      "def": 183,
+      "spa": 137,
+      "spd": 152,
+      "spe": 194
+     }
+    },
+    {
+     "species": "Arboliva",
+     "level": 91,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "substitute",
+      "hypervoice",
+      "leechseed",
+      "protect"
+     ],
+     "evs": {
+      "hp": 77,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 130,
+      "def": 216,
+      "spa": 279,
+      "spd": 250,
+      "spe": 123
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Slaking",
+     "level": 84,
+     "gender": "F",
+     "ability": "Truant",
+     "item": "Choice Band",
+     "moves": [
+      "gigaimpact",
+      "knockoff",
+      "earthquake",
+      "doubleedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 389,
+      "atk": 317,
+      "def": 216,
+      "spa": 208,
+      "spd": 157,
+      "spe": 216
+     }
+    },
+    {
+     "species": "Raging Bolt",
+     "level": 78,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Assault Vest",
+     "moves": [
+      "voltswitch",
+      "discharge",
+      "thunderclap",
+      "dracometeor"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 323,
+      "atk": 118,
+      "def": 187,
+      "spa": 259,
+      "spd": 184,
+      "spe": 162
+     }
+    },
+    {
+     "species": "Iron Jugulis",
+     "level": 77,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Power Herb",
+     "moves": [
+      "hurricane",
+      "earthpower",
+      "darkpulse",
+      "meteorbeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 271,
+      "atk": 128,
+      "def": 177,
+      "spa": 232,
+      "spd": 168,
+      "spe": 211
+     }
+    },
+    {
+     "species": "Froslass",
+     "level": 87,
+     "gender": "F",
+     "ability": "Cursed Body",
+     "item": "Wide Lens",
+     "moves": [
+      "tripleaxel",
+      "taunt",
+      "poltergeist",
+      "spikes"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 189,
+      "def": 172,
+      "spa": 189,
+      "spd": 172,
+      "spe": 241
+     }
+    },
+    {
+     "species": "Jirachi",
+     "level": 80,
+     "gender": "N",
+     "ability": "Serene Grace",
+     "item": "Assault Vest",
+     "moves": [
+      "drainpunch",
+      "bodyslam",
+      "ironhead",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 291,
+      "atk": 206,
+      "def": 206,
+      "spa": 206,
+      "spd": 206,
+      "spe": 206
+     }
+    },
+    {
+     "species": "Scyther",
+     "level": 82,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "dualwingbeat",
+      "closecombat",
+      "defog",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 228,
+      "def": 178,
+      "spa": 137,
+      "spd": 178,
+      "spe": 219
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Malamar",
+    "details": "Malamar, L82, F",
+    "condition": "275/275",
+    "active": true,
+    "stats": {
+     "atk": 198,
+     "def": 191,
+     "spa": 159,
+     "spd": 170,
+     "spe": 167
+    },
+    "moves": [
+     "psychocut",
+     "rest",
+     "superpower",
+     "knockoff"
+    ],
+    "baseAbility": "contrary",
+    "item": "chestoberry",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Falinks",
+    "details": "Falinks, L84",
+    "condition": "246/246",
+    "active": false,
+    "stats": {
+     "atk": 216,
+     "def": 216,
+     "spa": 166,
+     "spd": 149,
+     "spe": 174
+    },
+    "moves": [
+     "knockoff",
+     "ironhead",
+     "closecombat",
+     "noretreat"
+    ],
+    "baseAbility": "defiant",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cloyster",
+    "details": "Cloyster, L80, M",
+    "condition": "211/211",
+    "active": false,
+    "stats": {
+     "atk": 198,
+     "def": 334,
+     "spa": 182,
+     "spd": 118,
+     "spe": 158
+    },
+    "moves": [
+     "iciclespear",
+     "shellsmash",
+     "hydropump",
+     "rockblast"
+    ],
+    "baseAbility": "skilllink",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "skilllink",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lurantis",
+    "details": "Lurantis, L87, F",
+    "condition": "264/264",
+    "active": false,
+    "stats": {
+     "atk": 232,
+     "def": 206,
+     "spa": 189,
+     "spd": 206,
+     "spe": 128
+    },
+    "moves": [
+     "leechlife",
+     "superpower",
+     "leafstorm",
+     "knockoff"
+    ],
+    "baseAbility": "contrary",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Haxorus",
+    "details": "Haxorus, L77, M",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 271,
+     "def": 183,
+     "spa": 137,
+     "spd": 152,
+     "spe": 194
+    },
+    "moves": [
+     "earthquake",
+     "dragondance",
+     "outrage",
+     "ironhead"
+    ],
+    "baseAbility": "moldbreaker",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "moldbreaker",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Arboliva",
+    "details": "Arboliva, L91, M",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 130,
+     "def": 216,
+     "spa": 279,
+     "spd": 250,
+     "spe": 123
+    },
+    "moves": [
+     "substitute",
+     "hypervoice",
+     "leechseed",
+     "protect"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Slaking",
+    "details": "Slaking, L84, F",
+    "condition": "389/389",
+    "active": true,
+    "stats": {
+     "atk": 317,
+     "def": 216,
+     "spa": 208,
+     "spd": 157,
+     "spe": 216
+    },
+    "moves": [
+     "gigaimpact",
+     "knockoff",
+     "earthquake",
+     "doubleedge"
+    ],
+    "baseAbility": "truant",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "truant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Raging Bolt",
+    "details": "Raging Bolt, L78",
+    "condition": "323/323",
+    "active": false,
+    "stats": {
+     "atk": 118,
+     "def": 187,
+     "spa": 259,
+     "spd": 184,
+     "spe": 162
+    },
+    "moves": [
+     "voltswitch",
+     "discharge",
+     "thunderclap",
+     "dracometeor"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Jugulis",
+    "details": "Iron Jugulis, L77",
+    "condition": "271/271",
+    "active": false,
+    "stats": {
+     "atk": 128,
+     "def": 177,
+     "spa": 232,
+     "spd": 168,
+     "spe": 211
+    },
+    "moves": [
+     "hurricane",
+     "earthpower",
+     "darkpulse",
+     "meteorbeam"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "powerherb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Froslass",
+    "details": "Froslass, L87, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 189,
+     "def": 172,
+     "spa": 189,
+     "spd": 172,
+     "spe": 241
+    },
+    "moves": [
+     "tripleaxel",
+     "taunt",
+     "poltergeist",
+     "spikes"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "widelens",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Jirachi",
+    "details": "Jirachi, L80",
+    "condition": "291/291",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 206,
+     "spa": 206,
+     "spd": 206,
+     "spe": 206
+    },
+    "moves": [
+     "drainpunch",
+     "bodyslam",
+     "ironhead",
+     "uturn"
+    ],
+    "baseAbility": "serenegrace",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "serenegrace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Scyther",
+    "details": "Scyther, L82, F",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 228,
+     "def": 178,
+     "spa": 137,
+     "spd": 178,
+     "spe": 219
+    },
+    "moves": [
+     "dualwingbeat",
+     "closecombat",
+     "defog",
+     "uturn"
+    ],
+    "baseAbility": "technician",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1035875,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1035875",
+  "seed": "sodium,f5480259000fce63",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,f53ea13c000fce63",
+  "p2_ai_seed": "sodium,f53eb54d000fce63",
+  "p1_team_seed": "sodium,f53ec25e000fce63",
+  "p2_team_seed": "sodium,f53ed36f000fce63",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 54,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T23:01:35.044Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Gliscor",
+     "level": 76,
+     "gender": "F",
+     "ability": "Poison Heal",
+     "item": "Toxic Orb",
+     "moves": [
+      "knockoff",
+      "earthquake",
+      "toxicspikes",
+      "protect"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 239,
+      "atk": 188,
+      "def": 234,
+      "spa": 112,
+      "spd": 158,
+      "spe": 188
+     }
+    },
+    {
+     "species": "Dachsbun",
+     "level": 92,
+     "gender": "F",
+     "ability": "Well-Baked Body",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "bodypress",
+      "protect",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 200,
+      "def": 264,
+      "spa": 144,
+      "spd": 200,
+      "spe": 227
+     }
+    },
+    {
+     "species": "Camerupt",
+     "level": 91,
+     "gender": "M",
+     "ability": "Solid Rock",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "willowisp",
+      "stealthrock",
+      "overheat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 234,
+      "def": 179,
+      "spa": 243,
+      "spd": 188,
+      "spe": 125
+     }
+    },
+    {
+     "species": "Gardevoir",
+     "level": 83,
+     "gender": "M",
+     "ability": "Trace",
+     "item": "Choice Scarf",
+     "moves": [
+      "moonblast",
+      "focusblast",
+      "trick",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 112,
+      "def": 156,
+      "spa": 255,
+      "spd": 239,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Grumpig",
+     "level": 92,
+     "gender": "F",
+     "ability": "Thick Fat",
+     "item": "Leftovers",
+     "moves": [
+      "psychic",
+      "nastyplot",
+      "focusblast",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 87,
+      "def": 172,
+      "spa": 218,
+      "spd": 255,
+      "spe": 200
+     }
+    },
+    {
+     "species": "Sableye",
+     "level": 88,
+     "gender": "F",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "knockoff",
+      "thunderwave",
+      "encore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 182,
+      "def": 182,
+      "spa": 165,
+      "spd": 165,
+      "spe": 138
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Iron Bundle",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Choice Specs",
+     "moves": [
+      "hydropump",
+      "flipturn",
+      "icebeam",
+      "freezedry"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 215,
+      "atk": 170,
+      "def": 223,
+      "spa": 239,
+      "spd": 139,
+      "spe": 257
+     }
+    },
+    {
+     "species": "Grumpig",
+     "level": 92,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Leftovers",
+     "moves": [
+      "nastyplot",
+      "dazzlinggleam",
+      "shadowball",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 297,
+      "atk": 87,
+      "def": 172,
+      "spa": 218,
+      "spd": 255,
+      "spe": 200
+     }
+    },
+    {
+     "species": "Bellossom",
+     "level": 84,
+     "gender": "F",
+     "ability": "Chlorophyll",
+     "item": "Leftovers",
+     "moves": [
+      "quiverdance",
+      "moonblast",
+      "gigadrain",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 139,
+      "def": 208,
+      "spa": 199,
+      "spd": 216,
+      "spe": 132
+     }
+    },
+    {
+     "species": "Iron Valiant",
+     "level": 78,
+     "gender": "N",
+     "ability": "Quark Drive",
+     "item": "Life Orb",
+     "moves": [
+      "moonblast",
+      "encore",
+      "closecombat",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 244,
+      "atk": 248,
+      "def": 185,
+      "spa": 232,
+      "spd": 139,
+      "spe": 226
+     }
+    },
+    {
+     "species": "Staraptor",
+     "level": 79,
+     "gender": "F",
+     "ability": "Reckless",
+     "item": "Choice Band",
+     "moves": [
+      "quickattack",
+      "closecombat",
+      "bravebird",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 81,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 235,
+      "def": 156,
+      "spa": 125,
+      "spd": 140,
+      "spe": 204
+     }
+    },
+    {
+     "species": "Sableye",
+     "level": 88,
+     "gender": "F",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "encore",
+      "knockoff",
+      "thunderwave",
+      "recover"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 231,
+      "atk": 182,
+      "def": 182,
+      "spa": 165,
+      "spd": 165,
+      "spe": 138
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Gliscor",
+    "details": "Gliscor, L76, F",
+    "condition": "239/239",
+    "active": true,
+    "stats": {
+     "atk": 188,
+     "def": 234,
+     "spa": 112,
+     "spd": 158,
+     "spe": 188
+    },
+    "moves": [
+     "knockoff",
+     "earthquake",
+     "toxicspikes",
+     "protect"
+    ],
+    "baseAbility": "poisonheal",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "poisonheal",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Dachsbun",
+    "details": "Dachsbun, L92, F",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 200,
+     "def": 264,
+     "spa": 144,
+     "spd": 200,
+     "spe": 227
+    },
+    "moves": [
+     "wish",
+     "bodypress",
+     "protect",
+     "playrough"
+    ],
+    "baseAbility": "wellbakedbody",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "wellbakedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Camerupt",
+    "details": "Camerupt, L91, M",
+    "condition": "275/275",
+    "active": false,
+    "stats": {
+     "atk": 234,
+     "def": 179,
+     "spa": 243,
+     "spd": 188,
+     "spe": 125
+    },
+    "moves": [
+     "earthquake",
+     "willowisp",
+     "stealthrock",
+     "overheat"
+    ],
+    "baseAbility": "solidrock",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "solidrock",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gardevoir",
+    "details": "Gardevoir, L83, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 112,
+     "def": 156,
+     "spa": 255,
+     "spd": 239,
+     "spe": 180
+    },
+    "moves": [
+     "moonblast",
+     "focusblast",
+     "trick",
+     "psyshock"
+    ],
+    "baseAbility": "trace",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "trace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grumpig",
+    "details": "Grumpig, L92, F",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 87,
+     "def": 172,
+     "spa": 218,
+     "spd": 255,
+     "spe": 200
+    },
+    "moves": [
+     "psychic",
+     "nastyplot",
+     "focusblast",
+     "shadowball"
+    ],
+    "baseAbility": "thickfat",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Sableye",
+    "details": "Sableye, L88, F",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 182,
+     "def": 182,
+     "spa": 165,
+     "spd": 165,
+     "spe": 138
+    },
+    "moves": [
+     "recover",
+     "knockoff",
+     "thunderwave",
+     "encore"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Iron Bundle",
+    "details": "Iron Bundle, L78",
+    "condition": "215/215",
+    "active": true,
+    "stats": {
+     "atk": 170,
+     "def": 223,
+     "spa": 239,
+     "spd": 139,
+     "spe": 257
+    },
+    "moves": [
+     "hydropump",
+     "flipturn",
+     "icebeam",
+     "freezedry"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Grumpig",
+    "details": "Grumpig, L92, M",
+    "condition": "297/297",
+    "active": false,
+    "stats": {
+     "atk": 87,
+     "def": 172,
+     "spa": 218,
+     "spd": 255,
+     "spe": 200
+    },
+    "moves": [
+     "nastyplot",
+     "dazzlinggleam",
+     "shadowball",
+     "psyshock"
+    ],
+    "baseAbility": "thickfat",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Bellossom",
+    "details": "Bellossom, L84, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 139,
+     "def": 208,
+     "spa": 199,
+     "spd": 216,
+     "spe": 132
+    },
+    "moves": [
+     "quiverdance",
+     "moonblast",
+     "gigadrain",
+     "strengthsap"
+    ],
+    "baseAbility": "chlorophyll",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "chlorophyll",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Iron Valiant",
+    "details": "Iron Valiant, L78",
+    "condition": "244/244",
+    "active": false,
+    "stats": {
+     "atk": 248,
+     "def": 185,
+     "spa": 232,
+     "spd": 139,
+     "spe": 226
+    },
+    "moves": [
+     "moonblast",
+     "encore",
+     "closecombat",
+     "knockoff"
+    ],
+    "baseAbility": "quarkdrive",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "quarkdrive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Staraptor",
+    "details": "Staraptor, L79, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 235,
+     "def": 156,
+     "spa": 125,
+     "spd": 140,
+     "spe": 204
+    },
+    "moves": [
+     "quickattack",
+     "closecombat",
+     "bravebird",
+     "uturn"
+    ],
+    "baseAbility": "reckless",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "reckless",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sableye",
+    "details": "Sableye, L88, F",
+    "condition": "231/231",
+    "active": false,
+    "stats": {
+     "atk": 182,
+     "def": 182,
+     "spa": 165,
+     "spd": 165,
+     "spe": 138
+    },
+    "moves": [
+     "encore",
+     "knockoff",
+     "thunderwave",
+     "recover"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

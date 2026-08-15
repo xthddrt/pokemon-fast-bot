@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 576327,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth576327",
+  "seed": "sodium,acba871d0008cb47",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,acb126000008cb47",
+  "p2_ai_seed": "sodium,acb13a110008cb47",
+  "p1_team_seed": "sodium,acb147220008cb47",
+  "p2_team_seed": "sodium,acb158330008cb47",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 19,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-03T21:31:51.241Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Lurantis",
+     "level": 87,
+     "gender": "M",
+     "ability": "Contrary",
+     "item": "Leftovers",
+     "moves": [
+      "synthesis",
+      "leafstorm",
+      "superpower",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 264,
+      "atk": 232,
+      "def": 206,
+      "spa": 189,
+      "spd": 206,
+      "spe": 128
+     }
+    },
+    {
+     "species": "Kyurem",
+     "level": 77,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Choice Specs",
+     "moves": [
+      "icebeam",
+      "dracometeor",
+      "freezedry",
+      "earthpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 319,
+      "atk": 205,
+      "def": 183,
+      "spa": 245,
+      "spd": 183,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Shiftry",
+     "level": 89,
+     "gender": "F",
+     "ability": "Wind Rider",
+     "item": "Life Orb",
+     "moves": [
+      "tailwind",
+      "leafblade",
+      "lowkick",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 305,
+      "atk": 229,
+      "def": 158,
+      "spa": 211,
+      "spd": 158,
+      "spe": 193
+     }
+    },
+    {
+     "species": "Cramorant",
+     "level": 86,
+     "gender": "F",
+     "ability": "Gulp Missile",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "surf",
+      "roost",
+      "defog",
+      "bravebird"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 195,
+      "def": 144,
+      "spa": 195,
+      "spd": 213,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Empoleon",
+     "level": 84,
+     "gender": "F",
+     "ability": "Competitive",
+     "item": "Leftovers",
+     "moves": [
+      "roost",
+      "surf",
+      "stealthrock",
+      "icebeam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 149,
+      "def": 196,
+      "spa": 235,
+      "spd": 218,
+      "spe": 149
+     }
+    },
+    {
+     "species": "Ceruledge",
+     "level": 78,
+     "gender": "M",
+     "ability": "Weak Armor",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "bitterblade",
+      "poltergeist",
+      "swordsdance",
+      "shadowsneak"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 245,
+      "atk": 240,
+      "def": 170,
+      "spa": 139,
+      "spd": 201,
+      "spe": 178
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Reshiram",
+     "level": 76,
+     "gender": "N",
+     "ability": "Turboblaze",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "flareblitz",
+      "dragondance",
+      "stoneedge",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 226,
+      "def": 196,
+      "spa": 272,
+      "spd": 226,
+      "spe": 181
+     }
+    },
+    {
+     "species": "Passimian",
+     "level": 83,
+     "gender": "M",
+     "ability": "Defiant",
+     "item": "Leftovers",
+     "moves": [
+      "bulkup",
+      "knockoff",
+      "drainpunch",
+      "gunkshot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 247,
+      "def": 197,
+      "spa": 114,
+      "spd": 147,
+      "spe": 180
+     }
+    },
+    {
+     "species": "Wyrdeer",
+     "level": 87,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Assault Vest",
+     "moves": [
+      "psychicnoise",
+      "bodyslam",
+      "earthquake",
+      "megahorn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 232,
+      "def": 175,
+      "spa": 232,
+      "spd": 180,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Sylveon",
+     "level": 85,
+     "gender": "F",
+     "ability": "Pixilate",
+     "item": "Leftovers",
+     "moves": [
+      "wish",
+      "protect",
+      "calmmind",
+      "hypervoice"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 300,
+      "atk": 115,
+      "def": 159,
+      "spa": 236,
+      "spd": 270,
+      "spe": 151
+     }
+    },
+    {
+     "species": "Florges-White",
+     "level": 85,
+     "gender": "F",
+     "ability": "Flower Veil",
+     "item": "Leftovers",
+     "moves": [
+      "protect",
+      "calmmind",
+      "wish",
+      "moonblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 271,
+      "atk": 115,
+      "def": 164,
+      "spa": 239,
+      "spd": 311,
+      "spe": 176
+     }
+    },
+    {
+     "species": "Darkrai",
+     "level": 77,
+     "gender": "N",
+     "ability": "Bad Dreams",
+     "item": "Life Orb",
+     "moves": [
+      "sludgebomb",
+      "nastyplot",
+      "hypnosis",
+      "darkpulse"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 143,
+      "def": 183,
+      "spa": 252,
+      "spd": 183,
+      "spe": 237
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Lurantis",
+    "details": "Lurantis, L87, M",
+    "condition": "264/264",
+    "active": true,
+    "stats": {
+     "atk": 232,
+     "def": 206,
+     "spa": 189,
+     "spd": 206,
+     "spe": 128
+    },
+    "moves": [
+     "synthesis",
+     "leafstorm",
+     "superpower",
+     "knockoff"
+    ],
+    "baseAbility": "contrary",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "contrary",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Kyurem",
+    "details": "Kyurem, L77",
+    "condition": "319/319",
+    "active": false,
+    "stats": {
+     "atk": 205,
+     "def": 183,
+     "spa": 245,
+     "spd": 183,
+     "spe": 191
+    },
+    "moves": [
+     "icebeam",
+     "dracometeor",
+     "freezedry",
+     "earthpower"
+    ],
+    "baseAbility": "pressure",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Shiftry",
+    "details": "Shiftry, L89, F",
+    "condition": "305/305",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 158,
+     "spa": 211,
+     "spd": 158,
+     "spe": 193
+    },
+    "moves": [
+     "tailwind",
+     "leafblade",
+     "lowkick",
+     "knockoff"
+    ],
+    "baseAbility": "windrider",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "windrider",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Cramorant",
+    "details": "Cramorant, L86, F",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 195,
+     "def": 144,
+     "spa": 195,
+     "spd": 213,
+     "spe": 195
+    },
+    "moves": [
+     "surf",
+     "roost",
+     "defog",
+     "bravebird"
+    ],
+    "baseAbility": "gulpmissile",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "gulpmissile",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Empoleon",
+    "details": "Empoleon, L84, F",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 149,
+     "def": 196,
+     "spa": 235,
+     "spd": 218,
+     "spe": 149
+    },
+    "moves": [
+     "roost",
+     "surf",
+     "stealthrock",
+     "icebeam"
+    ],
+    "baseAbility": "competitive",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "competitive",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ceruledge",
+    "details": "Ceruledge, L78, M",
+    "condition": "245/245",
+    "active": false,
+    "stats": {
+     "atk": 240,
+     "def": 170,
+     "spa": 139,
+     "spd": 201,
+     "spe": 178
+    },
+    "moves": [
+     "bitterblade",
+     "poltergeist",
+     "swordsdance",
+     "shadowsneak"
+    ],
+    "baseAbility": "weakarmor",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "weakarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Reshiram",
+    "details": "Reshiram, L76",
+    "condition": "277/277",
+    "active": true,
+    "stats": {
+     "atk": 226,
+     "def": 196,
+     "spa": 272,
+     "spd": 226,
+     "spe": 181
+    },
+    "moves": [
+     "flareblitz",
+     "dragondance",
+     "stoneedge",
+     "outrage"
+    ],
+    "baseAbility": "turboblaze",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "turboblaze",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Passimian",
+    "details": "Passimian, L83, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 197,
+     "spa": 114,
+     "spd": 147,
+     "spe": 180
+    },
+    "moves": [
+     "bulkup",
+     "knockoff",
+     "drainpunch",
+     "gunkshot"
+    ],
+    "baseAbility": "defiant",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "defiant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Wyrdeer",
+    "details": "Wyrdeer, L87, M",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 232,
+     "def": 175,
+     "spa": 232,
+     "spd": 180,
+     "spe": 163
+    },
+    "moves": [
+     "psychicnoise",
+     "bodyslam",
+     "earthquake",
+     "megahorn"
+    ],
+    "baseAbility": "intimidate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Sylveon",
+    "details": "Sylveon, L85, F",
+    "condition": "300/300",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 159,
+     "spa": 236,
+     "spd": 270,
+     "spe": 151
+    },
+    "moves": [
+     "wish",
+     "protect",
+     "calmmind",
+     "hypervoice"
+    ],
+    "baseAbility": "pixilate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "pixilate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Florges",
+    "details": "Florges-White, L85, F",
+    "condition": "271/271",
+    "active": false,
+    "stats": {
+     "atk": 115,
+     "def": 164,
+     "spa": 239,
+     "spd": 311,
+     "spe": 176
+    },
+    "moves": [
+     "protect",
+     "calmmind",
+     "wish",
+     "moonblast"
+    ],
+    "baseAbility": "flowerveil",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "flowerveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Darkrai",
+    "details": "Darkrai, L77",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 143,
+     "def": 183,
+     "spa": 252,
+     "spd": 183,
+     "spe": 237
+    },
+    "moves": [
+     "sludgebomb",
+     "nastyplot",
+     "hypnosis",
+     "darkpulse"
+    ],
+    "baseAbility": "baddreams",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "baddreams",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   }
+  ]
+ }
+}

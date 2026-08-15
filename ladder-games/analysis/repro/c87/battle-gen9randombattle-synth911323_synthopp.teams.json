@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 911323,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth911323",
+  "seed": "sodium,96ba2211000de7db",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,96b0c0f4000de7db",
+  "p2_ai_seed": "sodium,96b0d505000de7db",
+  "p1_team_seed": "sodium,96b0e216000de7db",
+  "p2_team_seed": "sodium,96b0f327000de7db",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 38,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T22:18:19.884Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Dedenne",
+     "level": 88,
+     "gender": "F",
+     "ability": "Cheek Pouch",
+     "item": "Sitrus Berry",
+     "moves": [
+      "nuzzle",
+      "dazzlinggleam",
+      "superfang",
+      "thunderbolt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Flying",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 152,
+      "def": 151,
+      "spa": 193,
+      "spd": 168,
+      "spe": 228
+     }
+    },
+    {
+     "species": "Vespiquen",
+     "level": 99,
+     "gender": "F",
+     "ability": "Pressure",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "spikes",
+      "roost",
+      "hurricane",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 299,
+      "atk": 163,
+      "def": 258,
+      "spa": 214,
+      "spd": 258,
+      "spe": 135
+     }
+    },
+    {
+     "species": "Latias",
+     "level": 79,
+     "gender": "F",
+     "ability": "Levitate",
+     "item": "Soul Dew",
+     "moves": [
+      "calmmind",
+      "recover",
+      "dracometeor",
+      "psyshock"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 131,
+      "def": 188,
+      "spa": 219,
+      "spd": 251,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Breloom",
+     "level": 83,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Life Orb",
+     "moves": [
+      "rocktomb",
+      "bulletseed",
+      "machpunch",
+      "spore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 263,
+      "def": 180,
+      "spa": 147,
+      "spd": 147,
+      "spe": 164
+     }
+    },
+    {
+     "species": "Ampharos",
+     "level": 88,
+     "gender": "F",
+     "ability": "Static",
+     "item": "Assault Vest",
+     "moves": [
+      "focusblast",
+      "discharge",
+      "voltswitch",
+      "dazzlinggleam"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 137,
+      "def": 200,
+      "spa": 253,
+      "spd": 209,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Kingdra",
+     "level": 84,
+     "gender": "F",
+     "ability": "Sniper",
+     "item": "Lum Berry",
+     "moves": [
+      "waterfall",
+      "outrage",
+      "wavecrash",
+      "dragondance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 208,
+      "def": 208,
+      "spa": 208,
+      "spd": 208,
+      "spe": 191
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Scyther",
+     "level": 82,
+     "gender": "F",
+     "ability": "Technician",
+     "item": "Eviolite",
+     "moves": [
+      "closecombat",
+      "swordsdance",
+      "bugbite",
+      "dualwingbeat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 228,
+      "def": 178,
+      "spa": 137,
+      "spd": 178,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Floatzel",
+     "level": 86,
+     "gender": "M",
+     "ability": "Water Veil",
+     "item": "Leftovers",
+     "moves": [
+      "wavecrash",
+      "taunt",
+      "bulkup",
+      "icespinner"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 286,
+      "atk": 230,
+      "def": 144,
+      "spa": 195,
+      "spd": 135,
+      "spe": 247
+     }
+    },
+    {
+     "species": "Krookodile",
+     "level": 79,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "gunkshot",
+      "earthquake",
+      "knockoff",
+      "bulkup"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 280,
+      "atk": 230,
+      "def": 172,
+      "spa": 148,
+      "spd": 156,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Vileplume",
+     "level": 85,
+     "gender": "M",
+     "ability": "Effect Spore",
+     "item": "Leftovers",
+     "moves": [
+      "strengthsap",
+      "gigadrain",
+      "leechseed",
+      "sludgebomb"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 266,
+      "atk": 141,
+      "def": 193,
+      "spa": 236,
+      "spd": 202,
+      "spe": 134
+     }
+    },
+    {
+     "species": "Cetitan",
+     "level": 82,
+     "gender": "M",
+     "ability": "Sheer Force",
+     "item": "Life Orb",
+     "moves": [
+      "iciclecrash",
+      "superpower",
+      "iceshard",
+      "liquidation"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 413,
+      "atk": 232,
+      "def": 154,
+      "spa": 121,
+      "spd": 137,
+      "spe": 167
+     }
+    },
+    {
+     "species": "Incineroar",
+     "level": 82,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "knockoff",
+      "flareblitz",
+      "partingshot",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 236,
+      "def": 195,
+      "spa": 178,
+      "spd": 195,
+      "spe": 146
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Dedenne",
+    "details": "Dedenne, L88, F",
+    "condition": "261/261",
+    "active": true,
+    "stats": {
+     "atk": 152,
+     "def": 151,
+     "spa": 193,
+     "spd": 168,
+     "spe": 228
+    },
+    "moves": [
+     "nuzzle",
+     "dazzlinggleam",
+     "superfang",
+     "thunderbolt"
+    ],
+    "baseAbility": "cheekpouch",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "cheekpouch",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Flying",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Vespiquen",
+    "details": "Vespiquen, L99, F",
+    "condition": "299/299",
+    "active": false,
+    "stats": {
+     "atk": 163,
+     "def": 258,
+     "spa": 214,
+     "spd": 258,
+     "spe": 135
+    },
+    "moves": [
+     "spikes",
+     "roost",
+     "hurricane",
+     "toxic"
+    ],
+    "baseAbility": "pressure",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Latias",
+    "details": "Latias, L79, F",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 131,
+     "def": 188,
+     "spa": 219,
+     "spd": 251,
+     "spe": 219
+    },
+    "moves": [
+     "calmmind",
+     "recover",
+     "dracometeor",
+     "psyshock"
+    ],
+    "baseAbility": "levitate",
+    "item": "souldew",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Breloom",
+    "details": "Breloom, L83, F",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 263,
+     "def": 180,
+     "spa": 147,
+     "spd": 147,
+     "spe": 164
+    },
+    "moves": [
+     "rocktomb",
+     "bulletseed",
+     "machpunch",
+     "spore"
+    ],
+    "baseAbility": "technician",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Ampharos",
+    "details": "Ampharos, L88, F",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 137,
+     "def": 200,
+     "spa": 253,
+     "spd": 209,
+     "spe": 147
+    },
+    "moves": [
+     "focusblast",
+     "discharge",
+     "voltswitch",
+     "dazzlinggleam"
+    ],
+    "baseAbility": "static",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "static",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Kingdra",
+    "details": "Kingdra, L84, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 208,
+     "spa": 208,
+     "spd": 208,
+     "spe": 191
+    },
+    "moves": [
+     "waterfall",
+     "outrage",
+     "wavecrash",
+     "dragondance"
+    ],
+    "baseAbility": "sniper",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "sniper",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Scyther",
+    "details": "Scyther, L82, F",
+    "condition": "249/249",
+    "active": true,
+    "stats": {
+     "atk": 228,
+     "def": 178,
+     "spa": 137,
+     "spd": 178,
+     "spe": 219
+    },
+    "moves": [
+     "closecombat",
+     "swordsdance",
+     "bugbite",
+     "dualwingbeat"
+    ],
+    "baseAbility": "technician",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "technician",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Floatzel",
+    "details": "Floatzel, L86, M",
+    "condition": "286/286",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 144,
+     "spa": 195,
+     "spd": 135,
+     "spe": 247
+    },
+    "moves": [
+     "wavecrash",
+     "taunt",
+     "bulkup",
+     "icespinner"
+    ],
+    "baseAbility": "waterveil",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "waterveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Krookodile",
+    "details": "Krookodile, L79, M",
+    "condition": "280/280",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 172,
+     "spa": 148,
+     "spd": 156,
+     "spe": 191
+    },
+    "moves": [
+     "gunkshot",
+     "earthquake",
+     "knockoff",
+     "bulkup"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Vileplume",
+    "details": "Vileplume, L85, M",
+    "condition": "266/266",
+    "active": false,
+    "stats": {
+     "atk": 141,
+     "def": 193,
+     "spa": 236,
+     "spd": 202,
+     "spe": 134
+    },
+    "moves": [
+     "strengthsap",
+     "gigadrain",
+     "leechseed",
+     "sludgebomb"
+    ],
+    "baseAbility": "effectspore",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "effectspore",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Cetitan",
+    "details": "Cetitan, L82, M",
+    "condition": "413/413",
+    "active": false,
+    "stats": {
+     "atk": 232,
+     "def": 154,
+     "spa": 121,
+     "spd": 137,
+     "spe": 167
+    },
+    "moves": [
+     "iciclecrash",
+     "superpower",
+     "iceshard",
+     "liquidation"
+    ],
+    "baseAbility": "sheerforce",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "sheerforce",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Incineroar",
+    "details": "Incineroar, L82, F",
+    "condition": "290/290",
+    "active": false,
+    "stats": {
+     "atk": 236,
+     "def": 195,
+     "spa": 178,
+     "spd": 195,
+     "spe": 146
+    },
+    "moves": [
+     "knockoff",
+     "flareblitz",
+     "partingshot",
+     "closecombat"
+    ],
+    "baseAbility": "intimidate",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 726620,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth726620",
+  "seed": "sodium,db62b64a000b165c",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,db59552d000b165c",
+  "p2_ai_seed": "sodium,db59693e000b165c",
+  "p1_team_seed": "sodium,db59764f000b165c",
+  "p2_team_seed": "sodium,db598760000b165c",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 19,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T16:17:14.955Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Luxray",
+     "level": 88,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Assault Vest",
+     "moves": [
+      "throatchop",
+      "playrough",
+      "wildcharge",
+      "voltswitch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 261,
+      "def": 189,
+      "spa": 217,
+      "spd": 189,
+      "spe": 173
+     }
+    },
+    {
+     "species": "Mudsdale",
+     "level": 83,
+     "gender": "F",
+     "ability": "Stamina",
+     "item": "Leftovers",
+     "moves": [
+      "heavyslam",
+      "stoneedge",
+      "earthquake",
+      "roar"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 255,
+      "def": 214,
+      "spa": 139,
+      "spd": 189,
+      "spe": 106
+     }
+    },
+    {
+     "species": "Arcanine",
+     "level": 84,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "closecombat",
+      "morningsun",
+      "roar",
+      "flareblitz"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 233,
+      "def": 183,
+      "spa": 216,
+      "spd": 183,
+      "spe": 208
+     }
+    },
+    {
+     "species": "Urshifu-Rapid-Strike",
+     "level": 75,
+     "gender": "F",
+     "ability": "Unseen Fist",
+     "item": "Life Orb",
+     "moves": [
+      "aquajet",
+      "swordsdance",
+      "surgingstrikes",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 239,
+      "def": 194,
+      "spa": 138,
+      "spd": 134,
+      "spe": 189
+     }
+    },
+    {
+     "species": "Espathra",
+     "level": 80,
+     "gender": "F",
+     "ability": "Speed Boost",
+     "item": "Leftovers",
+     "moves": [
+      "calmmind",
+      "dazzlinggleam",
+      "roost",
+      "storedpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 101,
+      "def": 142,
+      "spa": 208,
+      "spd": 142,
+      "spe": 214
+     }
+    },
+    {
+     "species": "Noivern",
+     "level": 82,
+     "gender": "M",
+     "ability": "Infiltrator",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "dracometeor",
+      "hurricane",
+      "roost",
+      "flamethrower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 274,
+      "atk": 119,
+      "def": 178,
+      "spa": 206,
+      "spd": 178,
+      "spe": 249
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Espathra",
+     "level": 80,
+     "gender": "F",
+     "ability": "Speed Boost",
+     "item": "Leftovers",
+     "moves": [
+      "roost",
+      "calmmind",
+      "dazzlinggleam",
+      "storedpower"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 283,
+      "atk": 101,
+      "def": 142,
+      "spa": 208,
+      "spd": 142,
+      "spe": 214
+     }
+    },
+    {
+     "species": "Clefable",
+     "level": 83,
+     "gender": "F",
+     "ability": "Magic Guard",
+     "item": "Life Orb",
+     "moves": [
+      "moonlight",
+      "thunderwave",
+      "moonblast",
+      "fireblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 121,
+      "def": 169,
+      "spa": 205,
+      "spd": 197,
+      "spe": 147
+     }
+    },
+    {
+     "species": "Porygon-Z",
+     "level": 83,
+     "gender": "N",
+     "ability": "Adaptability",
+     "item": "Life Orb",
+     "moves": [
+      "terablast",
+      "agility",
+      "shadowball",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 277,
+      "atk": 137,
+      "def": 164,
+      "spa": 272,
+      "spd": 172,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Kingdra",
+     "level": 84,
+     "gender": "F",
+     "ability": "Swift Swim",
+     "item": "Life Orb",
+     "moves": [
+      "wavecrash",
+      "raindance",
+      "hurricane",
+      "dracometeor"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 208,
+      "def": 208,
+      "spa": 208,
+      "spd": 208,
+      "spe": 191
+     }
+    },
+    {
+     "species": "Kommo-o",
+     "level": 77,
+     "gender": "F",
+     "ability": "Soundproof",
+     "item": "Throat Spray",
+     "moves": [
+      "clangoroussoul",
+      "clangingscales",
+      "ironhead",
+      "drainpunch"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 242,
+      "atk": 214,
+      "def": 237,
+      "spa": 199,
+      "spd": 206,
+      "spe": 175
+     }
+    },
+    {
+     "species": "Tsareena",
+     "level": 87,
+     "gender": "F",
+     "ability": "Queenly Majesty",
+     "item": "Life Orb",
+     "moves": [
+      "tripleaxel",
+      "highjumpkick",
+      "synthesis",
+      "powerwhip"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 267,
+      "atk": 259,
+      "def": 220,
+      "spa": 137,
+      "spd": 220,
+      "spe": 175
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Luxray",
+    "details": "Luxray, L88, F",
+    "condition": "284/284",
+    "active": true,
+    "stats": {
+     "atk": 261,
+     "def": 189,
+     "spa": 217,
+     "spd": 189,
+     "spe": 173
+    },
+    "moves": [
+     "throatchop",
+     "playrough",
+     "wildcharge",
+     "voltswitch"
+    ],
+    "baseAbility": "intimidate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Mudsdale",
+    "details": "Mudsdale, L83, F",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 255,
+     "def": 214,
+     "spa": 139,
+     "spd": 189,
+     "spe": 106
+    },
+    "moves": [
+     "heavyslam",
+     "stoneedge",
+     "earthquake",
+     "roar"
+    ],
+    "baseAbility": "stamina",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "stamina",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Arcanine",
+    "details": "Arcanine, L84, F",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 233,
+     "def": 183,
+     "spa": 216,
+     "spd": 183,
+     "spe": 208
+    },
+    "moves": [
+     "closecombat",
+     "morningsun",
+     "roar",
+     "flareblitz"
+    ],
+    "baseAbility": "intimidate",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Urshifu",
+    "details": "Urshifu-Rapid-Strike, L75, F",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 239,
+     "def": 194,
+     "spa": 138,
+     "spd": 134,
+     "spe": 189
+    },
+    "moves": [
+     "aquajet",
+     "swordsdance",
+     "surgingstrikes",
+     "closecombat"
+    ],
+    "baseAbility": "unseenfist",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "unseenfist",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Espathra",
+    "details": "Espathra, L80, F",
+    "condition": "283/283",
+    "active": false,
+    "stats": {
+     "atk": 101,
+     "def": 142,
+     "spa": 208,
+     "spd": 142,
+     "spe": 214
+    },
+    "moves": [
+     "calmmind",
+     "dazzlinggleam",
+     "roost",
+     "storedpower"
+    ],
+    "baseAbility": "speedboost",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "speedboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Noivern",
+    "details": "Noivern, L82, M",
+    "condition": "274/274",
+    "active": false,
+    "stats": {
+     "atk": 119,
+     "def": 178,
+     "spa": 206,
+     "spd": 178,
+     "spe": 249
+    },
+    "moves": [
+     "dracometeor",
+     "hurricane",
+     "roost",
+     "flamethrower"
+    ],
+    "baseAbility": "infiltrator",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "infiltrator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Espathra",
+    "details": "Espathra, L80, F",
+    "condition": "283/283",
+    "active": true,
+    "stats": {
+     "atk": 101,
+     "def": 142,
+     "spa": 208,
+     "spd": 142,
+     "spe": 214
+    },
+    "moves": [
+     "roost",
+     "calmmind",
+     "dazzlinggleam",
+     "storedpower"
+    ],
+    "baseAbility": "speedboost",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "speedboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Clefable",
+    "details": "Clefable, L83, F",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 121,
+     "def": 169,
+     "spa": 205,
+     "spd": 197,
+     "spe": 147
+    },
+    "moves": [
+     "moonlight",
+     "thunderwave",
+     "moonblast",
+     "fireblast"
+    ],
+    "baseAbility": "magicguard",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "magicguard",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Porygon-Z",
+    "details": "Porygon-Z, L83",
+    "condition": "277/277",
+    "active": false,
+    "stats": {
+     "atk": 137,
+     "def": 164,
+     "spa": 272,
+     "spd": 172,
+     "spe": 197
+    },
+    "moves": [
+     "terablast",
+     "agility",
+     "shadowball",
+     "nastyplot"
+    ],
+    "baseAbility": "adaptability",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "adaptability",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Kingdra",
+    "details": "Kingdra, L84, F",
+    "condition": "263/263",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 208,
+     "spa": 208,
+     "spd": 208,
+     "spe": 191
+    },
+    "moves": [
+     "wavecrash",
+     "raindance",
+     "hurricane",
+     "dracometeor"
+    ],
+    "baseAbility": "swiftswim",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "swiftswim",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Kommo-o",
+    "details": "Kommo-o, L77, F",
+    "condition": "242/242",
+    "active": false,
+    "stats": {
+     "atk": 214,
+     "def": 237,
+     "spa": 199,
+     "spd": 206,
+     "spe": 175
+    },
+    "moves": [
+     "clangoroussoul",
+     "clangingscales",
+     "ironhead",
+     "drainpunch"
+    ],
+    "baseAbility": "soundproof",
+    "item": "throatspray",
+    "pokeball": "pokeball",
+    "ability": "soundproof",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Tsareena",
+    "details": "Tsareena, L87, F",
+    "condition": "267/267",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 220,
+     "spa": 137,
+     "spd": 220,
+     "spe": 175
+    },
+    "moves": [
+     "tripleaxel",
+     "highjumpkick",
+     "synthesis",
+     "powerwhip"
+    ],
+    "baseAbility": "queenlymajesty",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "queenlymajesty",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ }
+}

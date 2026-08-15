@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1080740,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1080740",
+  "seed": "sodium,0d93615200107da4",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,0d8a003500107da4",
+  "p2_ai_seed": "sodium,0d8a144600107da4",
+  "p1_team_seed": "sodium,0d8a215700107da4",
+  "p2_team_seed": "sodium,0d8a326800107da4",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 28,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T23:02:38.934Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Persian",
+     "level": 92,
+     "gender": "M",
+     "ability": "Limber",
+     "item": "Choice Band",
+     "moves": [
+      "uturn",
+      "switcheroo",
+      "doubleedge",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 269,
+      "atk": 181,
+      "def": 163,
+      "spa": 172,
+      "spd": 172,
+      "spe": 264
+     }
+    },
+    {
+     "species": "Glalie",
+     "level": 96,
+     "gender": "M",
+     "ability": "Inner Focus",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "freezedry",
+      "taunt",
+      "earthquake",
+      "spikes"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 309,
+      "atk": 208,
+      "def": 208,
+      "spa": 208,
+      "spd": 208,
+      "spe": 208
+     }
+    },
+    {
+     "species": "Granbull",
+     "level": 88,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "encore",
+      "earthquake",
+      "playrough",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 302,
+      "atk": 261,
+      "def": 182,
+      "spa": 156,
+      "spd": 156,
+      "spe": 129
+     }
+    },
+    {
+     "species": "Gastrodon-East",
+     "level": 86,
+     "gender": "M",
+     "ability": "Storm Drain",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "spikes",
+      "earthquake",
+      "surf"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 331,
+      "atk": 192,
+      "def": 166,
+      "spa": 207,
+      "spd": 190,
+      "spe": 116
+     }
+    },
+    {
+     "species": "Azelf",
+     "level": 82,
+     "gender": "N",
+     "ability": "Levitate",
+     "item": "Life Orb",
+     "moves": [
+      "psyshock",
+      "fireblast",
+      "dazzlinggleam",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 257,
+      "atk": 210,
+      "def": 162,
+      "spa": 252,
+      "spd": 162,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Slaking",
+     "level": 84,
+     "gender": "M",
+     "ability": "Truant",
+     "item": "Choice Scarf",
+     "moves": [
+      "gigaimpact",
+      "earthquake",
+      "doubleedge",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 389,
+      "atk": 317,
+      "def": 216,
+      "spa": 208,
+      "spd": 157,
+      "spe": 216
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Zangoose",
+     "level": 85,
+     "gender": "F",
+     "ability": "Toxic Boost",
+     "item": "Toxic Orb",
+     "moves": [
+      "closecombat",
+      "facade",
+      "quickattack",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 263,
+      "atk": 244,
+      "def": 151,
+      "spa": 151,
+      "spd": 151,
+      "spe": 202
+     }
+    },
+    {
+     "species": "Medicham",
+     "level": 86,
+     "gender": "M",
+     "ability": "Pure Power",
+     "item": "Choice Scarf",
+     "moves": [
+      "poisonjab",
+      "closecombat",
+      "trick",
+      "zenheadbutt"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 243,
+      "atk": 152,
+      "def": 178,
+      "spa": 152,
+      "spd": 178,
+      "spe": 187
+     }
+    },
+    {
+     "species": "Shiftry",
+     "level": 89,
+     "gender": "M",
+     "ability": "Wind Rider",
+     "item": "Life Orb",
+     "moves": [
+      "knockoff",
+      "suckerpunch",
+      "leafblade",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 305,
+      "atk": 229,
+      "def": 158,
+      "spa": 211,
+      "spd": 158,
+      "spe": 193
+     }
+    },
+    {
+     "species": "Armarouge",
+     "level": 80,
+     "gender": "F",
+     "ability": "Weak Armor",
+     "item": "Choice Specs",
+     "moves": [
+      "energyball",
+      "psyshock",
+      "armorcannon",
+      "aurasphere"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 267,
+      "atk": 101,
+      "def": 206,
+      "spa": 246,
+      "spd": 174,
+      "spe": 166
+     }
+    },
+    {
+     "species": "Zoroark",
+     "level": 83,
+     "gender": "F",
+     "ability": "Illusion",
+     "item": "Life Orb",
+     "moves": [
+      "sludgebomb",
+      "darkpulse",
+      "encore",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 235,
+      "atk": 179,
+      "def": 147,
+      "spa": 247,
+      "spd": 147,
+      "spe": 222
+     }
+    },
+    {
+     "species": "Flutter Mane",
+     "level": 74,
+     "gender": "N",
+     "ability": "Protosynthesis",
+     "item": "Life Orb",
+     "moves": [
+      "thunderbolt",
+      "moonblast",
+      "calmmind",
+      "shadowball"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Electric",
+     "shiny": false,
+     "stats": {
+      "hp": 203,
+      "atk": 86,
+      "def": 124,
+      "spa": 243,
+      "spd": 243,
+      "spe": 243
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Persian",
+    "details": "Persian, L92, M",
+    "condition": "269/269",
+    "active": true,
+    "stats": {
+     "atk": 181,
+     "def": 163,
+     "spa": 172,
+     "spd": 172,
+     "spe": 264
+    },
+    "moves": [
+     "uturn",
+     "switcheroo",
+     "doubleedge",
+     "knockoff"
+    ],
+    "baseAbility": "limber",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "limber",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Glalie",
+    "details": "Glalie, L96, M",
+    "condition": "309/309",
+    "active": false,
+    "stats": {
+     "atk": 208,
+     "def": 208,
+     "spa": 208,
+     "spd": 208,
+     "spe": 208
+    },
+    "moves": [
+     "freezedry",
+     "taunt",
+     "earthquake",
+     "spikes"
+    ],
+    "baseAbility": "innerfocus",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "innerfocus",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Granbull",
+    "details": "Granbull, L88, M",
+    "condition": "302/302",
+    "active": false,
+    "stats": {
+     "atk": 261,
+     "def": 182,
+     "spa": 156,
+     "spd": 156,
+     "spe": 129
+    },
+    "moves": [
+     "encore",
+     "earthquake",
+     "playrough",
+     "thunderwave"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Gastrodon",
+    "details": "Gastrodon-East, L86, M",
+    "condition": "331/331",
+    "active": false,
+    "stats": {
+     "atk": 192,
+     "def": 166,
+     "spa": 207,
+     "spd": 190,
+     "spe": 116
+    },
+    "moves": [
+     "recover",
+     "spikes",
+     "earthquake",
+     "surf"
+    ],
+    "baseAbility": "stormdrain",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "stormdrain",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Azelf",
+    "details": "Azelf, L82",
+    "condition": "257/257",
+    "active": false,
+    "stats": {
+     "atk": 210,
+     "def": 162,
+     "spa": 252,
+     "spd": 162,
+     "spe": 236
+    },
+    "moves": [
+     "psyshock",
+     "fireblast",
+     "dazzlinggleam",
+     "nastyplot"
+    ],
+    "baseAbility": "levitate",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "levitate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Slaking",
+    "details": "Slaking, L84, M",
+    "condition": "389/389",
+    "active": false,
+    "stats": {
+     "atk": 317,
+     "def": 216,
+     "spa": 208,
+     "spd": 157,
+     "spe": 216
+    },
+    "moves": [
+     "gigaimpact",
+     "earthquake",
+     "doubleedge",
+     "knockoff"
+    ],
+    "baseAbility": "truant",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "truant",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Zangoose",
+    "details": "Zangoose, L85, F",
+    "condition": "263/263",
+    "active": true,
+    "stats": {
+     "atk": 244,
+     "def": 151,
+     "spa": 151,
+     "spd": 151,
+     "spe": 202
+    },
+    "moves": [
+     "closecombat",
+     "facade",
+     "quickattack",
+     "knockoff"
+    ],
+    "baseAbility": "toxicboost",
+    "item": "toxicorb",
+    "pokeball": "pokeball",
+    "ability": "toxicboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Medicham",
+    "details": "Medicham, L86, M",
+    "condition": "243/243",
+    "active": false,
+    "stats": {
+     "atk": 152,
+     "def": 178,
+     "spa": 152,
+     "spd": 178,
+     "spe": 187
+    },
+    "moves": [
+     "poisonjab",
+     "closecombat",
+     "trick",
+     "zenheadbutt"
+    ],
+    "baseAbility": "purepower",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "purepower",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Shiftry",
+    "details": "Shiftry, L89, M",
+    "condition": "305/305",
+    "active": false,
+    "stats": {
+     "atk": 229,
+     "def": 158,
+     "spa": 211,
+     "spd": 158,
+     "spe": 193
+    },
+    "moves": [
+     "knockoff",
+     "suckerpunch",
+     "leafblade",
+     "swordsdance"
+    ],
+    "baseAbility": "windrider",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "windrider",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Armarouge",
+    "details": "Armarouge, L80, F",
+    "condition": "267/267",
+    "active": false,
+    "stats": {
+     "atk": 101,
+     "def": 206,
+     "spa": 246,
+     "spd": 174,
+     "spe": 166
+    },
+    "moves": [
+     "energyball",
+     "psyshock",
+     "armorcannon",
+     "aurasphere"
+    ],
+    "baseAbility": "weakarmor",
+    "item": "choicespecs",
+    "pokeball": "pokeball",
+    "ability": "weakarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Zoroark",
+    "details": "Zoroark, L83, F",
+    "condition": "235/235",
+    "active": false,
+    "stats": {
+     "atk": 179,
+     "def": 147,
+     "spa": 247,
+     "spd": 147,
+     "spe": 222
+    },
+    "moves": [
+     "sludgebomb",
+     "darkpulse",
+     "encore",
+     "nastyplot"
+    ],
+    "baseAbility": "illusion",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "illusion",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Flutter Mane",
+    "details": "Flutter Mane, L74",
+    "condition": "203/203",
+    "active": false,
+    "stats": {
+     "atk": 86,
+     "def": 124,
+     "spa": 243,
+     "spd": 243,
+     "spe": 243
+    },
+    "moves": [
+     "thunderbolt",
+     "moonblast",
+     "calmmind",
+     "shadowball"
+    ],
+    "baseAbility": "protosynthesis",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "protosynthesis",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Electric",
+    "terastallized": ""
+   }
+  ]
+ }
+}

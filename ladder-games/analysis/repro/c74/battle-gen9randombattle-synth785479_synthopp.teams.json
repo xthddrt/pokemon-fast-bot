@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 785479,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth785479",
+  "seed": "sodium,b831f01d000bfc47",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,b8288f00000bfc47",
+  "p2_ai_seed": "sodium,b828a311000bfc47",
+  "p1_team_seed": "sodium,b828b022000bfc47",
+  "p2_team_seed": "sodium,b828c133000bfc47",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 30,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:04:09.386Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Dragapult",
+     "level": 77,
+     "gender": "F",
+     "ability": "Clear Body",
+     "item": "Life Orb",
+     "moves": [
+      "dragondarts",
+      "dragondance",
+      "fireblast",
+      "terablast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 262,
+      "atk": 229,
+      "def": 160,
+      "spa": 199,
+      "spd": 160,
+      "spe": 263
+     }
+    },
+    {
+     "species": "Stonjourner",
+     "level": 91,
+     "gender": "F",
+     "ability": "Power Spot",
+     "item": "Life Orb",
+     "moves": [
+      "stoneedge",
+      "heatcrash",
+      "rockpolish",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 330,
+      "atk": 279,
+      "def": 298,
+      "spa": 88,
+      "spd": 88,
+      "spe": 179
+     }
+    },
+    {
+     "species": "Regidrago",
+     "level": 77,
+     "gender": "N",
+     "ability": "Dragon's Maw",
+     "item": "Lum Berry",
+     "moves": [
+      "dragondance",
+      "earthquake",
+      "dracometeor",
+      "outrage"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 435,
+      "atk": 199,
+      "def": 122,
+      "spa": 199,
+      "spd": 122,
+      "spe": 168
+     }
+    },
+    {
+     "species": "Grafaiai",
+     "level": 86,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "encore",
+      "gunkshot",
+      "partingshot",
+      "knockoff"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 249,
+      "atk": 213,
+      "def": 161,
+      "spa": 187,
+      "spd": 173,
+      "spe": 238
+     }
+    },
+    {
+     "species": "Lilligant",
+     "level": 86,
+     "gender": "F",
+     "ability": "Own Tempo",
+     "item": "Life Orb",
+     "moves": [
+      "sleeppowder",
+      "petaldance",
+      "alluringvoice",
+      "quiverdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Grass",
+     "shiny": false,
+     "stats": {
+      "hp": 261,
+      "atk": 108,
+      "def": 178,
+      "spa": 238,
+      "spd": 178,
+      "spe": 204
+     }
+    },
+    {
+     "species": "Grimmsnarl",
+     "level": 83,
+     "gender": "M",
+     "ability": "Prankster",
+     "item": "Leftovers",
+     "moves": [
+      "spiritbreak",
+      "partingshot",
+      "suckerpunch",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 293,
+      "atk": 247,
+      "def": 156,
+      "spa": 205,
+      "spd": 172,
+      "spe": 147
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Trevenant",
+     "level": 89,
+     "gender": "F",
+     "ability": "Natural Cure",
+     "item": "Choice Band",
+     "moves": [
+      "woodhammer",
+      "poltergeist",
+      "drainpunch",
+      "hornleech"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 296,
+      "atk": 247,
+      "def": 186,
+      "spa": 166,
+      "spd": 197,
+      "spe": 150
+     }
+    },
+    {
+     "species": "Exeggutor-Alola",
+     "level": 89,
+     "gender": "M",
+     "ability": "Harvest",
+     "item": "Sitrus Berry",
+     "moves": [
+      "flamethrower",
+      "dragonpulse",
+      "calmmind",
+      "gigadrain"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 314,
+      "atk": 191,
+      "def": 202,
+      "spa": 273,
+      "spd": 184,
+      "spe": 131
+     }
+    },
+    {
+     "species": "Wyrdeer",
+     "level": 87,
+     "gender": "M",
+     "ability": "Intimidate",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "thunderwave",
+      "psychicnoise",
+      "megahorn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 321,
+      "atk": 232,
+      "def": 175,
+      "spa": 232,
+      "spd": 180,
+      "spe": 163
+     }
+    },
+    {
+     "species": "Mamoswine",
+     "level": 81,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Choice Band",
+     "moves": [
+      "iceshard",
+      "earthquake",
+      "knockoff",
+      "iciclecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 311,
+      "atk": 257,
+      "def": 176,
+      "spa": 160,
+      "spd": 144,
+      "spe": 176
+     }
+    },
+    {
+     "species": "Metagross",
+     "level": 79,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Weakness Policy",
+     "moves": [
+      "agility",
+      "psychicfangs",
+      "heavyslam",
+      "earthquake"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 256,
+      "atk": 259,
+      "def": 251,
+      "spa": 196,
+      "spd": 188,
+      "spe": 156
+     }
+    },
+    {
+     "species": "Diancie",
+     "level": 82,
+     "gender": "N",
+     "ability": "Clear Body",
+     "item": "Assault Vest",
+     "moves": [
+      "diamondstorm",
+      "bodypress",
+      "earthpower",
+      "moonblast"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 211,
+      "def": 293,
+      "spa": 211,
+      "spd": 293,
+      "spe": 129
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Dragapult",
+    "details": "Dragapult, L77, F",
+    "condition": "262/262",
+    "active": true,
+    "stats": {
+     "atk": 229,
+     "def": 160,
+     "spa": 199,
+     "spd": 160,
+     "spe": 263
+    },
+    "moves": [
+     "dragondarts",
+     "dragondance",
+     "fireblast",
+     "terablast"
+    ],
+    "baseAbility": "clearbody",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Stonjourner",
+    "details": "Stonjourner, L91, F",
+    "condition": "330/330",
+    "active": false,
+    "stats": {
+     "atk": 279,
+     "def": 298,
+     "spa": 88,
+     "spd": 88,
+     "spe": 179
+    },
+    "moves": [
+     "stoneedge",
+     "heatcrash",
+     "rockpolish",
+     "earthquake"
+    ],
+    "baseAbility": "powerspot",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "powerspot",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Regidrago",
+    "details": "Regidrago, L77",
+    "condition": "435/435",
+    "active": false,
+    "stats": {
+     "atk": 199,
+     "def": 122,
+     "spa": 199,
+     "spd": 122,
+     "spe": 168
+    },
+    "moves": [
+     "dragondance",
+     "earthquake",
+     "dracometeor",
+     "outrage"
+    ],
+    "baseAbility": "dragonsmaw",
+    "item": "lumberry",
+    "pokeball": "pokeball",
+    "ability": "dragonsmaw",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grafaiai",
+    "details": "Grafaiai, L86, M",
+    "condition": "249/249",
+    "active": false,
+    "stats": {
+     "atk": 213,
+     "def": 161,
+     "spa": 187,
+     "spd": 173,
+     "spe": 238
+    },
+    "moves": [
+     "encore",
+     "gunkshot",
+     "partingshot",
+     "knockoff"
+    ],
+    "baseAbility": "prankster",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Lilligant",
+    "details": "Lilligant, L86, F",
+    "condition": "261/261",
+    "active": false,
+    "stats": {
+     "atk": 108,
+     "def": 178,
+     "spa": 238,
+     "spd": 178,
+     "spe": 204
+    },
+    "moves": [
+     "sleeppowder",
+     "petaldance",
+     "alluringvoice",
+     "quiverdance"
+    ],
+    "baseAbility": "owntempo",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "owntempo",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Grass",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Grimmsnarl",
+    "details": "Grimmsnarl, L83, M",
+    "condition": "293/293",
+    "active": false,
+    "stats": {
+     "atk": 247,
+     "def": 156,
+     "spa": 205,
+     "spd": 172,
+     "spe": 147
+    },
+    "moves": [
+     "spiritbreak",
+     "partingshot",
+     "suckerpunch",
+     "thunderwave"
+    ],
+    "baseAbility": "prankster",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "prankster",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Trevenant",
+    "details": "Trevenant, L89, F",
+    "condition": "296/296",
+    "active": true,
+    "stats": {
+     "atk": 247,
+     "def": 186,
+     "spa": 166,
+     "spd": 197,
+     "spe": 150
+    },
+    "moves": [
+     "woodhammer",
+     "poltergeist",
+     "drainpunch",
+     "hornleech"
+    ],
+    "baseAbility": "naturalcure",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "naturalcure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Exeggutor",
+    "details": "Exeggutor-Alola, L89, M",
+    "condition": "314/314",
+    "active": false,
+    "stats": {
+     "atk": 191,
+     "def": 202,
+     "spa": 273,
+     "spd": 184,
+     "spe": 131
+    },
+    "moves": [
+     "flamethrower",
+     "dragonpulse",
+     "calmmind",
+     "gigadrain"
+    ],
+    "baseAbility": "harvest",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "harvest",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Wyrdeer",
+    "details": "Wyrdeer, L87, M",
+    "condition": "321/321",
+    "active": false,
+    "stats": {
+     "atk": 232,
+     "def": 175,
+     "spa": 232,
+     "spd": 180,
+     "spe": 163
+    },
+    "moves": [
+     "earthquake",
+     "thunderwave",
+     "psychicnoise",
+     "megahorn"
+    ],
+    "baseAbility": "intimidate",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mamoswine",
+    "details": "Mamoswine, L81, M",
+    "condition": "311/311",
+    "active": false,
+    "stats": {
+     "atk": 257,
+     "def": 176,
+     "spa": 160,
+     "spd": 144,
+     "spe": 176
+    },
+    "moves": [
+     "iceshard",
+     "earthquake",
+     "knockoff",
+     "iciclecrash"
+    ],
+    "baseAbility": "thickfat",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Metagross",
+    "details": "Metagross, L79",
+    "condition": "256/256",
+    "active": false,
+    "stats": {
+     "atk": 259,
+     "def": 251,
+     "spa": 196,
+     "spd": 188,
+     "spe": 156
+    },
+    "moves": [
+     "agility",
+     "psychicfangs",
+     "heavyslam",
+     "earthquake"
+    ],
+    "baseAbility": "clearbody",
+    "item": "weaknesspolicy",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Diancie",
+    "details": "Diancie, L82",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 211,
+     "def": 293,
+     "spa": 211,
+     "spd": 293,
+     "spe": 129
+    },
+    "moves": [
+     "diamondstorm",
+     "bodypress",
+     "earthpower",
+     "moonblast"
+    ],
+    "baseAbility": "clearbody",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "clearbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   }
+  ]
+ }
+}

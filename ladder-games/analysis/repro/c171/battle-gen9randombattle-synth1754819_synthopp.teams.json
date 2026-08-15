@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 1754819,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth1754819",
+  "seed": "sodium,c93adfb9001ac6c3",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,c9317e9c001ac6c3",
+  "p2_ai_seed": "sodium,c93192ad001ac6c3",
+  "p1_team_seed": "sodium,c9319fbe001ac6c3",
+  "p2_team_seed": "sodium,c931b0cf001ac6c3",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 34,
+  "winner": "synthbot",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-11T04:41:18.547Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Vespiquen",
+     "level": 99,
+     "gender": "F",
+     "ability": "Pressure",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "hurricane",
+      "roost",
+      "uturn",
+      "toxicspikes"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 299,
+      "atk": 214,
+      "def": 258,
+      "spa": 214,
+      "spd": 258,
+      "spe": 135
+     }
+    },
+    {
+     "species": "Tyranitar",
+     "level": 78,
+     "gender": "M",
+     "ability": "Sand Stream",
+     "item": "Leftovers",
+     "moves": [
+      "icebeam",
+      "knockoff",
+      "stoneedge",
+      "thunderwave"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Rock",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 254,
+      "def": 217,
+      "spa": 193,
+      "spd": 201,
+      "spe": 140
+     }
+    },
+    {
+     "species": "Veluza",
+     "level": 85,
+     "gender": "M",
+     "ability": "Sharpness",
+     "item": "Sitrus Berry",
+     "moves": [
+      "filletaway",
+      "psychocut",
+      "nightslash",
+      "aquacutter"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 292,
+      "atk": 222,
+      "def": 173,
+      "spa": 181,
+      "spd": 159,
+      "spe": 168
+     }
+    },
+    {
+     "species": "Comfey",
+     "level": 85,
+     "gender": "F",
+     "ability": "Triage",
+     "item": "Leftovers",
+     "moves": [
+      "terablast",
+      "calmmind",
+      "synthesis",
+      "drainingkiss"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 225,
+      "atk": 93,
+      "def": 202,
+      "spa": 188,
+      "spd": 236,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Toxapex",
+     "level": 82,
+     "gender": "M",
+     "ability": "Regenerator",
+     "item": "Leftovers",
+     "moves": [
+      "recover",
+      "liquidation",
+      "haze",
+      "toxic"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Steel",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 150,
+      "def": 296,
+      "spa": 134,
+      "spd": 280,
+      "spe": 105
+     }
+    },
+    {
+     "species": "Polteageist",
+     "level": 78,
+     "gender": "N",
+     "ability": "Cursed Body",
+     "item": "White Herb",
+     "moves": [
+      "shellsmash",
+      "storedpower",
+      "shadowball",
+      "strengthsap"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 222,
+      "atk": 106,
+      "def": 146,
+      "spa": 254,
+      "spd": 223,
+      "spe": 154
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Incineroar",
+     "level": 82,
+     "gender": "F",
+     "ability": "Intimidate",
+     "item": "Assault Vest",
+     "moves": [
+      "knockoff",
+      "fakeout",
+      "overheat",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 290,
+      "atk": 236,
+      "def": 195,
+      "spa": 178,
+      "spd": 195,
+      "spe": 146
+     }
+    },
+    {
+     "species": "Chien-Pao",
+     "level": 72,
+     "gender": "N",
+     "ability": "Sword of Ruin",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "sacredsword",
+      "throatchop",
+      "iciclecrash",
+      "swordsdance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fighting",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 215,
+      "def": 157,
+      "spa": 172,
+      "spd": 136,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Dodrio",
+     "level": 85,
+     "gender": "F",
+     "ability": "Early Bird",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "bravebird",
+      "drillrun",
+      "swordsdance",
+      "doubleedge"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Normal",
+     "shiny": false,
+     "stats": {
+      "hp": 241,
+      "atk": 236,
+      "def": 168,
+      "spa": 151,
+      "spd": 151,
+      "spe": 236
+     }
+    },
+    {
+     "species": "Floatzel",
+     "level": 86,
+     "gender": "M",
+     "ability": "Water Veil",
+     "item": "Choice Band",
+     "moves": [
+      "icespinner",
+      "crunch",
+      "flipturn",
+      "wavecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 286,
+      "atk": 230,
+      "def": 144,
+      "spa": 195,
+      "spd": 135,
+      "spe": 247
+     }
+    },
+    {
+     "species": "Mimikyu",
+     "level": 79,
+     "gender": "M",
+     "ability": "Disguise",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "shadowsneak",
+      "shadowclaw",
+      "playrough"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 216,
+      "atk": 188,
+      "def": 172,
+      "spa": 125,
+      "spd": 211,
+      "spe": 197
+     }
+    },
+    {
+     "species": "Jirachi",
+     "level": 80,
+     "gender": "N",
+     "ability": "Serene Grace",
+     "item": "Assault Vest",
+     "moves": [
+      "ironhead",
+      "bodyslam",
+      "drainpunch",
+      "uturn"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 291,
+      "atk": 206,
+      "def": 206,
+      "spa": 206,
+      "spd": 206,
+      "spe": 206
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Vespiquen",
+    "details": "Vespiquen, L99, F",
+    "condition": "299/299",
+    "active": true,
+    "stats": {
+     "atk": 214,
+     "def": 258,
+     "spa": 214,
+     "spd": 258,
+     "spe": 135
+    },
+    "moves": [
+     "hurricane",
+     "roost",
+     "uturn",
+     "toxicspikes"
+    ],
+    "baseAbility": "pressure",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tyranitar",
+    "details": "Tyranitar, L78, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 254,
+     "def": 217,
+     "spa": 193,
+     "spd": 201,
+     "spe": 140
+    },
+    "moves": [
+     "icebeam",
+     "knockoff",
+     "stoneedge",
+     "thunderwave"
+    ],
+    "baseAbility": "sandstream",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "sandstream",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Rock",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Veluza",
+    "details": "Veluza, L85, M",
+    "condition": "292/292",
+    "active": false,
+    "stats": {
+     "atk": 222,
+     "def": 173,
+     "spa": 181,
+     "spd": 159,
+     "spe": 168
+    },
+    "moves": [
+     "filletaway",
+     "psychocut",
+     "nightslash",
+     "aquacutter"
+    ],
+    "baseAbility": "sharpness",
+    "item": "sitrusberry",
+    "pokeball": "pokeball",
+    "ability": "sharpness",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Comfey",
+    "details": "Comfey, L85, F",
+    "condition": "225/225",
+    "active": false,
+    "stats": {
+     "atk": 93,
+     "def": 202,
+     "spa": 188,
+     "spd": 236,
+     "spe": 219
+    },
+    "moves": [
+     "terablast",
+     "calmmind",
+     "synthesis",
+     "drainingkiss"
+    ],
+    "baseAbility": "triage",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "triage",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Toxapex",
+    "details": "Toxapex, L82, M",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 150,
+     "def": 296,
+     "spa": 134,
+     "spd": 280,
+     "spe": 105
+    },
+    "moves": [
+     "recover",
+     "liquidation",
+     "haze",
+     "toxic"
+    ],
+    "baseAbility": "regenerator",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "regenerator",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Steel",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Polteageist",
+    "details": "Polteageist, L78",
+    "condition": "222/222",
+    "active": false,
+    "stats": {
+     "atk": 106,
+     "def": 146,
+     "spa": 254,
+     "spd": 223,
+     "spe": 154
+    },
+    "moves": [
+     "shellsmash",
+     "storedpower",
+     "shadowball",
+     "strengthsap"
+    ],
+    "baseAbility": "cursedbody",
+    "item": "whiteherb",
+    "pokeball": "pokeball",
+    "ability": "cursedbody",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Incineroar",
+    "details": "Incineroar, L82, F",
+    "condition": "290/290",
+    "active": true,
+    "stats": {
+     "atk": 236,
+     "def": 195,
+     "spa": 178,
+     "spd": 195,
+     "spe": 146
+    },
+    "moves": [
+     "knockoff",
+     "fakeout",
+     "overheat",
+     "uturn"
+    ],
+    "baseAbility": "intimidate",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "intimidate",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Chien-Pao",
+    "details": "Chien-Pao, L72",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 215,
+     "def": 157,
+     "spa": 172,
+     "spd": 136,
+     "spe": 236
+    },
+    "moves": [
+     "sacredsword",
+     "throatchop",
+     "iciclecrash",
+     "swordsdance"
+    ],
+    "baseAbility": "swordofruin",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "swordofruin",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fighting",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dodrio",
+    "details": "Dodrio, L85, F",
+    "condition": "241/241",
+    "active": false,
+    "stats": {
+     "atk": 236,
+     "def": 168,
+     "spa": 151,
+     "spd": 151,
+     "spe": 236
+    },
+    "moves": [
+     "bravebird",
+     "drillrun",
+     "swordsdance",
+     "doubleedge"
+    ],
+    "baseAbility": "earlybird",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "earlybird",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Normal",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Floatzel",
+    "details": "Floatzel, L86, M",
+    "condition": "286/286",
+    "active": false,
+    "stats": {
+     "atk": 230,
+     "def": 144,
+     "spa": 195,
+     "spd": 135,
+     "spe": 247
+    },
+    "moves": [
+     "icespinner",
+     "crunch",
+     "flipturn",
+     "wavecrash"
+    ],
+    "baseAbility": "waterveil",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "waterveil",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mimikyu",
+    "details": "Mimikyu, L79, M",
+    "condition": "216/216",
+    "active": false,
+    "stats": {
+     "atk": 188,
+     "def": 172,
+     "spa": 125,
+     "spd": 211,
+     "spe": 197
+    },
+    "moves": [
+     "swordsdance",
+     "shadowsneak",
+     "shadowclaw",
+     "playrough"
+    ],
+    "baseAbility": "disguise",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "disguise",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Jirachi",
+    "details": "Jirachi, L80",
+    "condition": "291/291",
+    "active": false,
+    "stats": {
+     "atk": 206,
+     "def": 206,
+     "spa": 206,
+     "spd": 206,
+     "spe": 206
+    },
+    "moves": [
+     "ironhead",
+     "bodyslam",
+     "drainpunch",
+     "uturn"
+    ],
+    "baseAbility": "serenegrace",
+    "item": "assaultvest",
+    "pokeball": "pokeball",
+    "ability": "serenegrace",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ }
+}

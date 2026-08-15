@@ -1,0 +1,840 @@
+{
+ "meta": {
+  "game": 807105,
+  "format": "gen9randombattle",
+  "battle_tag": "battle-gen9randombattle-synth807105",
+  "seed": "sodium,5292a647000c50c1",
+  "p1_name": "synthbot",
+  "p2_name": "synthopp",
+  "p1_ai_seed": "sodium,5289452a000c50c1",
+  "p2_ai_seed": "sodium,5289593b000c50c1",
+  "p1_team_seed": "sodium,5289664c000c50c1",
+  "p2_team_seed": "sodium,5289775d000c50c1",
+  "move_prob": 0.85,
+  "tera_prob": 0.15,
+  "turns": 35,
+  "winner": "synthopp",
+  "capped": false,
+  "error_chunks_dropped": 0,
+  "timed_out": false,
+  "generated_at": "2026-08-09T17:06:12.691Z"
+ },
+ "teams": {
+  "p1": {
+   "name": "synthbot",
+   "id": "p1",
+   "team": [
+    {
+     "species": "Camerupt",
+     "level": 91,
+     "gender": "M",
+     "ability": "Solid Rock",
+     "item": "Leftovers",
+     "moves": [
+      "earthquake",
+      "stealthrock",
+      "overheat",
+      "willowisp"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 275,
+      "atk": 234,
+      "def": 179,
+      "spa": 243,
+      "spd": 188,
+      "spe": 125
+     }
+    },
+    {
+     "species": "Darkrai",
+     "level": 77,
+     "gender": "N",
+     "ability": "Bad Dreams",
+     "item": "Life Orb",
+     "moves": [
+      "darkpulse",
+      "hypnosis",
+      "sludgebomb",
+      "nastyplot"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 234,
+      "atk": 143,
+      "def": 183,
+      "spa": 252,
+      "spd": 183,
+      "spe": 237
+     }
+    },
+    {
+     "species": "Bruxish",
+     "level": 85,
+     "gender": "F",
+     "ability": "Strong Jaw",
+     "item": "Choice Scarf",
+     "moves": [
+      "psychicfangs",
+      "flipturn",
+      "icefang",
+      "wavecrash"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Psychic",
+     "shiny": false,
+     "stats": {
+      "hp": 254,
+      "atk": 227,
+      "def": 168,
+      "spa": 168,
+      "spd": 168,
+      "spe": 205
+     }
+    },
+    {
+     "species": "Tyranitar",
+     "level": 78,
+     "gender": "M",
+     "ability": "Sand Stream",
+     "item": "Weakness Policy",
+     "moves": [
+      "stoneedge",
+      "earthquake",
+      "knockoff",
+      "dragondance"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ghost",
+     "shiny": false,
+     "stats": {
+      "hp": 284,
+      "atk": 254,
+      "def": 217,
+      "spa": 193,
+      "spd": 201,
+      "spe": 140
+     }
+    },
+    {
+     "species": "Blaziken",
+     "level": 76,
+     "gender": "M",
+     "ability": "Speed Boost",
+     "item": "Life Orb",
+     "moves": [
+      "swordsdance",
+      "flareblitz",
+      "knockoff",
+      "closecombat"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dark",
+     "shiny": false,
+     "stats": {
+      "hp": 247,
+      "atk": 226,
+      "def": 150,
+      "spa": 211,
+      "spd": 150,
+      "spe": 166
+     }
+    },
+    {
+     "species": "Wugtrio",
+     "level": 91,
+     "gender": "F",
+     "ability": "Gooey",
+     "item": "Choice Band",
+     "moves": [
+      "liquidation",
+      "throatchop",
+      "aquajet",
+      "stompingtantrum"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 212,
+      "atk": 234,
+      "def": 143,
+      "spa": 143,
+      "spd": 179,
+      "spe": 270
+     }
+    }
+   ]
+  },
+  "p2": {
+   "name": "synthopp",
+   "id": "p2",
+   "team": [
+    {
+     "species": "Eternatus",
+     "level": 69,
+     "gender": "N",
+     "ability": "Pressure",
+     "item": "Leftovers",
+     "moves": [
+      "dynamaxcannon",
+      "flamethrower",
+      "recover",
+      "toxicspikes"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 0,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 0,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Water",
+     "shiny": false,
+     "stats": {
+      "hp": 308,
+      "atk": 122,
+      "def": 171,
+      "spa": 240,
+      "spd": 171,
+      "spe": 220
+     }
+    },
+    {
+     "species": "Corviknight",
+     "level": 80,
+     "gender": "F",
+     "ability": "Mirror Armor",
+     "item": "Leftovers",
+     "moves": [
+      "roost",
+      "bravebird",
+      "uturn",
+      "defog"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Dragon",
+     "shiny": false,
+     "stats": {
+      "hp": 288,
+      "atk": 185,
+      "def": 214,
+      "spa": 131,
+      "spd": 182,
+      "spe": 153
+     }
+    },
+    {
+     "species": "Charizard",
+     "level": 85,
+     "gender": "F",
+     "ability": "Blaze",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "earthquake",
+      "focusblast",
+      "flamethrower",
+      "hurricane"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fire",
+     "shiny": false,
+     "stats": {
+      "hp": 271,
+      "atk": 192,
+      "def": 181,
+      "spa": 234,
+      "spd": 193,
+      "spe": 219
+     }
+    },
+    {
+     "species": "Mabosstiff",
+     "level": 86,
+     "gender": "M",
+     "ability": "Stakeout",
+     "item": "Choice Scarf",
+     "moves": [
+      "playrough",
+      "crunch",
+      "wildcharge",
+      "psychicfangs"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Fairy",
+     "shiny": false,
+     "stats": {
+      "hp": 278,
+      "atk": 256,
+      "def": 204,
+      "spa": 152,
+      "spd": 170,
+      "spe": 195
+     }
+    },
+    {
+     "species": "Piloswine",
+     "level": 85,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Eviolite",
+     "moves": [
+      "earthquake",
+      "iciclecrash",
+      "roar",
+      "iceshard"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Poison",
+     "shiny": false,
+     "stats": {
+      "hp": 309,
+      "atk": 219,
+      "def": 185,
+      "spa": 151,
+      "spd": 151,
+      "spe": 134
+     }
+    },
+    {
+     "species": "Dewgong",
+     "level": 94,
+     "gender": "M",
+     "ability": "Thick Fat",
+     "item": "Heavy-Duty Boots",
+     "moves": [
+      "icebeam",
+      "knockoff",
+      "hydropump",
+      "encore"
+     ],
+     "evs": {
+      "hp": 85,
+      "atk": 85,
+      "def": 85,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+     },
+     "ivs": {
+      "hp": 31,
+      "atk": 31,
+      "def": 31,
+      "spa": 31,
+      "spd": 31,
+      "spe": 31
+     },
+     "teraType": "Ground",
+     "shiny": false,
+     "stats": {
+      "hp": 322,
+      "atk": 185,
+      "def": 204,
+      "spa": 185,
+      "spd": 232,
+      "spe": 185
+     }
+    }
+   ]
+  }
+ },
+ "p1_first_request_side": {
+  "name": "synthbot",
+  "id": "p1",
+  "pokemon": [
+   {
+    "ident": "p1: Camerupt",
+    "details": "Camerupt, L91, M",
+    "condition": "275/275",
+    "active": true,
+    "stats": {
+     "atk": 234,
+     "def": 179,
+     "spa": 243,
+     "spd": 188,
+     "spe": 125
+    },
+    "moves": [
+     "earthquake",
+     "stealthrock",
+     "overheat",
+     "willowisp"
+    ],
+    "baseAbility": "solidrock",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "solidrock",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Darkrai",
+    "details": "Darkrai, L77",
+    "condition": "234/234",
+    "active": false,
+    "stats": {
+     "atk": 143,
+     "def": 183,
+     "spa": 252,
+     "spd": 183,
+     "spe": 237
+    },
+    "moves": [
+     "darkpulse",
+     "hypnosis",
+     "sludgebomb",
+     "nastyplot"
+    ],
+    "baseAbility": "baddreams",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "baddreams",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Bruxish",
+    "details": "Bruxish, L85, F",
+    "condition": "254/254",
+    "active": false,
+    "stats": {
+     "atk": 227,
+     "def": 168,
+     "spa": 168,
+     "spd": 168,
+     "spe": 205
+    },
+    "moves": [
+     "psychicfangs",
+     "flipturn",
+     "icefang",
+     "wavecrash"
+    ],
+    "baseAbility": "strongjaw",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "strongjaw",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Psychic",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Tyranitar",
+    "details": "Tyranitar, L78, M",
+    "condition": "284/284",
+    "active": false,
+    "stats": {
+     "atk": 254,
+     "def": 217,
+     "spa": 193,
+     "spd": 201,
+     "spe": 140
+    },
+    "moves": [
+     "stoneedge",
+     "earthquake",
+     "knockoff",
+     "dragondance"
+    ],
+    "baseAbility": "sandstream",
+    "item": "weaknesspolicy",
+    "pokeball": "pokeball",
+    "ability": "sandstream",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ghost",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Blaziken",
+    "details": "Blaziken, L76, M",
+    "condition": "247/247",
+    "active": false,
+    "stats": {
+     "atk": 226,
+     "def": 150,
+     "spa": 211,
+     "spd": 150,
+     "spe": 166
+    },
+    "moves": [
+     "swordsdance",
+     "flareblitz",
+     "knockoff",
+     "closecombat"
+    ],
+    "baseAbility": "speedboost",
+    "item": "lifeorb",
+    "pokeball": "pokeball",
+    "ability": "speedboost",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dark",
+    "terastallized": ""
+   },
+   {
+    "ident": "p1: Wugtrio",
+    "details": "Wugtrio, L91, F",
+    "condition": "212/212",
+    "active": false,
+    "stats": {
+     "atk": 234,
+     "def": 143,
+     "spa": 143,
+     "spd": 179,
+     "spe": 270
+    },
+    "moves": [
+     "liquidation",
+     "throatchop",
+     "aquajet",
+     "stompingtantrum"
+    ],
+    "baseAbility": "gooey",
+    "item": "choiceband",
+    "pokeball": "pokeball",
+    "ability": "gooey",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   }
+  ]
+ },
+ "p2_first_request_side": {
+  "name": "synthopp",
+  "id": "p2",
+  "pokemon": [
+   {
+    "ident": "p2: Eternatus",
+    "details": "Eternatus, L69",
+    "condition": "308/308",
+    "active": true,
+    "stats": {
+     "atk": 122,
+     "def": 171,
+     "spa": 240,
+     "spd": 171,
+     "spe": 220
+    },
+    "moves": [
+     "dynamaxcannon",
+     "flamethrower",
+     "recover",
+     "toxicspikes"
+    ],
+    "baseAbility": "pressure",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "pressure",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Water",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Corviknight",
+    "details": "Corviknight, L80, F",
+    "condition": "288/288",
+    "active": false,
+    "stats": {
+     "atk": 185,
+     "def": 214,
+     "spa": 131,
+     "spd": 182,
+     "spe": 153
+    },
+    "moves": [
+     "roost",
+     "bravebird",
+     "uturn",
+     "defog"
+    ],
+    "baseAbility": "mirrorarmor",
+    "item": "leftovers",
+    "pokeball": "pokeball",
+    "ability": "mirrorarmor",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Dragon",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Charizard",
+    "details": "Charizard, L85, F",
+    "condition": "271/271",
+    "active": false,
+    "stats": {
+     "atk": 192,
+     "def": 181,
+     "spa": 234,
+     "spd": 193,
+     "spe": 219
+    },
+    "moves": [
+     "earthquake",
+     "focusblast",
+     "flamethrower",
+     "hurricane"
+    ],
+    "baseAbility": "blaze",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "blaze",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fire",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Mabosstiff",
+    "details": "Mabosstiff, L86, M",
+    "condition": "278/278",
+    "active": false,
+    "stats": {
+     "atk": 256,
+     "def": 204,
+     "spa": 152,
+     "spd": 170,
+     "spe": 195
+    },
+    "moves": [
+     "playrough",
+     "crunch",
+     "wildcharge",
+     "psychicfangs"
+    ],
+    "baseAbility": "stakeout",
+    "item": "choicescarf",
+    "pokeball": "pokeball",
+    "ability": "stakeout",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Fairy",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Piloswine",
+    "details": "Piloswine, L85, M",
+    "condition": "309/309",
+    "active": false,
+    "stats": {
+     "atk": 219,
+     "def": 185,
+     "spa": 151,
+     "spd": 151,
+     "spe": 134
+    },
+    "moves": [
+     "earthquake",
+     "iciclecrash",
+     "roar",
+     "iceshard"
+    ],
+    "baseAbility": "thickfat",
+    "item": "eviolite",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Poison",
+    "terastallized": ""
+   },
+   {
+    "ident": "p2: Dewgong",
+    "details": "Dewgong, L94, M",
+    "condition": "322/322",
+    "active": false,
+    "stats": {
+     "atk": 185,
+     "def": 204,
+     "spa": 185,
+     "spd": 232,
+     "spe": 185
+    },
+    "moves": [
+     "icebeam",
+     "knockoff",
+     "hydropump",
+     "encore"
+    ],
+    "baseAbility": "thickfat",
+    "item": "heavydutyboots",
+    "pokeball": "pokeball",
+    "ability": "thickfat",
+    "commanding": false,
+    "reviving": false,
+    "teraType": "Ground",
+    "terastallized": ""
+   }
+  ]
+ }
+}
