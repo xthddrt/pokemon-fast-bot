@@ -215,20 +215,44 @@ def main(argv):
     li, hits, hits1, scored = 0, 0, 0, 0
     for d in decisions:
         # sequential join: the ledger row for this decision must agree on BOTH
-        # the turn and the move we played, else it belongs to another decision
-        actual = "—"
+        # the turn and the move we played, else it belongs to another decision.
+        # One prediction can produce SEVERAL observation rows: the opponent's
+        # move, then pivot switch-ins ("switch") and faint replacements
+        # ("forced_switch"), the latter sometimes stamped with the PREVIOUS
+        # turn number. A strict 1:1 join deadlocks on any of them and blanks
+        # the whole rest of the game, so: skip stale rows from earlier turns,
+        # join the first same-turn same-choice row, then consume its
+        # follow-up switch rows as "⇒ target".
+        def _tn(r):
+            t = r.get("turn")
+            return t if isinstance(t, int) else -1
+
+        while li < len(acts) and _tn(acts[li]) < d["turn"]:
+            li += 1
+        actual, actual_event = "—", None
         if (
             li < len(acts)
-            and acts[li].get("turn") == d["turn"]
+            and _tn(acts[li]) == d["turn"]
             and acts[li].get("our_choice") == d.get("choice")
         ):
             actual = acts[li].get("actual") or "—"
+            actual_event = acts[li].get("event")
             li += 1
+            while (
+                li < len(acts)
+                and acts[li].get("event") in ("switch", "forced_switch")
+                and _tn(acts[li]) == d["turn"]
+                and acts[li].get("our_choice") == d.get("choice")
+            ):
+                follow = acts[li].get("actual") or ""
+                if follow.startswith("switch "):
+                    actual += " ⇒ " + follow.split(" ", 1)[1]
+                li += 1
         ours = pool(d["ws"], d["chance"])
         theirs = pool(d["ows"], d["chance"])
         names = [t[0] for t in theirs]
         shown = actual
-        if actual != "—" and names and names[0] != "No Move":
+        if actual_event == "move" and names and names[0] != "No Move":
             scored += 1
             if actual in names:
                 hits += 1
