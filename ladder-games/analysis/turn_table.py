@@ -63,6 +63,7 @@ RE_TIMING = re.compile(
 )
 RE_PLAYER = re.compile(r"^\|player\|(p[12])\|([^|]+)\|")
 RE_TERA = re.compile(r"^\|-terastallize\|(p[12])a")
+RE_GATE = re.compile(r"Tera gate: (BLOCKED|allowed) (\S+)")
 
 
 def find_game(arg=None):
@@ -121,6 +122,9 @@ def parse(game_dir):
                     m = RE_CHOICE.search(line)
                     if m:
                         cur["choice"] = m.group(1)
+                m = RE_GATE.search(line)
+                if m:
+                    cur["gate"] = (m.group(1), m.group(2))
                 m = RE_TIMING.search(line)
                 if m:
                     # TurnTiming is the last line of a decision: close it out
@@ -285,8 +289,21 @@ def main(argv):
                 shown = "**%s**" % actual
                 if actual == names[0]:
                     hits1 += 1
+        c_top1, c_top2 = cell(ours, 0), cell(ours, 1)
+        gate = d.get("gate")
+        if gate:
+            verdict, arm = gate
+            tag = " ⊘gate" if verdict == "BLOCKED" else " ✓gate"
+            if ours and ours[0][0] == arm:
+                c_top1 = c_top1.replace("<br>", tag + "<br>", 1)
+            elif len(ours) > 1 and ours[1][0] == arm:
+                c_top2 = c_top2.replace("<br>", tag + "<br>", 1)
+            if verdict == "BLOCKED" and d.get("choice") and (
+                not ours or d["choice"] != ours[0][0]
+            ):
+                c_top1 += "<br>→ played **%s**" % d["choice"]
         row = "| %s | %s | %s | %s | %s | %s |" % (
-            d["turn"], cell(ours, 0), cell(ours, 1),
+            d["turn"], c_top1, c_top2,
             cell(theirs, 0), cell(theirs, 1), shown,
         )
         if show_timing:
