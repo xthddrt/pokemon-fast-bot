@@ -10,7 +10,7 @@ regenerable); this repo is the *process*.
 Clone this repo as the workspace root, then the three checkouts inside it:
 
 ```bash
-git clone <this-repo> workspace && cd workspace
+git clone https://github.com/xthddrt/pokemon-fast-bot workspace && cd workspace
 git clone https://github.com/xthddrt/foul-play
 git clone https://github.com/xthddrt/poke-engine
 git clone https://github.com/smogon/pokemon-showdown && git -C pokemon-showdown checkout d43fb79
