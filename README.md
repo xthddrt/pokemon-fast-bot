@@ -20,6 +20,10 @@ cd foul-play && python3.12 -m venv .venv && .venv/bin/pip install -r requirement
 # .env (secrets, never committed): see foul-play/ladder/README.md for the vars
 ```
 
+Staleness check: `bash foul-play/tools/check_ps_drift.sh` fetches upstream
+and reports which layer moved (set data / generator logic / sim mechanics)
+with the refresh recipe for each.
+
 `pokemon-showdown @ d43fb79` is the pinned ground truth every conformance
 result and the v8 training corpus were built against (`data/random-battles/
 gen9/` verified unchanged 2026-08-14). Node ≥ v22 is required to run PS.
