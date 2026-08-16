@@ -87,6 +87,12 @@ def main():
     # (8 states in h1 -> 88 now = 11x weaker per state). Scale the ruled
     # loss by n_states/RULED_REF so per-state force is ledger-size-invariant.
     ap.add_argument("--ruled-ref", type=float, default=8.0)
+    # SCALE CAP (2026-08-16, the 13k-ledger lesson): per-state force
+    # invariance means TOTAL ruled force grows ~n — at 13,390 states it
+    # overwhelmed the anchors 56:1 and rewrote the net (bench 0.037->0.196).
+    # Cap the global multiplier; per-state escalation supplies targeted
+    # force where individual bands resist.
+    ap.add_argument("--ruled-scale-max", type=float, default=32.0)
     # HARD TIME WALL (Sally 2026-08-16): fine-tune is bounded by wall-clock,
     # not step count. Adaptive softening keyed to the wall (halve w at 40%,
     # 65%, 85% if bands unmet). At the wall: export + gate anyway and PRINT
@@ -290,7 +296,7 @@ def main():
                     print(f"  step {step}: boosting {int(unmet.sum())} unmet "
                           f"state(s), max w {float(ruled_w.max()):.0f}", flush=True)
         opt.zero_grad()
-        loss = (len(states) / a.ruled_ref) * (
+        loss = min(len(states) / a.ruled_ref, a.ruled_scale_max) * (
             ruled_w * lossf(net(batch), tgt)).mean()
         if aarm is not None:
             if pos + bs > len(pool_idx):
