@@ -59,6 +59,16 @@ def net_env(bin_path):
             env[k] = str(v)
     return env
 
+def mirror_state(s):
+    """Side-swap: the game is side-symmetric, so a mirrored position is a
+    legitimate new state. Its truth is MEASURED, not assumed 1-t: the label
+    player is measurably side-asymmetric (mean 0.027 antisymmetry deviation),
+    so naive 1-t labels are only safe at the extremes."""
+    p = s.split("/")
+    assert len(p) == 6, f"unexpected state format ({len(p)} segments)"
+    p[0], p[1] = p[1], p[0]
+    return "/".join(p)
+
 def arm_to_move(a):
     a = a.lower()
     if a in ("no move", "nomove"):
@@ -269,6 +279,15 @@ def cmd_scan(a):
                           "confirmed": bool(abs(rec["e"] - bp_) >= 0.10
                                             and min(zp, zb) >= 2.5)})
                 if k["confirmed"]:
+                    # mirror ruling (Sally: permanent up/down balance): the
+                    # side-swapped state, block-confirmed on its own.
+                    ms = mirror_state(rec["s"])
+                    mouts, mbm = block_confirm(ms, g["seed"] + 500, rec["t"])
+                    mp, mse = ac_stats(mouts)
+                    k["mirror"] = {"s": ms, "p_block": round(mp, 4),
+                                   "se_block": round(mse, 4),
+                                   "blocks": [round(m, 2) for m in mbm],
+                                   "naive_1mt": round(1 - k["p_block"], 4)}
                     res["candidate"] = k
                     break
             res["near_misses"].append(k)
@@ -443,6 +462,19 @@ def cmd_run(a):
                     f"{k['p_block']:.3f} zp={k['z_pooled']} zb={k['z_block']} | {k['context']}",
             "ts": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
         })
+        if "mirror" in k:
+            m = k["mirror"]
+            rows.append({
+                "id": f"{a.tag}-g{c['seed']}-t{k['t']}-mir",
+                "game": f"selfplay-{a.tag}-{c['seed']}", "decision": k["t"],
+                "target": m["p_block"],
+                "band": [round(max(0.0, m["p_block"] - m["se_block"]), 4),
+                         round(min(1.0, m["p_block"] + m["se_block"]), 4)],
+                "states": [m["s"]], "n_playouts": 30,
+                "note": f"MIRROR of t{k['t']}: measured {m['p_block']:.3f} "
+                        f"(naive 1-t {m['naive_1mt']:.3f}) — up/down balance",
+                "ts": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
+            })
     json.dump(rows, open(os.path.join(work, "ledger_rows.json"), "w"), indent=1)
     print(f"\n[{time.time()-t0:.0f}s] {len(rows)} confirmed ruling(s) staged in "
           f"{os.path.join(work, 'ledger_rows.json')} — NOT hammered; awaiting "
