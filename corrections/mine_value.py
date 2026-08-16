@@ -326,16 +326,19 @@ def cmd_run(a):
     print(f"[{time.time()-t0:.0f}s] evals injected ({len(keys)} states)", flush=True)
 
     senv = net_env(a.label)  # label player pinned to s1
+    # scans each own a playout pool; concurrency x pool = MINE_CONCURRENT
+    scan_pool = max(1, MAX_CONCURRENT // 4)
+    scan_conc = max(1, MAX_CONCURRENT // scan_pool)
     procs = []
     for i in range(a.games):
-        wait_slots(procs, MAX_CONCURRENT)
+        wait_slots(procs, scan_conc)
         procs.append(subprocess.Popen(
             [PY, os.path.abspath(__file__), "scan",
              "--game", os.path.join(work, f"g{i}.json"),
              "--out", os.path.join(work, f"cand{i}.json"),
              "--screen-n", str(a.screen_n), "--confirm-n", str(a.confirm_n),
              "--max-scan", str(a.max_scan), "--confirm-z", str(a.confirm_z),
-             "--pool", str(max(1, MAX_CONCURRENT // 4))],
+             "--pool", str(scan_pool)],
             env=senv, stdout=sys.stdout, stderr=subprocess.STDOUT))
     for p in procs:
         p.wait()
