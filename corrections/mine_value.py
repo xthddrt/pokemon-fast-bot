@@ -303,6 +303,71 @@ def cmd_block(a):
     json.dump({"t": a.t, "block": a.block, "e": rec["e"], "outs": outs},
               open(a.out, "w"))
 
+def cmd_confirm_batch(a):
+    """Block-confirm a LIST of candidate states (corpus mining path).
+
+    Input JSONL: {"id": str, "s": state string, "e": net eval}
+    Output JSONL: id, target (30-playout mean), se, band, blocks, W/T/L, z.
+    30 playouts as 6 independent seed-blocks; if a candidate CONFIRMS and its
+    SE > --tighten-se, a second 30 is added (cap 60) so murky positions get a
+    narrower band (Sally 2026-08-15). Env = label player (s1), set by caller.
+    """
+    import concurrent.futures as cf
+    rows = [json.loads(l) for l in open(a.states) if l.strip()]
+    lo, hi = a.start, (a.start + a.count if a.count else len(rows))
+    rows = rows[lo:hi]
+    print(f"confirm-batch: {len(rows)} candidates [{lo}:{hi}]", flush=True)
+
+    def blocks_for(s, key, n_blocks, off):
+        args = [(s, (abs(hash(key)) % 0xFFFFF * 1013 + (b + off) * 7919
+                     + j * 104729 + 600_000) & 0x7FFFFFFF)
+                for b in range(n_blocks) for j in range(5)]
+        with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as ex:
+            outs = list(ex.map(_playout_worker, args))
+        return outs
+
+    t0 = time.time()
+    with open(a.out, "w") as f:
+        for i, r in enumerate(rows):
+            outs = blocks_for(r["s"], r["id"], 6, 0)
+            p, se = ac_stats(outs)
+            e = float(r.get("e", 0.0))
+            zp = abs(e - p) / se if se > 0 else float("inf")
+            bm = [sum(outs[b * 5:(b + 1) * 5]) / 5 for b in range(len(outs) // 5)]
+            bmean = sum(bm) / len(bm)
+            bsd = (sum((m - bmean) ** 2 for m in bm) / (len(bm) - 1)) ** 0.5
+            zb = abs(e - bmean) / (bsd / len(bm) ** 0.5) if bsd > 0 else float("inf")
+            ok = abs(e - p) >= 0.10 and min(zp, zb) >= 2.5
+            if ok and se > a.tighten_se:
+                outs += blocks_for(r["s"], r["id"], 6, 100)
+                p, se = ac_stats(outs)
+                zp = abs(e - p) / se if se > 0 else float("inf")
+                bm = [sum(outs[b * 5:(b + 1) * 5]) / 5 for b in range(len(outs) // 5)]
+                bmean = sum(bm) / len(bm)
+                bsd = (sum((m - bmean) ** 2 for m in bm) / (len(bm) - 1)) ** 0.5
+                zb = abs(e - bmean) / (bsd / len(bm) ** 0.5) if bsd > 0 else float("inf")
+                ok = abs(e - p) >= 0.10 and min(zp, zb) >= 2.5
+            w = sum(1 for o in outs if o == 1.0)
+            t_ = sum(1 for o in outs if o == 0.5)
+            f.write(json.dumps({
+                "id": r["id"], "e": round(e, 4), "target": round(p, 4),
+                "se": round(se, 4), "n": len(outs),
+                "band": [round(max(0.0, p - se), 4), round(min(1.0, p + se), 4)],
+                "z_pooled": round(zp, 2) if zp != float("inf") else "inf",
+                "z_block": round(zb, 2) if zb != float("inf") else "inf",
+                "confirmed": bool(ok), "wins": w, "ties": t_,
+                "losses": len(outs) - w - t_,
+                "blocks": [round(m, 2) for m in bm], "s": r["s"],
+            }) + "\n")
+            f.flush()
+            if (i + 1) % 10 == 0:
+                el = time.time() - t0
+                print(f"  {i+1}/{len(rows)}  {el:.0f}s  eta {el/(i+1)*(len(rows)-i-1):.0f}s",
+                      flush=True)
+    print(f"confirm-batch done: {len(rows)} in {time.time()-t0:.0f}s -> {a.out}",
+          flush=True)
+
+
 def wait_slots(procs, limit):
     while sum(1 for p in procs if p.poll() is None) >= limit:
         time.sleep(2)
@@ -481,7 +546,7 @@ def cmd_run(a):
           f"assessment.", flush=True)
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block", "confirm-batch"):
         sys.argv.insert(1, "run")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd")
@@ -496,6 +561,12 @@ def main():
     s.add_argument("--confirm-z", type=float, default=3.0)
     s.add_argument("--pool", type=int, default=max(1, MAX_CONCURRENT // 4))
     s.add_argument("--start-t", type=int, default=None)
+    cb = sub.add_parser("confirm-batch")
+    cb.add_argument("--states", required=True)
+    cb.add_argument("--out", required=True)
+    cb.add_argument("--start", type=int, default=0)
+    cb.add_argument("--count", type=int, default=0)
+    cb.add_argument("--tighten-se", type=float, default=0.07)
     b = sub.add_parser("block")
     b.add_argument("--game"); b.add_argument("--t", type=int)
     b.add_argument("--block", type=int); b.add_argument("--n", type=int, default=5)
@@ -514,7 +585,8 @@ def main():
     r.add_argument("--audit", default=AUDIT_BIN)
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
-    {"game": cmd_game, "scan": cmd_scan, "run": cmd_run, "block": cmd_block}[a.cmd or "run"](a)
+    {"game": cmd_game, "scan": cmd_scan, "run": cmd_run, "block": cmd_block,
+     "confirm-batch": cmd_confirm_batch}[a.cmd or "run"](a)
 
 if __name__ == "__main__":
     main()
