@@ -40,7 +40,11 @@ LEAF_PROF = os.path.join(ROOT, "poke-engine", "target", "release", "leaf_prof")
 CORPUS = "/Users/sallyliu/pokemon-ai/synthetic-corpus-holdout10"
 AUDIT_BIN = os.path.join(ROOT, "valuenet/nets_v8b/v8b_h1.bin")
 LABEL_BIN = os.path.join(ROOT, "valuenet/nets_v8b/v8b_s1.bin")
-MAX_STEPS = 300
+# Mining plays stalls out to PS-like resolution (PP drain -> Struggle);
+# 1000 mirrors Showdown's own turn-limit backstop. The corpus labeler keeps
+# its 200-step cap for farm-scale economics — mining's 30 playouts/spot can
+# afford the tail. (Sally, 2026-08-15.)
+MAX_STEPS = 1000
 LABEL_ITERS = 2000
 MAX_CONCURRENT = 4  # half the cores, always
 
