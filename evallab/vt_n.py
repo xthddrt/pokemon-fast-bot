@@ -38,7 +38,7 @@ def _load(work):
 
 
 def train(work, seed, steps, threads, eval_every=1000, cap=CAP_N, batch=None,
-          wd=None):
+          wd=None, swap_aug=False):
     import torch
     import torch.nn as nn
     if threads:
@@ -89,8 +89,19 @@ def train(work, seed, steps, threads, eval_every=1000, cap=CAP_N, batch=None,
         opt.param_groups[0]["lr"] = cfg["lr"] * mlt
         opt.param_groups[1]["lr"] = cfg["lr_emb"] * mlt
         net.train()
-        z = net(ft.batch(b))
-        loss = nn.functional.binary_cross_entropy_with_logits(z, y[b])
+        bt = ft.batch(b)
+        yb = y[b]
+        if swap_aug:
+            # per-row 50% side swap with flipped label: exact-antisymmetry
+            # training (v8c). Holdout eval stays unswapped.
+            import torch as _t
+            sm = _t.from_numpy(rng.random(len(b)) < 0.5)
+            if bool(sm.any()):
+                V.swap_rows_(bt, sm)
+                yb = yb.clone()
+                yb[sm] = 1.0 - yb[sm]
+        z = net(bt)
+        loss = nn.functional.binary_cross_entropy_with_logits(z, yb)
         opt.zero_grad()
         loss.backward()
         g = float(torch.nn.utils.clip_grad_norm_(net.parameters(), float("inf")))
@@ -260,11 +271,13 @@ def main():
     ap.add_argument("--trunk-hid", type=int, default=CAP_N[1], dest="th")
     ap.add_argument("--wd", type=float, default=None)
     ap.add_argument("--eval-every", type=int, default=1000, dest="ee")
+    ap.add_argument("--swap-aug", action="store_true", help="v8c: per-row 50%% "
+                    "side-swap with flipped label (exact-antisymmetry training)")
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
     if a.cmd == "train":
         train(a.work, a.seed, a.steps, a.threads, a.ee, cap=(a.mh, a.th),
-              wd=a.wd)
+              wd=a.wd, swap_aug=a.swap_aug)
     elif a.cmd == "bench":
         bench(a.work, a.threads)
     else:

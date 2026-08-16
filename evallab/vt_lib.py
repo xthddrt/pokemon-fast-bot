@@ -170,6 +170,31 @@ def prune_keep(spec):
             keep(ARMA_GLOB_G, 18), "last_item" in want)
 
 
+# ---- side-swap augmentation (v8c, Sally 2026-08-15) -------------------------
+# Mirroring a state = swapping the two sides everywhere they appear in the
+# batch dict, with the label flipped by the caller (y -> 1-y). The game is
+# side-symmetric, so this teaches exact antisymmetry (measured v8b deviation:
+# 0.027). Slot layout per ArmAPlusNet.forward: 0=a1, 1-5=b1, 6=a2, 7-11=b2.
+SWAP_KEYS = (("a1_ids", "a2_ids"), ("a1_f", "a2_f"),
+             ("b1_ids", "b2_ids"), ("b1_f", "b2_f"), ("sf1", "sf2"))
+AM_SLOT_SWAP = np.concatenate([np.arange(6, 12), np.arange(0, 6)])
+
+
+def swap_rows_(b, mask):
+    """In-place side swap of the masked rows of a batch dict; g is global and
+    stays. Caller flips the labels."""
+    for k1, k2 in SWAP_KEYS:
+        t = b[k1][mask].clone()
+        b[k1][mask] = b[k2][mask]
+        b[k2][mask] = t
+    if "am" in b:
+        b["am"][mask] = b["am"][mask][:, AM_SLOT_SWAP]
+    if "ar" in b and b["ar"].shape[1]:
+        raise SystemExit("swap_rows_: addon_rest present but has no defined "
+                         "side swap -- refuse to train silently wrong")
+    return b
+
+
 class Arm:
     """Holds mmap'd feature arrays and yields batches. mmap means the four
     concurrent training processes share ONE page-cache copy of the 565 MB
