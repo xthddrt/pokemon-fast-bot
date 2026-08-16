@@ -290,14 +290,26 @@ def main():
             with torch.no_grad():
                 ev = torch.sigmoid(net(batch))
                 unmet = ~((ev >= band_lo) & (ev <= band_hi))
+                # symmetric multipliers (2026-08-16): double while violated,
+                # DECAY once satisfied — force withdraws instead of ratcheting
+                # (the 13k failure: 9.6k landed states kept firing at 256x)
+                ruled_w[unmet] = torch.clamp(ruled_w[unmet] * 2.0, max=a.boost_max)
+                ruled_w[~unmet] = torch.clamp(ruled_w[~unmet] * 0.7, min=1.0)
                 if bool(unmet.any()):
-                    ruled_w[unmet] = torch.clamp(ruled_w[unmet] * 2.0,
-                                                 max=a.boost_max)
-                    print(f"  step {step}: boosting {int(unmet.sum())} unmet "
-                          f"state(s), max w {float(ruled_w.max()):.0f}", flush=True)
+                    print(f"  step {step}: {int(unmet.sum())} violated "
+                          f"(max w {float(ruled_w.max()):.0f}, "
+                          f"mean w {float(ruled_w.mean()):.1f})", flush=True)
         opt.zero_grad()
+        z_r = net(batch)
+        with torch.no_grad():
+            p_now = torch.sigmoid(z_r)
+            margin = 0.1 * (band_hi - band_lo)
+            tgt_eff = torch.clamp(p_now, band_lo + margin, band_hi - margin)
+        # dead-zone: in-band states have tgt_eff == p_now -> zero gradient;
+        # violators are pulled to just INSIDE their band edge, never to the
+        # noisy point target
         loss = min(len(states) / a.ruled_ref, a.ruled_scale_max) * (
-            ruled_w * lossf(net(batch), tgt)).mean()
+            ruled_w * lossf(z_r, tgt_eff)).mean()
         if aarm is not None:
             if pos + bs > len(pool_idx):
                 perm, pos = rng.permutation(len(pool_idx)), 0
