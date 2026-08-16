@@ -75,7 +75,13 @@ def main():
     ap.add_argument("--tag", default="h1")
     ap.add_argument("--anchor", type=int, default=10310)
     ap.add_argument("--anchor-src", choices=["parity", "corpus"], default="corpus")
-    ap.add_argument("--anchor-w", type=float, default=100.0)
+    ap.add_argument("--anchor-w", type=float, default=30.0)
+    # ADAPTIVE PIN (Sally 2026-08-16): if the ruled states have not all
+    # reached their bands after --adapt-every steps, halve the anchor weight
+    # and continue (floor --w-min). One run finds its own operating point;
+    # the gates/bench still judge the final function.
+    ap.add_argument("--adapt-every", type=int, default=10000)
+    ap.add_argument("--w-min", type=float, default=2.5)
     # anchor minibatch per step (cycled in shuffled epochs over the full
     # anchor set — same constraint in expectation, ~10x less compute per
     # step; the end-of-run gates still check every state). 0 = full batch.
@@ -223,7 +229,13 @@ def main():
     lossf = torch.nn.BCEWithLogitsLoss()
     net.train()
     step = 0
+    cur_w = a.anchor_w
+    last_adapt = 0
     for step in range(1, a.cap + 1):
+        if step - last_adapt >= a.adapt_every and cur_w > a.w_min:
+            cur_w = max(cur_w / 2.0, a.w_min)
+            last_adapt = step
+            print(f"  step {step}: bands unmet, anchor w -> {cur_w}", flush=True)
         opt.zero_grad()
         loss = lossf(net(batch), tgt)
         if aarm is not None:
@@ -242,7 +254,7 @@ def main():
                 vt_lib.swap_rows_(bm, torch.ones(len(sm), dtype=torch.bool, device=dev))
                 outs.append(net(bm))
                 refs.append(anchor_ref_mir[torch.as_tensor(sm, dtype=torch.long, device=dev)])
-            loss = loss + a.anchor_w * torch.nn.functional.mse_loss(
+            loss = loss + cur_w * torch.nn.functional.mse_loss(
                 torch.cat(outs), torch.cat(refs))
         loss.backward()
         opt.step()
