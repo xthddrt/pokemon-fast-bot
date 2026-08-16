@@ -84,12 +84,16 @@ def main():
     entries = [json.loads(l) for l in open(LEDGER)]
     if not entries:
         raise SystemExit("empty ledger")
-    states, targets, bands = [], [], []
+    # band per ruling: two-sided [lo, hi] ("band" key, mined rulings), or the
+    # legacy one-sided <= conform ("conform" key -> [0, conform]).
+    states, targets, blo, bhi = [], [], [], []
     for e in entries:
+        lo, hi = e["band"] if "band" in e else (0.0, float(e.get("conform", a.conform)))
         for s in e["states"]:
             states.append(s)
             targets.append(float(e["target"]))
-            bands.append(float(e.get("conform", a.conform)))
+            blo.append(float(lo))
+            bhi.append(float(hi))
     print(f"{len(entries)} ruling(s), {len(states)} states")
 
     # 1. encode
@@ -132,7 +136,8 @@ def main():
     idx = np.arange(len(states))
     batch = arm.batch(idx)
     tgt = torch.tensor(targets, dtype=torch.float32)
-    band = torch.tensor(bands, dtype=torch.float32)
+    band_lo = torch.tensor(blo, dtype=torch.float32)
+    band_hi = torch.tensor(bhi, dtype=torch.float32)
 
     aarm = None
     if a.anchor:
@@ -168,7 +173,7 @@ def main():
         opt.step()
         with torch.no_grad():
             evals = torch.sigmoid(net(batch))
-        if bool((evals <= band).all()):
+        if bool(((evals >= band_lo) & (evals <= band_hi)).all()):
             break
     with torch.no_grad():
         net.eval()
@@ -202,11 +207,12 @@ def main():
             f.write(s + "\n")
     new_ruled = engine_logits(out_bin, ruled_file)
     ruled_evals = [1 / (1 + math.exp(-x)) for x in new_ruled]
-    # +0.002: f32 export rounding can land ~0.0005 above a band the fp32
+    # +-0.002: f32 export rounding can land ~0.0005 outside a band the fp32
     # net exactly met (observed in the anchor sweep)
-    ok = all(v <= b + 0.002 for v, b in zip(ruled_evals, bands))
+    ok = all(lo - 0.002 <= v <= hi + 0.002
+             for v, lo, hi in zip(ruled_evals, blo, bhi))
     print(f"ENGINE GATE (ruled states): {[round(v, 3) for v in ruled_evals]} "
-          f"-> {'PASS' if ok else 'FAIL'} (bands {sorted(set(bands))})")
+          f"-> {'PASS' if ok else 'FAIL'} (bands {sorted(set(zip(blo, bhi)))})")
     if os.path.isfile(PARITY):
         # source-net parity logits never change for a given source bin: cache
         src_bin = a.net.replace(".pt", ".bin")

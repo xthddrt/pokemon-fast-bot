@@ -31,6 +31,14 @@ ledger targets must be re-measured with the new label player (or retired
 into that retrain's corpus). A ledger target is only valid under the label
 recipe that produced it.
 
+**The pinned ruling label player = v8b_s1 @ 2,000 iters.** Ruling v1 (the
+t18 target 0.096) was measured with playouts driven by v8b_s1, so every
+subsequent ruling uses the same player — and s1 is frozen forever, so
+targets stay comparable across ledger generations no matter how many h<n>
+carves ship. (The training corpus's own labels were made by the v6-era
+label player; that definition gap is accepted — rulings are exceptions
+carved against measured self-play truth, not corpus rows.)
+
 ## 1. Pipeline (one round)
 
 **Phase 1 — trajectories.** G self-play games (default G = 25), engine vs
@@ -45,45 +53,41 @@ game → ~1,000 states per round.
 so this measures it exactly on its operating domain, with zero
 world-sampling noise contaminating the diagnosis.
 
-**Phase 2 — free prefilter.** The game outcome is a free 1-playout label
-for every state on its trajectory. Screen only:
-- states with |e_t − outcome| ≥ 0.5 (eval confidently wrong about the
-  actual result), plus
-- a 20% uniform random sample of the rest (coverage — so the prefilter
-  can't blind us to errors the outcome happened to agree with).
-
-This cuts the screening bill ~4–5× at negligible recall cost. Budget
-~200 screened states per round.
-
-**Phase 3 — screen (n = 20).** For each screened state: 20 playouts with
-the label player. p̂₂₀ = win fraction. Flag if BOTH:
-- z = |e − p̂₂₀| / SE_Wilson(p̂₂₀, 20) ≥ 2  (Wilson/Agresti-Coull SE — the
-  plain formula degenerates to 0 at p̂ ∈ {0,1}), and
-- |e − p̂₂₀| ≥ 0.15 (absolute floor, guards near-terminal states where SE
+**Phase 2 — backward endgame-first scan (n = 10; Sally's protocol,
+2026-08-15).** Per game, scan decisions BACKWARD from the last turn, 10
+label-player playouts per state. Stop at the FIRST state where BOTH:
+- z = |e − p̂₁₀| / SE_AC(p̂₁₀) ≥ 2  (Agresti-Coull SE — the plain formula
+  degenerates to 0 at p̂ ∈ {0,1}), and
+- |e − p̂₁₀| ≥ 0.15 (absolute floor, guards near-terminal states where SE
   collapses).
 
-Expected: real errors + ~5% statistical false positives; both go to
-phase 4, which kills the latter.
+Why backward: endgame playouts are both CHEAPER (short continuations) and
+MORE ACCURATE (less compounding playout-policy noise), so a small n is
+trustworthy exactly where accuracy is preferred — the endgame. First-hit-
+stop yields at most ONE ruling per game (the latest provably-wrong
+decision) and dedups correlated collapse turns for free. Scan depth capped
+(default 25 decisions) to bound the no-error case.
 
-**Phase 4 — dedup.** Contiguous flagged turns within one game are ONE error
-(the same collapse seen 4 times). Keep the earliest state of each contiguous
-run (the decision point where fixing the eval could still have changed
-play); drop the rest.
+**Phase 3 — confirm (n = 30, FRESH seeds).** Re-playout the hit 30× with
+new seeds. Admit to the ledger only if |e − p̂₃₀| ≥ 0.10 and z ≥ 3. Fresh
+seeds are mandatory: a state flagged by its own screening sample has an
+inflated measured gap (winner's curse); the confirm run gives the unbiased
+target. Ledger row as in VALUE_HAMMER §3.4 with target = p̂₃₀ and TWO-SIDED
+band [p̂₃₀ − SE₃₀, p̂₃₀ + SE₃₀] (underestimates are as real as
+overestimates; hammer_value.py accepts "band": [lo, hi]).
 
-**Phase 5 — confirm (n = 100, FRESH seeds).** Re-playout each survivor 100×
-with new seeds. Admit to the ledger only if |e − p̂₁₀₀| > max(3 × SE₁₀₀,
-0.10). Fresh seeds are mandatory: a state flagged by its own screening
-sample has an inflated measured gap (winner's curse); the confirm run gives
-the unbiased target. Ledger row as in VALUE_HAMMER §3.4 with
-target = p̂₁₀₀ and TWO-SIDED band [p̂₁₀₀ − SE₁₀₀, p̂₁₀₀ + SE₁₀₀]
-(underestimates are as real as overestimates; the hammer's band check
-extends from ≤ to inside-interval).
+**Phase 4 — batch.** Confirmed rulings from all games in the round are
+appended together and hammered in ONE run — the hammer is batch-native
+(every ledger ruling trains simultaneously from pristine s1), so 5–10 spots
+cost one ~70–90 s hammer, not 5–10. Between confirm and hammer sits Sally's
+assessment: mine_value.py writes ledger_rows.json and STOPS; rows are
+appended to the ledger and hammered on her command.
 
-**Phase 6 — hammer + gates + ship.** Exactly VALUE_HAMMER §3.5–3.7
+**Phase 5 — hammer + gates + ship.** Exactly VALUE_HAMMER §3.5–3.7
 (~70 s + gates). All rulings cumulative from pristine s1, engine-gated,
 drift bars enforced, shipped as the next h<n>.
 
-**Phase 7 — stopping + validation.**
+**Phase 6 — stopping + validation.**
 - Round metric: confirmed rulings per 100 screened states. It should fall
   round over round as errors get fixed (playouts use the label player, not
   the hammered net, so fixed errors stop re-flagging via the eval side of
@@ -98,17 +102,18 @@ drift bars enforced, shipped as the next h<n>.
 
 ## 2. Cost per round (8-core local; estimates)
 
-| phase | cost |
+| phase | cost (G = 5, 4-way parallel — half the cores) |
 |---|---|
-| 25 full-info games, 8 in parallel | ~10–15 min |
-| screen 200 states × 20 playouts | ~60–80 min |
-| confirm ~5–15 states × 100 playouts | ~15–30 min |
-| hammer + gates | ~2 min |
-| **total** | **~1.5–2 h wall, unattended** |
+| 5 full-info games @ 4500 ms/turn | ~5–10 min |
+| backward scans (10 playouts/state, endgame-short) | ~5–25 min |
+| confirm hits × 30 playouts | ~2–5 min each |
+| hammer + gates (one batch) | ~2 min |
+| **total** | **~15–40 min wall, unattended** |
 
-Playout cost basis: ~2 min wall per 100-playout label on 8 cores (measured,
-VALUE_HAMMER §3.2). Scale-out: rounds parallelize trivially on EC2 CPU
-boxes (the farm harness) if mining goes beyond occasional rounds.
+Backward scanning is what keeps this cheap: endgame playouts run seconds,
+and the scan stops at the first hit. Scale-out: rounds parallelize
+trivially on EC2 CPU boxes (the farm harness) if mining goes beyond
+occasional rounds.
 
 ## 3. Known limits
 
@@ -121,11 +126,15 @@ boxes (the farm harness) if mining goes beyond occasional rounds.
 - Statistical thresholds assume independent playouts; playout draws share
   the seeded engine's chance handling, which is by design (same as corpus).
 
-## 4. Implementation deltas required (small)
+## 4. Implementation (corrections/mine_value.py)
 
-1. Trajectory recorder: engine self-play harness (duel infra) emitting
-   {state, eval, turn, outcome} per decision.
-2. Miner script (screen/dedup/confirm): thin wrapper over the existing
-   playout labeler with Wilson-z logic.
-3. hammer_value.py: two-sided band support (train + gate on
-   inside-interval instead of ≤).
+    foul-play/.venv/bin/python corrections/mine_value.py \
+        [--games 5] [--ms 4500] [--tag mine1] [--screen-n 10] \
+        [--confirm-n 30] [--max-scan 25]
+
+Self-contained: plays the games (audited net via env-isolated
+subprocesses), evals every state through leaf_prof, backward-scans with the
+pinned label player (s1), confirms, prints the assessment table, writes
+<work>/ledger_rows.json. hammer_value.py accepts the two-sided
+"band": [lo, hi] rows it emits. Teams from the local holdout corpus
+(*.teams.json), ring-paired so no team repeats within a round.
