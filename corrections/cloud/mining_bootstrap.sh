@@ -88,27 +88,45 @@ for f in "$ROOT/corrections/mine_value.py" \
 done
 say "payload extracted to $ROOT"
 
-# ---------------------------------------------------------------- engine, FROM SOURCE
-# Never a prebuilt wheel: the v8 encoder lives in this tree, and a stale wheel
-# would either panic on load or, worse, score a DIFFERENT encoder than the net
-# was certified against. Same feature set for the wheel and for leaf_prof, so
-# the eval pass and the playouts agree by construction.
+# ---------------------------------------------------------------- engine
+# Provenance-safe build cache: artifacts are keyed by the sha256 of the FULL
+# engine source + requirements + python minor + feature flags, so a cache hit
+# is bit-provenance-equivalent to building from source (a stale wheel scoring
+# a different encoder is structurally impossible — any change moves the key).
+# First box of a generation builds and uploads; every later box pulls in ~60s.
 VENV="$ROOT/foul-play/.venv"
-python3.11 -m venv "$VENV" || die "venv"
-"$VENV/bin/pip" install -q --upgrade pip maturin || die "pip/maturin"
-"$VENV/bin/pip" install --no-cache-dir "$ROOT/poke-engine/poke-engine-py" \
-  --config-settings="build-args=--features poke-engine/terastallization --no-default-features" \
-  || die "wheel build"
-grep -v poke-engine "$ROOT/foul-play/requirements.txt" > /tmp/req.txt
-"$VENV/bin/pip" install -q -r /tmp/req.txt || die "foul-play deps"
-"$VENV/bin/python" -c "import poke_engine; print('wheel ok')" || die "wheel import"
-say "wheel built"
-
-cd "$ROOT/poke-engine"
-cargo build --release --bin leaf_prof --features terastallization --no-default-features \
-  || die "leaf_prof build"
-[ -x "$ROOT/poke-engine/target/release/leaf_prof" ] || die "leaf_prof missing after build"
-say "leaf_prof built"
+FEATS="terastallization"
+SRCHASH=$( (find "$ROOT/poke-engine/src" "$ROOT/poke-engine/poke-engine-py" \
+              "$ROOT/poke-engine/Cargo.toml" -type f -print0 | sort -z | \
+              xargs -0 sha256sum; cat "$ROOT/foul-play/requirements.txt"; \
+              python3.11 -V; echo "$FEATS") | sha256sum | cut -c1-16 )
+ART="$S3/artifacts/eng-$SRCHASH.tar.gz"
+say "engine artifact key: eng-$SRCHASH"
+if aws s3 cp "$ART" /root/eng.tar.gz --quiet 2>/dev/null; then
+  tar xzf /root/eng.tar.gz -C "$ROOT" || die "artifact untar"
+  "$VENV/bin/python" -c "import poke_engine; print('wheel ok (cached)')" || die "cached wheel import"
+  [ -x "$ROOT/poke-engine/target/release/leaf_prof" ] || die "cached leaf_prof missing"
+  say "engine from artifact cache (~60s vs ~13min build)"
+else
+  python3.11 -m venv "$VENV" || die "venv"
+  "$VENV/bin/pip" install -q --upgrade pip maturin || die "pip/maturin"
+  "$VENV/bin/pip" install --no-cache-dir "$ROOT/poke-engine/poke-engine-py" \
+    --config-settings="build-args=--features poke-engine/$FEATS --no-default-features" \
+    || die "wheel build"
+  grep -v poke-engine "$ROOT/foul-play/requirements.txt" > /tmp/req.txt
+  "$VENV/bin/pip" install -q -r /tmp/req.txt || die "foul-play deps"
+  "$VENV/bin/python" -c "import poke_engine; print('wheel ok')" || die "wheel import"
+  say "wheel built"
+  cd "$ROOT/poke-engine"
+  cargo build --release --bin leaf_prof --features "$FEATS" --no-default-features \
+    || die "leaf_prof build"
+  [ -x "$ROOT/poke-engine/target/release/leaf_prof" ] || die "leaf_prof missing after build"
+  say "leaf_prof built"
+  cd "$ROOT"
+  tar czf /root/eng.tar.gz -C "$ROOT" foul-play/.venv poke-engine/target/release/leaf_prof \
+    && aws s3 cp /root/eng.tar.gz "$ART" --quiet \
+    && say "engine artifact uploaded for the fleet" || say "artifact upload skipped (non-fatal)"
+fi
 
 # Preflight the two pieces mine_value.py cannot recover from: the team generator
 # (falls back to a DIFFERENT sampler if the vendored sets.json is missing) and
