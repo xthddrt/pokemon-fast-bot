@@ -74,6 +74,7 @@ def main():
     ap.add_argument("--cap", type=int, default=30000)
     ap.add_argument("--tag", default="h1")
     ap.add_argument("--anchor", type=int, default=10310)
+    ap.add_argument("--anchor-src", choices=["parity", "corpus"], default="corpus")
     ap.add_argument("--anchor-w", type=float, default=100.0)
     # anchor minibatch per step (cycled in shuffled epochs over the full
     # anchor set — same constraint in expectation, ~10x less compute per
@@ -107,9 +108,16 @@ def main():
     subprocess.run([PY, os.path.join(LAB, "enc_adopted.py"), "encode", src, enc],
                    cwd=LAB, check=True, capture_output=True, text=True)
 
-    # anchor states: encoded once per anchor count, reused by future runs
-    anchor_enc = os.path.join(work, f"anchor_enc_{a.anchor}")
-    if a.anchor and not os.path.isdir(anchor_enc):
+    # anchor states: corpus mode uses the downloaded full-corpus encoding
+    # (closes the loophole-gap leakage the bench exposed: a 10k fixed sample
+    # leaves gaps the optimizer threads a global lean through); parity mode
+    # is the legacy 10k sample.
+    corpus_enc = os.path.join(work, "corpus_enc")
+    use_corpus = a.anchor_src == "corpus" and os.path.isdir(corpus_enc)
+    if a.anchor_src == "corpus" and not use_corpus:
+        print("WARNING: corpus_enc missing; falling back to parity anchors")
+    anchor_enc = corpus_enc if use_corpus else os.path.join(work, f"anchor_enc_{a.anchor}")
+    if a.anchor and not use_corpus and not os.path.isdir(anchor_enc):
         import random as _r
         _r.seed(7)
         alines = [l.strip() for l in open(PARITY) if l.strip()]
@@ -146,11 +154,19 @@ def main():
         importlib.reload(vt_lib)
         aarm = vt_lib.Arm("old", add="setup")
         n_anchor = np.load(os.path.join(anchor_enc, "old_a1_f.npy"), mmap_mode="r").shape[0]
-        with torch.no_grad():
-            net.eval()
-            anchor_ref = torch.cat([
-                net(aarm.batch(np.arange(i, min(i + 4096, n_anchor)))).detach()
-                for i in range(0, n_anchor, 4096)])
+        ref_cache = os.path.join(anchor_enc,
+                                 f"teacher_ref_{os.path.basename(a.net)}.npy")
+        if os.path.isfile(ref_cache):
+            anchor_ref = torch.from_numpy(np.load(ref_cache))
+            assert anchor_ref.shape[0] == n_anchor
+        else:
+            with torch.no_grad():
+                net.eval()
+                anchor_ref = torch.cat([
+                    net(aarm.batch(np.arange(i, min(i + 4096, n_anchor)))).detach()
+                    for i in range(0, n_anchor, 4096)])
+            np.save(ref_cache, anchor_ref.numpy())
+        print(f"anchors: {n_anchor} ({'corpus' if use_corpus else 'parity'})", flush=True)
         bs = a.anchor_bs if a.anchor_bs else n_anchor
         rng = np.random.default_rng(7)
         perm, pos = rng.permutation(n_anchor), 0
