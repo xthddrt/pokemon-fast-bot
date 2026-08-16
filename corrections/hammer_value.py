@@ -80,6 +80,9 @@ def main():
     # anchor set — same constraint in expectation, ~10x less compute per
     # step; the end-of-run gates still check every state). 0 = full batch.
     ap.add_argument("--anchor-bs", type=int, default=512)
+    ap.add_argument("--device", default="auto",
+                    help="auto|cpu|cuda — cuda preloads the whole anchor corpus "
+                         "into VRAM (5.2GB fits a 4090) and runs the loop there")
     a = ap.parse_args()
 
     entries = [json.loads(l) for l in open(LEDGER)]
@@ -137,15 +140,19 @@ def main():
     import torch
     import vt_lib
     torch.set_num_threads(4)
+    dev = torch.device("cuda" if (a.device == "cuda" or (
+        a.device == "auto" and torch.cuda.is_available())) else "cpu")
+    print(f"device: {dev}", flush=True)
     net = vt_lib.build_net("old", (128, 256), 1, add="setup")
     ck = torch.load(a.net, map_location="cpu", weights_only=False)
     net.load_state_dict(ck["sd"] if "sd" in ck else ck["model"])
+    net.to(dev)
     arm = vt_lib.Arm("old", add="setup")
     idx = np.arange(len(states))
-    batch = arm.batch(idx)
-    tgt = torch.tensor(targets, dtype=torch.float32)
-    band_lo = torch.tensor(blo, dtype=torch.float32)
-    band_hi = torch.tensor(bhi, dtype=torch.float32)
+    batch = {k: v.to(dev) for k, v in arm.batch(idx).items()}
+    tgt = torch.tensor(targets, dtype=torch.float32, device=dev)
+    band_lo = torch.tensor(blo, dtype=torch.float32, device=dev)
+    band_hi = torch.tensor(bhi, dtype=torch.float32, device=dev)
 
     aarm = None
     if a.anchor:
@@ -154,13 +161,33 @@ def main():
         importlib.reload(vt_lib)
         aarm = vt_lib.Arm("old", add="setup")
         n_anchor = np.load(os.path.join(anchor_enc, "old_a1_f.npy"), mmap_mode="r").shape[0]
+        if dev.type == "cuda":
+            # whole corpus into VRAM once: every later batch is an on-device
+            # gather instead of a RAM->CPU-tensor assembly
+            gpu = {}
+            for k in vt_lib.OLD_KEYS:
+                arr = np.asarray(aarm.a[k])
+                gpu[k] = torch.from_numpy(arr).to(
+                    dev, torch.int64 if "ids" in k else torch.float32)
+            gpu_am = (torch.from_numpy(np.asarray(aarm.am[:, :, aarm.mcol],
+                                                  np.float32)).to(dev)
+                      if len(aarm.mcol) else None)
+            def abatch(sel):
+                s = torch.as_tensor(np.asarray(sel), dtype=torch.long, device=dev)
+                b = {k: gpu[k][s] for k in vt_lib.OLD_KEYS}
+                if gpu_am is not None:
+                    b["am"] = gpu_am[s]
+                return b
+        else:
+            def abatch(sel):
+                return aarm.batch(np.asarray(sel))
 
         def teacher_pass(mirrored):
             outs = []
             with torch.no_grad():
                 net.eval()
                 for i in range(0, n_anchor, 4096):
-                    b = aarm.batch(np.arange(i, min(i + 4096, n_anchor)))
+                    b = abatch(np.arange(i, min(i + 4096, n_anchor)))
                     if mirrored:
                         vt_lib.swap_rows_(b, torch.ones(
                             len(b["a1_f"]), dtype=torch.bool))
@@ -171,11 +198,11 @@ def main():
             p = os.path.join(anchor_enc,
                              f"teacher_ref_{tag}_{os.path.basename(a.net)}.npy")
             if os.path.isfile(p):
-                r = torch.from_numpy(np.load(p))
+                r = torch.from_numpy(np.load(p)).to(dev)
                 assert r.shape[0] == n_anchor
                 return r
             r = teacher_pass(mirrored)
-            np.save(p, r.numpy())
+            np.save(p, r.cpu().numpy())
             return r
 
         # MIRRORED ANCHORING (Sally 2026-08-16): the anchor pool is every
@@ -208,13 +235,13 @@ def main():
             sm = sel[sel >= n_anchor] - n_anchor
             outs, refs = [], []
             if len(so):
-                outs.append(net(aarm.batch(so)))
-                refs.append(anchor_ref[torch.as_tensor(so, dtype=torch.long)])
+                outs.append(net(abatch(so)))
+                refs.append(anchor_ref[torch.as_tensor(so, dtype=torch.long, device=dev)])
             if len(sm):
-                bm = aarm.batch(sm)
-                vt_lib.swap_rows_(bm, torch.ones(len(sm), dtype=torch.bool))
+                bm = abatch(sm)
+                vt_lib.swap_rows_(bm, torch.ones(len(sm), dtype=torch.bool, device=dev))
                 outs.append(net(bm))
-                refs.append(anchor_ref_mir[torch.as_tensor(sm, dtype=torch.long)])
+                refs.append(anchor_ref_mir[torch.as_tensor(sm, dtype=torch.long, device=dev)])
             loss = loss + a.anchor_w * torch.nn.functional.mse_loss(
                 torch.cat(outs), torch.cat(refs))
         loss.backward()
@@ -228,15 +255,15 @@ def main():
         if aarm is not None:
             samp = np.sort(np.random.default_rng(11).choice(
                 n_anchor, size=min(100_000, n_anchor), replace=False))
-            cur = torch.cat([net(aarm.batch(samp[i:i + 4096]))
+            cur = torch.cat([net(abatch(samp[i:i + 4096]))
                              for i in range(0, len(samp), 4096)])
-            drift = (cur - anchor_ref[torch.as_tensor(samp, dtype=torch.long)]).abs()
+            drift = (cur - anchor_ref[torch.as_tensor(samp, dtype=torch.long, device=dev)]).abs()
             cm = []
             for i in range(0, len(samp), 4096):
-                b = aarm.batch(samp[i:i + 4096])
-                vt_lib.swap_rows_(b, torch.ones(len(b["a1_f"]), dtype=torch.bool))
+                b = abatch(samp[i:i + 4096])
+                vt_lib.swap_rows_(b, torch.ones(len(b["a1_f"]), dtype=torch.bool, device=dev))
                 cm.append(net(b))
-            drift_m = (torch.cat(cm) - anchor_ref_mir[torch.as_tensor(samp, dtype=torch.long)]).abs()
+            drift_m = (torch.cat(cm) - anchor_ref_mir[torch.as_tensor(samp, dtype=torch.long, device=dev)]).abs()
             print(f"anchor drift (100k sample): orig mean {float(drift.mean()):.4f} "
                   f"max {float(drift.max()):.4f} | mirror mean {float(drift_m.mean()):.4f} "
                   f"max {float(drift_m.max()):.4f}", flush=True)
@@ -250,6 +277,7 @@ def main():
     stem = os.path.splitext(a.net)[0].rsplit("_s", 1)[0]
     out_pt = f"{stem}_{a.tag}.pt"
     out_bin = f"{stem}_{a.tag}.bin"
+    net.to("cpu")
     torch.save({"sd": net.state_dict(), "cfg": ck.get("cfg", {})}, out_pt)
     subprocess.run([PY, os.path.join(LAB, "export_v8.py"), out_pt, out_bin],
                    cwd=LAB, check=True, capture_output=True, text=True)
