@@ -87,6 +87,13 @@ def main():
     # (8 states in h1 -> 88 now = 11x weaker per state). Scale the ruled
     # loss by n_states/RULED_REF so per-state force is ledger-size-invariant.
     ap.add_argument("--ruled-ref", type=float, default=8.0)
+    # HARD TIME WALL (Sally 2026-08-16): fine-tune is bounded by wall-clock,
+    # not step count. Adaptive softening keyed to the wall (halve w at 40%,
+    # 65%, 85% if bands unmet). At the wall: export + gate anyway and PRINT
+    # the missed states — triage beats hostage-taking. Band check every
+    # --check-every steps (per-step checking forces a GPU sync = 5x slower).
+    ap.add_argument("--wall-min", type=float, default=10.0)
+    ap.add_argument("--check-every", type=int, default=100)
     # anchor minibatch per step (cycled in shuffled epochs over the full
     # anchor set — same constraint in expectation, ~10x less compute per
     # step; the end-of-run gates still check every state). 0 = full batch.
@@ -101,7 +108,7 @@ def main():
         raise SystemExit("empty ledger")
     # band per ruling: two-sided [lo, hi] ("band" key, mined rulings), or the
     # legacy one-sided <= conform ("conform" key -> [0, conform]).
-    states, targets, blo, bhi = [], [], [], []
+    states, targets, blo, bhi, entries_flat = [], [], [], [], []
     for e in entries:
         lo, hi = e["band"] if "band" in e else (0.0, float(e.get("conform", a.conform)))
         for s in e["states"]:
@@ -109,6 +116,7 @@ def main():
             targets.append(float(e["target"]))
             blo.append(float(lo))
             bhi.append(float(hi))
+            entries_flat.append(e["id"])
     print(f"{len(entries)} ruling(s), {len(states)} states")
 
     # 1. encode
@@ -235,12 +243,21 @@ def main():
     net.train()
     step = 0
     cur_w = a.anchor_w
-    last_adapt = 0
+    import time as _t
+    t_start = _t.time()
+    wall_s = a.wall_min * 60.0
+    soften_at = [0.40 * wall_s, 0.65 * wall_s, 0.85 * wall_s]
+    walled = False
     for step in range(1, a.cap + 1):
-        if step - last_adapt >= a.adapt_every and cur_w > a.w_min:
+        el = _t.time() - t_start
+        if soften_at and el >= soften_at[0] and cur_w > a.w_min:
             cur_w = max(cur_w / 2.0, a.w_min)
-            last_adapt = step
-            print(f"  step {step}: bands unmet, anchor w -> {cur_w}", flush=True)
+            soften_at.pop(0)
+            print(f"  {el:.0f}s: bands unmet, anchor w -> {cur_w}", flush=True)
+        if el >= wall_s:
+            walled = True
+            print(f"  WALL at {el:.0f}s / step {step}", flush=True)
+            break
         opt.zero_grad()
         loss = (len(states) / a.ruled_ref) * lossf(net(batch), tgt)
         if aarm is not None:
@@ -263,10 +280,20 @@ def main():
                 torch.cat(outs), torch.cat(refs))
         loss.backward()
         opt.step()
-        with torch.no_grad():
-            evals = torch.sigmoid(net(batch))
-        if bool(((evals >= band_lo) & (evals <= band_hi)).all()):
-            break
+        if step % a.check_every == 0:
+            with torch.no_grad():
+                evals = torch.sigmoid(net(batch))
+            if bool(((evals >= band_lo) & (evals <= band_hi)).all()):
+                break
+    with torch.no_grad():
+        evals = torch.sigmoid(net(batch))
+        missed = [(entries_flat[i], float(evals[i]))
+                  for i in range(len(states))
+                  if not (blo[i] <= float(evals[i]) <= bhi[i])]
+        if missed:
+            print(f"  MISSED {len(missed)} band(s):", flush=True)
+            for mid, ev in missed[:20]:
+                print(f"    {mid}: eval {ev:.3f}", flush=True)
     with torch.no_grad():
         net.eval()
         if aarm is not None:
