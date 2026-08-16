@@ -125,7 +125,7 @@ One GPU run, <=20 min guaranteed, any ledger size:
 - **Ruled force**: normalized by ledger size (n/8 scaling) so each carve
   pulls identically at 8 or 8,000 rulings; every ruling ships with its
   measured-target mirror twin (up/down balance by construction).
-- **Per-state escalation**: any state outside its +-1SE band after 1,000
+- **Per-state escalation**: any state outside its +-2SE band (Sally 2026-08-16: conservative bands, protocol-wide) after 1,000
   steps doubles its own weight (cap 64x). Force goes only where needed;
   gentle caps (8x) provably fail extreme carves.
 - **Hard wall**: 10-min fine-tune, band checks every 100 steps (per-step
