@@ -29,9 +29,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", required=True)
     ap.add_argument("--tag", default="lt1")
-    ap.add_argument("--steps", type=int, default=5000)
-    ap.add_argument("--lr", type=float, default=1e-5)
-    ap.add_argument("--lr-emb", type=float, default=3.3e-6)
+    ap.add_argument("--steps", type=int, default=20000)
+    ap.add_argument("--lr", type=float, default=3e-5)
+    ap.add_argument("--lr-emb", type=float, default=1e-5)
+    ap.add_argument("--warmup", type=int, default=1500)
+    ap.add_argument("--wd", type=float, default=0.002)
     ap.add_argument("--batch", type=int, default=4096)
     ap.add_argument("--mix", type=float, default=0.5,
                     help="fraction of each batch drawn from ledger rows")
@@ -116,7 +118,7 @@ def main():
     for nm, p in net.named_parameters():
         (emb if "emb" in nm else dense).append(p)
     opt = torch.optim.AdamW(
-        [{"params": dense, "lr": a.lr, "weight_decay": 0.0},
+        [{"params": dense, "lr": a.lr, "weight_decay": a.wd},
          {"params": emb, "lr": a.lr_emb, "weight_decay": 0.0}])
     lossf = torch.nn.functional.binary_cross_entropy_with_logits
     rng = np.random.default_rng(11)
@@ -126,7 +128,13 @@ def main():
     t0 = time.time()
     import math
     for step in range(1, a.steps + 1):
-        mlt = 0.5 * (1 + math.cos(math.pi * step / a.steps))
+        # warmup -> cosine: the settled-minimum warm start needs Adam's
+        # moments initialized before real step sizes arrive (the lr-3e-6
+        # no-warmup attempt kicked holdout 0.045 -> 0.060 in 500 steps)
+        if step <= a.warmup:
+            mlt = step / a.warmup
+        else:
+            mlt = 0.5 * (1 + math.cos(math.pi * (step - a.warmup) / (a.steps - a.warmup)))
         opt.param_groups[0]["lr"] = a.lr * mlt
         opt.param_groups[1]["lr"] = a.lr_emb * mlt
         ci = pool[rng.integers(0, len(pool), n_cor)]
