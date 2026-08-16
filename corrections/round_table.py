@@ -30,7 +30,7 @@ def main(prefix):
             nm = [f"t{m['t']} z={m['z_confirm']}" for m in c.get("near_misses", [])]
             if not c["candidate"]:
                 note = "clean game" + (f" (near-miss {', '.join(nm)})" if nm else "")
-                rows.append((g["seed"], res, "—", f"{total} turns", note, "", "", ""))
+                rows.append((g["seed"], res, "—", f"{total}", note, "", "", ""))
             else:
                 k = c["candidate"]
                 outs, bm = [], []
@@ -50,7 +50,7 @@ def main(prefix):
                 wl = f"{w}-{len(outs)-w-t_}" if not t_ else f"{w}-{t_}T-{len(outs)-w-t_}"
                 zbs = "∞" if zb == float("inf") else f"{zb:.1f}"
                 rows.append((g["seed"], res, k["t"],
-                             f"of {total} (end−{total - k['t']})",
+                             f"{total} (−{total - k['t']})",
                              f"{e:.3f} → {p:.3f} ± {se:.2f}",
                              f"{zp:.1f} / {zbs}", wl,
                              f"{'HAMMER' if ok else 'NOT confirmed'} | {k['context']}"))
