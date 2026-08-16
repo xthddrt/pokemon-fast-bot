@@ -82,6 +82,11 @@ def main():
     # the gates/bench still judge the final function.
     ap.add_argument("--adapt-every", type=int, default=10000)
     ap.add_argument("--w-min", type=float, default=2.5)
+    # RULED-FORCE NORMALIZATION (2026-08-16): the ruled BCE is a mean over
+    # all ruled states, so each carve's pull DILUTES as the ledger grows
+    # (8 states in h1 -> 88 now = 11x weaker per state). Scale the ruled
+    # loss by n_states/RULED_REF so per-state force is ledger-size-invariant.
+    ap.add_argument("--ruled-ref", type=float, default=8.0)
     # anchor minibatch per step (cycled in shuffled epochs over the full
     # anchor set — same constraint in expectation, ~10x less compute per
     # step; the end-of-run gates still check every state). 0 = full batch.
@@ -237,7 +242,7 @@ def main():
             last_adapt = step
             print(f"  step {step}: bands unmet, anchor w -> {cur_w}", flush=True)
         opt.zero_grad()
-        loss = lossf(net(batch), tgt)
+        loss = (len(states) / a.ruled_ref) * lossf(net(batch), tgt)
         if aarm is not None:
             if pos + bs > n_pool:
                 perm, pos = rng.permutation(n_pool), 0
