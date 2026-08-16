@@ -49,6 +49,23 @@ Readings that drive the design:
   overshooting between anchor corrections, so the optimizer finds the
   low-norm path to the constraint instead of the fast one. Push this axis
   until wall-time hurts, not before.
+
+**Minibatch follow-up (same day)**: replacing the full-batch anchor pass
+with a 512-state minibatch cycled in shuffled epochs (§5.1's design, landed
+early) — same ruled conformance in every run, gates PASS:
+
+| recipe (all minibatch-512 except baseline) | wall clock | held-out EARLY | held-out LATE |
+|---|---|---|---|
+| full-batch w=100 lr=1e-6 (baseline) | 19.2 min | 0.0178 | 0.0270 |
+| w=100, lr=1e-6 | 2.8 min | 0.0160 | 0.0237 |
+| **w=100, lr=3e-6 (DEFAULT)** | **70 s** | 0.0165 | 0.0241 |
+| w=30, lr=3e-6 | 46 s | 0.0195 | 0.0285 |
+
+Readings: minibatching does not cost drift — it slightly improves it
+(gradient noise regularizes; epochs still enforce every anchor). At w=100
+the lr can rise to 3e-6 for free (drift within noise of the best), so the
+speed/correctness trade-off dissolved: 70 s is the frontier. Only weakening
+the pin (w=30) actually degrades drift, for 24 s saved — rejected.
 - **LATE > EARLY drift is desired**: the carve generalizes along
   wall-endgame features — that is the lesson propagating, not damage. The
   damage gauge is EARLY (unrelated) drift only.
@@ -97,9 +114,13 @@ Readings that drive the design:
 
 ## 4. Current recipe (v1 implementation, hammer_value.py)
 
-- anchors: all 10,310 parity states, w = 100, lr = 1e-6, cap 30,000 steps,
-  train until every ruled state ≤ its band (the sweep winner; these are the
-  script defaults, so the bare command in §3.5 IS the recipe).
+- anchors: all 10,310 parity states, w = 100, lr = 3e-6, minibatch 512
+  cycled in shuffled epochs, cap 30,000 steps, train until every ruled
+  state ≤ its band (the minibatch sweep winner; these are the script
+  defaults, so the bare command in §3.5 IS the recipe). ~70 s end-to-end
+  steady-state (anchor encode + source parity logits cached after first
+  run). Fallback if a future multi-ruling hammer misses the §3.6 drift
+  bars: lr 1e-6 (2.8 min), then full batch (--anchor-bs 0, 19 min).
 - Rollback: `RG_NN_WEIGHTS=../valuenet/nets_v8b/v8b_s1.bin` — the original
   is preserved locally, on GitHub (valuenet + foul-play/ladder), and on S3
   including the .pt.

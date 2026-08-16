@@ -1,8 +1,9 @@
 """VALUE HAMMER — conform the net's eval on ruled positions to playout truth.
 
     foul-play/.venv/bin/python corrections/hammer_value.py \
-        [--net valuenet/nets_v8b/v8b_s1.pt] [--conform 0.2] [--lr 1e-6] \
-        [--cap 30000] [--tag h1] [--anchor 10310] [--anchor-w 100]
+        [--net valuenet/nets_v8b/v8b_s1.pt] [--conform 0.2] [--lr 3e-6] \
+        [--cap 30000] [--tag h1] [--anchor 10310] [--anchor-w 100] \
+        [--anchor-bs 512]
 
 Spec + full process: corrections/VALUE_HAMMER.md (defaults here = the
 2026-08-15 sweep winner documented there).
@@ -65,14 +66,19 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--net", default=os.path.join(ROOT, "valuenet/nets_v8b/v8b_s1.pt"))
     ap.add_argument("--conform", type=float, default=0.2)
-    # defaults = the 2026-08-15 sweep winner (see VALUE_HAMMER.md §2/§4):
-    # all parity states as anchors, heavy pin, tiny lr — lowest drift at
-    # equal conformance, cost is only steps.
-    ap.add_argument("--lr", type=float, default=1e-6)
+    # defaults = the 2026-08-15 minibatch sweep winner (VALUE_HAMMER.md
+    # §2/§4): all parity states as anchors, heavy pin, minibatch 512,
+    # lr 3e-6 — 70s end-to-end at drift equal to the best measured. If a
+    # future multi-ruling hammer misses the drift bars, drop lr to 1e-6.
+    ap.add_argument("--lr", type=float, default=3e-6)
     ap.add_argument("--cap", type=int, default=30000)
     ap.add_argument("--tag", default="h1")
     ap.add_argument("--anchor", type=int, default=10310)
     ap.add_argument("--anchor-w", type=float, default=100.0)
+    # anchor minibatch per step (cycled in shuffled epochs over the full
+    # anchor set — same constraint in expectation, ~10x less compute per
+    # step; the end-of-run gates still check every state). 0 = full batch.
+    ap.add_argument("--anchor-bs", type=int, default=512)
     a = ap.parse_args()
 
     entries = [json.loads(l) for l in open(LEDGER)]
@@ -128,17 +134,21 @@ def main():
     tgt = torch.tensor(targets, dtype=torch.float32)
     band = torch.tensor(bands, dtype=torch.float32)
 
-    abatch = None
+    aarm = None
     if a.anchor:
         os.environ["VT_ENC"] = anchor_enc
         import importlib
         importlib.reload(vt_lib)
         aarm = vt_lib.Arm("old", add="setup")
         n_anchor = np.load(os.path.join(anchor_enc, "old_a1_f.npy"), mmap_mode="r").shape[0]
-        abatch = aarm.batch(np.arange(n_anchor))
         with torch.no_grad():
             net.eval()
-            anchor_ref = net(abatch).detach()
+            anchor_ref = torch.cat([
+                net(aarm.batch(np.arange(i, min(i + 4096, n_anchor)))).detach()
+                for i in range(0, n_anchor, 4096)])
+        bs = a.anchor_bs if a.anchor_bs else n_anchor
+        rng = np.random.default_rng(7)
+        perm, pos = rng.permutation(n_anchor), 0
 
     opt = torch.optim.Adam(net.parameters(), lr=a.lr)
     lossf = torch.nn.BCEWithLogitsLoss()
@@ -147,8 +157,13 @@ def main():
     for step in range(1, a.cap + 1):
         opt.zero_grad()
         loss = lossf(net(batch), tgt)
-        if abatch is not None:
-            loss = loss + a.anchor_w * torch.nn.functional.mse_loss(net(abatch), anchor_ref)
+        if aarm is not None:
+            if pos + bs > n_anchor:
+                perm, pos = rng.permutation(n_anchor), 0
+            sel = perm[pos:pos + bs]
+            pos += bs
+            loss = loss + a.anchor_w * torch.nn.functional.mse_loss(
+                net(aarm.batch(sel)), anchor_ref[torch.as_tensor(sel, dtype=torch.long)])
         loss.backward()
         opt.step()
         with torch.no_grad():
@@ -156,7 +171,11 @@ def main():
         if bool((evals <= band).all()):
             break
     with torch.no_grad():
-        drift = (net(abatch) - anchor_ref).abs() if abatch is not None else torch.zeros(1)
+        net.eval()
+        drift = (torch.cat([
+            net(aarm.batch(np.arange(i, min(i + 4096, n_anchor))))
+            for i in range(0, n_anchor, 4096)]) - anchor_ref).abs() \
+            if aarm is not None else torch.zeros(1)
     print(f"fine-tune: {step} steps, ruled evals: "
           f"{[round(float(v), 3) for v in evals]}, "
           f"anchor drift mean {float(drift.mean()):.4f} max {float(drift.max()):.4f}")
@@ -189,7 +208,14 @@ def main():
     print(f"ENGINE GATE (ruled states): {[round(v, 3) for v in ruled_evals]} "
           f"-> {'PASS' if ok else 'FAIL'} (bands {sorted(set(bands))})")
     if os.path.isfile(PARITY):
-        old = engine_logits(a.net.replace(".pt", ".bin"), PARITY)
+        # source-net parity logits never change for a given source bin: cache
+        src_bin = a.net.replace(".pt", ".bin")
+        lcache = os.path.join(work, f"parity_logits_{os.path.basename(src_bin)}.json")
+        if os.path.isfile(lcache):
+            old = json.load(open(lcache))
+        else:
+            old = engine_logits(src_bin, PARITY)
+            json.dump(old, open(lcache, "w"))
         new = engine_logits(out_bin, PARITY)
         d = sorted(abs(x - y) for x, y in zip(old, new))
         print(f"COLLATERAL over {len(d)} parity states: "
