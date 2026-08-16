@@ -231,6 +231,16 @@ def main():
             np.save(p, r.cpu().numpy())
             return r
 
+        # CORPUS-RULED EXCLUSION (Sally 2026-08-16): rulings mined FROM the
+        # corpus must not also serve as anchors — the anchor would pin each
+        # one to the old wrong eval while the ruling pulls it to truth.
+        # Ledger rows may carry "row_i" (their corpus row); those indices
+        # (both seatings) are masked out of the anchor pool.
+        excl = np.array(sorted({e.get("row_i") for e in entries
+                                if e.get("row_i") is not None}), dtype=np.int64)
+        if len(excl):
+            print(f"anchor exclusion: {len(excl)} corpus rows are ruled", flush=True)
+
         # MIRRORED ANCHORING (Sally 2026-08-16): the anchor pool is every
         # corpus row in BOTH seatings — index [0,n) = as stored, [n,2n) =
         # seat-swapped — each pinned to the teacher's ACTUAL output on that
@@ -243,7 +253,11 @@ def main():
               f"({'corpus' if use_corpus else 'parity'})", flush=True)
         bs = a.anchor_bs if a.anchor_bs else n_pool
         rng = np.random.default_rng(7)
-        perm, pos = rng.permutation(n_pool), 0
+        pool_idx = np.arange(n_pool)
+        if len(excl):
+            bad = np.concatenate([excl, excl + n_anchor])
+            pool_idx = np.setdiff1d(pool_idx, bad, assume_unique=False)
+        perm, pos = rng.permutation(len(pool_idx)), 0
 
     opt = torch.optim.Adam(net.parameters(), lr=a.lr)
     lossf = torch.nn.BCEWithLogitsLoss(reduction="none")
@@ -279,9 +293,9 @@ def main():
         loss = (len(states) / a.ruled_ref) * (
             ruled_w * lossf(net(batch), tgt)).mean()
         if aarm is not None:
-            if pos + bs > n_pool:
-                perm, pos = rng.permutation(n_pool), 0
-            sel = perm[pos:pos + bs]
+            if pos + bs > len(pool_idx):
+                perm, pos = rng.permutation(len(pool_idx)), 0
+            sel = pool_idx[perm[pos:pos + bs]]
             pos += bs
             so = sel[sel < n_anchor]
             sm = sel[sel >= n_anchor] - n_anchor

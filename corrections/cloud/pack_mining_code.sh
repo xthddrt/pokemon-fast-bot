@@ -44,7 +44,9 @@ S3_PREFIX="${S3_PREFIX:-mining}"
 TAR="${TAR:-$(mktemp -d)/code.tar.gz}"
 
 NETS="valuenet/nets_v8b/v8b_s1.bin valuenet/nets_v8b/v8b_s1.constants.json
-      valuenet/nets_v8b/v8b_h2.bin valuenet/nets_v8b/v8b_h2.constants.json"
+      valuenet/nets_v8b/v8b_h2.bin valuenet/nets_v8b/v8b_h2.constants.json
+      valuenet/nets_v8c/v8c_s1.bin valuenet/nets_v8c/v8c_s1.constants.json
+      valuenet/nets_v8c/v8c_h1g.bin valuenet/nets_v8c/v8c_h1g.constants.json"
 
 cd "$ROOT"
 # Refuse to ship an incomplete payload: every one of these is a 25-minute
@@ -85,6 +87,7 @@ need = {
     "valuenet/sprt/run_duels.py",
     "valuenet/nets_v8b/v8b_s1.bin", "valuenet/nets_v8b/v8b_s1.constants.json",
     "valuenet/nets_v8b/v8b_h2.bin", "valuenet/nets_v8b/v8b_h2.constants.json",
+    "valuenet/nets_v8c/v8c_h1g.bin", "valuenet/nets_v8c/v8c_h1g.constants.json",
     "foul-play/fp/search/ps_teams.py",
     "foul-play/data/ps/gen9randombattle_sets.json",
     "foul-play/data/pokedex.json", "foul-play/data/moves.json",

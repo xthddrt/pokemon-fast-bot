@@ -82,7 +82,8 @@ tar xzf /root/code.tar.gz -C "$ROOT" || die "code untar"
 for f in "$ROOT/corrections/mine_value.py" \
          "$ROOT/valuenet/sprt/run_duels.py" \
          "$ROOT/valuenet/nets_v8b/v8b_h2.bin" "$ROOT/valuenet/nets_v8b/v8b_h2.constants.json" \
-         "$ROOT/valuenet/nets_v8b/v8b_s1.bin" "$ROOT/valuenet/nets_v8b/v8b_s1.constants.json"; do
+         "$ROOT/valuenet/nets_v8b/v8b_s1.bin" "$ROOT/valuenet/nets_v8b/v8b_s1.constants.json" \
+         "$ROOT/valuenet/nets_v8c/v8c_h1g.bin" "$ROOT/valuenet/nets_v8c/v8c_h1g.constants.json"; do
   [ -s "$f" ] || die "payload missing $f"
 done
 say "payload extracted to $ROOT"
