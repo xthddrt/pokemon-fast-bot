@@ -92,7 +92,7 @@ run_slot() {
       --search-time-ms "$SEARCH_MS" --first-turn-search-time-ms "$SEARCH_MS" \
       --search-parallelism 8 --search-pool-workers 8 --search-threads 1 \
       --nn-weights ../valuenet/m4_artifacts/valuenet_v6ref_nopuct.bin \
-      --selection-argmax-only --tera-gate-per-mon 0.001 --tera-gate-visit-frac 0.3333 \
+      --selection-argmax-only --tera-gate-per-mon 0.001 --tera-gate-visit-frac 0.25 \
       --save-replay always --log-level INFO --log-to-file \
       > "/opt/fleet-logs/${slug}_s${slot}_g${g}.log" 2>&1 || true
     flock /opt/archive/.lock env \
