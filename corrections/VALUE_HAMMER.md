@@ -137,7 +137,8 @@ the pin (w=30) actually degrades drift, for 24 s saved — rejected.
    of §3.3 — with the global anchor in place they don't confound; they
    locally replace the "old net was right" prior with a measurement. As the
    ledger grows this loop converges to the principled retrain
-   (corpus + hard examples) done incrementally.
+   (corpus + hard examples) done incrementally. The systematic version is
+   specced in ACTIVE_MINING.md (full-info self-play error mining).
 3. **Escalation if a ruling resists** (band unreachable at acceptable
    drift): restrict updates to trunk parameters (freeze embeddings + mon
    MLP) to shrink the perturbation space, or send the ruling class to the
