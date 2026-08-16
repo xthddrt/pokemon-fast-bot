@@ -128,6 +128,25 @@ say "preflight ok"
 # is saturated only at nproc-wide fan-out.
 MINE_CONCURRENT="$(nproc)"
 export MINE_CONCURRENT
+# MODE=confirm: instead of playing games, pull a candidate shard from S3 and
+# pair-confirm it (CAND_KEY = s3 key of the shard jsonl; SHARD_START/COUNT
+# optional slice). Results land in the same tarball path as a mining round.
+if [ "${MODE:-mine}" = "confirm" ]; then
+  say "confirm mode: shard $CAND_KEY [${SHARD_START:-0}+${SHARD_COUNT:-all}]"
+  aws s3 cp "s3://$S3_BUCKET/$CAND_KEY" /root/cands.jsonl --quiet || \
+    curl -sf -o /root/cands.jsonl "$CAND_URL"
+  mkdir -p "$ROOT/corrections/_mine_work/$TAG"
+  set +e
+  "$VENV/bin/python" "$ROOT/corrections/mine_value.py" confirm-pairs \
+    --states /root/cands.jsonl \
+    --out "$ROOT/corrections/_mine_work/$TAG/confirmed.jsonl" \
+    --start "${SHARD_START:-0}" --count "${SHARD_COUNT:-0}" $MINE_ARGS \
+    > /root/run.log 2>&1
+  RC=$?
+  set -e
+  say "confirm-pairs exited rc=$RC"
+  tail -20 /root/run.log
+else
 say "mining: $GAMES games, ${MS}ms/decision, MINE_CONCURRENT=$MINE_CONCURRENT"
 set +e
 "$VENV/bin/python" "$ROOT/corrections/mine_value.py" run \
@@ -137,6 +156,7 @@ RC=$?
 set -e
 say "mine_value.py exited rc=$RC"
 tail -40 /root/run.log
+fi
 
 # ---------------------------------------------------------------- results
 WORK="$ROOT/corrections/_mine_work/$TAG"

@@ -303,6 +303,53 @@ def cmd_block(a):
     json.dump({"t": a.t, "block": a.block, "e": rec["e"], "outs": outs},
               open(a.out, "w"))
 
+def cmd_confirm_pairs(a):
+    """20+20 pair confirm for corpus mining (Sally 2026-08-16): each input row
+    {"id","s","e","s_mir","e_mir"} gets 20 playouts per seating (4 blocks x 5,
+    distinct seed streams). Qualification is judged on the PAIR: mean gap
+    >= 0.10 and combined z >= 2.5. Playouts are flattened across all rows so
+    the process pool never idles between candidates."""
+    import concurrent.futures as cf
+    rows = [json.loads(l) for l in open(a.states) if l.strip()]
+    lo, hi = a.start, (a.start + a.count if a.count else len(rows))
+    rows = rows[lo:hi]
+    n_pl = a.pair_n  # per seating
+    print(f"confirm-pairs: {len(rows)} candidates [{lo}:{hi}], {n_pl}+{n_pl} playouts", flush=True)
+    tasks = []
+    for r in rows:
+        base = (abs(hash(r["id"])) % 0xFFFFF) * 1013 + 300_000
+        for j in range(n_pl):
+            tasks.append((r["s"], (base + j * 104729) & 0x7FFFFFFF))
+        for j in range(n_pl):
+            tasks.append((r["s_mir"], (base + 777_777 + j * 104729) & 0x7FFFFFFF))
+    t0 = time.time()
+    with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as ex:
+        outs = list(ex.map(_playout_worker, tasks, chunksize=4))
+    el = time.time() - t0
+    print(f"{len(tasks)} playouts in {el:.0f}s ({el/max(1,len(tasks)):.2f}s each)", flush=True)
+    with open(a.out, "w") as f:
+        for i, r in enumerate(rows):
+            o = outs[i*2*n_pl : i*2*n_pl + n_pl]
+            m = outs[i*2*n_pl + n_pl : (i+1)*2*n_pl]
+            po, seo = ac_stats(o)
+            pm, sem = ac_stats(m)
+            ga = abs(r["e"] - po); gb = abs(r["e_mir"] - pm)
+            g = (ga + gb) / 2
+            se = math.sqrt(seo**2 + sem**2) / 2
+            z = g / se if se > 0 else float("inf")
+            f.write(json.dumps({
+                "id": r["id"], "e": r["e"], "e_mir": r["e_mir"],
+                "target": round(po, 4), "se": round(seo, 4),
+                "band": [round(max(0.0, po-seo), 4), round(min(1.0, po+seo), 4)],
+                "target_mir": round(pm, 4), "se_mir": round(sem, 4),
+                "band_mir": [round(max(0.0, pm-sem), 4), round(min(1.0, pm+sem), 4)],
+                "pair_gap": round(g, 4), "pair_z": round(z, 2) if z != float("inf") else "inf",
+                "confirmed": bool(g >= 0.10 and z >= 2.5),
+                "s": r["s"], "s_mir": r["s_mir"],
+            }) + "\n")
+    print(f"confirm-pairs done -> {a.out}", flush=True)
+
+
 def cmd_confirm_batch(a):
     """Block-confirm a LIST of candidate states (corpus mining path).
 
@@ -546,7 +593,7 @@ def cmd_run(a):
           f"assessment.", flush=True)
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block", "confirm-batch"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block", "confirm-batch", "confirm-pairs"):
         sys.argv.insert(1, "run")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd")
@@ -561,6 +608,12 @@ def main():
     s.add_argument("--confirm-z", type=float, default=3.0)
     s.add_argument("--pool", type=int, default=max(1, MAX_CONCURRENT // 4))
     s.add_argument("--start-t", type=int, default=None)
+    cp = sub.add_parser("confirm-pairs")
+    cp.add_argument("--states", required=True)
+    cp.add_argument("--out", required=True)
+    cp.add_argument("--start", type=int, default=0)
+    cp.add_argument("--count", type=int, default=0)
+    cp.add_argument("--pair-n", type=int, default=20)
     cb = sub.add_parser("confirm-batch")
     cb.add_argument("--states", required=True)
     cb.add_argument("--out", required=True)
@@ -586,7 +639,8 @@ def main():
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
     {"game": cmd_game, "scan": cmd_scan, "run": cmd_run, "block": cmd_block,
-     "confirm-batch": cmd_confirm_batch}[a.cmd or "run"](a)
+     "confirm-batch": cmd_confirm_batch,
+     "confirm-pairs": cmd_confirm_pairs}[a.cmd or "run"](a)
 
 if __name__ == "__main__":
     main()
