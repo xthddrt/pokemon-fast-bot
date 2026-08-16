@@ -48,7 +48,7 @@ LABEL_BIN = os.path.join(ROOT, "valuenet/nets_v8b/v8b_s1.bin")
 # replication of runs made under the old 300 cap.
 MAX_STEPS = int(os.environ.get("MINE_MAX_STEPS", "1000"))
 LABEL_ITERS = 2000
-MAX_CONCURRENT = 4  # half the cores, always
+MAX_CONCURRENT = int(os.environ.get("MINE_CONCURRENT", "4"))  # half the Mac's cores; cloud boxes set MINE_CONCURRENT to their vCPUs
 
 def net_env(bin_path):
     env = {k: v for k, v in os.environ.items() if not k.startswith("PE_")}
@@ -243,19 +243,34 @@ def wait_slots(procs, limit):
     while sum(1 for p in procs if p.poll() is None) >= limit:
         time.sleep(2)
 
+def fresh_teams_file(work, i, seed):
+    """Two brand-new teams from the PS-exact generator port, one file per
+    game (Sally 2026-08-15: every mining round plays never-seen teams)."""
+    if os.path.join(ROOT, "foul-play") not in sys.path:
+        sys.path.insert(0, os.path.join(ROOT, "foul-play"))
+    from fp.search import ps_teams
+    path = os.path.join(work, f"teams_g{i}.json")
+    teams = {}
+    for k, salt in (("p1", 11), ("p2", 12)):
+        ps_teams.seed(seed * 977 + salt)
+        teams[k] = {"team": ps_teams.random_team()}
+    json.dump({"teams": teams}, open(path, "w"))
+    return path
+
 def cmd_run(a):
     work = os.path.join(HERE, "_mine_work", a.tag)
     os.makedirs(work, exist_ok=True)
     t0 = time.time()
-    files = sorted(glob.glob(os.path.join(CORPUS, "*.teams.json")))
-    assert len(files) >= 2, f"need teams.json files in {CORPUS}"
-    # ring pairing: game i = file_i's p1 vs file_{i+1}'s p2 — no team reused
     genv = net_env(a.audit)
     procs = []
     for i in range(a.games):
-        n = len(files)
-        off = 1 + (i // n) % (n - 1)
-        fa, fb = files[i % n], files[(i + off) % n]
+        if a.teams_source == "ps":
+            fa = fb = fresh_teams_file(work, i, a.seed_base + i)
+        else:
+            files = sorted(glob.glob(os.path.join(CORPUS, "*.teams.json")))
+            n = len(files)
+            off = 1 + (i // n) % (n - 1)
+            fa, fb = files[i % n], files[(i + off) % n]
         wait_slots(procs, MAX_CONCURRENT)
         procs.append(subprocess.Popen(
             [PY, os.path.abspath(__file__), "game",
@@ -397,6 +412,7 @@ def main():
     r.add_argument("--max-scan", type=int, default=1000)
     r.add_argument("--confirm-z", type=float, default=3.0)
     r.add_argument("--seed-base", type=int, default=101)
+    r.add_argument("--teams-source", choices=["ps", "corpus"], default="ps")
     r.add_argument("--audit", default=AUDIT_BIN)
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
