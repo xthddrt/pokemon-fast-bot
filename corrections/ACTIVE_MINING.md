@@ -31,7 +31,7 @@ ledger targets must be re-measured with the new label player (or retired
 into that retrain's corpus). A ledger target is only valid under the label
 recipe that produced it.
 
-**The pinned ruling label player = v8b_s1 @ 2,000 iters.** Ruling v1 (the
+**The label player = the CURRENT champion @ 2,000 iters (Sally 2026-08-16: policy iteration — value targets track the strongest play we have; targets are re-measured against the new champion at each net generation).** Historical note: rulings v1-mine3 were originally measured under v8b_s1 — Ruling v1 (the
 t18 target 0.096) was measured with playouts driven by v8b_s1, so every
 subsequent ruling uses the same player — and s1 is frozen forever, so
 targets stay comparable across ledger generations no matter how many h<n>

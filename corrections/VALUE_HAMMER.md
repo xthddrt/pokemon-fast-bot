@@ -112,7 +112,35 @@ the pin (w=30) actually degrades drift, for 24 s saved — rejected.
    records the ruling ids), flip the launcher default, commit valuenet +
    foul-play/ladder + the ledger.
 
-## 4. Current recipe (v1 implementation, hammer_value.py)
+## 4. THE PROTOCOL (final, Sally 2026-08-16) — v7 + 4096 anchors
+
+One GPU run, <=20 min guaranteed, any ledger size:
+
+    python hammer_value.py --net <champion>.pt --tag h<n> \
+        --anchor-w 30 --w-min 30 --anchor-bs 4096 --device cuda
+
+- **Anchors**: the FULL training corpus, mirror-doubled (both seatings of
+  every row, ~4M views), each pinned to the champion's own outputs
+  (teacher refs disk-cached per net). Hard w=30, NEVER softened globally.
+- **Ruled force**: normalized by ledger size (n/8 scaling) so each carve
+  pulls identically at 8 or 8,000 rulings; every ruling ships with its
+  measured-target mirror twin (up/down balance by construction).
+- **Per-state escalation**: any state outside its +-1SE band after 1,000
+  steps doubles its own weight (cap 64x). Force goes only where needed;
+  gentle caps (8x) provably fail extreme carves.
+- **Hard wall**: 10-min fine-tune, band checks every 100 steps (per-step
+  checks cost a GPU sync = 5x slower), then export + gates ALWAYS run,
+  printing any missed bands for triage.
+- **Ledger hygiene**: multi-world rulings contribute <=3 representative
+  states (8 t18 duplicates at max force were 18% of total carve impulse).
+- **Gates**: all bands (+-0.002 engine tolerance) AND frozen-bench Brier
+  (bench_v1.jsonl) — measured cost at 88 states: -0.0018, equal to h2's
+  cost at 6 states (6x better drift-per-correction than parity anchoring).
+
+Measured reference run (v8c_s1 -> v8c_h1g): 13.5 min total, 8,100 steps,
+88/88 bands, ruled mean |eval-truth| 0.350 -> 0.016.
+
+## 4b. Legacy recipe (pre-2026-08-16, parity anchors)
 
 - anchors: all 10,310 parity states, w = 100, lr = 3e-6, minibatch 512
   cycled in shuffled epochs, cap 30,000 steps, train until every ruled

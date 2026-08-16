@@ -39,8 +39,8 @@ ROOT = os.path.dirname(HERE)
 PY = os.path.join(ROOT, "foul-play", ".venv", "bin", "python")
 LEAF_PROF = os.path.join(ROOT, "poke-engine", "target", "release", "leaf_prof")
 CORPUS = "/Users/sallyliu/pokemon-ai/synthetic-corpus-holdout10"
-AUDIT_BIN = os.path.join(ROOT, "valuenet/nets_v8b/v8b_h2.bin")
-LABEL_BIN = os.path.join(ROOT, "valuenet/nets_v8b/v8b_s1.bin")
+AUDIT_BIN = os.path.join(ROOT, "valuenet/nets_v8c/v8c_h1g.bin")
+LABEL_BIN = os.path.join(ROOT, "valuenet/nets_v8c/v8c_h1g.bin")  # label player = current champion (Sally 2026-08-16)
 # Mining plays stalls out to PS-like resolution (PP drain -> Struggle);
 # 1000 mirrors Showdown's own turn-limit backstop. The corpus labeler keeps
 # its 200-step cap for farm-scale economics — mining's 30 playouts/spot can
