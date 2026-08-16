@@ -33,26 +33,34 @@ def main(prefix):
                 rows.append((g["seed"], res, "—", f"{total}", note, "", "", ""))
             else:
                 k = c["candidate"]
-                outs, bm = [], []
-                for b in range(6):
-                    o = json.load(open(os.path.join(work, f"blk{i}_{b}.json")))["outs"]
-                    outs += o
-                    bm.append(sum(o) / len(o))
-                p, se = ac(outs)
                 e = k["e"]
-                zp = abs(e - p) / se
-                bmean = sum(bm) / 6
-                bsd = (sum((m - bmean) ** 2 for m in bm) / 5) ** 0.5
-                zb = abs(e - bmean) / (bsd / 6 ** 0.5) if bsd > 0 else float("inf")
-                ok = abs(e - p) >= 0.10 and min(zp, zb) >= 2.5
-                w = sum(1 for o in outs if o == 1.0)
-                t_ = sum(1 for o in outs if o == 0.5)
-                wl = f"{w}-{len(outs)-w-t_}" if not t_ else f"{w}-{t_}T-{len(outs)-w-t_}"
-                zbs = "∞" if zb == float("inf") else f"{zb:.1f}"
+                if "p_block" in k:  # in-scan block-verified (current protocol)
+                    p, se = k["p_block"], k["se_block"]
+                    zp = k["z_pooled"]
+                    zbs = "∞" if k["z_block"] == "inf" else f"{float(k['z_block']):.1f}"
+                    ok = k["confirmed"]
+                    w, t_, tot = k["wins"], k["ties"], 30
+                else:  # legacy dirs with blk files
+                    outs, bm = [], []
+                    for b in range(6):
+                        o = json.load(open(os.path.join(work, f"blk{i}_{b}.json")))["outs"]
+                        outs += o
+                        bm.append(sum(o) / len(o))
+                    p, se = ac(outs)
+                    zp = abs(e - p) / se
+                    bmean = sum(bm) / 6
+                    bsd = (sum((m - bmean) ** 2 for m in bm) / 5) ** 0.5
+                    zb = abs(e - bmean) / (bsd / 6 ** 0.5) if bsd > 0 else float("inf")
+                    ok = abs(e - p) >= 0.10 and min(zp, zb) >= 2.5
+                    w = sum(1 for o in outs if o == 1.0)
+                    t_ = sum(1 for o in outs if o == 0.5)
+                    tot = len(outs)
+                    zbs = "∞" if zb == float("inf") else f"{zb:.1f}"
+                wl = f"{w}-{tot-w-t_}" if not t_ else f"{w}-{t_}T-{tot-w-t_}"
                 rows.append((g["seed"], res, k["t"],
                              f"{total} (−{total - k['t']})",
                              f"{e:.3f} → {p:.3f} ± {se:.2f}",
-                             f"{zp:.1f} / {zbs}", wl,
+                             f"{float(zp):.1f} / {zbs}", wl,
                              f"{'HAMMER' if ok else 'NOT confirmed'} | {k['context']}"))
             i += 1
     print("| game | result | turn | game len | eval → truth (n=30) | z pooled/block | W-L | verdict, position |")

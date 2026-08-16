@@ -212,10 +212,22 @@ def cmd_scan(a):
             return [one_playout(state_str, s) for s in seeds]
         return list(pool.map(_playout_worker, [(state_str, s) for s in seeds]))
 
+    def block_confirm(state_str, gseed, t):
+        """6 seed-blocks x 5 playouts over FRESH processes (the authority;
+        playout-repro-anomaly demands cross-process draws)."""
+        base = gseed * 1_000_003 + t * 8191 + 900_000
+        args = [(state_str, (base + b * 1013 + j * 104729) & 0x7FFFFFFF)
+                for b in range(6) for j in range(5)]
+        with cf.ProcessPoolExecutor(max_workers=min(6, max(2, a.pool))) as bp:
+            outs = list(bp.map(_playout_worker, args))
+        bm = [sum(outs[b * 5:(b + 1) * 5]) / 5 for b in range(6)]
+        return outs, bm
+
     g = json.load(open(a.game))
     res = {"seed": g["seed"], "outcome": g["outcome"], "scanned": [],
            "candidate": None, "near_misses": []}
-    for rec in reversed(g["states"][-a.max_scan:]):
+    seq = [r for r in g["states"] if a.start_t is None or r["t"] < a.start_t]
+    for rec in reversed(seq[-a.max_scan:]):
         base = g["seed"] * 1_000_003 + rec["t"] * 8191
         outs = run_playouts(rec["s"], [(base + j * 7919) & 0x7FFFFFFF
                                        for j in range(a.screen_n)])
@@ -235,17 +247,30 @@ def cmd_scan(a):
                 "t": rec["t"], "e": round(rec["e"], 4),
                 "p_screen": round(p_stage1, 4), "p_confirm": round(p, 4),
                 "se_confirm": round(se, 4), "z_confirm": round(z, 2),
-                "confirmed": bool(z >= a.confirm_z),
-                "wins": sum(1 for o in outs if o == 1.0),
-                "losses": sum(1 for o in outs if o == 0.0),
-                "ties": sum(1 for o in outs if o == 0.5),
                 "context": describe(rec["s"]), "s": rec["s"],
             }
-            if k["confirmed"]:
-                res["candidate"] = k
-                break
-            # screen hit that failed confirm = probably noise: record it for
-            # Sally's soften-to-2.5σ/2σ judgment call, keep scanning backward
+            if z >= a.confirm_z:
+                # scan-level hit: the block re-measure is the authority. A
+                # rejection records a near-miss and the scan RESUMES — every
+                # game ends block-CONFIRMED or clean-to-turn-1 (Sally).
+                bouts, bm = block_confirm(rec["s"], g["seed"], rec["t"])
+                bp_, bse = ac_stats(bouts)
+                zp = abs(rec["e"] - bp_) / bse
+                bmean = sum(bm) / 6
+                bsd = (sum((m - bmean) ** 2 for m in bm) / 5) ** 0.5
+                zb = abs(rec["e"] - bmean) / (bsd / 6 ** 0.5) if bsd > 0 else float("inf")
+                k.update({"p_block": round(bp_, 4), "se_block": round(bse, 4),
+                          "z_pooled": round(zp, 2),
+                          "z_block": (round(zb, 2) if zb != float("inf") else "inf"),
+                          "blocks": [round(m, 2) for m in bm],
+                          "wins": sum(1 for o in bouts if o == 1.0),
+                          "losses": sum(1 for o in bouts if o == 0.0),
+                          "ties": sum(1 for o in bouts if o == 0.5),
+                          "confirmed": bool(abs(rec["e"] - bp_) >= 0.10
+                                            and min(zp, zb) >= 2.5)})
+                if k["confirmed"]:
+                    res["candidate"] = k
+                    break
             res["near_misses"].append(k)
     json.dump(res, open(a.out, "w"))
 
@@ -372,7 +397,7 @@ def cmd_run(a):
 
     # scans each own a playout pool; concurrency x pool = MINE_CONCURRENT
     scan_pool = max(1, MAX_CONCURRENT // 4)
-    scan_conc = max(1, MAX_CONCURRENT // scan_pool)
+    scan_conc = max(1, MAX_CONCURRENT // max(scan_pool, 2))
     procs = []
     for i in range(a.games):
         wait_slots(procs, scan_conc)
@@ -387,67 +412,37 @@ def cmd_run(a):
     for p in procs:
         p.wait()
 
-    # block re-measure every scan candidate: 6 fresh processes x 5 playouts,
-    # pooled; the scan's own single-process confirm is provisional only
-    # (playout-repro-anomaly). Verdict needs gap >= 0.10 and BOTH z >= 2.5.
     cands = [json.load(open(os.path.join(work, f"cand{i}.json")))
              for i in range(a.games)]
-    procs = []
-    for i, c in enumerate(cands):
-        if not c["candidate"]:
-            continue
-        for b in range(6):
-            wait_slots(procs, MAX_CONCURRENT)
-            procs.append(subprocess.Popen(
-                [PY, os.path.abspath(__file__), "block",
-                 "--game", os.path.join(work, f"g{i}.json"),
-                 "--t", str(c["candidate"]["t"]), "--block", str(b),
-                 "--n", "5", "--out", os.path.join(work, f"blk{i}_{b}.json")],
-                env=senv, stdout=sys.stdout, stderr=subprocess.STDOUT))
-    for p in procs:
-        p.wait()
-    print(f"[{time.time()-t0:.0f}s] block re-measures done", flush=True)
-
     rows = []
-    print("\n=== MINING CANDIDATES (%s) — block-remeasured ===" % a.tag, flush=True)
+    print("\n=== MINING CANDIDATES (%s) — block-verified in-scan ===" % a.tag, flush=True)
     for i, c in enumerate(cands):
         for k in c.get("near_misses", []):
+            extra = (f" blocks {k['p_block']} zp={k['z_pooled']} zb={k['z_block']}"
+                     if "p_block" in k else "")
             print(f"game {c['seed']} NEAR-MISS t{k['t']}: eval {k['e']:.3f} vs "
-                  f"scan-confirm {k['p_confirm']:.3f} (z={k['z_confirm']})", flush=True)
+                  f"scan {k['p_confirm']:.3f} (z={k['z_confirm']}){extra}", flush=True)
         if not c["candidate"]:
-            print(f"game {c['seed']} (outcome {c['outcome']}): no confirmed "
-                  f"eval error", flush=True)
+            print(f"game {c['seed']} (outcome {c['outcome']}): CLEAN to turn 1",
+                  flush=True)
             continue
         k = c["candidate"]
-        blocks = [json.load(open(os.path.join(work, f"blk{i}_{b}.json")))
-                  for b in range(6)]
-        outs = [o for b in blocks for o in b["outs"]]
-        p, se = ac_stats(outs)
-        e = k["e"]
-        zp = abs(e - p) / se
-        bm = [sum(b["outs"]) / len(b["outs"]) for b in blocks]
-        bmean = sum(bm) / len(bm)
-        bsd = (sum((m - bmean) ** 2 for m in bm) / (len(bm) - 1)) ** 0.5
-        zb = abs(e - bmean) / (bsd / len(bm) ** 0.5) if bsd > 0 else float("inf")
-        ok = abs(e - p) >= 0.10 and min(zp, zb) >= 2.5
-        w = sum(1 for o in outs if o == 1.0)
-        t_ = sum(1 for o in outs if o == 0.5)
         print(f"game {c['seed']} (outcome {c['outcome']}) turn {k['t']}: "
-              f"eval {e:.3f} vs truth {p:.3f}±{se:.3f} "
-              f"(z_pooled={zp:.2f} z_block={zb:.2f}, {w}W-{t_}T-{len(outs)-w-t_}L) "
-              f"{'CONFIRMED' if ok else 'NOT confirmed'} | blocks={[round(m,2) for m in bm]} "
-              f"| {k['context']}", flush=True)
-        if ok:
-            rows.append({
-                "id": f"{a.tag}-g{c['seed']}-t{k['t']}",
-                "game": f"selfplay-{a.tag}-{c['seed']}", "decision": k["t"],
-                "target": round(p, 4),
-                "band": [round(max(0.0, p - se), 4), round(min(1.0, p + se), 4)],
-                "states": [k["s"]], "n_playouts": len(outs),
-                "note": f"block-remeasured 6x5 PS-scored: eval {e:.3f} vs "
-                        f"truth {p:.3f} zp={zp:.1f} zb={zb:.1f} | {k['context']}",
-                "ts": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
-            })
+              f"eval {k['e']:.3f} vs truth {k['p_block']:.3f}±{k['se_block']:.3f} "
+              f"(z_pooled={k['z_pooled']} z_block={k['z_block']}, "
+              f"{k['wins']}W-{k['ties']}T-{k['losses']}L) CONFIRMED | "
+              f"blocks={k['blocks']} | {k['context']}", flush=True)
+        rows.append({
+            "id": f"{a.tag}-g{c['seed']}-t{k['t']}",
+            "game": f"selfplay-{a.tag}-{c['seed']}", "decision": k["t"],
+            "target": k["p_block"],
+            "band": [round(max(0.0, k["p_block"] - k["se_block"]), 4),
+                     round(min(1.0, k["p_block"] + k["se_block"]), 4)],
+            "states": [k["s"]], "n_playouts": 30,
+            "note": f"in-scan block-verified: eval {k['e']:.3f} vs truth "
+                    f"{k['p_block']:.3f} zp={k['z_pooled']} zb={k['z_block']} | {k['context']}",
+            "ts": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
+        })
     json.dump(rows, open(os.path.join(work, "ledger_rows.json"), "w"), indent=1)
     print(f"\n[{time.time()-t0:.0f}s] {len(rows)} confirmed ruling(s) staged in "
           f"{os.path.join(work, 'ledger_rows.json')} — NOT hammered; awaiting "
@@ -468,6 +463,7 @@ def main():
     s.add_argument("--max-scan", type=int, default=1000)
     s.add_argument("--confirm-z", type=float, default=3.0)
     s.add_argument("--pool", type=int, default=max(1, MAX_CONCURRENT // 4))
+    s.add_argument("--start-t", type=int, default=None)
     b = sub.add_parser("block")
     b.add_argument("--game"); b.add_argument("--t", type=int)
     b.add_argument("--block", type=int); b.add_argument("--n", type=int, default=5)

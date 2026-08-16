@@ -74,12 +74,14 @@ stop yields at most ONE ruling per game (the latest provably-wrong
 decision) and dedups correlated collapse turns for free. Scan depth capped
 (default 25 decisions) to bound the no-error case.
 
-**Phase 3 — block confirm (the authority).** Every scan candidate is
-re-measured as 6 fresh processes × 5 PS-scored playouts (fresh seeds —
-winner's curse and the playout-repro anomaly both demand it). Confirmed
-only if gap ≥ 0.10 and BOTH pooled and block-level z ≥ 2.5. Target = the
-pooled mean, TWO-SIDED band ±1 pooled SE (hammer_value.py accepts
-"band": [lo, hi]).
+**Phase 3 — block confirm, IN-SCAN (the authority).** Every scan hit is
+immediately re-measured as 6 seed-blocks × 5 PS-scored playouts across
+fresh processes (winner's curse and the playout-repro anomaly both demand
+it). Confirmed only if gap ≥ 0.10 and BOTH pooled and block-level z ≥ 2.5.
+A REJECTED hit is recorded as a near-miss and the scan RESUMES backward —
+every game terminates either at a block-confirmed ruling or clean at
+turn 1; "unconfirmed and done" is not an outcome (Sally, 2026-08-15).
+Target = pooled mean, TWO-SIDED band ±1 pooled SE.
 
 **Phase 4 — batch.** Confirmed rulings from all games in the round are
 appended together and hammered in ONE run — the hammer is batch-native
