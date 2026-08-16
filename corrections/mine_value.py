@@ -161,7 +161,7 @@ def cmd_scan(a):
     """Backward scan one game. Env (label player = s1) set by orchestrator."""
     g = json.load(open(a.game))
     res = {"seed": g["seed"], "outcome": g["outcome"], "scanned": [],
-           "candidate": None}
+           "candidate": None, "near_misses": []}
     for rec in reversed(g["states"][-a.max_scan:]):
         base = g["seed"] * 1_000_003 + rec["t"] * 8191
         outs = [one_playout(rec["s"], (base + j * 7919) & 0x7FFFFFFF)
@@ -179,17 +179,22 @@ def cmd_scan(a):
             pc, sec = ac_stats(outs_c)
             gc = abs(rec["e"] - pc)
             zc = gc / sec
-            res["candidate"] = {
+            k = {
                 "t": rec["t"], "e": round(rec["e"], 4),
                 "p_screen": round(p, 4), "p_confirm": round(pc, 4),
                 "se_confirm": round(sec, 4), "z_confirm": round(zc, 2),
-                "confirmed": bool(gc >= 0.10 and zc >= 3.0),
+                "confirmed": bool(gc >= 0.10 and zc >= a.confirm_z),
                 "wins": sum(1 for o in outs_c if o == 1.0),
                 "losses": sum(1 for o in outs_c if o == 0.0),
                 "ties": sum(1 for o in outs_c if o == 0.5),
                 "context": describe(rec["s"]), "s": rec["s"],
             }
-            break
+            if k["confirmed"]:
+                res["candidate"] = k
+                break
+            # screen hit that failed confirm = probably noise: record it for
+            # Sally's soften-to-2.5σ/2σ judgment call, keep scanning backward
+            res["near_misses"].append(k)
     json.dump(res, open(a.out, "w"))
 
 def wait_slots(procs, limit):
@@ -250,7 +255,7 @@ def cmd_run(a):
              "--game", os.path.join(work, f"g{i}.json"),
              "--out", os.path.join(work, f"cand{i}.json"),
              "--screen-n", str(a.screen_n), "--confirm-n", str(a.confirm_n),
-             "--max-scan", str(a.max_scan)],
+             "--max-scan", str(a.max_scan), "--confirm-z", str(a.confirm_z)],
             env=senv, stdout=sys.stdout, stderr=subprocess.STDOUT))
     for p in procs:
         p.wait()
@@ -261,8 +266,13 @@ def cmd_run(a):
     rows = []
     print("\n=== MINING CANDIDATES (%s) ===" % a.tag, flush=True)
     for c in cands:
+        for k in c.get("near_misses", []):
+            print(f"game {c['seed']} NEAR-MISS turn {k['t']}: eval {k['e']:.3f} "
+                  f"vs truth {k['p_confirm']:.3f}±{k['se_confirm']:.3f} "
+                  f"(z={k['z_confirm']}) — screen hit, confirm below threshold",
+                  flush=True)
         if not c["candidate"]:
-            print(f"game {c['seed']} (outcome {c['outcome']}): no significant "
+            print(f"game {c['seed']} (outcome {c['outcome']}): no confirmed "
                   f"eval error in last {a.max_scan} decisions", flush=True)
             continue
         k = c["candidate"]
@@ -301,14 +311,16 @@ def main():
     s.add_argument("--game"); s.add_argument("--out")
     s.add_argument("--screen-n", type=int, default=10)
     s.add_argument("--confirm-n", type=int, default=30)
-    s.add_argument("--max-scan", type=int, default=25)
+    s.add_argument("--max-scan", type=int, default=1000)
+    s.add_argument("--confirm-z", type=float, default=3.0)
     r = sub.add_parser("run")
     r.add_argument("--games", type=int, default=5)
     r.add_argument("--ms", type=int, default=4500)
     r.add_argument("--tag", default="mine1")
     r.add_argument("--screen-n", type=int, default=10)
     r.add_argument("--confirm-n", type=int, default=30)
-    r.add_argument("--max-scan", type=int, default=25)
+    r.add_argument("--max-scan", type=int, default=1000)
+    r.add_argument("--confirm-z", type=float, default=3.0)
     r.add_argument("--audit", default=AUDIT_BIN)
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
