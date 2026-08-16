@@ -12,7 +12,7 @@ FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-14000} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-8} \
 --search-threads 1 \
---nn-weights "${RG_NN_WEIGHTS:-../valuenet/nets_v8b/v8b_h2.bin}" \
+--nn-weights "${RG_NN_WEIGHTS:-../valuenet/nets_v8b/v8b_h3.bin}" \
 --selection-argmax-only --tera-gate-per-mon 0.0015 --tera-gate-visit-frac 0.3333 \
 --tera-gate-opp-tera-bonus 0.003"
 
