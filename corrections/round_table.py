@@ -26,10 +26,11 @@ def main(prefix):
             g = json.load(open(os.path.join(work, f"g{i}.json")))
             c = json.load(open(os.path.join(work, f"cand{i}.json")))
             res = {1.0: "W", 0.0: "L", 0.5: "tie"}[g["outcome"]]
+            total = len(g["states"])
             nm = [f"t{m['t']} z={m['z_confirm']}" for m in c.get("near_misses", [])]
             if not c["candidate"]:
                 note = "clean game" + (f" (near-miss {', '.join(nm)})" if nm else "")
-                rows.append((g["seed"], res, "—", note, "", "", ""))
+                rows.append((g["seed"], res, "—", f"{total} turns", note, "", "", ""))
             else:
                 k = c["candidate"]
                 outs, bm = [], []
@@ -49,12 +50,13 @@ def main(prefix):
                 wl = f"{w}-{len(outs)-w-t_}" if not t_ else f"{w}-{t_}T-{len(outs)-w-t_}"
                 zbs = "∞" if zb == float("inf") else f"{zb:.1f}"
                 rows.append((g["seed"], res, k["t"],
+                             f"of {total} (end−{total - k['t']})",
                              f"{e:.3f} → {p:.3f} ± {se:.2f}",
                              f"{zp:.1f} / {zbs}", wl,
                              f"{'HAMMER' if ok else 'NOT confirmed'} | {k['context']}"))
             i += 1
-    print("| game | result | turn | eval → truth (n=30) | z pooled/block | W-L | verdict, position |")
-    print("|---|---|---|---|---|---|---|")
+    print("| game | result | turn | game len | eval → truth (n=30) | z pooled/block | W-L | verdict, position |")
+    print("|---|---|---|---|---|---|---|---|")
     for r in sorted(rows):
         print("| " + " | ".join(str(x) for x in r) + " |")
 
