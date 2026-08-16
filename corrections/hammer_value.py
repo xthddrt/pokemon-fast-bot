@@ -154,22 +154,43 @@ def main():
         importlib.reload(vt_lib)
         aarm = vt_lib.Arm("old", add="setup")
         n_anchor = np.load(os.path.join(anchor_enc, "old_a1_f.npy"), mmap_mode="r").shape[0]
-        ref_cache = os.path.join(anchor_enc,
-                                 f"teacher_ref_{os.path.basename(a.net)}.npy")
-        if os.path.isfile(ref_cache):
-            anchor_ref = torch.from_numpy(np.load(ref_cache))
-            assert anchor_ref.shape[0] == n_anchor
-        else:
+
+        def teacher_pass(mirrored):
+            outs = []
             with torch.no_grad():
                 net.eval()
-                anchor_ref = torch.cat([
-                    net(aarm.batch(np.arange(i, min(i + 4096, n_anchor)))).detach()
-                    for i in range(0, n_anchor, 4096)])
-            np.save(ref_cache, anchor_ref.numpy())
-        print(f"anchors: {n_anchor} ({'corpus' if use_corpus else 'parity'})", flush=True)
-        bs = a.anchor_bs if a.anchor_bs else n_anchor
+                for i in range(0, n_anchor, 4096):
+                    b = aarm.batch(np.arange(i, min(i + 4096, n_anchor)))
+                    if mirrored:
+                        vt_lib.swap_rows_(b, torch.ones(
+                            len(b["a1_f"]), dtype=torch.bool))
+                    outs.append(net(b).detach())
+            return torch.cat(outs)
+
+        def cached_ref(tag, mirrored):
+            p = os.path.join(anchor_enc,
+                             f"teacher_ref_{tag}_{os.path.basename(a.net)}.npy")
+            if os.path.isfile(p):
+                r = torch.from_numpy(np.load(p))
+                assert r.shape[0] == n_anchor
+                return r
+            r = teacher_pass(mirrored)
+            np.save(p, r.numpy())
+            return r
+
+        # MIRRORED ANCHORING (Sally 2026-08-16): the anchor pool is every
+        # corpus row in BOTH seatings — index [0,n) = as stored, [n,2n) =
+        # seat-swapped — each pinned to the teacher's ACTUAL output on that
+        # view. A symmetric net must be held still on both halves of state
+        # space, not just the stored one.
+        anchor_ref = cached_ref("orig", False)
+        anchor_ref_mir = cached_ref("mirror", True)
+        n_pool = 2 * n_anchor
+        print(f"anchors: {n_anchor} x2 seatings = {n_pool} "
+              f"({'corpus' if use_corpus else 'parity'})", flush=True)
+        bs = a.anchor_bs if a.anchor_bs else n_pool
         rng = np.random.default_rng(7)
-        perm, pos = rng.permutation(n_anchor), 0
+        perm, pos = rng.permutation(n_pool), 0
 
     opt = torch.optim.Adam(net.parameters(), lr=a.lr)
     lossf = torch.nn.BCEWithLogitsLoss()
@@ -179,12 +200,23 @@ def main():
         opt.zero_grad()
         loss = lossf(net(batch), tgt)
         if aarm is not None:
-            if pos + bs > n_anchor:
-                perm, pos = rng.permutation(n_anchor), 0
+            if pos + bs > n_pool:
+                perm, pos = rng.permutation(n_pool), 0
             sel = perm[pos:pos + bs]
             pos += bs
+            so = sel[sel < n_anchor]
+            sm = sel[sel >= n_anchor] - n_anchor
+            outs, refs = [], []
+            if len(so):
+                outs.append(net(aarm.batch(so)))
+                refs.append(anchor_ref[torch.as_tensor(so, dtype=torch.long)])
+            if len(sm):
+                bm = aarm.batch(sm)
+                vt_lib.swap_rows_(bm, torch.ones(len(sm), dtype=torch.bool))
+                outs.append(net(bm))
+                refs.append(anchor_ref_mir[torch.as_tensor(sm, dtype=torch.long)])
             loss = loss + a.anchor_w * torch.nn.functional.mse_loss(
-                net(aarm.batch(sel)), anchor_ref[torch.as_tensor(sel, dtype=torch.long)])
+                torch.cat(outs), torch.cat(refs))
         loss.backward()
         opt.step()
         with torch.no_grad():
@@ -193,10 +225,23 @@ def main():
             break
     with torch.no_grad():
         net.eval()
-        drift = (torch.cat([
-            net(aarm.batch(np.arange(i, min(i + 4096, n_anchor))))
-            for i in range(0, n_anchor, 4096)]) - anchor_ref).abs() \
-            if aarm is not None else torch.zeros(1)
+        if aarm is not None:
+            samp = np.sort(np.random.default_rng(11).choice(
+                n_anchor, size=min(100_000, n_anchor), replace=False))
+            cur = torch.cat([net(aarm.batch(samp[i:i + 4096]))
+                             for i in range(0, len(samp), 4096)])
+            drift = (cur - anchor_ref[torch.as_tensor(samp, dtype=torch.long)]).abs()
+            cm = []
+            for i in range(0, len(samp), 4096):
+                b = aarm.batch(samp[i:i + 4096])
+                vt_lib.swap_rows_(b, torch.ones(len(b["a1_f"]), dtype=torch.bool))
+                cm.append(net(b))
+            drift_m = (torch.cat(cm) - anchor_ref_mir[torch.as_tensor(samp, dtype=torch.long)]).abs()
+            print(f"anchor drift (100k sample): orig mean {float(drift.mean()):.4f} "
+                  f"max {float(drift.max()):.4f} | mirror mean {float(drift_m.mean()):.4f} "
+                  f"max {float(drift_m.max()):.4f}", flush=True)
+        else:
+            drift = torch.zeros(1)
     print(f"fine-tune: {step} steps, ruled evals: "
           f"{[round(float(v), 3) for v in evals]}, "
           f"anchor drift mean {float(drift.mean()):.4f} max {float(drift.max()):.4f}")
