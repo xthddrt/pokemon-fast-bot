@@ -189,36 +189,56 @@ def cmd_game(a):
                "states": recs}, open(a.out, "w"))
     print(f"game {a.seed}: {len(recs)} decisions, outcome {outcome}", flush=True)
 
+def _playout_worker(args):
+    state_str, seed = args
+    return one_playout(state_str, seed)
+
 def cmd_scan(a):
-    """Backward scan one game. Env (label player = s1) set by orchestrator."""
+    """Backward scan one game. Env (label player = s1) set by orchestrator.
+
+    Playouts fan out over a small PROCESS pool (--pool; default sized so
+    orchestrator-level scan concurrency x pool = MINE_CONCURRENT). Separate
+    processes double as the playout-repro-anomaly mitigation: screen and
+    confirm draws span independent process instances, like block confirms.
+    Screens are STAGED: 4 playouts first, the remaining 6 only when the
+    first 4 disagree with the eval (gap >= 0.10) — most states pass at 4.
+    Flag decisions always use the full sample.
+    """
+    import concurrent.futures as cf
+    pool = cf.ProcessPoolExecutor(max_workers=a.pool) if a.pool > 1 else None
+
+    def run_playouts(state_str, seeds):
+        if pool is None:
+            return [one_playout(state_str, s) for s in seeds]
+        return list(pool.map(_playout_worker, [(state_str, s) for s in seeds]))
+
     g = json.load(open(a.game))
     res = {"seed": g["seed"], "outcome": g["outcome"], "scanned": [],
            "candidate": None, "near_misses": []}
     for rec in reversed(g["states"][-a.max_scan:]):
         base = g["seed"] * 1_000_003 + rec["t"] * 8191
-        outs = [one_playout(rec["s"], (base + j * 7919) & 0x7FFFFFFF)
-                for j in range(a.screen_n)]
+        outs = run_playouts(rec["s"], [(base + j * 7919) & 0x7FFFFFFF
+                                       for j in range(a.screen_n)])
+        p_stage1 = sum(outs) / len(outs)
+        if abs(rec["e"] - p_stage1) >= 0.15 and a.confirm_n > a.screen_n:
+            outs += run_playouts(rec["s"], [(base + j * 7919) & 0x7FFFFFFF
+                                            for j in range(a.screen_n, a.confirm_n)])
         p, se = ac_stats(outs)
         gap = abs(rec["e"] - p)
         z = gap / se
         res["scanned"].append({"t": rec["t"], "e": round(rec["e"], 3),
                                "p10": round(p, 3), "z": round(z, 2)})
         print(f"game {g['seed']} t{rec['t']}: e={rec['e']:.3f} "
-              f"p̂{a.screen_n}={p:.3f} z={z:.1f}", flush=True)
-        if gap >= 0.15 and z >= 2.0:
-            outs_c = [one_playout(rec["s"], (base + 500_000 + j * 104729) & 0x7FFFFFFF)
-                      for j in range(a.confirm_n)]
-            pc, sec = ac_stats(outs_c)
-            gc = abs(rec["e"] - pc)
-            zc = gc / sec
+              f"p̂{len(outs)}={p:.3f} z={z:.1f}", flush=True)
+        if len(outs) > a.screen_n and gap >= 0.10 and z >= 2.0:
             k = {
                 "t": rec["t"], "e": round(rec["e"], 4),
-                "p_screen": round(p, 4), "p_confirm": round(pc, 4),
-                "se_confirm": round(sec, 4), "z_confirm": round(zc, 2),
-                "confirmed": bool(gc >= 0.10 and zc >= a.confirm_z),
-                "wins": sum(1 for o in outs_c if o == 1.0),
-                "losses": sum(1 for o in outs_c if o == 0.0),
-                "ties": sum(1 for o in outs_c if o == 0.5),
+                "p_screen": round(p_stage1, 4), "p_confirm": round(p, 4),
+                "se_confirm": round(se, 4), "z_confirm": round(z, 2),
+                "confirmed": bool(z >= a.confirm_z),
+                "wins": sum(1 for o in outs if o == 1.0),
+                "losses": sum(1 for o in outs if o == 0.0),
+                "ties": sum(1 for o in outs if o == 0.5),
                 "context": describe(rec["s"]), "s": rec["s"],
             }
             if k["confirmed"]:
@@ -314,7 +334,8 @@ def cmd_run(a):
              "--game", os.path.join(work, f"g{i}.json"),
              "--out", os.path.join(work, f"cand{i}.json"),
              "--screen-n", str(a.screen_n), "--confirm-n", str(a.confirm_n),
-             "--max-scan", str(a.max_scan), "--confirm-z", str(a.confirm_z)],
+             "--max-scan", str(a.max_scan), "--confirm-z", str(a.confirm_z),
+             "--pool", str(max(1, MAX_CONCURRENT // 4))],
             env=senv, stdout=sys.stdout, stderr=subprocess.STDOUT))
     for p in procs:
         p.wait()
@@ -395,19 +416,20 @@ def main():
     g.add_argument("--ms", type=int); g.add_argument("--teams")
     s = sub.add_parser("scan")
     s.add_argument("--game"); s.add_argument("--out")
-    s.add_argument("--screen-n", type=int, default=10)
+    s.add_argument("--screen-n", type=int, default=8)
     s.add_argument("--confirm-n", type=int, default=30)
     s.add_argument("--max-scan", type=int, default=1000)
     s.add_argument("--confirm-z", type=float, default=3.0)
+    s.add_argument("--pool", type=int, default=max(1, MAX_CONCURRENT // 4))
     b = sub.add_parser("block")
     b.add_argument("--game"); b.add_argument("--t", type=int)
     b.add_argument("--block", type=int); b.add_argument("--n", type=int, default=5)
     b.add_argument("--out")
     r = sub.add_parser("run")
     r.add_argument("--games", type=int, default=5)
-    r.add_argument("--ms", type=int, default=4500)
+    r.add_argument("--ms", type=int, default=1000)
     r.add_argument("--tag", default="mine1")
-    r.add_argument("--screen-n", type=int, default=10)
+    r.add_argument("--screen-n", type=int, default=8)
     r.add_argument("--confirm-n", type=int, default=30)
     r.add_argument("--max-scan", type=int, default=1000)
     r.add_argument("--confirm-z", type=float, default=3.0)

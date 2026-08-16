@@ -43,8 +43,10 @@ carved against measured self-play truth, not corpus rows.)
 
 **Phase 1 — trajectories.** G self-play games (default G = 25), engine vs
 engine, full information (both teams fully known — one world, no sampling),
-champion vs champion at ladder-strength search (4500 ms/decision,
-first-decision 14000 ms). Teams drawn from the PS-exact sampler. Record
+champion vs champion at 1000 ms/decision (trajectories only need to REACH
+realistic positions — truth comes from the label player; the training
+corpus teacher ran 50 ms. Sally, 2026-08-15). Teams: two FRESH teams per
+game from the PS-exact generator port (fp.search.ps_teams.random_team). Record
 every decision: full-info state string, the net's raw eval e_t (direct net
 call, no search), turn index, and the final game outcome. ~40 decisions per
 game → ~1,000 states per round.
@@ -53,13 +55,17 @@ game → ~1,000 states per round.
 so this measures it exactly on its operating domain, with zero
 world-sampling noise contaminating the diagnosis.
 
-**Phase 2 — backward endgame-first scan (n = 10; Sally's protocol,
-2026-08-15).** Per game, scan decisions BACKWARD from the last turn, 10
-label-player playouts per state. Stop at the FIRST state where BOTH:
-- z = |e − p̂₁₀| / SE_AC(p̂₁₀) ≥ 2  (Agresti-Coull SE — the plain formula
-  degenerates to 0 at p̂ ∈ {0,1}), and
-- |e − p̂₁₀| ≥ 0.15 (absolute floor, guards near-terminal states where SE
-  collapses).
+**Phase 2 — backward scan with 8→30 escalation (Sally's protocol,
+2026-08-15).** Per game, scan decisions BACKWARD from the last turn:
+8 label-player playouts per state; if |e − p̂₈| ≥ 0.15, pour in 22 more and
+judge the pooled 30 (gap ≥ 0.10 and z ≥ 2 flags the candidate; z ≥ 3
+marks it scan-confirmed, else near-miss and the scan continues). Stage-1
+n=8 (not less): a smaller stage passes real errors too often, and every
+false pass costs LONGER playouts deeper in the game plus an
+earlier/less-relevant ruling. Error clustering across adjacent turns is
+the safety net for the residual misses. Playouts fan out over a process
+pool (cross-process draws — the repro-anomaly mitigation baked into
+screening).
 
 Why backward: endgame playouts are both CHEAPER (short continuations) and
 MORE ACCURATE (less compounding playout-policy noise), so a small n is
@@ -68,13 +74,12 @@ stop yields at most ONE ruling per game (the latest provably-wrong
 decision) and dedups correlated collapse turns for free. Scan depth capped
 (default 25 decisions) to bound the no-error case.
 
-**Phase 3 — confirm (n = 30, FRESH seeds).** Re-playout the hit 30× with
-new seeds. Admit to the ledger only if |e − p̂₃₀| ≥ 0.10 and z ≥ 3. Fresh
-seeds are mandatory: a state flagged by its own screening sample has an
-inflated measured gap (winner's curse); the confirm run gives the unbiased
-target. Ledger row as in VALUE_HAMMER §3.4 with target = p̂₃₀ and TWO-SIDED
-band [p̂₃₀ − SE₃₀, p̂₃₀ + SE₃₀] (underestimates are as real as
-overestimates; hammer_value.py accepts "band": [lo, hi]).
+**Phase 3 — block confirm (the authority).** Every scan candidate is
+re-measured as 6 fresh processes × 5 PS-scored playouts (fresh seeds —
+winner's curse and the playout-repro anomaly both demand it). Confirmed
+only if gap ≥ 0.10 and BOTH pooled and block-level z ≥ 2.5. Target = the
+pooled mean, TWO-SIDED band ±1 pooled SE (hammer_value.py accepts
+"band": [lo, hi]).
 
 **Phase 4 — batch.** Confirmed rulings from all games in the round are
 appended together and hammered in ONE run — the hammer is batch-native
@@ -102,18 +107,15 @@ drift bars enforced, shipped as the next h<n>.
 
 ## 2. Cost per round (8-core local; estimates)
 
-| phase | cost (G = 5, 4-way parallel — half the cores) |
-|---|---|
-| 5 full-info games @ 4500 ms/turn | ~5–10 min |
-| backward scans (10 playouts/state, endgame-short) | ~5–25 min |
-| confirm hits × 30 playouts | ~2–5 min each |
-| hammer + gates (one batch) | ~2 min |
-| **total** | **~15–40 min wall, unattended** |
+One command, cloud (32-vCPU spot box, ~$0.10–0.40/round):
 
-Backward scanning is what keeps this cheap: endgame playouts run seconds,
-and the scan stops at the first hit. Scale-out: rounds parallelize
-trivially on EC2 CPU boxes (the farm harness) if mining goes beyond
-occasional rounds.
+    TAG=mine4 GAMES=10 bash corrections/cloud/launch_mining.sh
+    TAG=mine5 BOXES=4 GAMES=10 bash corrections/cloud/launch_mining_fleet.sh
+
+Local (Mac, MINE_CONCURRENT=4): a 10-game round ≈ 20–25 min. Cloud: ≈
+10–15 min incl. the ~3-min box build; the fleet variant runs N disjoint
+rounds concurrently (seed-base offsets, fresh teams everywhere) for
+"more hammers per iteration".
 
 ## 3. Known limits
 
