@@ -310,6 +310,22 @@ def cmd_confirm_pairs(a):
     >= 0.10 and combined z >= 2.5. Playouts are flattened across all rows so
     the process pool never idles between candidates."""
     import concurrent.futures as cf
+    # SELF-SUFFICIENT LABEL ENV (canary catch 2026-08-16: the cloud bootstrap
+    # ran this netless — 2,000 "playouts" in 10s measuring nothing). If the
+    # label player isn't configured, configure it from the packed champion;
+    # then PROVE the net actually loads before spending a single playout.
+    if "PE_NN_WEIGHTS" not in os.environ:
+        for k, v in net_env(LABEL_BIN).items():
+            if k.startswith("PE_"):
+                os.environ[k] = v
+        print(f"label env self-configured from {LABEL_BIN}", flush=True)
+    import subprocess as _sp
+    chk = _sp.run([LEAF_PROF, "logits", "/dev/null"], env=dict(os.environ),
+                  capture_output=True, text=True)
+    if "valuenet: loaded" not in (chk.stderr + chk.stdout):
+        raise SystemExit(f"FATAL: label net failed to load "
+                         f"(PE_NN_WEIGHTS={os.environ.get('PE_NN_WEIGHTS')})")
+    print("label net verified", flush=True)
     rows = [json.loads(l) for l in open(a.states) if l.strip()]
     lo, hi = a.start, (a.start + a.count if a.count else len(rows))
     rows = rows[lo:hi]
