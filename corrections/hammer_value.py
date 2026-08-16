@@ -94,6 +94,13 @@ def main():
     # --check-every steps (per-step checking forces a GPU sync = 5x slower).
     ap.add_argument("--wall-min", type=float, default=10.0)
     ap.add_argument("--check-every", type=int, default=100)
+    # PER-STATE ESCALATION (Sally 2026-08-16: tight bands, all satisfied,
+    # minimal drift — in that order). Instead of softening the anchors
+    # globally for a few stubborn carves, DOUBLE the individual weight of any
+    # ruled state still outside its band every --boost-every steps (cap
+    # --boost-max). Anchors never soften; force goes only where needed.
+    ap.add_argument("--boost-every", type=int, default=1000)
+    ap.add_argument("--boost-max", type=float, default=64.0)
     # anchor minibatch per step (cycled in shuffled epochs over the full
     # anchor set — same constraint in expectation, ~10x less compute per
     # step; the end-of-run gates still check every state). 0 = full batch.
@@ -239,7 +246,8 @@ def main():
         perm, pos = rng.permutation(n_pool), 0
 
     opt = torch.optim.Adam(net.parameters(), lr=a.lr)
-    lossf = torch.nn.BCEWithLogitsLoss()
+    lossf = torch.nn.BCEWithLogitsLoss(reduction="none")
+    ruled_w = torch.ones(len(states), device=dev)
     net.train()
     step = 0
     cur_w = a.anchor_w
@@ -258,8 +266,18 @@ def main():
             walled = True
             print(f"  WALL at {el:.0f}s / step {step}", flush=True)
             break
+        if step % a.boost_every == 0:
+            with torch.no_grad():
+                ev = torch.sigmoid(net(batch))
+                unmet = ~((ev >= band_lo) & (ev <= band_hi))
+                if bool(unmet.any()):
+                    ruled_w[unmet] = torch.clamp(ruled_w[unmet] * 2.0,
+                                                 max=a.boost_max)
+                    print(f"  step {step}: boosting {int(unmet.sum())} unmet "
+                          f"state(s), max w {float(ruled_w.max()):.0f}", flush=True)
         opt.zero_grad()
-        loss = (len(states) / a.ruled_ref) * lossf(net(batch), tgt)
+        loss = (len(states) / a.ruled_ref) * (
+            ruled_w * lossf(net(batch), tgt)).mean()
         if aarm is not None:
             if pos + bs > n_pool:
                 perm, pos = rng.permutation(n_pool), 0
