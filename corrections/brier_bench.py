@@ -90,10 +90,18 @@ def paired_ci(evals_a, evals_b, rows, n_boot=10000, seed=7):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("tags", nargs="+")
+    ap.add_argument("tags", nargs="*", default=[])
+    ap.add_argument("--bench", nargs="*", default=[],
+                    help="bench.jsonl files from --bench-per-game rounds (frozen yardstick)")
     ap.add_argument("--nets", default="s1,h3")
     a = ap.parse_args()
     rows = load_bench(a.tags)
+    for bf in a.bench:
+        for line in open(bf):
+            r = json.loads(line)
+            rows.append({"s": r["s"], "truth": r["truth"], "n": r["n"],
+                         "band": r.get("band"), "ruled_game": False,
+                         "key": r["key"]})
     if not rows:
         raise SystemExit("no bench states found")
     sf = os.path.join(HERE, "_mine_work", "brier_states.txt")
@@ -110,9 +118,14 @@ def main():
         print(f"  Brier {n}: {brier(ev[n], rows):.4f}")
     base = nets[0]
     for n in nets[1:]:
-        for label, sub in (("ALL", rows),
-                           ("ruled-game", [r for r in rows if r["ruled_game"]]),
-                           ("clean-game", [r for r in rows if not r["ruled_game"]])):
+        slices = [("ALL", rows),
+                  ("ruled-game", [r for r in rows if r["ruled_game"]]),
+                  ("clean-game", [r for r in rows if not r["ruled_game"]])]
+        for band in ("early", "mid", "late"):
+            bs = [r for r in rows if r.get("band") == band]
+            if bs:
+                slices.append((band, bs))
+        for label, sub in slices:
             if len(sub) < 5:
                 continue
             ia = [ev[base][i] for i, r in enumerate(rows) if r in sub]

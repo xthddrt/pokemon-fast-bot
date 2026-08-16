@@ -326,6 +326,50 @@ def cmd_run(a):
     print(f"[{time.time()-t0:.0f}s] evals injected ({len(keys)} states)", flush=True)
 
     senv = net_env(a.label)  # label player pinned to s1
+
+    if a.bench_per_game:
+        # BENCH MODE (Sally 2026-08-15): no scans; sample states across ply
+        # bands (40/40/20 early/mid/late, evallab's split) and block-label
+        # each with 6 fresh processes x 5 playouts. Output bench.jsonl.
+        bands = (("early", 0, 10), ("mid", 10, 25), ("late", 25, 10 ** 9))
+        alloc = {"early": 0.4, "mid": 0.4, "late": 0.2}
+        picks = []
+        for i in range(a.games):
+            g = json.load(open(os.path.join(work, f"g{i}.json")))
+            rng = random.Random(a.seed_base + i * 31 + 7)
+            for name, lo, hi in bands:
+                ts = [r["t"] for r in g["states"] if lo <= r["t"] < hi]
+                k = min(len(ts), max(1, round(alloc[name] * a.bench_per_game)))
+                picks += [(i, t, name) for t in rng.sample(ts, k)]
+        procs = []
+        for (i, t, _) in picks:
+            for b in range(6):
+                wait_slots(procs, MAX_CONCURRENT)
+                procs.append(subprocess.Popen(
+                    [PY, os.path.abspath(__file__), "block",
+                     "--game", os.path.join(work, f"g{i}.json"),
+                     "--t", str(t), "--block", str(b), "--n", "5",
+                     "--out", os.path.join(work, f"bb{i}_{t}_{b}.json")],
+                    env=senv, stdout=sys.stdout, stderr=subprocess.STDOUT))
+        for p in procs:
+            p.wait()
+        out_path = os.path.join(work, "bench.jsonl")
+        with open(out_path, "w") as f:
+            for (i, t, band) in picks:
+                g = json.load(open(os.path.join(work, f"g{i}.json")))
+                rec = next(r for r in g["states"] if r["t"] == t)
+                outs = []
+                for b in range(6):
+                    outs += json.load(open(os.path.join(work, f"bb{i}_{t}_{b}.json")))["outs"]
+                p_, se = ac_stats(outs)
+                f.write(json.dumps({"key": f"{a.tag}-g{g['seed']}-t{t}",
+                                    "s": rec["s"], "truth": round(p_, 4),
+                                    "se": round(se, 4), "n": len(outs),
+                                    "band": band, "e": round(rec["e"], 4)}) + "\n")
+        print(f"[{time.time()-t0:.0f}s] BENCH: {len(picks)} block-labeled states "
+              f"-> {out_path}", flush=True)
+        return
+
     # scans each own a playout pool; concurrency x pool = MINE_CONCURRENT
     scan_pool = max(1, MAX_CONCURRENT // 4)
     scan_conc = max(1, MAX_CONCURRENT // scan_pool)
@@ -438,6 +482,7 @@ def main():
     r.add_argument("--confirm-z", type=float, default=3.0)
     r.add_argument("--seed-base", type=int, default=101)
     r.add_argument("--teams-source", choices=["ps", "corpus"], default="ps")
+    r.add_argument("--bench-per-game", type=int, default=0)
     r.add_argument("--audit", default=AUDIT_BIN)
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
