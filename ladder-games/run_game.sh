@@ -8,6 +8,10 @@ set -a; . "$ROOT/.env"; set +a
 
 # Overridable per run: RG_WORLDS (searched worlds), RG_POOL (parallel search
 # processes; worlds/pool = waves), RG_FIRST_TURN_MS, RG_SEARCH_MS.
+# PHANTOM opponent-model (Sally 2026-08-17): soft mode, alpha 0.5 — sampled
+# never-revealed opponent mons get half the exploration bonus, full Q.
+export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
+export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.5}"
 FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-14000} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-8} \
