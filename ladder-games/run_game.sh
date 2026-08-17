@@ -8,15 +8,17 @@ set -a; . "$ROOT/.env"; set +a
 
 # Overridable per run: RG_WORLDS (searched worlds), RG_POOL (parallel search
 # processes; worlds/pool = waves), RG_FIRST_TURN_MS, RG_SEARCH_MS.
-# PHANTOM opponent-model (Sally 2026-08-17): soft mode, alpha 0.5 — sampled
-# never-revealed opponent mons get half the exploration bonus, full Q.
+# PHANTOM opponent-model (Sally 2026-08-17): soft mode, alpha 0.75 — sampled
+# never-revealed opponent mons get 0.75x the exploration bonus, full Q.
+# Net: v8c_s1 UNHAMMERED (Sally 2026-08-17: h1g carve caused the Manutoh 28b
+# eval blunder; s1 and hz18 both price it correctly).
 export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
-export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.5}"
+export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.75}"
 FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-14000} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-8} \
 --search-threads 1 \
---nn-weights "${RG_NN_WEIGHTS:-../valuenet/nets_v8c/v8c_h1g.bin}" \
+--nn-weights "${RG_NN_WEIGHTS:-../valuenet/nets_v8c/v8c_s1.bin}" \
 --selection-argmax-only --tera-gate-per-mon 0.0015 --tera-gate-visit-frac 0.25 \
 --tera-gate-opp-tera-bonus 0.003"
 
