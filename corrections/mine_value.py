@@ -201,7 +201,15 @@ def cmd_game(a):
 
 def _playout_worker(args):
     state_str, seed = args
-    return one_playout(state_str, seed)
+    try:
+        return one_playout(state_str, seed)
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException:
+        # engine panics (pyo3 PanicException) are BaseException and cannot
+        # even be pickled back -- swallow to a None row, never kill the pool
+        # (fleet incident 2026-08-17: one panic killed a whole box mid-chunk)
+        return None
 
 def cmd_scan(a):
     """Backward scan one game. Env (label player = s1) set by orchestrator.
@@ -465,6 +473,15 @@ def phase_of(state_str):
 def _gen_game_worker(args):
     """Play one fresh-team self-play game; return phase-harvested positions."""
     seed, ms, keep, work, rand_ply = args
+    try:
+        return _gen_game_inner(seed, ms, keep, work, rand_ply)
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException:
+        return []
+
+
+def _gen_game_inner(seed, ms, keep, work, rand_ply):
     sys.path.insert(0, os.path.join(ROOT, "valuenet", "sprt"))
     import run_duels as rd
     from poke_engine import State, generate_instructions, monte_carlo_tree_search
@@ -567,7 +584,8 @@ def cmd_gen(a):
             outs[k] = o
     per = {}
     for i, o in zip(meta, outs):
-        per.setdefault(i, []).append(o)
+        if o is not None:
+            per.setdefault(i, []).append(o)
     t2 = time.time()
     shard = os.path.join(work, "shard.jsonl.gz")
     with gzip.open(shard, "wt") as f:

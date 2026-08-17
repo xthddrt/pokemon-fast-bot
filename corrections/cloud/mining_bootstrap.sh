@@ -183,11 +183,12 @@ if [ "${MODE:-mine}" = "gen" ]; then
     aws s3 cp /root/progress.json "$S3/genv9/$TAG/progress.json" --quiet || true
     say "chunk $ci: seeds $SB..$((SB + GEN_CHUNK - 1))"
     set +e
+    r=0
     MINE_CONCURRENT="$(nproc)" MINE_MAX_STEPS=300 "$VENV/bin/python" "$ROOT/corrections/mine_value.py" gen \
       --games "$GEN_CHUNK" --ms "$MS" --tag "$CT" --seed-base "$SB" \
       --label-bin "$ROOT/valuenet/nets_v8c/v8c_s1.bin" \
-      >> /root/run.log 2>&1
-    r=$?
+      >> /root/run.log 2>&1 || r=$?
+    : "${r:=0}"
     set -e
     if [ $r -eq 0 ] && [ -s "$ROOT/corrections/_mine_work/$CT/shard.jsonl.gz" ]; then
       aws s3 cp "$ROOT/corrections/_mine_work/$CT/shard.jsonl.gz" \
