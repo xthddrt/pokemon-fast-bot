@@ -164,27 +164,36 @@ def main():
     opt = torch.optim.AdamW(groups)
     lossf = torch.nn.functional.binary_cross_entropy_with_logits
     rng = np.random.default_rng(a.seed * 7919 + 13)
-    per_band = a.batch // 3
+    # FULL-COVERAGE EPOCHS (Sally 2026-08-17): no sampling. One epoch = every
+    # row of BOTH corpora exactly once in its original seating AND exactly once
+    # mirrored, shuffled. Virtual index: [0, 2*(n0+n1)); high bit = mirror.
+    n0, n1 = corp[0]["n"], corp[1]["n"]
+    ntot = n0 + n1
+    steps_per_epoch = (2 * ntot) // a.batch
+    max_steps = a.steps
+    print(f"epoch = {2*ntot} samples (corpus+mirror) = {steps_per_epoch} steps; "
+          f"max {max_steps} steps ≈ {max_steps/steps_per_epoch:.1f} epochs",
+          flush=True)
     best = (1e9, None, -1)
     t0 = time.time()
-    for step in range(1, a.steps + 1):
+    perm = None
+    for step in range(1, max_steps + 1):
         mlt = step / a.warmup if step <= a.warmup else 0.5 * (
-            1 + math.cos(math.pi * (step - a.warmup) / (a.steps - a.warmup)))
+            1 + math.cos(math.pi * (step - a.warmup) / (max_steps - a.warmup)))
         for grp in opt.param_groups:
             grp["lr"] = a.lr * mlt
-        oi, ys = [], []
-        for k in range(3):
-            # split band quota across the two corpora by size
-            tot = sum(len(rows) for _, rows in pools[k])
-            for c, rows in pools[k]:
-                take = max(1, int(per_band * len(rows) / tot))
-                sel = rows[torch.from_numpy(
-                    rng.integers(0, len(rows), take)).to(dev)]
-                oi.append((c, sel))
-                ys.append(corp[c]["y"][sel])
+        pos = ((step - 1) % steps_per_epoch) * a.batch
+        if pos == 0:
+            perm = torch.from_numpy(
+                rng.permutation(2 * ntot)).to(dev)
+        v = perm[pos:pos + a.batch]
+        mirror = v >= ntot
+        base_i = torch.where(mirror, v - ntot, v)
+        in_c1 = base_i >= n0
+        oi = [(0, base_i[~in_c1]), (1, base_i[in_c1] - n0)]
         b = cbatch(None, oi)
-        yb = torch.cat(ys)
-        sm = torch.from_numpy(rng.random(len(yb)) < 0.5).to(dev)
+        yb = torch.cat([corp[0]["y"][oi[0][1]], corp[1]["y"][oi[1][1]]])
+        sm = torch.cat([mirror[~in_c1], mirror[in_c1]])
         vt_lib.swap_rows_(b, sm)
         yb = torch.where(sm, 1.0 - yb, yb)
         net.train()
@@ -192,7 +201,7 @@ def main():
         opt.zero_grad()
         loss.backward()
         opt.step()
-        if step % a.eval_every == 0 or step == a.steps:
+        if step % a.eval_every == 0 or step == max_steps:
             net.eval()
             hb = brier(net, hg, hn, hy)
             print(f"  step {step}: loss {float(loss):.4f} "
