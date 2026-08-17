@@ -449,6 +449,144 @@ def fresh_teams_file(work, i, seed):
     json.dump({"teams": teams}, open(path, "w"))
     return path
 
+
+
+def phase_of(state_str):
+    """hp-mass phase p = 1 - sum(hp_frac)/12 over both sides (v9 recipe)."""
+    tot = 0.0
+    for side in state_str.split("/")[:2]:
+        for m in side.split("=")[:6]:
+            f = m.split(",")
+            mx = float(f[7])
+            tot += (float(f[6]) / mx) if mx else 0.0
+    return 1.0 - tot / 12.0
+
+
+def _gen_game_worker(args):
+    """Play one fresh-team self-play game; return phase-harvested positions."""
+    seed, ms, keep, work, rand_ply = args
+    sys.path.insert(0, os.path.join(ROOT, "valuenet", "sprt"))
+    import run_duels as rd
+    from poke_engine import State, generate_instructions, monte_carlo_tree_search
+    tf = fresh_teams_file(work, seed, seed)
+    rng = random.Random(seed ^ 0x5EED)
+    state = State.from_string(rd.opening_state(tf, "p1", tf, "p2"))
+    cand = [[], [], []]   # per-phase candidate turns; ONE random pick each
+    for step in range(MAX_STEPS):
+        if not any(p.hp > 0 for p in state.side_one.pokemon):
+            break
+        if not any(p.hp > 0 for p in state.side_two.pokemon):
+            break
+        ss = state.to_string()
+        res = monte_carlo_tree_search(state, ms, 0, 1,
+                                      (seed * 104729 + step) & 0x7FFFFFFF)
+        s1 = [m for m in res.side_one if m.visits > 0]
+        s2 = [m for m in res.side_two if m.visits > 0]
+        if not s1 or not s2:
+            break
+        ph = phase_of(ss)
+        band = 0 if ph < 1 / 3 else 1 if ph < 2 / 3 else 2
+        cand[band].append({"s": ss, "ph": round(ph, 4), "g": seed, "t": step})
+        p1 = max(s1, key=lambda m: m.visits).move_choice
+        p2 = max(s2, key=lambda m: m.visits).move_choice
+        # DIVERSITY (Sally 2026-08-17): ~15% of turns one side plays a random
+        # legal move -- covers the plausible-but-suboptimal states human
+        # opponents create, without full-random garbage positions.
+        if rng.random() < rand_ply:
+            side = rng.random() < 0.5
+            pool_arms = s1 if side else s2
+            pick_arm = rng.choice(pool_arms).move_choice
+            if side:
+                p1 = pick_arm
+            else:
+                p2 = pick_arm
+        try:
+            branches = [b for b in generate_instructions(
+                state, arm_to_move(p1), arm_to_move(p2)) if b.percentage > 0]
+        except Exception:
+            break
+        if not branches:
+            break
+        state = state.apply_instructions(
+            rng.choices(branches, weights=[b.percentage for b in branches])[0])
+    try:
+        os.unlink(tf)
+    except OSError:
+        pass
+    # AT MOST 3 ROWS PER GAME (Sally 2026-08-17): one uniform draw per phase
+    # bucket. Kills within-game correlation; phase mix ~ even thirds free.
+    return [rng.choice(band) for band in cand if band]
+
+
+def cmd_gen(a):
+    """V9 CORPUS GENERATION (Sally 2026-08-17): fresh-team self-play games at
+    --ms, phase-weighted position harvest (keep-late 1.0 / keep-mid 0.5 /
+    keep-early 0.125 by default), then n playouts per kept position with the
+    LABEL player (2000 iters) -- n per phase (8/8/10). One shard jsonl.gz out.
+    Stage 1 saturates the pool with whole games; stage 2 with flat playouts."""
+    import concurrent.futures as cf
+    import gzip
+    if "PE_NN_WEIGHTS" not in os.environ:
+        for k, v in net_env(a.label_bin).items():
+            if k.startswith("PE_"):
+                os.environ[k] = v
+        print(f"label env self-configured from {a.label_bin}", flush=True)
+    import subprocess as _sp
+    chk = _sp.run([LEAF_PROF, "logits", "/dev/null"], env=dict(os.environ),
+                  capture_output=True, text=True)
+    if "valuenet: loaded" not in (chk.stderr + chk.stdout):
+        raise SystemExit(f"FATAL: label net failed to load "
+                         f"(PE_NN_WEIGHTS={os.environ.get('PE_NN_WEIGHTS')})")
+    print("label net verified", flush=True)
+    work = os.path.join(HERE, "_mine_work", a.tag)
+    os.makedirs(work, exist_ok=True)
+    keep = (1.0, 1.0, 1.0)  # per-game bucket sampling replaced keep-weights
+    npb = (a.n_early, a.n_mid, a.n_late)
+    t0 = time.time()
+    gtasks = [(a.seed_base + i, a.ms, keep, work, a.rand_ply) for i in range(a.games)]
+    kept = []
+    with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as pool:
+        for out in pool.map(_gen_game_worker, gtasks, chunksize=1):
+            kept.extend(out)
+    t1 = time.time()
+    bands = [sum(1 for r in kept if (0 if r["ph"] < 1/3 else 1 if r["ph"] < 2/3 else 2) == b)
+             for b in range(3)]
+    print(f"games: {a.games} in {t1-t0:.0f}s -> {len(kept)} positions "
+          f"(early {bands[0]} mid {bands[1]} late {bands[2]})", flush=True)
+    tasks, meta = [], []
+    for i, r in enumerate(kept):
+        band = 0 if r["ph"] < 1/3 else 1 if r["ph"] < 2/3 else 2
+        for j in range(npb[band]):
+            tasks.append((r["s"], (r["g"] * 1_000_003 + r["t"] * 8191
+                                   + j * 104729) & 0x7FFFFFFF))
+            meta.append(i)
+    print(f"labeling: {len(tasks)} playouts", flush=True)
+    outs = [None] * len(tasks)
+    with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as pool:
+        for k, o in enumerate(pool.map(_playout_worker, tasks, chunksize=4)):
+            outs[k] = o
+    per = {}
+    for i, o in zip(meta, outs):
+        per.setdefault(i, []).append(o)
+    t2 = time.time()
+    shard = os.path.join(work, "shard.jsonl.gz")
+    with gzip.open(shard, "wt") as f:
+        for i, r in enumerate(kept):
+            os_ = per.get(i, [])
+            if not os_:
+                continue
+            f.write(json.dumps({"s": r["s"], "y": round(sum(os_) / len(os_), 4),
+                                "n": len(os_), "ph": r["ph"],
+                                "g": r["g"], "t": r["t"]}) + "\n")
+    stats = {"games": a.games, "positions": len(kept),
+             "bands": bands, "playouts": len(tasks),
+             "game_s": round(t1 - t0, 1), "label_s": round(t2 - t1, 1),
+             "s_per_playout": round((t2 - t1) * MAX_CONCURRENT / max(len(tasks), 1), 2)}
+    json.dump(stats, open(os.path.join(work, "gen_stats.json"), "w"), indent=1)
+    print(f"DONE {stats}", flush=True)
+
+
+
 def cmd_run(a):
     work = os.path.join(HERE, "_mine_work", a.tag)
     os.makedirs(work, exist_ok=True)
@@ -609,7 +747,7 @@ def cmd_run(a):
           f"assessment.", flush=True)
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block", "confirm-batch", "confirm-pairs"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("game", "scan", "run", "block", "confirm-batch", "confirm-pairs", "gen"):
         sys.argv.insert(1, "run")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd")
@@ -650,13 +788,28 @@ def main():
     r.add_argument("--confirm-z", type=float, default=3.0)
     r.add_argument("--seed-base", type=int, default=101)
     r.add_argument("--teams-source", choices=["ps", "corpus"], default="ps")
+
+    ge = sub.add_parser("gen")
+    ge.add_argument("--games", type=int, default=50)
+    ge.add_argument("--ms", type=int, default=1000)
+    ge.add_argument("--tag", default="gen1")
+    ge.add_argument("--seed-base", type=int, default=1)
+    ge.add_argument("--keep-early", type=float, default=0.125)
+    ge.add_argument("--keep-mid", type=float, default=0.5)
+    ge.add_argument("--keep-late", type=float, default=1.0)
+    ge.add_argument("--n-early", type=int, default=8)
+    ge.add_argument("--n-mid", type=int, default=8)
+    ge.add_argument("--n-late", type=int, default=10)
+    ge.add_argument("--rand-ply", type=float, default=0.15)
+    ge.add_argument("--label-bin", default=os.path.join(ROOT, "valuenet/nets_v8c/v8c_s1.bin"))
+    ge.set_defaults(fn=cmd_gen)
     r.add_argument("--bench-per-game", type=int, default=0)
     r.add_argument("--audit", default=AUDIT_BIN)
     r.add_argument("--label", default=LABEL_BIN)
     a = ap.parse_args()
     {"game": cmd_game, "scan": cmd_scan, "run": cmd_run, "block": cmd_block,
      "confirm-batch": cmd_confirm_batch,
-     "confirm-pairs": cmd_confirm_pairs}[a.cmd or "run"](a)
+     "confirm-pairs": cmd_confirm_pairs, "gen": cmd_gen}[a.cmd or "run"](a)
 
 if __name__ == "__main__":
     main()

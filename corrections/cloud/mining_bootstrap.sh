@@ -69,6 +69,25 @@ aws s3 cp /root/boot.log "$S3/logs/$TAG.boot.log" || true
 ( while true; do sleep 60; push_logs; done ) &
 LOGSYNC=$!
 
+# SPOT RECLAIM WATCHER (Sally 2026-08-17): EC2 posts a 2-minute warning at the
+# metadata endpoint before reclaiming a spot box. Poll every 30s; on notice,
+# push logs and a RECLAIMED marker naming the in-flight work so the supervisor
+# relaunches EXACTLY the lost seed range and nothing else.
+( TOK=""
+  while true; do
+    sleep 30
+    TOK=$(curl -sf -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 120"           http://169.254.169.254/latest/api/token 2>/dev/null) || continue
+    ACT=$(curl -sf -H "X-aws-ec2-metadata-token: $TOK"           http://169.254.169.254/latest/meta-data/spot/instance-action 2>/dev/null)
+    if [ -n "$ACT" ]; then
+      echo "$(date -u +%H:%M:%SZ) SPOT RECLAIM NOTICE: $ACT" >> /root/boot.log
+      cp /root/progress.json /root/reclaim.json 2>/dev/null || echo "{}" > /root/reclaim.json
+      aws s3 cp /root/reclaim.json "$S3/results/$TAG.RECLAIMED.json" || true
+      push_logs
+      exit 0
+    fi
+  done ) &
+RECLAIMWATCH=$!
+
 # ---------------------------------------------------------------- toolchain
 dnf install -y -q gcc gcc-c++ python3.11 python3.11-devel tar gzip || die "dnf"
 curl -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal || die "rustup"
@@ -150,23 +169,67 @@ export MINE_CONCURRENT
 # MODE=confirm: instead of playing games, pull a candidate shard from S3 and
 # pair-confirm it (CAND_KEY = s3 key of the shard jsonl; SHARD_START/COUNT
 # optional slice). Results land in the same tarball path as a mining round.
-if [ "${MODE:-mine}" = "audit" ]; then
+if [ "${MODE:-mine}" = "gen" ]; then
+  # V9 CORPUS GENERATION (Sally 2026-08-17): chunked so a spot reclaim loses
+  # at most ~half a chunk. Each chunk plays GEN_CHUNK games, phase-harvests,
+  # labels with v8c_s1 @ 2000 iters, and uploads its shard immediately.
+  say "gen mode: $GEN_CHUNKS chunks x $GEN_CHUNK games, MS=$MS, seed-base $SEED_BASE"
+  RC=0
+  for ci in $(seq 0 $((GEN_CHUNKS - 1))); do
+    SB=$((SEED_BASE + ci * GEN_CHUNK))
+    CT="$TAG-c$ci"
+    echo "{\"tag\": \"$TAG\", \"chunk\": $ci, \"seed_base\": $SB, \"games\": $GEN_CHUNK}" > /root/progress.json
+    aws s3 cp /root/progress.json "$S3/genv9/$TAG/progress.json" --quiet || true
+    say "chunk $ci: seeds $SB..$((SB + GEN_CHUNK - 1))"
+    set +e
+    MINE_CONCURRENT="$(nproc)" MINE_MAX_STEPS=300 "$VENV/bin/python" "$ROOT/corrections/mine_value.py" gen \
+      --games "$GEN_CHUNK" --ms "$MS" --tag "$CT" --seed-base "$SB" \
+      --label-bin "$ROOT/valuenet/nets_v8c/v8c_s1.bin" \
+      >> /root/run.log 2>&1
+    r=$?
+    set -e
+    if [ $r -eq 0 ] && [ -s "$ROOT/corrections/_mine_work/$CT/shard.jsonl.gz" ]; then
+      aws s3 cp "$ROOT/corrections/_mine_work/$CT/shard.jsonl.gz" \
+        "$S3/genv9/$TAG/chunk_$ci.jsonl.gz" --quiet || say "chunk $ci upload FAILED"
+      aws s3 cp "$ROOT/corrections/_mine_work/$CT/gen_stats.json" \
+        "$S3/genv9/$TAG/chunk_$ci.stats.json" --quiet || true
+      rm -rf "$ROOT/corrections/_mine_work/$CT"
+      say "chunk $ci uploaded"
+    else
+      RC=$r; say "chunk $ci FAILED rc=$r"
+    fi
+    push_logs
+  done
+  mkdir -p "$ROOT/corrections/_mine_work/$TAG"
+  echo "{\"rc\": $RC}" > "$ROOT/corrections/_mine_work/$TAG/done.json"
+  say "gen loop exited rc=$RC"
+  tail -20 /root/run.log
+elif [ "${MODE:-mine}" = "audit" ]; then
   # Per-turn evaluator audit of an archived game shipped inside the payload.
   # AUDIT_GAME is the repo-relative game dir; N/MS are playouts per decision
   # and search ms per step.
-  say "audit mode: $AUDIT_GAME, N=${N:-20} MS=${MS} net=${AUDIT_NET:-v8c_hz18}"
+  say "audit mode: N=${N:-20} MS=${MS} ARMS=${ARMS:-0} OPPS=${OPPS:-argmax} COLLAPSED=${COLLAPSED:-0}"
   mkdir -p "$ROOT/corrections/_mine_work/$TAG"
-  set +e
-  AUDIT_CONCURRENT="$(nproc)" "$VENV/bin/python" "$ROOT/corrections/audit_game.py" \
-    "$ROOT/$AUDIT_GAME" --n "${N:-20}" --ms "$MS" --workers "$(nproc)" \
-    --arms "${ARMS:-0}" \
-    --net "$ROOT/valuenet/nets_v8c/${AUDIT_NET:-v8c_hz18}.bin" \
-    --out "$ROOT/corrections/_mine_work/$TAG/audit.json" \
-    > /root/run.log 2>&1
-  RC=$?
-  set -e
-  say "audit_game.py exited rc=$RC"
-  tail -60 /root/run.log
+  RC=0
+  for g in $AUDIT_GAME; do
+    for opp in ${OPPS:-argmax}; do
+      base="$(basename "$g")"
+      say "auditing $base opp=$opp"
+      set +e
+      AUDIT_CONCURRENT="$(nproc)" "$VENV/bin/python" "$ROOT/corrections/audit_game.py" \
+        "$ROOT/$g" --n "${N:-20}" --ms "$MS" --workers "$(nproc)" \
+        --arms "${ARMS:-0}" --opp "$opp" \
+        $( [ "${COLLAPSED:-0}" = "1" ] && echo --collapsed-only ) \
+        --net "$ROOT/valuenet/nets_v8c/${AUDIT_NET:-v8c_hz18}.bin" \
+        --out "$ROOT/corrections/_mine_work/$TAG/$base.$opp.json" \
+        >> /root/run.log 2>&1
+      r=$?; [ $r -ne 0 ] && RC=$r
+      set -e
+      push_logs
+    done
+  done
+  say "audit loop exited rc=$RC"
+  tail -30 /root/run.log
 elif [ "${MODE:-mine}" = "confirm" ]; then
   say "confirm mode: shard $CAND_KEY [${SHARD_START:-0}+${SHARD_COUNT:-all}]"
   aws s3 cp "s3://$S3_BUCKET/$CAND_KEY" /root/cands.jsonl --quiet || \
@@ -202,7 +265,7 @@ cp /root/boot.log "$WORK/boot.log"
 tar czf "/root/$TAG.tar.gz" -C "$ROOT/corrections/_mine_work" "$TAG" || die "tar results"
 aws s3 cp "/root/$TAG.tar.gz" "$S3/results/$TAG.tar.gz" || die "result upload"
 push_logs
-kill $LOGSYNC $WATCHDOG 2>/dev/null || true
+kill $LOGSYNC $WATCHDOG $RECLAIMWATCH 2>/dev/null || true
 say "DONE rc=$RC -> $S3/results/$TAG.tar.gz"
 aws s3 cp /root/boot.log "$S3/logs/$TAG.boot.log" || true
 shutdown -h now

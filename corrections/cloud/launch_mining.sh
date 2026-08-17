@@ -110,6 +110,10 @@ export AUDIT_GAME="${AUDIT_GAME:-}"
 export AUDIT_NET=${AUDIT_NET:-v8c_hz18}
 export N=${N:-20}
 export ARMS=${ARMS:-0}
+export OPPS="${OPPS:-argmax}"
+export COLLAPSED=${COLLAPSED:-0}
+export GEN_CHUNK=${GEN_CHUNK:-750}
+export GEN_CHUNKS=${GEN_CHUNKS:-8}
 export HARD_TIMEOUT_S=$TIMEOUT_S
 export CODE_KEY=$S3_PREFIX/code.tar.gz
 exec > /root/stub.log 2>&1
