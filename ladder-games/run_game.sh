@@ -14,6 +14,7 @@ set -a; . "$ROOT/.env"; set +a
 # eval blunder; s1 and hz18 both price it correctly).
 export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
 export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.5}"
+export PE_PHANTOM_ALPHA_SELF="${RG_PHANTOM_ALPHA_SELF:-0.9}"
 FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-14000} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-8} \
