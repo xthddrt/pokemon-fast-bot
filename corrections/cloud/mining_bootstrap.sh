@@ -73,11 +73,12 @@ LOGSYNC=$!
 # metadata endpoint before reclaiming a spot box. Poll every 30s; on notice,
 # push logs and a RECLAIMED marker naming the in-flight work so the supervisor
 # relaunches EXACTLY the lost seed range and nothing else.
-( TOK=""
+( trap - ERR
+  TOK=""
   while true; do
     sleep 30
     TOK=$(curl -sf -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 120"           http://169.254.169.254/latest/api/token 2>/dev/null) || continue
-    ACT=$(curl -sf -H "X-aws-ec2-metadata-token: $TOK"           http://169.254.169.254/latest/meta-data/spot/instance-action 2>/dev/null)
+    ACT=$(curl -sf -H "X-aws-ec2-metadata-token: $TOK"           http://169.254.169.254/latest/meta-data/spot/instance-action 2>/dev/null) || ACT=""
     if [ -n "$ACT" ]; then
       echo "$(date -u +%H:%M:%SZ) SPOT RECLAIM NOTICE: $ACT" >> /root/boot.log
       cp /root/progress.json /root/reclaim.json 2>/dev/null || echo "{}" > /root/reclaim.json
