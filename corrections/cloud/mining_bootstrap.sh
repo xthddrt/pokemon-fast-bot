@@ -150,7 +150,24 @@ export MINE_CONCURRENT
 # MODE=confirm: instead of playing games, pull a candidate shard from S3 and
 # pair-confirm it (CAND_KEY = s3 key of the shard jsonl; SHARD_START/COUNT
 # optional slice). Results land in the same tarball path as a mining round.
-if [ "${MODE:-mine}" = "confirm" ]; then
+if [ "${MODE:-mine}" = "audit" ]; then
+  # Per-turn evaluator audit of an archived game shipped inside the payload.
+  # AUDIT_GAME is the repo-relative game dir; N/MS are playouts per decision
+  # and search ms per step.
+  say "audit mode: $AUDIT_GAME, N=${N:-20} MS=${MS} net=${AUDIT_NET:-v8c_hz18}"
+  mkdir -p "$ROOT/corrections/_mine_work/$TAG"
+  set +e
+  AUDIT_CONCURRENT="$(nproc)" "$VENV/bin/python" "$ROOT/corrections/audit_game.py" \
+    "$ROOT/$AUDIT_GAME" --n "${N:-20}" --ms "$MS" --workers "$(nproc)" \
+    --arms "${ARMS:-0}" \
+    --net "$ROOT/valuenet/nets_v8c/${AUDIT_NET:-v8c_hz18}.bin" \
+    --out "$ROOT/corrections/_mine_work/$TAG/audit.json" \
+    > /root/run.log 2>&1
+  RC=$?
+  set -e
+  say "audit_game.py exited rc=$RC"
+  tail -60 /root/run.log
+elif [ "${MODE:-mine}" = "confirm" ]; then
   say "confirm mode: shard $CAND_KEY [${SHARD_START:-0}+${SHARD_COUNT:-all}]"
   aws s3 cp "s3://$S3_BUCKET/$CAND_KEY" /root/cands.jsonl --quiet || \
     curl -sf -o /root/cands.jsonl "$CAND_URL"

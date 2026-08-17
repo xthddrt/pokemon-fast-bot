@@ -46,7 +46,12 @@ TAR="${TAR:-$(mktemp -d)/code.tar.gz}"
 NETS="valuenet/nets_v8b/v8b_s1.bin valuenet/nets_v8b/v8b_s1.constants.json
       valuenet/nets_v8b/v8b_h2.bin valuenet/nets_v8b/v8b_h2.constants.json
       valuenet/nets_v8c/v8c_s1.bin valuenet/nets_v8c/v8c_s1.constants.json
-      valuenet/nets_v8c/v8c_h1g.bin valuenet/nets_v8c/v8c_h1g.constants.json"
+      valuenet/nets_v8c/v8c_h1g.bin valuenet/nets_v8c/v8c_h1g.constants.json
+      valuenet/nets_v8c/v8c_hz18.bin valuenet/nets_v8c/v8c_hz18.constants.json"
+
+# MODE=audit extras: audit_game.py + turn_table.py + whatever archived game
+# dirs AUDIT_PATHS names (the box replays their recorded worlds).
+AUDIT_EXTRA="corrections/audit_game.py ladder-games/analysis/turn_table.py ${AUDIT_PATHS:-}"
 
 cd "$ROOT"
 # Refuse to ship an incomplete payload: every one of these is a 25-minute
@@ -76,7 +81,7 @@ COPYFILE_DISABLE=1 tar czf "$TAR" --no-mac-metadata \
   --exclude='.claude' --exclude='*/target' \
   --exclude='foul-play/logs' --exclude='foul-play/.env' \
   --exclude='poke-engine/tests' \
-  foul-play poke-engine valuenet/sprt corrections/mine_value.py $NETS
+  foul-play poke-engine valuenet/sprt corrections/mine_value.py $NETS $AUDIT_EXTRA
 
 # Fail loud. macOS `tar -t` silently re-merges AppleDouble members back into
 # xattrs and reports a clean listing, so bsdtar cannot audit its own output.
