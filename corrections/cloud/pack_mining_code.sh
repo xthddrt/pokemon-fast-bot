@@ -51,7 +51,7 @@ NETS="valuenet/nets_v8b/v8b_s1.bin valuenet/nets_v8b/v8b_s1.constants.json
 
 # MODE=audit extras: audit_game.py + turn_table.py + whatever archived game
 # dirs AUDIT_PATHS names (the box replays their recorded worlds).
-AUDIT_EXTRA="corrections/audit_game.py ladder-games/analysis/turn_table.py ${AUDIT_PATHS:-}"
+AUDIT_EXTRA="corrections/audit_game.py corrections/opp_duel.py corrections/opp_model_lab.py ladder-games/analysis/turn_table.py ${AUDIT_PATHS:-}"
 
 cd "$ROOT"
 # Refuse to ship an incomplete payload: every one of these is a 25-minute

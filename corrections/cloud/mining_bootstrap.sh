@@ -186,6 +186,7 @@ if [ "${MODE:-mine}" = "gen" ]; then
     r=0
     MINE_CONCURRENT="$(nproc)" MINE_MAX_STEPS=300 "$VENV/bin/python" "$ROOT/corrections/mine_value.py" gen \
       --games "$GEN_CHUNK" --ms "$MS" --tag "$CT" --seed-base "$SB" \
+      --n-early "${N_EARLY:-8}" --n-mid "${N_MID:-8}" --n-late "${N_LATE:-10}" \
       --label-bin "$ROOT/valuenet/nets_v8c/v8c_s1.bin" \
       >> /root/run.log 2>&1 || r=$?
     : "${r:=0}"
@@ -206,6 +207,18 @@ if [ "${MODE:-mine}" = "gen" ]; then
   echo "{\"rc\": $RC}" > "$ROOT/corrections/_mine_work/$TAG/done.json"
   say "gen loop exited rc=$RC"
   tail -20 /root/run.log
+elif [ "${MODE:-mine}" = "oppduel" ]; then
+  say "oppduel mode: $PAIRS pairs, ${MS}ms, 4 worlds"
+  mkdir -p "$ROOT/corrections/_mine_work/$TAG"
+  set +e
+  r=0
+  MINE_CONCURRENT="$(nproc)" PE_PHANTOM_MODE="${PHANTOM_MODE:-cut}" \
+    PE_PHANTOM_ALPHA="${PHANTOM_ALPHA:-0.5}" "$VENV/bin/python" "$ROOT/corrections/opp_duel.py" \
+    --pairs "$PAIRS" --ms "$MS" --tag "$TAG" --seed-base "$SEED_BASE" \
+    > /root/run.log 2>&1 || r=$?
+  set -e
+  say "opp_duel exited rc=$r"
+  tail -5 /root/run.log
 elif [ "${MODE:-mine}" = "audit" ]; then
   # Per-turn evaluator audit of an archived game shipped inside the payload.
   # AUDIT_GAME is the repo-relative game dir; N/MS are playouts per decision
