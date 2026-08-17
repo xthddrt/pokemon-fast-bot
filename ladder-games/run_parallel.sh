@@ -14,6 +14,11 @@ START=$(date +%s)
 echo "claim dir: $CLAIM_DIR"
 
 set -a; . "$ROOT/.env"; set +a
+# PHANTOM opponent-model — same production knobs as run_game.sh
+export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
+export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.5}"
+export PE_PHANTOM_ALPHA_SELF="${RG_PHANTOM_ALPHA_SELF:-0.9}"
+export PE_PHANTOM_SELF_AS_SEEN="${RG_PHANTOM_SELF_AS_SEEN:-0.5}"
 FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-4500} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-4} \
