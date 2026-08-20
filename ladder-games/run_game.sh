@@ -14,8 +14,11 @@ set -a; . "$ROOT/.env"; set +a
 # SELF_AS_SEEN 0.2 = the weight the modelled opponent puts on lines using OUR
 # not-yet-revealed switch. These were 0.5/0.5 at one point and the comment was
 # not updated; the values below are authoritative.
-# Net: v9c0 (Sally 2026-08-17: 4M-row single net, fresh-holdout true error
-# -21% vs v8c_s1, duel +36 Elo [+6,+67]; sidecar carries tau=1.0 UCB=0.0422).
+# Net: v10c0 (Sally 2026-08-20: 4M-row fresh v10 corpus, mirror-trained, seed 1).
+# Round-robin 39,312 games: +12.1 Elo vs v9c0, +45.8 vs v8c_s1, transitivity checked.
+# Better evaluator on neutral data too (bench_v1 0.02709 vs v9c0 0.02942).
+# Sidecar carries tau=1.0 UCB=0.02 -- the 12k-iteration plateau [0.019,0.042]
+# transferred to ladder budget via lnN (ladder c behaves like 1.258x the tested c).
 export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
 export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0}"
 export PE_PHANTOM_SELF_AS_SEEN="${RG_PHANTOM_SELF_AS_SEEN:-0.2}"
@@ -50,4 +53,18 @@ PASS_ARGS=()
 # Archive whatever was played (never let a bot crash skip archiving entirely:
 # the trap would be nice, but a failed game with no battle log has nothing to
 # archive anyway).
-python3 "$ROOT/ladder-games/archive_game.py" --since "$START" --flags "$FLAGS"
+ARCHIVED=$(python3 "$ROOT/ladder-games/archive_game.py" --since "$START" --flags "$FLAGS")
+echo "$ARCHIVED"
+
+# Turn table for every game just archived. The dir is parsed from
+# archive_game.py's own "-> <dir>" line rather than relying on turn_table.py's
+# most-recent-game default: run_parallel.sh archives several games in ONE call,
+# and the default would print the same game N times. RG_NO_TABLE=1 skips it.
+# Analysis must never fail the run -- the game is already safely archived.
+if [ -z "${RG_NO_TABLE:-}" ]; then
+  printf '%s\n' "$ARCHIVED" | sed -n 's/^archived .* -> //p' | while IFS= read -r d; do
+    echo
+    python3 "$ROOT/ladder-games/analysis/turn_table.py" --timing "$d" \
+      || echo "(turn table failed for $d)"
+  done
+fi

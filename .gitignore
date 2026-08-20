@@ -46,3 +46,7 @@ __pycache__/
 valuenet/
 truestate/
 .venv-train/
+
+# Validation game artifacts: ~15MB per game (battle.log + worlds.jsonl),
+# 1.5GB after a few hundred. Regenerate with ladder-games/validation/run_validation_batch.sh
+ladder-games/validation/runs/
