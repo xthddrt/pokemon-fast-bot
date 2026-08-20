@@ -1,0 +1,29 @@
+{
+ "rows": 40,
+ "workers": 4,
+ "encode_s": 0.1,
+ "states_per_s": 325.3,
+ "states_per_core_s": 81.3,
+ "mon_feats": 72,
+ "n_ids": 9,
+ "side_feats": 99,
+ "glob_feats": 18,
+ "setup_d": 14,
+ "src": "states.jsonl",
+ "bytes": {
+  "_hpchk.npy": 1088,
+  "addon_mon.npy": 13568,
+  "old_a1_f.npy": 5888,
+  "old_a1_ids.npy": 848,
+  "old_a2_f.npy": 5888,
+  "old_a2_ids.npy": 848,
+  "old_b1_f.npy": 28928,
+  "old_b1_ids.npy": 3728,
+  "old_b2_f.npy": 28928,
+  "old_b2_ids.npy": 3728,
+  "old_g.npy": 1568,
+  "old_sf1.npy": 8048,
+  "old_sf2.npy": 8048
+ },
+ "bytes_total": 111104
+}

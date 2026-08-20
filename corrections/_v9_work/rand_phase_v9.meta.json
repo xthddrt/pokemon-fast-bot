@@ -1,0 +1,21 @@
+{
+ "version": 9,
+ "phase_trunks": 3,
+ "mon_in": 226,
+ "trunk_in": 728,
+ "mon_hid": 128,
+ "trunk": 256,
+ "bench_mult": 1,
+ "bench_sort": 1,
+ "pp_true_max": 1,
+ "attn_d": 0,
+ "policy_slots": 0,
+ "n_blocks": 0,
+ "bytes": 3517626,
+ "sha256": "538a7a50cec8def7f04c8c22e087bcff3a69f06a93e21e7300e0457c6a01d242",
+ "from_ckpt": "rand_phase.pt",
+ "ckpt_cfg": {
+  "arch": "phase3",
+  "note": "random-weight parity net"
+ }
+}
