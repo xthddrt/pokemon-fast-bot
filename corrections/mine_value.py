@@ -39,14 +39,35 @@ ROOT = os.path.dirname(HERE)
 PY = os.path.join(ROOT, "foul-play", ".venv", "bin", "python")
 LEAF_PROF = os.path.join(ROOT, "poke-engine", "target", "release", "leaf_prof")
 CORPUS = "/Users/sallyliu/pokemon-ai/synthetic-corpus-holdout10"
-AUDIT_BIN = os.path.join(ROOT, "valuenet/nets_v8c/v8c_h1g.bin")
-LABEL_BIN = os.path.join(ROOT, "valuenet/nets_v8c/v8c_h1g.bin")  # label player = current champion (Sally 2026-08-16)
-# Mining plays stalls out to PS-like resolution (PP drain -> Struggle);
-# 1000 mirrors Showdown's own turn-limit backstop. The corpus labeler keeps
-# its 200-step cap for farm-scale economics — mining's 30 playouts/spot can
-# afford the tail. (Sally, 2026-08-15.) MINE_MAX_STEPS overrides for exact
-# replication of runs made under the old 300 cap.
-MAX_STEPS = int(os.environ.get("MINE_MAX_STEPS", "1000"))
+# The audit/label player is ALWAYS the production ladder net (Sally
+# 2026-08-19): valuenet/PRODUCTION_NET is the single pointer the ladder
+# launchers (run_game.sh/run_parallel.sh) and generation pipelines all read,
+# so shipping a new champion updates every consumer at once. net_env() below
+# applies the net's own constants sidecar, so calibrated constants follow
+# automatically. MINE_BIN overrides for deliberate off-champion experiments.
+def _production_bin():
+    with open(os.path.join(ROOT, "valuenet/PRODUCTION_NET")) as f:
+        return os.path.join(ROOT, f.read().strip())
+
+
+AUDIT_BIN = os.environ.get("MINE_BIN") or _production_bin()
+LABEL_BIN = AUDIT_BIN
+# GAME-LENGTH CAP (Sally 2026-08-19: 1000 -> 250). Distinct from the per-
+# PLAYOUT cap inside labeling, which is also 250 (--cap-steps).
+#
+# 1000 mirrored Showdown's own turn-limit backstop, letting stalls play out to
+# PS-like resolution (PP drain -> Struggle). Measured over 6,000 games that
+# tail is not worth its cost: median game ends at step ~36, p99 at 97, but the
+# longest ran 961 -- ~27x the median in generation compute for one game. Only
+# 0.17% of games reach a harvested position past step 250, so the cap bounds
+# the worst generation outlier at ~7x median while touching almost nothing.
+#
+# Interacts with the unresolved-game discard below: a game that HITS this cap
+# has no winner, so it is dropped entirely rather than mined. That is the
+# intent -- a 250-turn stall war has no trustworthy outcome to label with.
+# MINE_MAX_STEPS overrides for exact replication of older runs (1000 for the
+# v10 corpus, 300 for the pre-v10 mining bootstrap).
+MAX_STEPS = int(os.environ.get("MINE_MAX_STEPS", "250"))
 LABEL_ITERS = 2000
 MAX_CONCURRENT = int(os.environ.get("MINE_CONCURRENT", "4"))  # half the Mac's cores; cloud boxes set MINE_CONCURRENT to their vCPUs
 
@@ -84,24 +105,51 @@ def ac_stats(outs):
 
 INS_RE = re.compile(r"^(Damage|Heal) Side(One|Two)\S*: (-?\d+)")
 
-def double_ko_winner(pre_state, branch):
-    """PS gen9 rule: the side whose mon faints LAST wins a double KO."""
-    hp = {s: pre_state.side_one.pokemon[int(getattr(pre_state.side_one, "active_index", 0))].hp
-          if s == "One" else
-          pre_state.side_two.pokemon[int(getattr(pre_state.side_two, "active_index", 0))].hp
-          for s in ("One", "Two")}
-    seq = {}
-    for i, ins in enumerate(branch.instruction_list):
+def double_ko_winner(pre_state, instrs):
+    r"""A DOUBLE KO IS NOT A DRAW -- who faints FIRST loses (Sally 2026-08-19).
+
+    Ground truth is pokemon-showdown/sim/battle.ts checkWin():
+
+        if (this.sides.every(side => !side.pokemonLeft)) {
+            this.win(faintData && this.gen > 4 ? faintData.target.side : null);
+
+    `faintData` after the faintQueue drain is the LAST faint processed and
+    win() takes the WINNER, so for gen > 4 (gen9 qualifies) the side that
+    faints LAST wins. Only gen <= 4 is a genuine tie.
+
+    The engine emits a branch's instructions in application order, so replaying
+    their HP deltas reproduces that faint ordering. Damage and Heal are the only
+    variants that move a live pokemon's HP (DamageSubstitute and
+    ChangeSubstituteHealth hit the substitute; ChangeMaxHP does not occur in
+    gen9 randbats), and Heal amounts can be NEGATIVE (Steel Beam's self-cost) --
+    hence -?\d+ in INS_RE.
+
+    Tracks SIDE TOTALS rather than the active slot: a branch can switch the
+    active mid-stream (U-turn, post-faint replacement), which makes the
+    pre-state's active_index stale, and totals are immune to that. Both agree
+    in the common case because a wiped side's last faint is necessarily its
+    active.
+
+    `instrs` is an instruction LIST (pass branch.instruction_list). Returns 1.0
+    if side one wins, 0.0 if side two wins, or None when the order cannot be
+    established -- callers must treat None as "no outcome", never as 0.5.
+    """
+    if pre_state is None or not instrs:
+        return None
+    tot = {"One": sum(p.hp for p in pre_state.side_one.pokemon if p.hp > 0),
+           "Two": sum(p.hp for p in pre_state.side_two.pokemon if p.hp > 0)}
+    fell = {}
+    for i, ins in enumerate(instrs):
         m = INS_RE.match(str(ins))
         if not m:
             continue
         kind, side, amt = m.groups()
-        hp[side] += int(amt) if kind == "Heal" else -int(amt)
-        if hp[side] <= 0 and side not in seq:
-            seq[side] = i
-    if len(seq) < 2:
+        tot[side] += int(amt) if kind == "Heal" else -int(amt)
+        if tot[side] <= 0 and side not in fell:
+            fell[side] = i
+    if len(fell) < 2:
         return None
-    return 1.0 if seq["One"] > seq["Two"] else 0.0
+    return 1.0 if fell["One"] > fell["Two"] else 0.0
 
 def one_playout(state_str, base_seed):
     from poke_engine import State, generate_instructions, monte_carlo_tree_search
@@ -131,7 +179,7 @@ def one_playout(state_str, base_seed):
         nxt = state.apply_instructions(pick)
         if (not any(p.hp > 0 for p in nxt.side_one.pokemon)
                 and not any(p.hp > 0 for p in nxt.side_two.pokemon)):
-            w = double_ko_winner(state, pick)
+            w = double_ko_winner(state, pick.instruction_list)
             return w if w is not None else 0.5
         state = nxt
     a1 = sum(p.hp > 0 for p in state.side_one.pokemon)
@@ -470,18 +518,45 @@ def phase_of(state_str):
     return 1.0 - tot / 12.0
 
 
+def _soft_pick(arms, rng):
+    """Sally 2026-08-19 gen diversity: contenders = every arm with visits >=
+    70% of the argmax's; sample one with probability proportional to visit
+    share squared. Reduces to pure argmax when nothing is close."""
+    best = max(m.visits for m in arms)
+    cands = [m for m in arms if m.visits >= 0.7 * best]
+    if len(cands) == 1:
+        return cands[0].move_choice
+    return rng.choices(cands, weights=[float(m.visits) ** 2 for m in cands])[0].move_choice
+
+
+_GEN_FAILS = []
+
+
 def _gen_game_worker(args):
-    """Play one fresh-team self-play game; return phase-harvested positions."""
-    seed, ms, keep, work, rand_ply = args
+    """Play one fresh-team self-play game; return phase-harvested positions
+    (each carrying the game's final outcome as the free posterior seed).
+
+    FAIL LOUD (Sally 2026-08-19): this used to swallow BaseException and
+    return [], so a box whose every game threw still reported "DONE" with 0
+    positions, uploaded ten empty chunks and self-terminated -- a whole fleet
+    burned producing nothing. The first few failures now print a full
+    traceback to stderr (captured in the box's run.log)."""
+    seed, ms, gen_iters, keep, work, rand_ply = args
     try:
-        return _gen_game_inner(seed, ms, keep, work, rand_ply)
+        return _gen_game_inner(seed, ms, gen_iters, keep, work, rand_ply)
     except (KeyboardInterrupt, SystemExit):
         raise
     except BaseException:
+        if len(_GEN_FAILS) < 3:
+            _GEN_FAILS.append(1)
+            import traceback
+            print("GEN-GAME-FAILED seed=%s" % (seed,), file=sys.stderr)
+            traceback.print_exc(file=sys.stderr)
+            sys.stderr.flush()
         return []
 
 
-def _gen_game_inner(seed, ms, keep, work, rand_ply):
+def _gen_game_inner(seed, ms, gen_iters, keep, work, rand_ply):
     sys.path.insert(0, os.path.join(ROOT, "valuenet", "sprt"))
     import run_duels as rd
     from poke_engine import State, generate_instructions, monte_carlo_tree_search
@@ -489,14 +564,17 @@ def _gen_game_inner(seed, ms, keep, work, rand_ply):
     rng = random.Random(seed ^ 0x5EED)
     state = State.from_string(rd.opening_state(tf, "p1", tf, "p2"))
     cand = [[], [], []]   # per-phase candidate turns; ONE random pick each
+    prev_state, last_instrs = None, None
     for step in range(MAX_STEPS):
         if not any(p.hp > 0 for p in state.side_one.pokemon):
             break
         if not any(p.hp > 0 for p in state.side_two.pokemon):
             break
         ss = state.to_string()
-        res = monte_carlo_tree_search(state, ms, 0, 1,
-                                      (seed * 104729 + step) & 0x7FFFFFFF)
+        # A2: fixed-iteration game policy (== the label policy); gen_iters=0
+        # restores the old timed search.
+        res = monte_carlo_tree_search(state, 0 if gen_iters else ms, gen_iters,
+                                      1, (seed * 104729 + step) & 0x7FFFFFFF)
         s1 = [m for m in res.side_one if m.visits > 0]
         s2 = [m for m in res.side_two if m.visits > 0]
         if not s1 or not s2:
@@ -504,19 +582,14 @@ def _gen_game_inner(seed, ms, keep, work, rand_ply):
         ph = phase_of(ss)
         band = 0 if ph < 1 / 3 else 1 if ph < 2 / 3 else 2
         cand[band].append({"s": ss, "ph": round(ph, 4), "g": seed, "t": step})
-        p1 = max(s1, key=lambda m: m.visits).move_choice
-        p2 = max(s2, key=lambda m: m.visits).move_choice
-        # DIVERSITY (Sally 2026-08-17): ~15% of turns one side plays a random
-        # legal move -- covers the plausible-but-suboptimal states human
-        # opponents create, without full-random garbage positions.
-        if rng.random() < rand_ply:
-            side = rng.random() < 0.5
-            pool_arms = s1 if side else s2
-            pick_arm = rng.choice(pool_arms).move_choice
-            if side:
-                p1 = pick_arm
-            else:
-                p2 = pick_arm
+        # DIVERSITY (Sally 2026-08-19, replaces the 15% random-ply): each side
+        # samples among near-argmax contenders -- any arm with a visit count
+        # >= 70% of the argmax's -- with probability proportional to visit
+        # share SQUARED. E.g. shares 50%/40%: P(argmax) = .25/(.25+.16) = .61.
+        # Squaring keeps the argmax favored while real near-ties genuinely
+        # branch; arms the search dismissed can never be played (no garbage).
+        p1 = _soft_pick(s1, rng)
+        p2 = _soft_pick(s2, rng)
         try:
             branches = [b for b in generate_instructions(
                 state, arm_to_move(p1), arm_to_move(p2)) if b.percentage > 0]
@@ -524,23 +597,85 @@ def _gen_game_inner(seed, ms, keep, work, rand_ply):
             break
         if not branches:
             break
-        state = state.apply_instructions(
-            rng.choices(branches, weights=[b.percentage for b in branches])[0])
+        chosen = rng.choices(branches, weights=[b.percentage for b in branches])[0]
+        prev_state, last_instrs = state, chosen.instruction_list
+        state = state.apply_instructions(chosen)
     try:
         os.unlink(tf)
     except OSError:
         pass
-    # AT MOST 3 ROWS PER GAME (Sally 2026-08-17): one uniform draw per phase
-    # bucket. Kills within-game correlation; phase mix ~ even thirds free.
-    return [rng.choice(band) for band in cand if band]
+    # A3 (Sally 2026-08-19): the game outcome is one free on-policy playout
+    # sample for every position mined from it; 0.5 when the loop ended on the
+    # step cap or a dead search rather than a winner.
+    a1 = any(p.hp > 0 for p in state.side_one.pokemon)
+    a2 = any(p.hp > 0 for p in state.side_two.pokemon)
+    if a1 and not a2:
+        yg = 1.0
+    elif a2 and not a1:
+        yg = 0.0
+    elif not a1 and not a2:
+        # BOTH sides wiped -- resolve by faint order, NEVER a draw.
+        yg = double_ko_winner(prev_state, last_instrs)
+    else:
+        # both sides still alive -> the loop broke abnormally (MAX_STEPS, a
+        # dead search, or failed instruction generation). No outcome exists.
+        yg = None
+    # UNRESOLVED-GAME DISCARD (Sally 2026-08-19): a game that ended with no
+    # winner -- the MAX_STEPS cap, a dead search, or a failed instruction
+    # generation -- has no real outcome, so yg=0.5 is a FABRICATED posterior
+    # seed. Measured over 6,000 games: unresolved games are 0.92% of games and
+    # 1.33% of the labeling budget, but average 5.24 step-capped playouts per
+    # position vs 0.07 for resolved games -- the least trustworthy labels in
+    # the corpus. Drop the whole game rather than mine it.
+    # NOTE: this is a label-QUALITY fix, not a straggler fix. Stragglers are
+    # CLOSE games: 81% of the playout budget sits in n>=20 positions and 98.4%
+    # of those come from games that finished normally. LPT ordering is what
+    # addresses the tail.
+    if yg is None:
+        return []
+    # AT MOST 3 ROWS PER GAME (Sally 2026-08-17): one draw per phase bucket
+    # kills within-game correlation. TARGET-THEN-NEAREST (Sally 2026-08-19):
+    # a uniform draw over the band's STATES samples by dwell time, starving
+    # the band edges (games spend ~1 turn at ph~0 and rush through ph>0.9).
+    # Drawing a target ph uniformly over the band's INTERVAL and keeping the
+    # state closest to it makes the sample ph-uniform within each band, so
+    # turn-1 full-roster and deep-late states get real probability mass.
+    out = []
+    for b, lo in ((0, 0.0), (1, 1.0 / 3.0), (2, 2.0 / 3.0)):
+        if not cand[b]:
+            continue
+        target = lo + rng.random() / 3.0
+        out.append(min(cand[b], key=lambda r: abs(r["ph"] - target)))
+    for r in out:
+        r["yg"] = yg
+    return out
+
+
+def _label_worker(args):
+    """One position -> one adaptive-n label via the native label_position
+    (mercy + cap-bootstrap + step-0 sharing + Beta stopping, all in Rust).
+    Returns (label, n, v0, n_mercy, n_capped, steps) or None on failure."""
+    (state_str, seed, yg, iters, cap, nmin, nmax, h, m, mlo, mhi, mcons) = args
+    try:
+        from poke_engine import State, label_position
+        return label_position(
+            State.from_string(state_str), iters=iters, cap_steps=cap,
+            n_min=nmin, n_max=nmax, ci_halfwidth=h, prior_m=m,
+            mercy_lo=mlo, mercy_hi=mhi, mercy_consec=mcons,
+            seed=seed, game_outcome=yg,
+        )
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException:
+        return None
 
 
 def cmd_gen(a):
-    """V9 CORPUS GENERATION (Sally 2026-08-17): fresh-team self-play games at
-    --ms, phase-weighted position harvest (keep-late 1.0 / keep-mid 0.5 /
-    keep-early 0.125 by default), then n playouts per kept position with the
-    LABEL player (2000 iters) -- n per phase (8/8/10). One shard jsonl.gz out.
-    Stage 1 saturates the pool with whole games; stage 2 with flat playouts."""
+    """V10 CORPUS GENERATION (Sally 2026-08-19): fresh-team self-play games at
+    --gen-iters (the label policy), <=3 phase-drawn positions per game, then
+    ONE native label_position call per position: adaptive-n Beta labeling
+    (prior = net value, +1 free sample from the source game outcome), mercy
+    rule, 250-step cap with net bootstrap. One shard jsonl.gz out."""
     import concurrent.futures as cf
     import gzip
     if "PE_NN_WEIGHTS" not in os.environ:
@@ -548,19 +683,25 @@ def cmd_gen(a):
             if k.startswith("PE_"):
                 os.environ[k] = v
         print(f"label env self-configured from {a.label_bin}", flush=True)
-    import subprocess as _sp
-    chk = _sp.run([LEAF_PROF, "logits", "/dev/null"], env=dict(os.environ),
-                  capture_output=True, text=True)
-    if "valuenet: loaded" not in (chk.stderr + chk.stdout):
+    # Net verification via the WHEEL itself (Sally 2026-08-19): the old
+    # leaf_prof subprocess check needed a locally COMPILED Rust binary, which
+    # wheel-first fleet boxes deliberately do not have. engine_config() is
+    # authoritative for the exact library the labeler will use. Env is set
+    # above, before this first engine import (Rust LazyLock reads it once).
+    import poke_engine as _pe
+    _cfg = _pe.engine_config()
+    if "nn_active=true" not in _cfg:
         raise SystemExit(f"FATAL: label net failed to load "
-                         f"(PE_NN_WEIGHTS={os.environ.get('PE_NN_WEIGHTS')})")
-    print("label net verified", flush=True)
+                         f"(PE_NN_WEIGHTS={os.environ.get('PE_NN_WEIGHTS')}) "
+                         f"engine_config: {_cfg}")
+    print(f"label net verified: {_cfg}", flush=True)
     work = os.path.join(HERE, "_mine_work", a.tag)
     os.makedirs(work, exist_ok=True)
     keep = (1.0, 1.0, 1.0)  # per-game bucket sampling replaced keep-weights
     npb = (a.n_early, a.n_mid, a.n_late)
     t0 = time.time()
-    gtasks = [(a.seed_base + i, a.ms, keep, work, a.rand_ply) for i in range(a.games)]
+    gtasks = [(a.seed_base + i, a.ms, a.gen_iters, keep, work, a.rand_ply)
+              for i in range(a.games)]
     kept = []
     with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as pool:
         for out in pool.map(_gen_game_worker, gtasks, chunksize=1):
@@ -570,36 +711,45 @@ def cmd_gen(a):
              for b in range(3)]
     print(f"games: {a.games} in {t1-t0:.0f}s -> {len(kept)} positions "
           f"(early {bands[0]} mid {bands[1]} late {bands[2]})", flush=True)
-    tasks, meta = [], []
-    for i, r in enumerate(kept):
-        band = 0 if r["ph"] < 1/3 else 1 if r["ph"] < 2/3 else 2
-        for j in range(npb[band]):
-            tasks.append((r["s"], (r["g"] * 1_000_003 + r["t"] * 8191
-                                   + j * 104729) & 0x7FFFFFFF))
-            meta.append(i)
-    print(f"labeling: {len(tasks)} playouts", flush=True)
+    # A chunk that harvested nothing means every game threw; uploading an
+    # empty shard and exiting 0 hides a broken box (Sally 2026-08-19).
+    if not kept:
+        raise SystemExit("FATAL: 0 positions harvested from %d games -- see "
+                         "GEN-GAME-FAILED tracebacks above" % a.games)
+    tasks = [(r["s"],
+              (r["g"] * 1_000_003 + r["t"] * 8191) & 0x7FFFFFFF,
+              r.get("yg"), a.label_iters, a.cap_steps, a.label_nmin,
+              a.label_nmax, a.label_h, a.label_m, a.mercy_lo, a.mercy_hi,
+              a.mercy_consec)
+             for r in kept]
+    print(f"labeling: {len(tasks)} positions (adaptive n {a.label_nmin}"
+          f"-{a.label_nmax}, h={a.label_h})", flush=True)
     outs = [None] * len(tasks)
     with cf.ProcessPoolExecutor(max_workers=MAX_CONCURRENT) as pool:
-        for k, o in enumerate(pool.map(_playout_worker, tasks, chunksize=4)):
+        for k, o in enumerate(pool.map(_label_worker, tasks, chunksize=1)):
             outs[k] = o
-    per = {}
-    for i, o in zip(meta, outs):
-        if o is not None:
-            per.setdefault(i, []).append(o)
     t2 = time.time()
+    n_total = mercy_total = cap_total = steps_total = 0
     shard = os.path.join(work, "shard.jsonl.gz")
     with gzip.open(shard, "wt") as f:
-        for i, r in enumerate(kept):
-            os_ = per.get(i, [])
-            if not os_:
+        for r, o in zip(kept, outs):
+            if o is None:
                 continue
-            f.write(json.dumps({"s": r["s"], "y": round(sum(os_) / len(os_), 4),
-                                "n": len(os_), "ph": r["ph"],
-                                "g": r["g"], "t": r["t"]}) + "\n")
+            label, n, v0, n_mercy, n_capped, steps = o
+            n_total += n
+            mercy_total += n_mercy
+            cap_total += n_capped
+            steps_total += steps
+            f.write(json.dumps({"s": r["s"], "y": round(label, 4), "n": n,
+                                "v0": round(v0, 4), "yg": r.get("yg"),
+                                "ph": r["ph"], "g": r["g"], "t": r["t"],
+                                "mercy": n_mercy, "capped": n_capped}) + "\n")
     stats = {"games": a.games, "positions": len(kept),
-             "bands": bands, "playouts": len(tasks),
+             "bands": bands, "playouts": n_total,
+             "mercy_exits": mercy_total, "cap_exits": cap_total,
+             "playout_steps": steps_total,
              "game_s": round(t1 - t0, 1), "label_s": round(t2 - t1, 1),
-             "s_per_playout": round((t2 - t1) * MAX_CONCURRENT / max(len(tasks), 1), 2)}
+             "s_per_playout": round((t2 - t1) * MAX_CONCURRENT / max(n_total, 1), 2)}
     json.dump(stats, open(os.path.join(work, "gen_stats.json"), "w"), indent=1)
     print(f"DONE {stats}", flush=True)
 
@@ -810,6 +960,9 @@ def main():
     ge = sub.add_parser("gen")
     ge.add_argument("--games", type=int, default=50)
     ge.add_argument("--ms", type=int, default=1000)
+    # A2 (Sally 2026-08-19): game generation at fixed ITERATIONS -- the same
+    # policy the labels use. 0 falls back to the timed --ms search.
+    ge.add_argument("--gen-iters", type=int, default=2000)
     ge.add_argument("--tag", default="gen1")
     ge.add_argument("--seed-base", type=int, default=1)
     ge.add_argument("--keep-early", type=float, default=0.125)
@@ -818,8 +971,24 @@ def main():
     ge.add_argument("--n-early", type=int, default=8)
     ge.add_argument("--n-mid", type=int, default=8)
     ge.add_argument("--n-late", type=int, default=10)
-    ge.add_argument("--rand-ply", type=float, default=0.15)
-    ge.add_argument("--label-bin", default=os.path.join(ROOT, "valuenet/nets_v8c/v8c_s1.bin"))
+    # OBSOLETE (Sally 2026-08-19): random-ply replaced by _soft_pick squared-
+    # share sampling among near-argmax contenders. Parsed for compat, unused.
+    ge.add_argument("--rand-ply", type=float, default=0.0)
+    # label player = production net (valuenet/PRODUCTION_NET), like AUDIT_BIN
+    ge.add_argument("--label-bin", default=LABEL_BIN)
+    # adaptive-n labeling knobs (Sally 2026-08-19; see label_position in
+    # poke-engine-py): Beta posterior, net-value prior m, stop at 95% CI
+    # half-width h, floor/cap n. n-early/mid/late above are OBSOLETE under
+    # adaptive n and ignored unless --fixed-n 1.
+    ge.add_argument("--label-iters", type=int, default=2000)
+    ge.add_argument("--cap-steps", type=int, default=250)
+    ge.add_argument("--label-nmin", type=int, default=4)
+    ge.add_argument("--label-nmax", type=int, default=40)
+    ge.add_argument("--label-h", type=float, default=0.15)
+    ge.add_argument("--label-m", type=float, default=2.0)
+    ge.add_argument("--mercy-lo", type=float, default=0.025)
+    ge.add_argument("--mercy-hi", type=float, default=0.975)
+    ge.add_argument("--mercy-consec", type=int, default=3)
     ge.set_defaults(fn=cmd_gen)
     r.add_argument("--bench-per-game", type=int, default=0)
     r.add_argument("--audit", default=AUDIT_BIN)

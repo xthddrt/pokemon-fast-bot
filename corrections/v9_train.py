@@ -60,6 +60,11 @@ def main():
                     help="phase3 = 3-trunk hp-mass blend; single = one plain "
                          "trunk, IDENTICAL data/batching/schedule, the control "
                          "for the 3-net-vs-1-net Brier comparison")
+    ap.add_argument("--rows-per-corpus", type=int, default=0,
+                    help="data-scaling probe: subsample EACH corpus to this "
+                         "many rows (preserves the 50/50 old/fresh mix); "
+                         "everything else identical, so Brier-vs-rows is the "
+                         "pure data-quantity curve")
     a = ap.parse_args()
 
     sys.path.insert(0, LAB)
@@ -91,6 +96,13 @@ def main():
                            np.float32)
         assert len(lab) == n, (enc_dir, len(lab), n)
         y = torch.from_numpy(lab).to(dev)
+        if a.rows_per_corpus and a.rows_per_corpus < n:
+            sub = np.sort(np.random.default_rng(
+                20260817 + len(corp)).choice(n, a.rows_per_corpus, False))
+            st = torch.from_numpy(sub).to(dev)
+            g = {k: g[k][st] for k in g}
+            y = y[st]
+            n = a.rows_per_corpus
         corp.append({"g": g, "n": n, "y": y})
         print(f"corpus {enc_dir}: {n} rows", flush=True)
 

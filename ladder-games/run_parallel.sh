@@ -16,15 +16,14 @@ echo "claim dir: $CLAIM_DIR"
 set -a; . "$ROOT/.env"; set +a
 # PHANTOM opponent-model — same production knobs as run_game.sh
 export PE_PHANTOM_MODE="${RG_PHANTOM_MODE:-soft}"
-export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0.5}"
-export PE_PHANTOM_ALPHA_SELF="${RG_PHANTOM_ALPHA_SELF:-0.9}"
-export PE_PHANTOM_SELF_AS_SEEN="${RG_PHANTOM_SELF_AS_SEEN:-0.5}"
+export PE_PHANTOM_ALPHA="${RG_PHANTOM_ALPHA:-0}"
+export PE_PHANTOM_SELF_AS_SEEN="${RG_PHANTOM_SELF_AS_SEEN:-0.2}"
 FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --first-turn-search-time-ms ${RG_FIRST_TURN_MS:-4500} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-4} \
 --search-threads 1 \
---nn-weights "${RG_NN_WEIGHTS:-../valuenet/nets_v8c/v8c_s1.bin}" \
---selection-argmax-only --tera-gate-per-mon 0.001 --tera-gate-visit-frac 0.25"
+--nn-weights "${RG_NN_WEIGHTS:-../$(cat "$ROOT/valuenet/PRODUCTION_NET")}" \
+--selection-argmax-only --tera-gate-q-margin 0.01 --tera-gate-visit-frac 0.25"
 
 cd "$ROOT/foul-play"
 pids=()

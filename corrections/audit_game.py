@@ -227,6 +227,14 @@ def arms_audit(a, game_dir, keys, decisions, worlds, chances, tt):
     tot_loss = sum(f[2]["delta"] for f in flags)
     print(f"\ntotal win-rate left on the table across flagged decisions: "
           f"{tot_loss:+.2f}")
+    regs = []
+    for r in rows:
+        alts = [x["delta"] for x in r["arms"]
+                if not x["played"] and x["delta"] == x["delta"]]
+        regs.append(max([d for d in alts if d > 0], default=0.0))
+    if regs:
+        print(f"raw regret (best alt minus played, clamped at 0): "
+              f"mean {sum(regs)/len(regs):+.3f}/turn over {len(regs)} decisions")
 
     out = a.out or os.path.join(game_dir, "policy_audit.json")
     json.dump(rows, open(out, "w"), indent=1, default=float)
@@ -250,6 +258,9 @@ def main():
                          "proportion to visit share (ladder-realistic, and the "
                          "mixed-strategy solution concept); 'argmax' is the "
                          "old best-move-always model")
+    ap.add_argument("--collapsed-only", action="store_true",
+                    help="audit only decisions where every sampled world "
+                         "agrees on the full opponent roster (all 6 revealed)")
     ap.add_argument("--arms", type=int, default=0,
                     help="POLICY audit: measure the top-K arms of every "
                          "decision, not just the position (0 = value audit)")
@@ -272,6 +283,15 @@ def main():
     if len(keys) != len(decisions):
         print(f"WARNING: {len(keys)} world decisions vs {len(decisions)} log "
               f"decisions — pairing by order", file=sys.stderr)
+    if a.collapsed_only:
+        def roster(st):
+            return tuple(m.split(",")[0] for m in st.split("/")[1].split("=")[:6])
+        sel = [i for i, d in enumerate(keys) if i < len(decisions)
+               and len({roster(st) for st in worlds[d].values()}) == 1]
+        keys = [keys[i] for i in sel]
+        decisions = [decisions[i] for i in sel]
+        print(f"collapsed-only: {len(keys)} of {len(sel) and max(sel)+1} "
+              f"decisions have the full roster known", flush=True)
 
     if a.arms:
         return arms_audit(a, game_dir, keys, decisions, worlds, chances, tt)
