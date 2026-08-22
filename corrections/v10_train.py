@@ -74,6 +74,10 @@ def main():
                     help="fraction of GAMES (not rows) held out")
     ap.add_argument("--tag", default="v10s0")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--label-key", default="y",
+                    help="meta.npz column to train on (e.g. y11 for max-CV labels)")
+    ap.add_argument("--weight-key", default="",
+                    help="optional meta.npz column of per-row loss weights")
     a = ap.parse_args()
     # vt_lib resolves VT_ENC from its own module dir on reload, so a relative
     # --enc silently becomes evallab/<rel>. Pin it absolute at the boundary.
@@ -85,13 +89,26 @@ def main():
     import vt_lib
 
     torch.manual_seed(a.seed)
-    dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    dev = torch.device("cuda" if torch.cuda.is_available() else
+                       ("mps" if torch.backends.mps.is_available() else "cpu"))
     print(f"device={dev} enc={a.enc} seed={a.seed}", flush=True)
 
     g, n = load_enc(vt_lib, np, torch, dev, a.enc)
     meta = np.load(os.path.join(a.enc, "meta.npz"))
-    y_all = torch.from_numpy(meta["y"].astype(np.float32)).to(dev)
+    y_np = meta[a.label_key].astype(np.float32)
+    # enc_adopted turns a key missing on later rows into nan silently; a nan
+    # label destroys the run with no error, so refuse it here.
+    assert np.isfinite(y_np).all(), f"non-finite values in label column {a.label_key!r}"
+    assert (y_np >= 0.0).all() and (y_np <= 1.0).all(), \
+        f"labels outside [0,1] in {a.label_key!r}"
+    y_all = torch.from_numpy(y_np).to(dev)
     assert len(y_all) == n, (len(y_all), n)
+    w_all = None
+    if a.weight_key:
+        w_np = meta[a.weight_key].astype(np.float32)
+        assert np.isfinite(w_np).all() and (w_np > 0).all(), \
+            f"bad weights in {a.weight_key!r}"
+        w_all = torch.from_numpy(w_np).to(dev)
     games = meta["g"].astype(np.int64)
     print(f"corpus: {n:,} rows, {len(np.unique(games)):,} distinct games", flush=True)
 
@@ -137,7 +154,7 @@ def main():
         {"params": [p for nm, p in net.named_parameters() if "emb" not in nm],
          "lr": a.lr, "weight_decay": a.wd},
     ])
-    lossf = torch.nn.BCEWithLogitsLoss()
+    lossf = torch.nn.BCEWithLogitsLoss(reduction="none")
 
     # FULL-COVERAGE MIRROR EPOCHS: every train row once seated, once mirrored.
     steps_per_epoch = max(1, (2 * ntr) // a.batch)
@@ -164,7 +181,12 @@ def main():
         vt_lib.swap_rows_(b, mirror)          # flip every side-scoped feature
         yb = torch.where(mirror, 1.0 - yb, yb)
         net.train()
-        loss = lossf(net(b), yb)
+        per = lossf(net(b), yb)
+        if w_all is not None:
+            wb = w_all[rows]        # mirrored rows keep their weight
+            loss = (per * wb).sum() / wb.sum()
+        else:
+            loss = per.mean()
         opt.zero_grad()
         loss.backward()
         opt.step()
@@ -186,6 +208,7 @@ def main():
     torch.save({"sd": net.state_dict(),
                 "cfg": {"arch": "single-trunk", "seed": a.seed, "enc": a.enc,
                         "steps": a.steps, "batch": a.batch, "lr": a.lr,
+                        "label_key": a.label_key, "weight_key": a.weight_key,
                         "holdout_brier": best[0], "best_step": best[2],
                         "mirror": "full-coverage corpus+mirror per epoch"}}, out)
     print(f"saved {out}", flush=True)

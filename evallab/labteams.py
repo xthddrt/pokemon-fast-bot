@@ -45,6 +45,14 @@ PAIR_C = (
 
 PAIRS = {"A": PAIR_A, "B": PAIR_B, "C": PAIR_C}
 
+# Extra pairs without editing this file: EVALLAB_PAIR_JSON -> {"D0": [[6
+# entries],[6 entries]], ...}, same "species[:requiredmove]" entry format,
+# modal sets as above. Used by the onepair experiment's sampled candidates.
+import os as _os
+if _os.environ.get("EVALLAB_PAIR_JSON"):
+    PAIRS.update({k: (v[0], v[1]) for k, v in
+                  json.load(open(_os.environ["EVALLAB_PAIR_JSON"])).items()})
+
 
 def sets():
     global _SETS

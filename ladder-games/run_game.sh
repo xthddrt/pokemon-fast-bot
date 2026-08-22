@@ -15,6 +15,10 @@ set -a; . "$ROOT/.env"; set +a
 # not-yet-revealed switch. These were 0.5/0.5 at one point and the comment was
 # not updated; the values below are authoritative.
 # Net: v10c0 (Sally 2026-08-20: 4M-row fresh v10 corpus, mirror-trained, seed 1).
+# MIXING (Sally 2026-08-21, default ON, RG_MIX=0 reverts to pure argmax):
+# sample among candidates with visit >= 25% of argmax AND avg score >= the
+# argmax's, weighted by visit*score. Anti-readability: back-to-back losses were
+# 7- and 15-turn single-move loops into opponent lines predicted at 80%+.
 # Round-robin 39,312 games: +12.1 Elo vs v9c0, +45.8 vs v8c_s1, transitivity checked.
 # Better evaluator on neutral data too (bench_v1 0.02709 vs v9c0 0.02942).
 # Sidecar carries tau=1.0 UCB=0.02 -- the 12k-iteration plateau [0.019,0.042]
@@ -27,7 +31,7 @@ FLAGS="--search-time-ms ${RG_SEARCH_MS:-4500} \
 --search-parallelism ${RG_WORLDS:-8} --search-pool-workers ${RG_POOL:-8} \
 --search-threads 1 \
 --nn-weights "${RG_NN_WEIGHTS:-../$(cat "$ROOT/valuenet/PRODUCTION_NET")}" \
---selection-argmax-only --tera-gate-q-margin 0.01 --tera-gate-visit-frac 0.25 \
+--selection-argmax-only $([ "${RG_MIX:-1}" != "0" ] && printf %s --selection-mix) --tera-gate-q-margin 0.01 --tera-gate-visit-frac 0.25 \
 --endgame-playout-gate ${RG_EPG:-0}"
 # RG_REMOTE_URL: route searches + EPG playouts to a worker box (search_server.py);
 # the websocket stays here (Showdown rejects datacenter logins). Any remote

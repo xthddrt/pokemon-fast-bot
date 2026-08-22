@@ -21,7 +21,7 @@ import audit_team_legality     # noqa: E402
 import audit_posterior         # noqa: E402
 
 PASS1 = ["viol_missing_revealed_move", "viol_item", "viol_item_should_be_gone",
-         "viol_ability", "incomplete_moves", "incomplete_ability",
+         "viol_ability", "viol_tera", "incomplete_moves", "incomplete_ability",
          "incomplete_item", "incomplete_tera", "tera_arm_offered_after_use"]
 PASS2 = ["species_not_in_ps_pool", "duplicate_species", "two_stealthrock",
          "illegal_level", "illegal_ability", "illegal_tera", "illegal_item",
@@ -63,6 +63,12 @@ def main():
          and os.path.isfile(os.path.join(batch, g, "worlds.jsonl"))),
         key=lambda p: int(re.sub(r"\D", "", os.path.basename(p)) or 0),
     )
+    # A game whose log captured TWO battles cannot be graded: the auditor would
+    # match one battle's truth against the other's worlds. run_validation_batch
+    # marks those with an EXCLUDED file. Counted and reported rather than
+    # silently dropped -- a silent skip reads as "covered everything".
+    excluded = [g for g in games if os.path.isfile(os.path.join(g, "EXCLUDED"))]
+    games = [g for g in games if g not in set(excluded)]
     tot = collections.Counter()
     rows, errs = [], []
     ndec = nworld = 0
@@ -94,6 +100,21 @@ def main():
     for name, dec, w, f, tr, nz in rows:
         print("%-6s %5d %7d %7d %9s  %s"
               % (name, dec, w, f, tr, nz or "-"))
+    if excluded:
+        print("\n## EXCLUDED (cross-talk: >1 battle in the log, ungradeable)")
+        for g in excluded:
+            print("   %s" % os.path.basename(g))
+    # Pass 4/5: true-set rate vs Bayes ceiling, share calibration, truth
+    # orphans -- batch-pooled (per-game numbers are 8-world noise).
+    import subprocess
+    try:
+        out = subprocess.run(
+            [sys.executable, os.path.join(HERE, "audit_setaccuracy.py")]
+            + games, capture_output=True, text=True, timeout=3600).stdout
+        print("\n" + out.strip())
+    except Exception as e:
+        errs.append(("setaccuracy", repr(e)))
+
     print("\n## POOLED TOTALS")
     bad = {k: v for k, v in tot.items() if v}
     if not bad:

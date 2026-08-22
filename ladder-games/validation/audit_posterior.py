@@ -122,6 +122,20 @@ def main():
     excl_by_dec = item_exclusions(a.run_dir, ident2sp)
 
     tvs, ratios, orphan_rows = [], [], []
+    # CHECK 3: the same TV statistic over the ITEM / ABILITY / TERA marginals.
+    # Movesets were the only distribution-checked column; a sampler that
+    # always hands a species its modal item is legal per pass 2 and
+    # moveset-clean here, yet items (Scarf/Band/Sash) are the decisive
+    # unknowns. CHECK 5: TV of the JOINT (moveset, item) minus the TV its
+    # product-of-marginals predicts -- PS draws the item CONDITIONED on the
+    # moveset, and an independent-draw sampler passes both marginal checks.
+    # CHECK 6: distinct-signature count vs the multinomial expectation --
+    # 8 identical worlds under a flat posterior (mode collapse) is invisible
+    # to every per-world check.
+    marg_tvs = {"item": [], "ability": [], "tera": []}
+    joint_gap = []
+    diversity = []   # (observed_distinct - expected_distinct)
+    collapse_rows = []
     scored = 0
     for d in sorted(by_dec):
         worlds = by_dec[d]
@@ -170,6 +184,69 @@ def main():
                 orphan_rows.append((d, sp, len(orph),
                                     round(sum(expp[k] for k in orph), 3)))
 
+            # ---- check 3: marginals over item / ability / tera
+            for col, idx in (("item", 1), ("ability", 2), ("tera", 3)):
+                em = collections.Counter()
+                for sig, c in R[sp]["sets"].items():
+                    parts = sig.split("|")
+                    if known <= frozenset(parts[0].split(",")) \
+                            and parts[1] not in banned:
+                        em[parts[idx]] += c
+                emt = sum(em.values())
+                if emt == 0 or len(em) < 2:
+                    continue
+                om = collections.Counter()
+                for w in worlds:
+                    mon = parse_mon(w["state"], sp)
+                    if mon:
+                        val = norm(mon[col if col != "item" else "item"])
+                        om["none" if val in ("", "none") else val] += 1
+                omt = sum(om.values())
+                if omt < n:
+                    continue
+                ks = set(em) | set(om)
+                marg_tvs[col].append(0.5 * sum(
+                    abs(om.get(k, 0) / omt - em.get(k, 0) / emt) for k in ks))
+
+            # ---- check 5: joint (moveset,item) TV vs product-of-marginals TV
+            ej = collections.Counter()
+            for sig, c in R[sp]["sets"].items():
+                parts = sig.split("|")
+                ms2 = frozenset(parts[0].split(","))
+                if known <= ms2 and parts[1] not in banned:
+                    ej[(ms2, parts[1])] += c
+            ejt = sum(ej.values())
+            if ejt and len(ej) >= 2:
+                oj = collections.Counter()
+                for w in worlds:
+                    mon = parse_mon(w["state"], sp)
+                    if mon:
+                        ms2 = frozenset(
+                            x for x in map(norm, mon["moves"]) if x != "none")
+                        it = norm(mon["item"])
+                        oj[(ms2, "none" if it in ("", "none") else it)] += 1
+                ojt = sum(oj.values())
+                if ojt >= n:
+                    ksj = set(ej) | set(oj)
+                    tv_joint = 0.5 * sum(
+                        abs(oj.get(k, 0) / ojt - ej.get(k, 0) / ejt)
+                        for k in ksj)
+                    # product-of-marginals reference for the same keys
+                    em1 = collections.Counter(); em2 = collections.Counter()
+                    for (ms2, it), c in ej.items():
+                        em1[ms2] += c; em2[it] += c
+                    tv_prod = 0.5 * sum(abs(
+                        oj.get(k, 0) / ojt
+                        - (em1[k[0]] / ejt) * (em2[k[1]] / ejt)) for k in ksj)
+                    joint_gap.append(tv_joint - tv_prod)
+
+            # ---- check 6: diversity vs multinomial expectation
+            exp_distinct = sum(1 - (1 - pv) ** seen for pv in expp.values())
+            diversity.append(len(obs) - exp_distinct)
+            ent = -sum(pv * math.log(pv, 2) for pv in expp.values() if pv > 0)
+            if len(obs) == 1 and ent > 1.5:
+                collapse_rows.append((d, sp, round(ent, 2)))
+
     print("# Posterior audit — %s" % os.path.basename(os.path.normpath(a.run_dir)))
     print("reference: %d real PS teams | comparable (decision, mon) pairs: %d\n"
           % (ref["teams"], scored))
@@ -191,6 +268,25 @@ def main():
     verdict = ("no top-set inflation detected" if abs(r_m - 1.0) <= r_ci
                else ("TOP SET OVER-SAMPLED" if r_m > 1 else "TOP SET UNDER-SAMPLED"))
     print("   verdict: %s" % verdict)
+    for col in ("item", "ability", "tera"):
+        if marg_tvs[col]:
+            m, ci = stat(marg_tvs[col])
+            print("   mean TV, %-8s marginal  %.3f +/- %.3f  (n=%d)"
+                  % (col, m, ci, len(marg_tvs[col])))
+    if joint_gap:
+        m, ci = stat(joint_gap)
+        print("   joint-vs-marginals TV gap %+.3f +/- %.3f  (>0 = coupling "
+              "worse than marginals suggest)" % (m, ci))
+    if diversity:
+        m, ci = stat(diversity)
+        print("   world diversity vs multinomial  %+.2f +/- %.2f distinct sets"
+              % (m, ci))
+    if collapse_rows:
+        print("   MODE COLLAPSE (1 distinct set, ref entropy > 1.5 bits): %d pairs"
+              % len(collapse_rows))
+        for d, sp, ent in collapse_rows[:6]:
+            print("      d%-4d %-18s H=%.2f" % (d, sp, ent))
+
     print("\n   orphaned movesets (reference p >= 1/worlds, ZERO worlds): %d of %d pairs"
           % (len(orphan_rows), scored))
     for row in sorted(orphan_rows, key=lambda x: -x[3])[:8]:

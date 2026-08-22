@@ -78,7 +78,7 @@ d = sys.argv[1]
 src = os.path.join(d, "battle.log")
 if not os.path.isfile(src):
     raise SystemExit("no battle.log to split")
-sys.path.insert(0, "/Users/sallyliu/pokemon-fast-bot/ladder-games")
+sys.path.insert(0, os.path.join(os.environ.get("FP_ROOT", "/Users/sallyliu/pokemon-fast-bot"), "ladder-games"))
 import archive_game as A
 A.segment_log(open(src, errors="replace").read(), d)
 n = sum(1 for _ in open(os.path.join(d, "worlds.jsonl")))
